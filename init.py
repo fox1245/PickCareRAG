@@ -11,5 +11,13 @@ from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from typing import List, Tuple
 from langchain import hub
 from langchain_community.document_loaders import PyMuPDFLoader
+import json
+from pathlib import Path
+from pprint import pprint, pformat
+from langchain_community.document_loaders import JSONLoader
+
+
+
+
 
 

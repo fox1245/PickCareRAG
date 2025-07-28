@@ -1,6 +1,7 @@
 import init
 import WebBaseLoader as WB
 import pdfLoader as PDF
+import jsonLoader as JL
 # API 키 정보 로드
 init.load_dotenv()
 
@@ -63,11 +64,19 @@ def WebLoad(url, model, QA, attrs, html_class):
 # for elem in web_res2:
 #     print(elem)
 
-FILE_PATH = "./data/SPRI_AI_Brief_2023년12월호_F.pdf"
+# FILE_PATH = "./data/SPRI_AI_Brief_2023년12월호_F.pdf"
 
-PDF_context = PDF.pdfLoader(FILE_PATH).load()
-for elem in PDF_context:
-    print(elem.page_content)
+# PDF_context = PDF.pdfLoader(FILE_PATH).load()
+# for elem in PDF_context:
+#     print(elem.page_content)
 
 
 
+# load_json = JL.jsonLoader(
+#     file_path = "data/people.json",
+#     jq_schema= ".[].phoneNumbers",
+#     text_content = False,
+# )
+
+
+# print(load_json.load())
