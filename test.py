@@ -11,9 +11,9 @@ def format_docs(docs):
 
 
 
-def WebLoad(url, model, QA):
+def WebLoad(url, model, QA, attrs):
     parseMan = WB.WebBaseLoader(url)
-    docs = parseMan.parse()
+    docs = parseMan.parse(attrArgs = attrs)
 
     #문서분할
     text_splitter = init.RecursiveCharacterTextSplitter(chunk_size = 1000, chunk_overlap = 50)
@@ -52,6 +52,6 @@ def WebLoad(url, model, QA):
 
 
 curious_man = "부영그룹의 출산 장려 정책에 대해 설명해주세요"
-web_res = WebLoad(url = "https://n.news.naver.com/article/437/0000378416", model = "gpt-4o-mini", QA = curious_man)
+web_res = WebLoad(url = "https://n.news.naver.com/article/437/0000378416", model = "gpt-4o-mini", QA = curious_man, attrs= {"class": ["newsct_article _article_body", "media_end_head_title"]})
 for elem in web_res:
     print(elem)
