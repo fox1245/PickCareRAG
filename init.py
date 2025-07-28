@@ -15,6 +15,7 @@ import json
 from pathlib import Path
 from pprint import pprint, pformat
 from langchain_community.document_loaders import JSONLoader
+from langchain_community.document_loaders import UnstructuredPowerPointLoader
 
 
 

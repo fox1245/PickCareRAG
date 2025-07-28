@@ -2,6 +2,7 @@ import init
 import WebBaseLoader as WB
 import pdfLoader as PDF
 import jsonLoader as JL
+import pptLoader as PL
 # API 키 정보 로드
 init.load_dotenv()
 
@@ -80,3 +81,9 @@ def WebLoad(url, model, QA, attrs, html_class):
 
 
 # print(load_json.load())
+
+ppt_file_path = "./data/sample-ppt.pptx"
+ppt_load = PL.pptLoader(ppt_file_path).load()
+
+for elem in ppt_load:
+    print(elem)
