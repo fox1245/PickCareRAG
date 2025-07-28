@@ -1,4 +1,6 @@
 import init
+
+
 class WebBaseLoader():
     def __init__(self, url):
         self.web_paths = [url,]
