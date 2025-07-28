@@ -8,7 +8,7 @@ class pdfLoader():
         
 
     def load(self):
-        self.loader = init.PyPDFLoader(self.path, extract_images= self.extract_bool)
+        self.loader = init.PyMuPDFLoader(self.path, extract_images= self.extract_bool)
         self.docs = self.loader.load()
         print(type(self.docs))
         return self.docs
