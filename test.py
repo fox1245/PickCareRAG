@@ -1,5 +1,6 @@
 import init
 import WebBaseLoader as WB
+import pdfLoader as PDF
 # API 키 정보 로드
 init.load_dotenv()
 
@@ -51,13 +52,22 @@ def WebLoad(url, model, QA, attrs, html_class):
     return response_buff
 
 
-curious_man = "부영그룹의 출산 장려 정책에 대해 설명해주세요"
-web_res = WebLoad(url = "https://n.news.naver.com/article/437/0000378416", model = "gpt-4o-mini", QA = curious_man, attrs= {"class": ["newsct_article _article_body", "media_end_head_title"]}, html_class = 'div')
-for elem in web_res:
-    print(elem)
+# curious_man = "부영그룹의 출산 장려 정책에 대해 설명해주세요"
+# web_res = WebLoad(url = "https://n.news.naver.com/article/437/0000378416", model = "gpt-4o-mini", QA = curious_man, attrs= {"class": ["newsct_article _article_body", "media_end_head_title"]}, html_class = 'div')
+# for elem in web_res:
+#     print(elem)
 
 
-curious_man2 = "주어진 문서를 분석하세요"
-web_res2 = WebLoad(url = "https://www.bbc.com/news/business-68092814", model = "gpt-4o-mini", QA = curious_man2, attrs = {"id": ["main-content"]}, html_class= 'main')
-for elem in web_res2:
-    print(elem)
+# curious_man2 = "주어진 문서를 분석하세요"
+# web_res2 = WebLoad(url = "https://www.bbc.com/news/business-68092814", model = "gpt-4o-mini", QA = curious_man2, attrs = {"id": ["main-content"]}, html_class= 'main')
+# for elem in web_res2:
+#     print(elem)
+
+FILE_PATH = "./data/SPRI_AI_Brief_2023년12월호_F.pdf"
+
+PDF_context = PDF.pdfLoader(FILE_PATH).load()
+for elem in PDF_context:
+    print(elem.page_content)
+
+
+
