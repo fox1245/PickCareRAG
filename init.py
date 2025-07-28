@@ -8,3 +8,4 @@ from langchain_community.vectorstores import Chroma, FAISS
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
+from typing import List, Tuple
