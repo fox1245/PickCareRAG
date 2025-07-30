@@ -28,4 +28,4 @@ def create_image(model_name = "grok-2-image" , prompt = "A cat in a tree", file_
   
   
 if __name__ == "__main__":
-  create_image(prompt = "A golden retriever swimming in the river", file_name = "golden_retriever.png")
+  create_image(prompt = "A gorgeous male stagbeetle", file_name = "output_images/stag_beetle.png")

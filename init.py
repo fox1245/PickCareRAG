@@ -31,7 +31,7 @@ from operator import itemgetter
 from langchain.output_parsers.json import SimpleJsonOutputParser
 from langchain.callbacks.base import BaseCallbackHandler
 import os
-from unstructured.partition.pdf import partition_pdf
+from langchain_xai import ChatXAI
 
 
 
