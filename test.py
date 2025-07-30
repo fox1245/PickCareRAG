@@ -96,26 +96,87 @@ def PDFask(file_path, model, QA, prompt = None, k = 3):
     response_buff.append(f"[HUMAN]\n{QA}\n")
     response_buff.append(f"[AI]\n{response}")
     return response_buff
+
+
+def promptMaker(Prompt : dict):
+    system_prompt = Prompt['system']
+    question = Prompt['question']
+    prompt = init.ChatPromptTemplate.from_messages(
+        [
+            ("system",
+             f"{system_prompt}"
+            ),
+            init.MessagesPlaceholder(variable_name= "chat_history"),
+            ("human" , "#Question:\n{question}"),  # 사용자 입력을 변수로 사용
+        ]
+        
+    )
+    return prompt
+
+
+# 세션 ID를 기반으로 세션 기록을 가져오는 함수
+def get_session_history(session_ids):
+    print(f"[대화 세션ID]: {session_ids}")
+    if session_ids not in store:  # 세션 ID가 store에 없는 경우
+        # 새로운 ChatMessageHistory 객체를 생성하여 store에 저장
+        store[session_ids] = init.ChatMessageHistory()
+    return store[session_ids]  # 해당 세션 ID에 대한 세션 기록 반환
+    
+
+def simpleChatWithHistory(ask):
+    prompt = promptMaker(Prompt = ask)
+    llm = init.ChatOpenAI()
+    chain = prompt | llm | init.StrOutputParser()
+    #세션 기록을 저장할 딕셔너리
+    
+    chain_with_history = init.RunnableWithMessageHistory(
+        chain, 
+        get_session_history, #세션 기록을 가져오는 함수
+        input_messages_key = "question", #사용자의 질문이 템플릿 변수에 들어갈 key
+        history_messages_key= "chat_history", #기록 메시지의 키
+    )
+    
+    
+    response = chain_with_history.invoke(
+        #질문 입력
+        {"question" : ask["question"]},
+        config={"configurable": {"session_id": "abc123"}},
+         
+    )
+    return response
+
+
+        
+    
     
     
 
 
 
 if __name__ == "__main__":
-    TC.TestClass.test_webBase()
-    TC.TestClass.test_webBase2()
-    TC.TestClass.testJSON()
-    TC.TestClass.testPDF()
-    TC.TestClass.testPPT()
-    loader = CL.csvLoader(file_path = "data/titanic.csv")
-    docs = loader.load()
-    for elem in docs:
-        print(elem.page_content)
-    QA = "삼성 가우스에 대해 설명해주세요"
-    file_path = "data/SPRI_AI_Brief_2023년12월호_F.pdf"
-    pdfQuery = PDFask(model = "gpt-4o-mini", QA = QA, file_path = file_path)
-    for elem in pdfQuery:
-        print(elem)
+    # TC.TestClass.test_webBase()
+    # TC.TestClass.test_webBase2()
+    # TC.TestClass.testJSON()
+    # TC.TestClass.testPDF()
+    # TC.TestClass.testPPT()
+    # loader = CL.csvLoader(file_path = "data/titanic.csv")
+    # docs = loader.load()
+    # for elem in docs:
+    #     print(elem.page_content)
+    # QA = "삼성 가우스에 대해 설명해주세요"
+    # file_path = "data/SPRI_AI_Brief_2023년12월호_F.pdf"
+    # pdfQuery = PDFask(model = "gpt-4o-mini", QA = QA, file_path = file_path)
+    # for elem in pdfQuery:
+    #     print(elem)
+    global store
+    store = {}
+    ask = {'system': '당신은 Question-Answering 챗봇입니다. 주어진 질문에 대한 답변을 제공해주세요.', 'question': '저는 개발자 입니다.'}
+    response = simpleChatWithHistory(ask)
+    print(response)
+    
+    
+    
+    
     
 
 
