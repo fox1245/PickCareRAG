@@ -4,6 +4,7 @@ import pdfLoader as PDF
 import jsonLoader as JL
 import pptLoader as PL
 import testClass as TC
+import csvLoader as CL
 # API 키 정보 로드
 init.load_dotenv()
 
@@ -25,7 +26,7 @@ def WebLoad(url, model, QA, attrs, html_class):
     splits = text_splitter.split_documents(docs)
 
     #벡터스토어 생성
-    vectorstore = init.FAISS.from_documents(documents = splits, embedding = init.OpenAIEmbeddings())
+    vectorstore = init.FAISS.from_documents(documents = splits, embedding = init.OpenAIEmbeddings(model="text-embedding-3-large"))
 
     #검색(search)
     retriever = vectorstore.as_retriever()
@@ -56,9 +57,16 @@ def WebLoad(url, model, QA, attrs, html_class):
 
 
 
-if __name__ == "__main__":
-    TC.TestClass.test_webBase()
-    TC.TestClass.test_webBase2()
-    TC.TestClass.testJSON()
-    TC.TestClass.testPDF()
-    TC.TestClass.testPPT()
+# if __name__ == "__main__":
+#     TC.TestClass.test_webBase()
+#     TC.TestClass.test_webBase2()
+    #TC.TestClass.testJSON()
+    #TC.TestClass.testPDF()
+    #TC.TestClass.testPPT()
+
+
+
+# loader = CL.csvLoader(file_path = "data/titanic.csv")
+# docs = loader.load()
+# for elem in docs:
+#     print(elem.page_content)

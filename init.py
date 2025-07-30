@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 from langchain_teddynote import logging
 import bs4
 from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_experimental.text_splitter import SemanticChunker
 from langchain_community.document_loaders import WebBaseLoader
 from langchain_community.vectorstores import Chroma, FAISS
 from langchain_core.output_parsers import StrOutputParser
@@ -16,7 +17,8 @@ from pathlib import Path
 from pprint import pprint, pformat
 from langchain_community.document_loaders import JSONLoader
 from langchain_community.document_loaders import UnstructuredPowerPointLoader
-
+from langchain_community.document_loaders.csv_loader import CSVLoader
+from langchain.text_splitter import CharacterTextSplitter
 
 
 
