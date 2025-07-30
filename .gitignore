@@ -7,3 +7,6 @@ output.jpg
 output.png
 golden_retriever.png
 .grok
+test_grok.py
+requirement.txt
+requirement2.txt

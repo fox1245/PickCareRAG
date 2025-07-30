@@ -31,7 +31,10 @@ from operator import itemgetter
 from langchain.output_parsers.json import SimpleJsonOutputParser
 from langchain.callbacks.base import BaseCallbackHandler
 import os
+import io
+from PIL import Image
 from langchain_xai import ChatXAI
+from xai_sdk import Client
 
 
 
