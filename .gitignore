@@ -2,3 +2,8 @@
 test.ipynb
 data
 output_images
+__pycache__
+output.jpg
+output.png
+golden_retriever.png
+.grok
