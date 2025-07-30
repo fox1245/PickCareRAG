@@ -244,9 +244,9 @@ if __name__ == "__main__":
     #     print(elem.page_content)
     # QA = "삼성 가우스에 대해 설명해주세요"
     # file = "data/SPRI_AI_Brief_2023년12월호_F.pdf"
-    # # pdfQuery = PDFask(model = "gpt-4o-mini", QA = QA, file_path = file_path)
-    # # for elem in pdfQuery:
-    # #     print(elem)
+    # pdfQuery = PDFask(model = "gpt-4o-mini", QA = QA, file_path = file)
+    # for elem in pdfQuery:
+    #     print(elem)
     # global store
     # store = {}
     # session_id = {'session_id' : 'rag123'}
