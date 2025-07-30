@@ -55,8 +55,45 @@ def WebLoad(url, model, QA, attrs, html_class):
     return response_buff
 
 
-def PDFLoad(file_path, model, QA):
+def PDFask(file_path, model, QA, k = 3):
     loader = PDF.pdfLoader(file_path= file_path, extract_bool=True)
+    
+    text_splitter = init.RecursiveCharacterTextSplitter(chunk_size = 1000, chunk_overlap = 50)
+    
+    split_docs = loader.load_and_split(text_splitter = text_splitter)
+    print(type(split_docs))
+    vectorstore = init.FAISS.from_documents(documents= split_docs, embedding = init.OpenAIEmbeddings(model="text-embedding-3-large"))
+    
+    
+    bm25_retriever = init.BM25Retriever.from_documents(split_docs)    
+    bm25_retriever.k = k
+    faiss_vectorstore = init.FAISS.from_documents(split_docs, init.OpenAIEmbeddings(model="text-embedding-3-large"))
+    faiss_retriever = faiss_vectorstore.as_retriever(search_kwargs = {"k" : k})
+    
+    
+    #앙상블 리트리버를 초기화
+    ensemble_retiever = init.EnsembleRetriever(
+        retrievers=[bm25_retriever, faiss_retriever], weight = [0.5, 0.5]
+    )
+    
+    #프롬프트 생성
+    prompt = init.hub.pull("rlm/rag-prompt")
+    
+    llm = init.ChatOpenAI(model_name = model)
+    
+    rag_chain = (
+        {"context" : ensemble_retiever | format_docs, "question" : init.RunnablePassthrough()}
+        |prompt
+        |llm
+        |init.StrOutputParser()
+    )
+    
+    response = rag_chain.invoke(QA)
+    response_buff = list()
+    response_buff.append(f"PDF Path: {file_path}")
+    response_buff.append(f"[HUMAN]\n{QA}\n")
+    response_buff.append(f"[AI]\n{response}")
+    return response_buff
     
     
 
@@ -72,7 +109,11 @@ if __name__ == "__main__":
     docs = loader.load()
     for elem in docs:
         print(elem.page_content)
-
-
+    QA = "삼성 가우스에 대해 설명해주세요"
+    file_path = "data/SPRI_AI_Brief_2023년12월호_F.pdf"
+    pdfQuery = PDFask(model = "gpt-4o-mini", QA = QA, file_path = file_path)
+    for elem in pdfQuery:
+        print(elem)
+    
 
 
