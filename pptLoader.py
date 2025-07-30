@@ -1,6 +1,7 @@
 import init
+from Loader import Loader
 
-class pptLoader():
+class pptLoader(Loader):
     def __init__(self, file_path):
         self.file_path = file_path
 

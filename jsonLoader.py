@@ -1,6 +1,7 @@
 import init
+from Loader import Loader
 
-class jsonLoader():
+class jsonLoader(Loader):
     def __init__(self, file_path, jq_schema, text_content):
         self.file_path = file_path
         self.jq_schema = jq_schema

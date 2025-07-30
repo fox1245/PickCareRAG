@@ -1,6 +1,7 @@
 import init
+from Loader import Loader
 
-class pdfLoader():
+class pdfLoader(Loader):
     def __init__(self, file_path, extract_bool = True):
         self.path = file_path
         self.extract_bool = extract_bool

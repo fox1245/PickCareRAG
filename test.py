@@ -18,7 +18,7 @@ def format_docs(docs):
 
 def WebLoad(url, model, QA, attrs, html_class):
     parseMan = WB.WebBaseLoader(url)
-    docs = parseMan.parse(attrArgs = attrs, klass = html_class)
+    docs = parseMan.load(attrArgs = attrs, klass = html_class)
 
     #문서분할
     text_splitter = init.RecursiveCharacterTextSplitter(chunk_size = 1000, chunk_overlap = 50)
@@ -36,11 +36,6 @@ def WebLoad(url, model, QA, attrs, html_class):
     
     prompt = init.hub.pull("rlm/rag-prompt") #프롬프트
     
-
-
-
-
-
     #체인 생성
     rag_chain = (
     {"context": retriever | format_docs, "question": init.RunnablePassthrough()}
@@ -58,6 +53,12 @@ def WebLoad(url, model, QA, attrs, html_class):
     response_buff.append(f"[HUMAN]\n{question}\n")
     response_buff.append(f"[AI]\n{response}")
     return response_buff
+
+
+def PDFLoad(file_path, model, QA):
+    loader = PDF.pdfLoader(file_path= file_path, extract_bool=True)
+    
+    
 
 
 
