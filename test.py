@@ -16,7 +16,7 @@ def format_docs(docs):
 
 
 
-def WebLoad(url, model, QA, attrs, html_class):
+def WebLoad(url, model, QA, attrs, html_class, prompt = None):
     parseMan = WB.WebBaseLoader(url)
     docs = parseMan.load(attrArgs = attrs, klass = html_class)
 
@@ -34,7 +34,8 @@ def WebLoad(url, model, QA, attrs, html_class):
     #검색(search)
     retriever = vectorstore.as_retriever()
     
-    prompt = init.hub.pull("rlm/rag-prompt") #프롬프트
+    if prompt == None:
+        prompt = init.hub.pull("rlm/rag-prompt") #프롬프트
     
     #체인 생성
     rag_chain = (
@@ -55,7 +56,7 @@ def WebLoad(url, model, QA, attrs, html_class):
     return response_buff
 
 
-def PDFask(file_path, model, QA, k = 3):
+def PDFask(file_path, model, QA, prompt = None, k = 3):
     loader = PDF.pdfLoader(file_path= file_path, extract_bool=True)
     
     text_splitter = init.RecursiveCharacterTextSplitter(chunk_size = 1000, chunk_overlap = 50)
@@ -77,7 +78,8 @@ def PDFask(file_path, model, QA, k = 3):
     )
     
     #프롬프트 생성
-    prompt = init.hub.pull("rlm/rag-prompt")
+    if prompt == None:
+        prompt = init.hub.pull("rlm/rag-prompt") #프롬프트
     
     llm = init.ChatOpenAI(model_name = model)
     
@@ -100,21 +102,20 @@ def PDFask(file_path, model, QA, k = 3):
 
 
 if __name__ == "__main__":
-    # TC.TestClass.test_webBase()
-    # TC.TestClass.test_webBase2()
-    # TC.TestClass.testJSON()
-    # TC.TestClass.testPDF()
-    # TC.TestClass.testPPT()
-    # loader = CL.csvLoader(file_path = "data/titanic.csv")
-    # docs = loader.load()
-    # for elem in docs:
-    #     print(elem.page_content)
-    # QA = "삼성 가우스에 대해 설명해주세요"
-    # file_path = "data/SPRI_AI_Brief_2023년12월호_F.pdf"
-    # pdfQuery = PDFask(model = "gpt-4o-mini", QA = QA, file_path = file_path)
-    # for elem in pdfQuery:
-    #     print(elem)
-    pass
+    TC.TestClass.test_webBase()
+    TC.TestClass.test_webBase2()
+    TC.TestClass.testJSON()
+    TC.TestClass.testPDF()
+    TC.TestClass.testPPT()
+    loader = CL.csvLoader(file_path = "data/titanic.csv")
+    docs = loader.load()
+    for elem in docs:
+        print(elem.page_content)
+    QA = "삼성 가우스에 대해 설명해주세요"
+    file_path = "data/SPRI_AI_Brief_2023년12월호_F.pdf"
+    pdfQuery = PDFask(model = "gpt-4o-mini", QA = QA, file_path = file_path)
+    for elem in pdfQuery:
+        print(elem)
     
 
 
