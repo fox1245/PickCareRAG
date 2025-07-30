@@ -65,13 +65,14 @@ def PDFLoad(file_path, model, QA):
 if __name__ == "__main__":
     TC.TestClass.test_webBase()
     TC.TestClass.test_webBase2()
-    #TC.TestClass.testJSON()
-    #TC.TestClass.testPDF()
-    #TC.TestClass.testPPT()
+    TC.TestClass.testJSON()
+    TC.TestClass.testPDF()
+    TC.TestClass.testPPT()
+    loader = CL.csvLoader(file_path = "data/titanic.csv")
+    docs = loader.load()
+    for elem in docs:
+        print(elem.page_content)
 
 
 
-# loader = CL.csvLoader(file_path = "data/titanic.csv")
-# docs = loader.load()
-# for elem in docs:
-#     print(elem.page_content)
+
