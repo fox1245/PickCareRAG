@@ -27,15 +27,20 @@ def WebLoad(url, model, QA, attrs, html_class):
 
     #벡터스토어 생성
     vectorstore = init.FAISS.from_documents(documents = splits, embedding = init.OpenAIEmbeddings(model="text-embedding-3-large"))
+    
+    #모델 생성
+    llm = init.ChatOpenAI(model_name = model)
 
     #검색(search)
     retriever = vectorstore.as_retriever()
+    # retriever = init.MultiQueryRetriever.from_llm(
+    #     retriever = vectorstore.as_retriever(), llm = llm
+    # )
 
 
     prompt = init.hub.pull("rlm/rag-prompt")
 
-    #모델 생성
-    llm = init.ChatOpenAI(model_name = model)
+
 
     #체인 생성
     rag_chain = (
@@ -57,9 +62,9 @@ def WebLoad(url, model, QA, attrs, html_class):
 
 
 
-# if __name__ == "__main__":
-#     TC.TestClass.test_webBase()
-#     TC.TestClass.test_webBase2()
+if __name__ == "__main__":
+    TC.TestClass.test_webBase()
+    TC.TestClass.test_webBase2()
     #TC.TestClass.testJSON()
     #TC.TestClass.testPDF()
     #TC.TestClass.testPPT()
