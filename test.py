@@ -33,12 +33,11 @@ def WebLoad(url, model, QA, attrs, html_class):
 
     #검색(search)
     retriever = vectorstore.as_retriever()
-    # retriever = init.MultiQueryRetriever.from_llm(
-    #     retriever = vectorstore.as_retriever(), llm = llm
-    # )
+    
+    prompt = init.hub.pull("rlm/rag-prompt") #프롬프트
+    
 
 
-    prompt = init.hub.pull("rlm/rag-prompt")
 
 
 
