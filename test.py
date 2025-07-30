@@ -100,20 +100,21 @@ def PDFask(file_path, model, QA, k = 3):
 
 
 if __name__ == "__main__":
-    TC.TestClass.test_webBase()
-    TC.TestClass.test_webBase2()
-    TC.TestClass.testJSON()
-    TC.TestClass.testPDF()
-    TC.TestClass.testPPT()
-    loader = CL.csvLoader(file_path = "data/titanic.csv")
-    docs = loader.load()
-    for elem in docs:
-        print(elem.page_content)
-    QA = "삼성 가우스에 대해 설명해주세요"
-    file_path = "data/SPRI_AI_Brief_2023년12월호_F.pdf"
-    pdfQuery = PDFask(model = "gpt-4o-mini", QA = QA, file_path = file_path)
-    for elem in pdfQuery:
-        print(elem)
+    # TC.TestClass.test_webBase()
+    # TC.TestClass.test_webBase2()
+    # TC.TestClass.testJSON()
+    # TC.TestClass.testPDF()
+    # TC.TestClass.testPPT()
+    # loader = CL.csvLoader(file_path = "data/titanic.csv")
+    # docs = loader.load()
+    # for elem in docs:
+    #     print(elem.page_content)
+    # QA = "삼성 가우스에 대해 설명해주세요"
+    # file_path = "data/SPRI_AI_Brief_2023년12월호_F.pdf"
+    # pdfQuery = PDFask(model = "gpt-4o-mini", QA = QA, file_path = file_path)
+    # for elem in pdfQuery:
+    #     print(elem)
+    pass
     
 
 
