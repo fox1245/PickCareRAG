@@ -146,7 +146,7 @@ def simpleChatWithHistory(ask):
     return response
 
 
-def RAG_RunnableWithMessageHistory(file_path, ask : dict,  model = "gpt-4o-mini",temp = 0,  k=3, chunk_size = 1000, chunk_overlap = 50):
+def RAG_RunnableWithMessageHistory(file_path, ask : dict,  session_id: dict , model = "gpt-4o-mini",temp = 0,  k=3, chunk_size = 1000, chunk_overlap = 50):
     #문서 로드
     loader = PDF.pdfLoader(file_path=file_path, extract_bool= True)
     docs = loader.load()
@@ -217,7 +217,7 @@ def RAG_RunnableWithMessageHistory(file_path, ask : dict,  model = "gpt-4o-mini"
     response = rag_with_history.invoke(
         #질문 입력
         {"question" : ask["question"]},
-        config = {"configurable" : {"session_id" : "rag123"}},
+        config = {"configurable" : {"session_id" : session_id["session_id"]}},
     )
     
     return response
@@ -251,9 +251,10 @@ if __name__ == "__main__":
     #     print(elem)
     global store
     store = {}
+    session_id = {'session_id' : 'rag123'}
     ask = {'system': '당신은 Question-Answering 챗봇입니다. 주어진 질문에 대한 답변을 제공해주세요.', 'question': '주어진 자료에서 핵심 사항을 요약해서 알려주세요'}
     #response = simpleChatWithHistory(ask)
-    response = RAG_RunnableWithMessageHistory(file_path = file, ask = ask)
+    response = RAG_RunnableWithMessageHistory(file_path = file, ask = ask, session_id= session_id)
     print(response)
     
     
