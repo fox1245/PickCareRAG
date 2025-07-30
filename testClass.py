@@ -3,7 +3,7 @@ import WebBaseLoader as WB
 import pdfLoader as PDF
 import jsonLoader as JL
 import pptLoader as PL
-from test import WebLoad
+from RAG import WebLoad
 
 
 
