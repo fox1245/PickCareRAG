@@ -233,25 +233,25 @@ def RAG_RunnableWithMessageHistory(file_path, ask : dict,  session_id: dict , mo
 
 
 if __name__ == "__main__":
-    # TC.TestClass.test_webBase()
-    # TC.TestClass.test_webBase2()
-    # TC.TestClass.testJSON()
-    # TC.TestClass.testPDF()
-    # TC.TestClass.testPPT()
-    # loader = CL.csvLoader(file_path = "data/titanic.csv")
-    # docs = loader.load()
-    # for elem in docs:
-    #     print(elem.page_content)
-    # QA = "삼성 가우스에 대해 설명해주세요"
-    # file = "data/SPRI_AI_Brief_2023년12월호_F.pdf"
-    # pdfQuery = PDFask(model = "gpt-4o-mini", QA = QA, file_path = file)
-    # for elem in pdfQuery:
-    #     print(elem)
-    # global store
-    # store = {}
-    # session_id = {'session_id' : 'rag123'}
-    # ask = {'system': '당신은 Question-Answering 챗봇입니다. 주어진 질문에 대한 답변을 제공해주세요.', 'question': '주어진 자료에서 핵심 사항을 요약해서 알려주세요'}
-    # #response = simpleChatWithHistory(ask)
-    # response = RAG_RunnableWithMessageHistory(file_path = file, ask = ask, session_id= session_id)
-    # print(response)
+    TC.TestClass.test_webBase()
+    TC.TestClass.test_webBase2()
+    TC.TestClass.testJSON()
+    TC.TestClass.testPDF()
+    TC.TestClass.testPPT()
+    loader = CL.csvLoader(file_path = "data/titanic.csv")
+    docs = loader.load()
+    for elem in docs:
+        print(elem.page_content)
+    QA = "삼성 가우스에 대해 설명해주세요"
+    file = "data/SPRI_AI_Brief_2023년12월호_F.pdf"
+    pdfQuery = PDFask(model = "gpt-4o-mini", QA = QA, file_path = file)
+    for elem in pdfQuery:
+        print(elem)
+    global store
+    store = {}
+    session_id = {'session_id' : 'rag123'}
+    ask = {'system': '당신은 Question-Answering 챗봇입니다. 주어진 질문에 대한 답변을 제공해주세요.', 'question': '주어진 자료에서 핵심 사항을 요약해서 알려주세요'}
+    #response = simpleChatWithHistory(ask)
+    response = RAG_RunnableWithMessageHistory(file_path = file, ask = ask, session_id= session_id)
+    print(response)
     pass
