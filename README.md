@@ -16,3 +16,5 @@ RESTful API를 통해 http 프로토콜을 경유하여 JAVA spring과 통신하
 # 기타
 멀티모달 지원 (CLIP모델을 사용하여 이미지 분류 및 이미지 인식 및 이미지 & 자연어 텍스트 간 상호 유사도 계산 지원)
 MCP서버를 경유한 생성형 AI서비스 지원
+
+https://github.com/UB-Mannheim/tesseract/wiki 설치

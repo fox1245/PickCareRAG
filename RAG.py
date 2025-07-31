@@ -5,6 +5,7 @@ import jsonLoader as JL
 import pptLoader as PL
 import testClass as TC
 import csvLoader as CL
+import CLIP_RAG as CLIP
 # API 키 정보 로드
 init.load_dotenv()
 
@@ -222,12 +223,15 @@ def RAG_RunnableWithMessageHistory(file_path, ask : dict,  session_id: dict , mo
     
     return response
 
-    
+
+
     
 
 
 
         
+#set INCLUDE=%INCLUDE%;"A:\vcpkg\installed\x64-windows\include\leptonica"
+#set LIB=%LIB%;"A:\vcpkg\installed\x64-windows\lib"  
 
 
 
@@ -244,14 +248,23 @@ if __name__ == "__main__":
         print(elem.page_content)
     QA = "삼성 가우스에 대해 설명해주세요"
     file = "data/SPRI_AI_Brief_2023년12월호_F.pdf"
+    file2 = "data/전기기기요약.pdf"
     pdfQuery = PDFask(model = "gpt-4o-mini", QA = QA, file_path = file)
     for elem in pdfQuery:
         print(elem)
     global store
     store = {}
     session_id = {'session_id' : 'rag123'}
-    ask = {'system': '당신은 Question-Answering 챗봇입니다. 주어진 질문에 대한 답변을 제공해주세요.', 'question': '주어진 자료에서 핵심 사항을 요약해서 알려주세요'}
+    ask = {'system': '당신은 Question-Answering 챗봇입니다. 주어진 질문에 대한 답변을 제공해주세요.', 'question': '주어진 자료에서 핵심 사항을 요약해서 노래로 만들어 주세요'}
     #response = simpleChatWithHistory(ask)
     response = RAG_RunnableWithMessageHistory(file_path = file, ask = ask, session_id= session_id)
     print(response)
-    pass
+    import unstructured.partition.pdf
+    print("설치 성공!")
+    clip = CLIP.CLIP(4000, 0, file2)
+    chain = clip.load()
+    query = "다음 문서를 요약하세요"
+    response = chain.invoke(query, limit = 6)
+    print(response)
+    
+    

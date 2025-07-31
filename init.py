@@ -35,6 +35,14 @@ import io
 from PIL import Image
 from langchain_xai import ChatXAI
 from xai_sdk import Client
+import base64
+from langchain_core.messages import HumanMessage
+import uuid
+from langchain.retrievers.multi_vector import MultiVectorRetriever
+from langchain.storage import InMemoryStore
+from langchain_core.documents import Document
+from IPython.display import HTML, display
+from langchain_core.runnables import RunnableLambda, RunnablePassthrough
 
 
 
