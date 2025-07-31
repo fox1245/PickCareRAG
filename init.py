@@ -43,6 +43,7 @@ from langchain.storage import InMemoryStore
 from langchain_core.documents import Document
 from IPython.display import HTML, display
 from langchain_core.runnables import RunnableLambda, RunnablePassthrough
+from unstructured.partition.pdf import partition_pdf
 
 
 

@@ -105,32 +105,72 @@ def img_prompt_func(data_dict):
     messages.append(text_message)
     return [init.HumanMessage(content=messages)]
 
+def extract_pdf_elements(path, fname):
+    """
+    PDF 파일에서 이미지, 테이블, 그리고 텍스트 조각을 추출합니다.
+    path: 이미지(.jpg)를 저장할 파일 경로
+    fname: 파일 이름
+    """
+    return init.partition_pdf(
+        filename=init.os.path.join(path, fname),
+        extract_images_in_pdf=True,  # PDF 내 이미지 추출 활성화
+        infer_table_structure=True,  # 테이블 구조 추론 활성화
+        chunking_strategy="by_title",  # 제목별로 텍스트 조각화
+        max_characters=4000,  # 최대 문자 수
+        new_after_n_chars=3800,  # 이 문자 수 이후에 새로운 조각 생성
+        combine_text_under_n_chars=2000,  # 이 문자 수 이하의 텍스트는 결합
+        image_output_dir_path=path,  # 이미지 출력 디렉토리 경로
+        languages=["kor"],
+    )
+
+# 요소를 유형별로 분류
 
 
+def categorize_elements(raw_pdf_elements):
+    """
+    PDF에서 추출된 요소를 테이블과 텍스트로 분류합니다.
+    raw_pdf_elements: unstructured.documents.elements의 리스트
+    """
+    tables = []  # 테이블 저장 리스트
+    texts = []  # 텍스트 저장 리스트
+    for element in raw_pdf_elements:
+        if "unstructured.documents.elements.Table" in str(type(element)):
+            tables.append(str(element))  # 테이블 요소 추가
+        elif "unstructured.documents.elements.CompositeElement" in str(type(element)):
+            texts.append(str(element))  # 텍스트 요소 추가
+    return texts, tables
 
 
 
 
 class CLIP(Loader):
-    def __init__(self, chunk_size, chunk_overlap, FILE_PATH, model = "gpt-4o", fpath = "multi-modal/"):
-        self.FILE_PATH = FILE_PATH
-        PDF_context = PDF.pdfLoader(self.FILE_PATH).load()
-        self.texts = ""
-        for elem in PDF_context:
-            self.texts += '\n'.join(elem.page_content)
-                        
+    def __init__(self, chunk_size, chunk_overlap, fname, model = "gpt-4o", fpath = "multi-modal/"):
+        self.fname = fname
+        #PDF_context = PDF.pdfLoader(self.FILE_PATH).load() 
         self.model = model
         self.chunk_size = chunk_size,
         self.chunk_overlap = chunk_overlap
         self.fpath = fpath
-        #텍스트에 대해 특정 토큰 크기 적용
-        self.text_splitter = init.CharacterTextSplitter.from_tiktoken_encoder(chunk_size = 4000, chunk_overlap = 0)
+       
 
     def load(self):
+        #요소 추출
+        self.raw_pdf_elements = extract_pdf_elements(self.fpath, self.fname)
+        
+        #테스트, 테이블 추출
+        self.texts, self.tables = categorize_elements(self.raw_pdf_elements)
+        
+        
+        #텍스트에 대해 특정 토큰 크기 적용
+        self.text_splitter = init.CharacterTextSplitter.from_tiktoken_encoder(chunk_size = 4000, chunk_overlap = 0)
         joined_texts = " ".join(self.texts) #텍스트 결합
         self.texts_4k_token = self.text_splitter.split_text(joined_texts) #분할 실행
         
-        self.text_summaries = self.generate_text_summaries(self.texts_4k_token, summarize_texts = True)
+        
+        #
+        
+        
+        self.text_summaries, self.table_summaries = self.generate_text_summaries(self.texts_4k_token ,self.tables,  summarize_texts = True)
         
         self.img_base64_list, self.image_summaries = self.generate_img_summaries(self.fpath)
         
@@ -140,38 +180,46 @@ class CLIP(Loader):
         vectorstore = init.Chroma(collection_name = "sample-rag-multi-modal", embedding_function = init.OpenAIEmbeddings(model="text-embedding-3-large"))
         
         #검색기 생성
-        self.retriever_multi_vector_img = self.create_multi_vector_retriever(vectorstore, self.text_summaries, self.texts, self.image_summaries, self.img_base64_list)
+        #def create_multi_vector_retriever(self, vectorstore, text_summaries, texts, table_summaries,  tables, image_summaries, images):
+        self.retriever_multi_vector_img = self.create_multi_vector_retriever(vectorstore, self.text_summaries, self.texts, self.table_summaries, self.tables, self.image_summaries, self.img_base64_list)
         self.chain_multimodel_rag = self.multi_modal_rag_chain(self.retriever_multi_vector_img)
         return self.chain_multimodel_rag
         
     
         
-    def generate_text_summaries(self, texts, summarize_texts = False):
+    def generate_text_summaries(self, texts, tables, summarize_texts=False):
         """
+        텍스트 요소 요약
         texts: 문자열 리스트
-        summarize_texts: 텍스트 요약 여부를 결정
+        tables: 문자열 리스트
+        summarize_texts: 텍스트 요약 여부를 결정. True/False
         """
-        
-        prompt_text = """You are an assistant tasked with summarizing text for retrieval. \
-                        These summaries will be embedded and used to retrieve the raw text elements. \
-                        Give a concise summary of the text that is well optimized for retrieval. text: {element} """
+
+        # 프롬프트 설정
+        prompt_text = """You are an assistant tasked with summarizing tables and text for retrieval. \
+        These summaries will be embedded and used to retrieve the raw text or table elements. \
+        Give a concise summary of the table or text that is well optimized for retrieval. Table or text: {element} """
         prompt = init.ChatPromptTemplate.from_template(prompt_text)
-        
-        
-        #텍스트 요약 체인
-        model = init.ChatOpenAI(temperature=0, model = self.model)
-        summarize_chain = {"element": lambda x : x} | prompt | model | init.StrOutputParser()
-        
-        
-        #요약을 위한 빈 리스트 초기화
+
+        # 텍스트 요약 체인
+        model = init.ChatOpenAI(temperature=0, model="gpt-4o")
+        summarize_chain = {"element": lambda x: x} | prompt | model | init.StrOutputParser()
+
+        # 요약을 위한 빈 리스트 초기화
         text_summaries = []
-        
-        #제공된 텍스트에 대해 요약이 요청되었을 경우 적용
+        table_summaries = []
+
+        # 제공된 텍스트에 대해 요약이 요청되었을 경우 적용
         if texts and summarize_texts:
-            text_summaries = summarize_chain.batch(texts, {"max_concurrency": 2})
+            text_summaries = summarize_chain.batch(texts, {"max_concurrency": 3})
         elif texts:
             text_summaries = texts
-        return text_summaries
+
+        # 제공된 테이블에 적용
+        if tables:
+            table_summaries = summarize_chain.batch(tables, {"max_concurrency": 3})
+
+        return text_summaries, table_summaries
     
     def encode_image(self, image_path):
         #이미지 파일을 base64 문자열로 인코딩.
@@ -227,7 +275,7 @@ class CLIP(Loader):
         return img_base64_list, image_summaries
     
     
-    def create_multi_vector_retriever(self, vectorstore, text_summaries, texts, image_summaries, images):
+    def create_multi_vector_retriever(self, vectorstore, text_summaries, texts, table_summaries,  tables, image_summaries, images):
         """
     요약을 색인화하지만 원본 이미지나 텍스트를 반환하는 검색기를 생성합니다.
     """
@@ -264,6 +312,10 @@ class CLIP(Loader):
         #텍스트, 테이블, 이미지 추가
         if text_summaries:
             add_documents(retriever, text_summaries, texts)
+            
+        if table_summaries:
+            add_documents(retriever, table_summaries, tables)
+            
         if image_summaries:
             add_documents(retriever, image_summaries, images)
             
