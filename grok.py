@@ -35,8 +35,8 @@ class GrokRAG():
 
 
   
-if __name__ == "__main__":
-    g = GrokRAG()
-    g.create_image(prompt = "A tiger jumping up to the mountains", file_name = "output_images/tiger.png")
-    for m in g.chat.stream("Tell me fun thing to do in NYC"):
-        print(m.content, end = "", flush = True)
+# if __name__ == "__main__":
+#     g = GrokRAG()
+#     g.create_image(prompt = "A tiger jumping up to the mountains", file_name = "output_images/tiger.png")
+#     for m in g.chat.stream("Tell me fun thing to do in NYC"):
+#         print(m.content, end = "", flush = True)
