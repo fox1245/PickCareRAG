@@ -1,4 +1,4 @@
-name: LangChainKR
+name: LangChainKR2
 channels:
   - defaults
   - https://repo.anaconda.com/pkgs/main
@@ -283,4 +283,4 @@ dependencies:
       - xxhash==3.5.0
       - yarl==1.20.1
       - zstandard==0.23.0
-prefix: C:\Users\admin\.conda\envs\LangChainKR
+prefix: C:\Users\admin\.conda\envs\LangChainKR2
