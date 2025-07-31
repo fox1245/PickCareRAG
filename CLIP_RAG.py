@@ -172,7 +172,7 @@ class CLIP(Loader):
         
         self.text_summaries, self.table_summaries = self.generate_text_summaries(self.texts_4k_token ,self.tables,  summarize_texts = True)
         
-        self.img_base64_list, self.image_summaries = self.generate_img_summaries(self.fpath)
+        self.img_base64_list, self.image_summaries = self.generate_img_summaries("figures")
         
         print(self.image_summaries)
         

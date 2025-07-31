@@ -263,7 +263,7 @@ if __name__ == "__main__":
     # print("설치 성공!")
     clip = CLIP.CLIP(4000, 0, file2, fpath = "data/")
     chain = clip.load()
-    query = "다음 문서를 요약하세요. 그리고 맨처음 주어진 이미지에 대해서 설명하세요"
+    query = "다음 문서를 요약하세요. 주어진 이미지들에 대해서 설명하세요"
     response = chain.invoke(query, limit = 6)
     print(response)
     
