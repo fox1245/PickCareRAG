@@ -63,7 +63,7 @@ def PDFask(file_path, model, QA, prompt = None, k = 3):
     text_splitter = init.RecursiveCharacterTextSplitter(chunk_size = 1000, chunk_overlap = 50)
     
     split_docs = loader.load_and_split(text_splitter = text_splitter)
-    print(type(split_docs))
+    #print(type(split_docs))
     vectorstore = init.FAISS.from_documents(documents= split_docs, embedding = init.OpenAIEmbeddings(model="text-embedding-3-large"))
     
     
@@ -97,6 +97,46 @@ def PDFask(file_path, model, QA, prompt = None, k = 3):
     response_buff.append(f"[HUMAN]\n{QA}\n")
     response_buff.append(f"[AI]\n{response}")
     return response_buff
+
+
+def JSONask(file_path, jq_schema,  QA ,model = "gpt-4o", prompt = None, k = 3, text_content = False):
+    loader = JL.jsonLoader(file_path = file_path, jq_schema= jq_schema, text_content = text_content)
+    
+    text_splitter = init.RecursiveCharacterTextSplitter(chunk_size = 1000, chunk_overlap = 50)
+    
+    split_docs = loader.load_and_split(text_splitter=text_splitter)
+    #vectorstore = init.FAISS.from_documents(documents = split_docs, embedding = init.OpenAIEmbeddings(model = "text-embedding-3-large"))
+    
+    bm25_retriever = init.BM25Retriever.from_documents(split_docs)    
+    bm25_retriever.k = k
+    faiss_vectorstore = init.FAISS.from_documents(split_docs, init.OpenAIEmbeddings(model="text-embedding-3-large"))
+    faiss_retriever = faiss_vectorstore.as_retriever(search_kwargs = {"k" : k})
+    #앙상블 리트리버를 초기화
+    ensemble_retiever = init.EnsembleRetriever(
+        retrievers=[bm25_retriever, faiss_retriever], weight = [0.5, 0.5]
+    )
+    
+    if prompt == None:
+        prompt = init.hub.pull("rlm/rag-prompt") #프롬프트
+    
+    llm = init.ChatOpenAI(model_name = model)
+    
+    rag_chain = (
+        {"context" : ensemble_retiever | format_docs, "question" : init.RunnablePassthrough()}
+        |prompt
+        |llm
+        |init.StrOutputParser()
+    )
+    
+    response = rag_chain.invoke(QA)
+    response_buff = list()
+    response_buff.append(f"JSON Path: {file_path}")
+    response_buff.append(f"[HUMAN]\n{QA}\n")
+    response_buff.append(f"[AI]\n{response}")
+    return response_buff
+        
+    
+    
 
 
 def promptMaker(Prompt : dict):
@@ -237,34 +277,42 @@ def RAG_RunnableWithMessageHistory(file_path, ask : dict,  session_id: dict , mo
 
 
 if __name__ == "__main__":
-    # TC.TestClass.test_webBase()
-    # TC.TestClass.test_webBase2()
-    # TC.TestClass.testJSON()
-    # TC.TestClass.testPDF()
-    # TC.TestClass.testPPT()
-    # loader = CL.csvLoader(file_path = "data/titanic.csv")
-    # docs = loader.load()
-    # for elem in docs:
-    #     print(elem.page_content)
-    # QA = "삼성 가우스에 대해 설명해주세요"
-    # file = "data/SPRI_AI_Brief_2023년12월호_F.pdf"
-    file2 = "Tensorrt_demos 빌드 방법 정리.pdf"
-    # pdfQuery = PDFask(model = "gpt-4o-mini", QA = QA, file_path = file)
-    # for elem in pdfQuery:
-    #     print(elem)
-    # global store
-    # store = {}
-    # session_id = {'session_id' : 'rag123'}
-    # ask = {'system': '당신은 Question-Answering 챗봇입니다. 주어진 질문에 대한 답변을 제공해주세요.', 'question': '주어진 자료에서 핵심 사항을 요약해서 노래로 만들어 주세요'}
-    # #response = simpleChatWithHistory(ask)
-    # response = RAG_RunnableWithMessageHistory(file_path = file, ask = ask, session_id= session_id)
-    # print(response)
+    TC.TestClass.test_webBase()
+    TC.TestClass.test_webBase2()
+    TC.TestClass.testJSON()
+    TC.TestClass.testPDF()
+    TC.TestClass.testPPT()
+    loader = CL.csvLoader(file_path = "data/titanic.csv")
+    docs = loader.load()
+    for elem in docs:
+        print(elem.page_content)
+    QA = "삼성 가우스에 대해 설명해주세요"
+    file = "data/SPRI_AI_Brief_2023년12월호_F.pdf"
+    file2 = "layout-parser-paper.pdf"
+    file3 = "data/people.json"
+    pdfQuery = PDFask(model = "gpt-4o-mini", QA = QA, file_path = file)
+    for elem in pdfQuery:
+        print(elem)
+    global store
+    store = {}
+    session_id = {'session_id' : 'rag123'}
+    ask = {'system': '당신은 Question-Answering 챗봇입니다. 주어진 질문에 대한 답변을 제공해주세요.', 'question': '주어진 자료에서 핵심 사항을 요약해서 노래로 만들어 주세요'}
+    #response = simpleChatWithHistory(ask)
+    response = RAG_RunnableWithMessageHistory(file_path = file, ask = ask, session_id= session_id)
+    print(response)
     # import unstructured.partition.pdf
     # print("설치 성공!")
+    
+    
     clip = CLIP.CLIP(4000, 0, file2, fpath = "data/")
     chain = clip.load()
     query = "다음 문서를 요약하세요. 주어진 이미지들에 대해서 설명하세요"
     response = chain.invoke(query, limit = 6)
     print(response)
+    # test_json = JL.jsonLoader(file_path = file3, jq_schema=".[].phoneNumbers", text_content= False)
+    # text_splitter = init.RecursiveCharacterTextSplitter(chunk_size = 1000, chunk_overlap = 50)
+    # print(test_json.load())
     
+    # json_response = JSONask(file_path = file3, jq_schema= ".[].phoneNumbers", QA = "다음 문서를 분석하여 요약하세요")
+    # print(json_response)
     
