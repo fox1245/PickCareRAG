@@ -17,6 +17,7 @@ class jsonLoader(Loader):
         docs = self.loader.load()
         pretty_str = init.pformat(docs, indent=2, width=40)
         return pretty_str
+    
     def load_and_split(self, text_splitter):
         try:
             split_docs = self.loader.load_and_split(text_splitter)

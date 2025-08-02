@@ -6,6 +6,7 @@ import pptLoader as PL
 import testClass as TC
 import csvLoader as CL
 import CLIP_RAG as CLIP
+import hwpLoader as HL
 # API 키 정보 로드
 init.load_dotenv()
 
@@ -103,7 +104,7 @@ def JSONask(file_path, jq_schema,  QA ,model = "gpt-4o", prompt = None, k = 3, t
     loader = JL.jsonLoader(file_path = file_path, jq_schema= jq_schema, text_content = text_content)
     
     text_splitter = init.RecursiveCharacterTextSplitter(chunk_size = 1000, chunk_overlap = 50)
-    
+    loader.load()
     split_docs = loader.load_and_split(text_splitter=text_splitter)
     #vectorstore = init.FAISS.from_documents(documents = split_docs, embedding = init.OpenAIEmbeddings(model = "text-embedding-3-large"))
     
@@ -135,6 +136,46 @@ def JSONask(file_path, jq_schema,  QA ,model = "gpt-4o", prompt = None, k = 3, t
     response_buff.append(f"[AI]\n{response}")
     return response_buff
         
+        
+def HWPask(file_path, QA, model = "gpt-4o", prompt = None, k = 3):
+    loader = HL.hwpLoader(file_path= file_path)
+    context = loader.load()
+    text_splitter = init.RecursiveCharacterTextSplitter(chunk_size = 1000, chunk_overlap = 50)
+    text_chunks = text_splitter.split_text(context)
+    # 문자열 리스트를 Document 객체 리스트로 변환
+    split_docs = [init.Document(page_content=chunk, metadata={"source": file_path}) for chunk in text_chunks]
+    #vectorstore = init.FAISS.from_documents(documents = split_docs, embedding = init.OpenAIEmbeddings(model = "text-embedding-3-large"))
+    
+    bm25_retriever = init.BM25Retriever.from_documents(split_docs)    
+    bm25_retriever.k = k
+    faiss_vectorstore = init.FAISS.from_documents(split_docs, init.OpenAIEmbeddings(model="text-embedding-3-large"))
+    faiss_retriever = faiss_vectorstore.as_retriever(search_kwargs = {"k" : k})
+    #앙상블 리트리버를 초기화
+    ensemble_retiever = init.EnsembleRetriever(
+        retrievers=[bm25_retriever, faiss_retriever], weight = [0.5, 0.5]
+    )
+    
+    if prompt == None:
+        prompt = init.hub.pull("rlm/rag-prompt") #프롬프트
+    
+    prompt += "\n answer in korean"
+    
+    llm = init.ChatOpenAI(model_name = model)
+    
+    rag_chain = (
+        {"context" : ensemble_retiever | format_docs, "question" : init.RunnablePassthrough()}
+        |prompt
+        |llm
+        |init.StrOutputParser()
+    )
+    
+    response = rag_chain.invoke(QA)
+    response_buff = list()
+    response_buff.append(f"HWP Path: {file_path}")
+    response_buff.append(f"[HUMAN]\n{QA}\n")
+    response_buff.append(f"[AI]\n{response}")
+    return response_buff
+    
     
     
 
@@ -265,6 +306,10 @@ def RAG_RunnableWithMessageHistory(file_path, ask : dict,  session_id: dict , mo
 
 
 
+        
+        
+
+
     
 
 
@@ -277,38 +322,38 @@ def RAG_RunnableWithMessageHistory(file_path, ask : dict,  session_id: dict , mo
 
 
 if __name__ == "__main__":
-    TC.TestClass.test_webBase()
-    TC.TestClass.test_webBase2()
-    TC.TestClass.testJSON()
-    TC.TestClass.testPDF()
-    TC.TestClass.testPPT()
-    loader = CL.csvLoader(file_path = "data/titanic.csv")
-    docs = loader.load()
-    for elem in docs:
-        print(elem.page_content)
-    QA = "삼성 가우스에 대해 설명해주세요"
-    file = "data/SPRI_AI_Brief_2023년12월호_F.pdf"
-    file2 = "layout-parser-paper.pdf"
+    # TC.TestClass.test_webBase()
+    # TC.TestClass.test_webBase2()
+    # TC.TestClass.testJSON()
+    # TC.TestClass.testPDF()
+    # TC.TestClass.testPPT()
+    # loader = CL.csvLoader(file_path = "data/titanic.csv")
+    # docs = loader.load()
+    # for elem in docs:
+    #     print(elem.page_content)
+    # QA = "삼성 가우스에 대해 설명해주세요"
+    # file = "data/SPRI_AI_Brief_2023년12월호_F.pdf"
+    # file4 = "Tensorrt_demos 빌드 방법 정리.pdf"
     file3 = "data/people.json"
-    pdfQuery = PDFask(model = "gpt-4o-mini", QA = QA, file_path = file)
-    for elem in pdfQuery:
-        print(elem)
-    global store
-    store = {}
-    session_id = {'session_id' : 'rag123'}
-    ask = {'system': '당신은 Question-Answering 챗봇입니다. 주어진 질문에 대한 답변을 제공해주세요.', 'question': '주어진 자료에서 핵심 사항을 요약해서 노래로 만들어 주세요'}
-    #response = simpleChatWithHistory(ask)
-    response = RAG_RunnableWithMessageHistory(file_path = file, ask = ask, session_id= session_id)
-    print(response)
+    # pdfQuery = PDFask(model = "gpt-4o-mini", QA = QA, file_path = file)
+    # for elem in pdfQuery:
+    #     print(elem)
+    # global store
+    # store = {}
+    # session_id = {'session_id' : 'rag123'}
+    # ask = {'system': '당신은 Question-Answering 챗봇입니다. 주어진 질문에 대한 답변을 제공해주세요.', 'question': '주어진 자료에서 핵심 사항을 요약해서 노래로 만들어 주세요'}
+    # response = simpleChatWithHistory(ask)
+    # response = RAG_RunnableWithMessageHistory(file_path = file, ask = ask, session_id= session_id)
+    # print(response)
     # import unstructured.partition.pdf
     # print("설치 성공!")
     
     
-    clip = CLIP.CLIP(4000, 0, file2, fpath = "data/")
-    chain = clip.load()
-    query = "다음 문서를 요약하세요. 주어진 이미지들에 대해서 설명하세요"
-    response = chain.invoke(query, limit = 6)
-    print(response)
+    # clip = CLIP.CLIP(4000, 0, file4, fpath = "data/")
+    # chain = clip.load()
+    # query = "다음 문서가 말하고자하는 내용에 대해서 쉬운 용어로 설명하세요.  그리고 상세히 내용을 분석하세요. 그리고 주어진 이미지들에 대해서 설명하세요. 그리고 당신이 정리한 모든 내용을 일본어로 번역하세요"
+    # response = chain.invoke(query, limit = 6)
+    # print(response)
     # test_json = JL.jsonLoader(file_path = file3, jq_schema=".[].phoneNumbers", text_content= False)
     # text_splitter = init.RecursiveCharacterTextSplitter(chunk_size = 1000, chunk_overlap = 50)
     # print(test_json.load())
@@ -316,3 +361,10 @@ if __name__ == "__main__":
     # json_response = JSONask(file_path = file3, jq_schema= ".[].phoneNumbers", QA = "다음 문서를 분석하여 요약하세요")
     # print(json_response)
     
+    # hwp = HL.hwpLoader(r"Q:\Coding\PickCareRAG\디지털 정부혁신 추진계획.hwp")
+    # docs = hwp.load()
+    # print(docs)
+    hwp_response = HWPask(file_path= r"Q:\Coding\PickCareRAG\재미있는 일본어 단어암기.hwp", QA = "다음 문서에서 핵심 단어나 사회적, 경제적, 실용적으로 중요한 의미의 내용을 간추려서 단어장 만들어 주세요")
+    for elem in hwp_response:
+        print(elem, end = "", flush = True)
+

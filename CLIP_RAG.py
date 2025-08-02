@@ -3,6 +3,16 @@ import pdfLoader as PDF
 import re
 from Loader import Loader
 
+def remove_nonempty_dir(path):
+    try:
+        if init.os.path.exists(path):
+            init.shutil.rmtree(path)
+            print(f"해당 디렉터리와 디렉터리의 내용이 삭제 되었습니다.{path}")
+        else:
+            print(f"해당하는 디렉터리가 존재하지 않습니다. {path}")
+    except Exception as e:
+        print(f"삭제 중 오류 발생 {path}")
+
 def plt_img_base64(img_base64):
     """base64 인코딩된 문자열을 이미지로 표시"""
     # base64 문자열을 소스로 사용하는 HTML img 태그 생성
@@ -155,6 +165,7 @@ class CLIP(Loader):
 
     def load(self):
         #요소 추출
+
         self.raw_pdf_elements = extract_pdf_elements(self.fpath, self.fname)
         
         #테스트, 테이블 추출
@@ -183,6 +194,7 @@ class CLIP(Loader):
         #def create_multi_vector_retriever(self, vectorstore, text_summaries, texts, table_summaries,  tables, image_summaries, images):
         self.retriever_multi_vector_img = self.create_multi_vector_retriever(vectorstore, self.text_summaries, self.texts, self.table_summaries, self.tables, self.image_summaries, self.img_base64_list)
         self.chain_multimodel_rag = self.multi_modal_rag_chain(self.retriever_multi_vector_img)
+        remove_nonempty_dir("figures")
         return self.chain_multimodel_rag
         
     
