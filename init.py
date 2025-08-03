@@ -50,6 +50,8 @@ import pythoncom
 import win32com.client
 from pyhwpx import Hwp
 from langchain_core.documents import Document
+from langchain.schema import format_document
+import matplotlib.pyplot as plt
 
 
 

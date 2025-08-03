@@ -7,6 +7,7 @@ import testClass as TC
 import csvLoader as CL
 import CLIP_RAG as CLIP
 import hwpLoader as HL
+from test_grok import create_image
 # API 키 정보 로드
 init.load_dotenv()
 
@@ -139,7 +140,7 @@ def JSONask(file_path, jq_schema,  QA ,model = "gpt-4o", prompt = None, k = 3, t
         
 def HWPask(file_path, QA, model = "gpt-4o", prompt = None, k = 3):
     loader = HL.hwpLoader(file_path= file_path)
-    context = loader.load()
+    context = loader.load2()
     text_splitter = init.RecursiveCharacterTextSplitter(chunk_size = 1000, chunk_overlap = 50)
     text_chunks = text_splitter.split_text(context)
     # 문자열 리스트를 Document 객체 리스트로 변환
@@ -160,10 +161,12 @@ def HWPask(file_path, QA, model = "gpt-4o", prompt = None, k = 3):
     
     prompt += "\n answer in korean"
     
+    
     llm = init.ChatOpenAI(model_name = model)
     
     rag_chain = (
         {"context" : ensemble_retiever | format_docs, "question" : init.RunnablePassthrough()}
+        #{"context" : init.RunnableLambda(format_docs) | ensemble_retiever, "question" : init.RunnablePassthrough()}
         |prompt
         |llm
         |init.StrOutputParser()
@@ -304,7 +307,13 @@ def RAG_RunnableWithMessageHistory(file_path, ask : dict,  session_id: dict , mo
     
     return response
 
-
+def prompt_maker():
+    custom_prompt = init.PromptTemplate(
+    input_variables=["context", "question"],
+    template="냥! 저는 문서를 읽고 말할 줄 아는 똑똑한 고양이예요~ 😺\n{context}를 보고, {question}에 대해 최대한 귀엽고 사랑스럽고 카와이한 고양이 말투로 정리해줄게요! 야옹~ 답변은 아주 디테일하고 내 섬세한 수염처럼 초~ 센서티브하게 답변해줄게 냥냥. 답변이 만족스러우면 고급 츄르 한 개 줄래냥?. \n답변: ",
+    )
+    return custom_prompt
+    
 
         
         
@@ -364,7 +373,29 @@ if __name__ == "__main__":
     # hwp = HL.hwpLoader(r"Q:\Coding\PickCareRAG\디지털 정부혁신 추진계획.hwp")
     # docs = hwp.load()
     # print(docs)
-    hwp_response = HWPask(file_path= r"Q:\Coding\PickCareRAG\재미있는 일본어 단어암기.hwp", QA = "다음 문서에서 핵심 단어나 사회적, 경제적, 실용적으로 중요한 의미의 내용을 간추려서 단어장 만들어 주세요")
-    for elem in hwp_response:
+    custom_prompt = prompt_maker()
+    # hwp_response = HWPask(file_path= r"Q:\Coding\PickCareRAG\디지털 정부혁신 추진계획.hwp",prompt = custom_prompt,  QA = "해당 문서를 박테리아도 이해할 수 있을 만큼 쉽게 정리하세요")
+    # for elem in hwp_response:
+    #     print(elem, end = "", flush = True)
+    # prompt = init.hub.pull("rlm/rag-prompt")
+    # print(prompt)
+    
+    pdf_response = PDFask(file_path="Q:\Coding\PickCareRAG\data\Tensorrt_demos 빌드 방법 정리.pdf", model = "gpt-4o",  QA = "해당 문서를 박테리아도 이해할 수 있을 만큼 쉽게 정리하세요", prompt=custom_prompt)
+    for elem in pdf_response:
         print(elem, end = "", flush = True)
+    create_image(prompt = "A photo of a cute kitten in Kawhi asking for a snack. An animation from the 1980s in Japan", file_name = "output_images/lovely_cat.png")
+    
+    image_path = "output_images/lovely_cat.png"
+    if init.os.path.exists(image_path):
+        img = init.Image.open(image_path)
+        
+        canvas = init.plt.imshow(img)
+        init.plt.axis('off')
+        init.plt.title("귀여운 고양이 사진! 😺")
+        init.plt.show()
+        
+    else:
+        print(f"이미지 파일이 생성되지 않았습니다: {image_path}")
+        
+        
 
