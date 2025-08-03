@@ -25,5 +25,5 @@ MCP서버를 경유한 생성형 AI서비스 지원
 
 *현재 미비상황*
 
-1.MCP서버 구현
-2.AWS EC2와 통신할 Restful api기능의 구현
+1. MCP서버 구현
+2. AWS EC2와 통신할 Restful api기능의 구현
