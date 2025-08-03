@@ -8,10 +8,31 @@ import csvLoader as CL
 import CLIP_RAG as CLIP
 import hwpLoader as HL
 from test_grok import create_image
+from trellis import create_3d_from_image
+
+
+
+
+
+
 # API 키 정보 로드
 init.load_dotenv()
 
 #init.logging.langsmith("Pickcare-RAG")
+
+# tqdm 객체를 전역 변수로 선언 (callback에서 공유)
+progress_bar = None
+
+def callback(step: int, steps: int, time: float):
+    print("Completed step: {} of {}".format(step, steps))
+    
+def callback2(step: int, steps: int, time: float):
+    global progress_bar
+    if progress_bar is None:
+        progress_bar = init.tqdm(total=steps, desc="Generating Image")  # 초기화
+    progress_bar.update(1)  # 진행 상황 업데이트
+    if step == steps:  # 완료 시 클리어
+        progress_bar.close()
 
 def format_docs(docs):
     # 검색한 문서 결과를 하나의 문단으로 합쳐줍니다.
@@ -314,7 +335,34 @@ def prompt_maker():
     )
     return custom_prompt
     
-
+def create_diffusion_image(file_name, prompt):
+    stable_diffusion = init.StableDiffusion(
+        model_path=r"D:\Coding\PythonCleanCode\practice_20250710\model\prefectPonyXL_v40.safetensors",
+        # wtype="default", # Weight type (e.g. "q8_0", "f16", etc) (The "default" setting is automatically applied and determines the weight type of a model file)
+    )
+    output = stable_diffusion.txt_to_img(
+        prompt=prompt,
+        width=512, # Must be a multiple of 64
+        height=512, # Must be a multiple of 64
+        progress_callback=callback2,
+        # seed=1337, # Uncomment to set a specific seed (use -1 for a random seed)
+    )
+    output[0].save(f"output_images/{file_name}.png") # Output returned as list of PIL Images
+    
+    
+    image_path = f"output_images/{file_name}.png"
+    if init.os.path.exists(image_path):
+        img = init.Image.open(image_path)
+        
+        init.plt.rc('font', family=['Malgun Gothic', 'Segoe UI Emoji'])
+        init.plt.rcParams['axes.unicode_minus'] = False
+        canvas = init.plt.imshow(img)
+        init.plt.axis('off')
+        init.plt.title("귀여운 고양이 사진! 😺")
+        init.plt.show()
+        
+    else:
+        print(f"이미지 파일이 생성되지 않았습니다: {image_path}")
         
         
 
@@ -343,7 +391,7 @@ if __name__ == "__main__":
     # QA = "삼성 가우스에 대해 설명해주세요"
     # file = "data/SPRI_AI_Brief_2023년12월호_F.pdf"
     # file4 = "Tensorrt_demos 빌드 방법 정리.pdf"
-    file3 = "data/people.json"
+    # file3 = "data/people.json"
     # pdfQuery = PDFask(model = "gpt-4o-mini", QA = QA, file_path = file)
     # for elem in pdfQuery:
     #     print(elem)
@@ -373,29 +421,25 @@ if __name__ == "__main__":
     # hwp = HL.hwpLoader(r"Q:\Coding\PickCareRAG\디지털 정부혁신 추진계획.hwp")
     # docs = hwp.load()
     # print(docs)
-    custom_prompt = prompt_maker()
+    # custom_prompt = prompt_maker()
     # hwp_response = HWPask(file_path= r"Q:\Coding\PickCareRAG\디지털 정부혁신 추진계획.hwp",prompt = custom_prompt,  QA = "해당 문서를 박테리아도 이해할 수 있을 만큼 쉽게 정리하세요")
     # for elem in hwp_response:
     #     print(elem, end = "", flush = True)
     # prompt = init.hub.pull("rlm/rag-prompt")
     # print(prompt)
     
-    pdf_response = PDFask(file_path="Q:\Coding\PickCareRAG\data\Tensorrt_demos 빌드 방법 정리.pdf", model = "gpt-4o",  QA = "해당 문서를 박테리아도 이해할 수 있을 만큼 쉽게 정리하세요", prompt=custom_prompt)
-    for elem in pdf_response:
-        print(elem, end = "", flush = True)
-    create_image(prompt = "A photo of a cute kitten in Kawhi asking for a snack. An animation from the 1980s in Japan", file_name = "output_images/lovely_cat.png")
+    # pdf_response = PDFask(file_path="Q:\Coding\PickCareRAG\data\Tensorrt_demos 빌드 방법 정리.pdf", model = "gpt-4o",  QA = "해당 문서를 박테리아도 이해할 수 있을 만큼 쉽게 정리하세요", prompt=custom_prompt)
+    # for elem in pdf_response:
+    #     print(elem, end = "", flush = True)
     
-    image_path = "output_images/lovely_cat.png"
-    if init.os.path.exists(image_path):
-        img = init.Image.open(image_path)
+    # create_diffusion_image("cute_cat", "very very cute, lovely, precious kitty staring at me")
         
-        canvas = init.plt.imshow(img)
-        init.plt.axis('off')
-        init.plt.title("귀여운 고양이 사진! 😺")
-        init.plt.show()
-        
-    else:
-        print(f"이미지 파일이 생성되지 않았습니다: {image_path}")
-        
-        
+    
+    # create_image(prompt = "A photo of a cute kitten in Kawhi asking for a snack. An animation from the 1980s in Japan", file_name = "output_images/lovely_cat.png")
+    
+    #create_3d_from_image(file_path= "output_images/lovely_cat.png", output_file = "cutecat.mp4")
+    pass
+
+
+            
 

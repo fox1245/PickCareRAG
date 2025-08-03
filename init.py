@@ -52,6 +52,9 @@ from pyhwpx import Hwp
 from langchain_core.documents import Document
 from langchain.schema import format_document
 import matplotlib.pyplot as plt
+from stable_diffusion_cpp import StableDiffusion
+from tqdm import tqdm
+from stable_diffusion_cpp import StableDiffusion
 
 
 
