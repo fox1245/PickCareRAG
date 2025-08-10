@@ -126,7 +126,7 @@ def PDFask(file_path, model, QA, prompt = None, k = 3):
     return response_buff
 
 
-def JSONask(file_path, jq_schema,  QA ,model = "gpt-4o", prompt = None, k = 3, text_content = False):
+def JSONask(file_path, jq_schema,  QA , model = "gpt-5", prompt = None, k = 3, text_content = False):
     loader = JL.jsonLoader(file_path = file_path, jq_schema= jq_schema, text_content = text_content)
     
     text_splitter = init.RecursiveCharacterTextSplitter(chunk_size = 1000, chunk_overlap = 50)
@@ -163,7 +163,7 @@ def JSONask(file_path, jq_schema,  QA ,model = "gpt-4o", prompt = None, k = 3, t
     return response_buff
         
         
-def HWPask(file_path, QA, model = "gpt-4o", prompt = None, k = 3):
+def HWPask(file_path, QA, model = "gpt-5", prompt = None, k = 3):
     loader = HL.hwpLoader(file_path= file_path)
     context = loader.load2()
     text_splitter = init.RecursiveCharacterTextSplitter(chunk_size = 1000, chunk_overlap = 50)
@@ -256,7 +256,7 @@ def simpleChatWithHistory(ask):
     return response
 
 
-def RAG_RunnableWithMessageHistory(file_path, ask : dict,  session_id: dict , model = "gpt-4o-mini",temp = 0,  k=3, chunk_size = 1000, chunk_overlap = 50):
+def RAG_RunnableWithMessageHistory(file_path, ask : dict,  session_id: dict , model = "gpt-5-mini",temp = 0,  k=3, chunk_size = 1000, chunk_overlap = 50):
     #문서 로드
     loader = PDF.pdfLoader(file_path=file_path, extract_bool= True)
     docs = loader.load()
@@ -297,8 +297,12 @@ def RAG_RunnableWithMessageHistory(file_path, ask : dict,  session_id: dict , mo
     )
     
     
+    if "gpt-5" in model:
     #모델 생성
-    llm = init.ChatOpenAI(model_name = model, temperature= temp)
+        llm = init.ChatOpenAI(model_name = model, temperature= None)
+    else:
+        llm = init.ChatOpenAI(model_name = model, temperature= temp)
+    
     
     #체인 생성
     chain = (
@@ -403,7 +407,7 @@ if __name__ == "__main__":
     file = "data/SPRI_AI_Brief_2023년12월호_F.pdf"
     file4 = r"Tensorrt_demos.pdf"
     file3 = "data/people.json"
-    pdfQuery = PDFask(model = "gpt-4o-mini", QA = QA, file_path = file)
+    pdfQuery = PDFask(model = "gpt-5-mini", QA = QA, file_path = file)
     for elem in pdfQuery:
         print(elem)
     global store
@@ -447,10 +451,10 @@ if __name__ == "__main__":
     print(prompt)
     if init.platform.system() == "Windows": 
         print("윈도우")
-        pdf_response = PDFask(file_path=r"Q:\Coding\PickCareRAG\data\Tensorrt_demos.pdf", model = "gpt-4o",  QA = "해당 문서를 길가던 참새도 이해할 수 있을 만큼 쉽게 정리하세요", prompt=custom_prompt)
+        pdf_response = PDFask(file_path=r"Q:\Coding\PickCareRAG\data\Tensorrt_demos.pdf", model = "gpt-5",  QA = "해당 문서를 길가던 참새도 이해할 수 있을 만큼 쉽게 정리하세요", prompt=custom_prompt)
     elif init.platform.system() == "Linux":
         print("리눅스")
-        pdf_response = PDFask(file_path=r"/mnt/q/Coding/PickCareRAG/data/Tensorrt_demos.pdf", model = "gpt-4o",  QA = "해당 문서를 충치에 걸린 다람쥐도 이해할 수 있을 만큼 쉽게 정리하세요", prompt=custom_prompt)
+        pdf_response = PDFask(file_path=r"/mnt/q/Coding/PickCareRAG/data/Tensorrt_demos.pdf", model = "gpt-5",  QA = "해당 문서를 충치에 걸린 다람쥐도 이해할 수 있을 만큼 쉽게 정리하세요", prompt=custom_prompt)
     for elem in pdf_response:
         print(elem, end = "", flush = True)
     

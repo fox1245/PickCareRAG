@@ -154,13 +154,14 @@ def categorize_elements(raw_pdf_elements):
 
 
 class CLIP(Loader):
-    def __init__(self, chunk_size, chunk_overlap, fname, model = "gpt-4o", fpath = "multi-modal/"):
+    def __init__(self, chunk_size, chunk_overlap,  fname, temp = 0.1, model = "gpt-5", fpath = "multi-modal/"):
         self.fname = fname
         #PDF_context = PDF.pdfLoader(self.FILE_PATH).load() 
         self.model = model
-        self.chunk_size = chunk_size,
+        self.chunk_size = chunk_size
         self.chunk_overlap = chunk_overlap
         self.fpath = fpath
+        self.temperature = temp
        
 
     def load(self):
@@ -214,7 +215,11 @@ class CLIP(Loader):
         prompt = init.ChatPromptTemplate.from_template(prompt_text)
 
         # 텍스트 요약 체인
-        model = init.ChatOpenAI(temperature=0, model="gpt-4o")
+        if "gpt-5" in self.model:
+            model = init.ChatOpenAI(temperature=None, model="gpt-5")
+        else:
+            model = init.ChatOpenAI(temperature= self.temperature, model = self.model)
+            
         summarize_chain = {"element": lambda x: x} | prompt | model | init.StrOutputParser()
 
         # 요약을 위한 빈 리스트 초기화
@@ -241,7 +246,11 @@ class CLIP(Loader):
         
     def image_summarize(self, img_base64, prompt):
         #이미지 요약을 생성
-        chat = init.ChatOpenAI(model = self.model, max_tokens = 2048)
+        if "gpt-5" in self.model:
+            
+            chat = init.ChatOpenAI(model = self.model, max_tokens = 2048)
+        else:
+            chat = init.ChatOpenAI(model = self.model, max_tokens = 2048, temperature= self.temperature)
         
         msg = chat.invoke(
             [
@@ -339,7 +348,10 @@ class CLIP(Loader):
         """
 
         # 멀티모달 LLM
-        model = init.ChatOpenAI(temperature=0, model="gpt-4o", max_tokens=2048)
+        if "gpt-5" in self.model:
+            model = init.ChatOpenAI(temperature=None, model="gpt-5", max_tokens=2048)
+        else:
+            model = init.ChatOpenAI(temperature = self.temperature, model = self.model, max_tokens = 2048)
 
         # RAG 파이프라인
         chain = (

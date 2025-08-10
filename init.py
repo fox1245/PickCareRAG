@@ -32,6 +32,7 @@ from langchain_core.prompts import PromptTemplate
 from operator import itemgetter
 from langchain.output_parsers.json import SimpleJsonOutputParser
 from langchain.callbacks.base import BaseCallbackHandler
+from langchain_teddynote.document_loaders import HWPLoader
 import os
 import io
 from PIL import Image
