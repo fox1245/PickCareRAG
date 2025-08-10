@@ -1,0 +1,11463 @@
+[SPARSE] Backend: spconv, Attention: flash_attn
+URL: https://n.news.naver.com/article/437/0000378416
+문서의 수: 1
+[HUMAN]
+부영그룹의 출산 장려 정책에 대해 설명해주세요. 그리고 한국어로 답변해주셔야 합니다.
+
+[AI]
+부영그룹은 2021년 이후 태어난 직원 자녀에게 1억원씩 지원하는 출산 장려 정책을 도입했습니다. 연년생이나 쌍둥이인 경우에는 최대 2억원을 받을 수 있으며, 셋째 아이를 낳으면 국민주택도 제공할 계획입니다. 이러한 정책은 직원들의 경제적 부담을 줄이고 출산을 촉진하기 위한 노력의 일환으로 시행되고 있습니다.
+URL: https://www.bbc.com/news/business-68092814
+문서의 수: 1
+[HUMAN]
+주어진 문서를 분석하세요. 그리고 한국어로 답변해주셔야 합니다.
+
+[AI]
+문서에서는 생성적 AI가 데이터를 분석하고 스스로 결정을 내릴 수 있지만, 잘못된 데이터를 기반으로 학습할 경우 점점 더 나쁜 결정을 내릴 수 있다는 우려를 다룹니다. 아마존의 채용 도구 사례처럼 AI가 성별 편향을 보일 수 있으며, 이로 인해 특정 집단을 불리하게 만드는 결정을 내릴 수 있습니다. 따라서 AI 시스템의 정확성과 공정성을 확보하기 위해서는 엄격한 감시가 필요하다고 강조하고 있습니다.
+[ Document(metadata={'source': 'Q:\\Coding\\PickCareRAG\\data\\people.json', 'seq_num': 1}, page_content='["483-4639-1933", "947-4179-7976"]'),
+  Document(metadata={'source': 'Q:\\Coding\\PickCareRAG\\data\\people.json', 'seq_num': 2}, page_content='["337-5721-3227", "387-3768-9586"]'),
+  Document(metadata={'source': 'Q:\\Coding\\PickCareRAG\\data\\people.json', 'seq_num': 3}, page_content='["354-5563-4638", "471-9212-1826"]'),
+  Document(metadata={'source': 'Q:\\Coding\\PickCareRAG\\data\\people.json', 'seq_num': 4}, page_content='["468-2796-2152", "922-5760-7030"]'),
+  Document(metadata={'source': 'Q:\\Coding\\PickCareRAG\\data\\people.json', 'seq_num': 5}, page_content='["751-2823-8259", "722-7267-9516"]'),
+  Document(metadata={'source': 'Q:\\Coding\\PickCareRAG\\data\\people.json', 'seq_num': 6}, page_content='["462-4433-5968", "483-1709-4850"]'),
+  Document(metadata={'source': 'Q:\\Coding\\PickCareRAG\\data\\people.json', 'seq_num': 7}, page_content='["382-2779-3692", "835-4343-5346"]'),
+  Document(metadata={'source': 'Q:\\Coding\\PickCareRAG\\data\\people.json', 'seq_num': 8}, page_content='["136-2831-1021", "818-9721-7208"]'),
+  Document(metadata={'source': 'Q:\\Coding\\PickCareRAG\\data\\people.json', 'seq_num': 9}, page_content='["423-5001-2734", "256-4271-3750"]'),
+  Document(metadata={'source': 'Q:\\Coding\\PickCareRAG\\data\\people.json', 'seq_num': 10}, page_content='["668-1157-6180", "815-9997-6459"]'),
+  Document(metadata={'source': 'Q:\\Coding\\PickCareRAG\\data\\people.json', 'seq_num': 11}, page_content='["745-5529-4411", "437-3892-3668"]'),
+  Document(metadata={'source': 'Q:\\Coding\\PickCareRAG\\data\\people.json', 'seq_num': 12}, page_content='["914-2071-3446", "539-6835-4629"]'),
+  Document(metadata={'source': 'Q:\\Coding\\PickCareRAG\\data\\people.json', 'seq_num': 13}, page_content='["709-3578-3445", "907-3295-1822"]'),
+  Document(metadata={'source': 'Q:\\Coding\\PickCareRAG\\data\\people.json', 'seq_num': 14}, page_content='["508-9125-7029", "939-1920-5084"]'),
+  Document(metadata={'source': 'Q:\\Coding\\PickCareRAG\\data\\people.json', 'seq_num': 15}, page_content='["891-2980-9497", "811-3249-9899"]'),
+  Document(metadata={'source': 'Q:\\Coding\\PickCareRAG\\data\\people.json', 'seq_num': 16}, page_content='["499-4872-5904", "140-3733-7715"]'),
+  Document(metadata={'source': 'Q:\\Coding\\PickCareRAG\\data\\people.json', 'seq_num': 17}, page_content='["672-6315-8675", "975-1259-1656"]'),
+  Document(metadata={'source': 'Q:\\Coding\\PickCareRAG\\data\\people.json', 'seq_num': 18}, page_content='["853-1953-3723", "408-3476-1336"]'),
+  Document(metadata={'source': 'Q:\\Coding\\PickCareRAG\\data\\people.json', 'seq_num': 19}, page_content='["290-8270-9786", "483-1765-4028"]'),
+  Document(metadata={'source': 'Q:\\Coding\\PickCareRAG\\data\\people.json', 'seq_num': 20}, page_content='["460-4533-7245", "344-2344-7362"]')]
+<class 'list'>
+2023년 12월호
+2023년 12월호
+Ⅰ. 인공지능 산업 동향 브리프
+ 1. 정책/법제 
+   ▹ 미국, 안전하고 신뢰할 수 있는 AI 개발과 사용에 관한 행정명령 발표  ························· 1
+   ▹ G7, 히로시마 AI 프로세스를 통해 AI 기업 대상 국제 행동강령에 합의··························· 2
+   ▹ 영국 AI 안전성 정상회의에 참가한 28개국, AI 위험에 공동 대응 선언··························· 3
+   ▹ 미국 법원, 예술가들이 생성 AI 기업에 제기한 저작권 소송 기각····································· 4
+   ▹ 미국 연방거래위원회, 저작권청에 소비자 보호와 경쟁 측면의 AI 의견서 제출················· 5
+   ▹ EU AI 법 3자 협상, 기반모델 규제 관련 견해차로 난항··················································· 6
+ 
+ 2. 기업/산업 
+   ▹ 미국 프런티어 모델 포럼, 1,000만 달러 규모의 AI 안전 기금 조성································ 7
+   ▹ 코히어, 데이터 투명성 확보를 위한 데이터 출처 탐색기 공개  ······································· 8
+   ▹ 알리바바 클라우드, 최신 LLM ‘통이치엔원 2.0’ 공개 ······················································ 9
+   ▹ 삼성전자, 자체 개발 생성 AI ‘삼성 가우스’ 공개 ··························································· 10
+   ▹ 구글, 앤스로픽에 20억 달러 투자로 생성 AI 협력 강화 ················································ 11
+   ▹ IDC, 2027년 AI 소프트웨어 매출 2,500억 달러 돌파 전망··········································· 12
+   ▹ 빌 게이츠, AI 에이전트로 인한 컴퓨터 사용의 패러다임 변화 전망································ 13
+   ▹ 유튜브, 2024년부터 AI 생성 콘텐츠 표시 의무화···························································· 14
+ 3. 기술/연구
+   ▹ 영국 과학혁신기술부, AI 안전 연구소 설립 발표······························································ 15
+   ▹ 구글 딥마인드, 범용 AI 모델의 기능과 동작에 대한 분류 체계 발표······························ 16
+   ▹ 갈릴레오의 LLM 환각 지수 평가에서 GPT-4가 가장 우수 ··········································· 17
+   
+ 4. 인력/교육     
+   ▹ 영국 옥스퍼드 인터넷 연구소, AI 기술자의 임금이 평균 21% 높아······························· 18
+   
+   
+ 
+Ⅱ. 주요 행사
+   ▹CES 2024 ····························································································································· 19
+   ▹AIMLA 2024 ························································································································· 19
+   ▹AAAI Conference on Artificial Intelligence ·································································· 19
+Ⅰ. 인공지능 산업 동향 브리프
+1. 정책/법제  
+2. 기업/산업 
+3. 기술/연구 
+ 4. 인력/교육
+미국, 안전하고 신뢰할 수 있는 AI 개발과 사용에 관한 행정명령 발표 
+n 미국 바이든 대통령이 ‘안전하고 신뢰할 수 있는 AI 개발과 사용에 관한 행정명령’에 서명하고 
+광범위한 행정 조치를 명시
+n 행정명령은 △AI의 안전과 보안 기준 마련 △개인정보보호 △형평성과 시민권 향상 △소비자 
+보호 △노동자 지원 △혁신과 경쟁 촉진 △국제협력을 골자로 함
+KEY Contents
+£ 바이든 대통령, AI 행정명령 통해 안전하고 신뢰할 수 있는 AI 개발과 활용 추진
+n 미국 바이든 대통령이 2023년 10월 30일 연방정부 차원에서 안전하고 신뢰할 수 있는 AI 개발과 
+사용을 보장하기 위한 행정명령을 발표
+∙행정명령은 △AI의 안전과 보안 기준 마련 △개인정보보호 △형평성과 시민권 향상 △소비자 보호 
+△노동자 지원 △혁신과 경쟁 촉진 △국제협력에 관한 내용을 포괄
+n (AI 안전과 보안 기준) 강력한 AI 시스템을 개발하는 기업에게 안전 테스트 결과와 시스템에 관한 
+주요 정보를 미국 정부와 공유할 것을 요구하고, AI 시스템의 안전성과 신뢰성 확인을 위한 표준 및 
+AI 생성 콘텐츠 표시를 위한 표준과 모범사례 확립을 추진
+∙△1026 플롭스(FLOPS, Floating Point Operation Per Second)를 초과하는 컴퓨팅 성능 또는 생물학적 
+서열 데이터를 주로 사용하고 1023플롭스를 초과하는 컴퓨팅 성능을 사용하는 모델 △단일 데이터센터에서 
+1,000Gbit/s 이상의 네트워킹으로 연결되며 AI 훈련에서 이론상 최대 1020 플롭스를 처리할 수 있는 
+컴퓨팅 용량을 갖춘 컴퓨팅 클러스터가 정보공유 요구대상
+n (형평성과 시민권 향상) 법률, 주택, 보건 분야에서 AI의 무책임한 사용으로 인한 차별과 편견 및 기타 
+문제를 방지하는 조치를 확대
+∙형사사법 시스템에서 AI 사용 모범사례를 개발하고, 주택 임대 시 AI 알고리즘 차별을 막기 위한 명확한 
+지침을 제공하며, 보건복지 부문에서 책임 있는 AI 배포와 사용을 위한 전략을 마련 
+n (소비자 보호와 근로자 지원) 의료 분야에서 책임 있는 AI 사용을 촉진하고 맞춤형 개인교습 등 학교 
+내 AI 교육 도구 관련 자원을 개발하며, AI로 인한 근로자 피해를 완화하고 이점을 극대화하는 원칙과 
+모범사례를 마련
+n (혁신과 경쟁 촉진) 국가AI연구자원(National Artificial Intelligence Research Resource, NAIRR)*을 
+통해 미국 전역의 AI 연구를 촉진하고, 중소기업과 개발자에 기술과 인프라를 지원
+* 국가 차원에서 AI 연구 인프라를 확충해 더 많은 AI 연구자에게 인프라를 지원하는 프로그램 
+∙비자 기준과 인터뷰 절차의 현대화와 간소화로 AI 관련 주요 분야의 전문 지식을 갖춘 외국인들이 미국에서 
+공부하고 취업할 수 있도록 지원
+☞ 출처 : The White House, Executive Order on the Safe, Secure, and Trustworthy Development and Use of 
+Artificial Intelligence (E.O. 14110), 2023.10.30.
+SPRi AI Brief |  
+2023-12월호
+2
+G7, 히로시마 AI 프로세스를 통해 AI 기업 대상 국제 행동강령에 합의
+n G7이 첨단 AI 시스템을 개발하는 기업을 대상으로 AI 위험 식별과 완화를 위해 자발적인 
+채택을 권고하는 AI 국제 행동강령을 마련
+n 행동강령은 AI 수명주기 전반에 걸친 위험 평가와 완화, 투명성과 책임성의 보장, 정보공유와 
+이해관계자 간 협력, 보안 통제, 콘텐츠 인증과 출처 확인 등의 조치를 요구
+KEY Contents
+£ G7, 첨단 AI 시스템의 위험 관리를 위한 국제 행동강령 마련
+n 주요 7개국(G7)*은 2023년 10월 30일 ‘히로시마 AI 프로세스’를 통해 AI 기업 대상의 AI 국제 
+행동강령(International Code of Conduct for Advanced AI Systems)에 합의
+∙G7은 2023년 5월 일본 히로시마에서 개최된 정상회의에서 생성 AI에 관한 국제규범 마련과 
+정보공유를 위해 ‘히로시마 AI 프로세스’를 출범**
+∙기업의 자발적 채택을 위해 마련된 이번 행동강령은 기반모델과 생성 AI를 포함한 첨단 AI 시스템의 
+위험 식별과 완화에 필요한 조치를 포함
+* 주요 7개국(G7)은 미국, 일본, 독일, 영국, 프랑스, 이탈리아, 캐나다를 의미
+** 5월 정상회의에는 한국, 호주, 베트남 등을 포함한 8개국이 초청을 받았으나, AI 국제 행동강령에는 우선 G7 국가만 포함하여 채택
+n G7은 행동강령을 통해 아래의 조치를 제시했으며, 빠르게 발전하는 기술에 대응할 수 있도록 
+이해관계자 협의를 통해 필요에 따라 개정할 예정
+∙첨단 AI 시스템의 개발 과정에서 AI 수명주기 전반에 걸쳐 위험을 평가 및 완화하는 조치를 채택하고, 
+첨단 AI 시스템의 출시와 배포 이후 취약점과 오용 사고, 오용 유형을 파악해 완화
+∙첨단 AI 시스템의 성능과 한계를 공개하고 적절하거나 부적절한 사용영역을 알리는 방법으로 투명성을 
+보장하고 책임성을 강화
+∙산업계, 정부, 시민사회, 학계를 포함해 첨단 AI 시스템을 개발하는 조직 간 정보공유와 사고 발생 시 
+신고를 위해 협력하고, 위험 기반 접근방식을 토대로 개인정보보호 정책과 위험 완화 조치를 포함하는 
+AI 거버넌스와 위험 관리 정책을 마련
+∙AI 수명주기 전반에 걸쳐 물리보안, 사이버보안, 내부자 위협 보안을 포함한 강력한 보안 통제 구현
+∙사용자가 AI 생성 콘텐츠를 식별할 수 있도록 워터마크를 비롯하여 기술적으로 가능한 기법으로 
+신뢰할 수 있는 콘텐츠 인증과 출처 확인 메커니즘을 개발 및 구축 
+∙사회적 위험과 안전·보안 문제를 완화하는 연구와 효과적인 완화 대책에 우선 투자하고, 기후 위기 
+대응, 세계 보건과 교육 등 세계적 난제 해결을 위한 첨단 AI 시스템을 우선 개발
+∙국제 기술 표준의 개발 및 채택을 가속화하고, 개인정보와 지식재산권 보호를 위해 데이터 입력과 수집 
+시 적절한 보호 장치 구현
+☞ 출처: G7, Hiroshima Process International Code of Conduct for Advanced AI Systems, 2023.10.30.
+1. 정책/법제  
+2. 기업/산업 
+3. 기술/연구 
+ 4. 인력/교육
+영국 AI 안전성 정상회의에 참가한 28개국, AI 위험에 공동 대응 선언
+n 영국 블레츨리 파크에서 개최된 AI 안전성 정상회의에 참가한 28개국들이 AI 안전 보장을 
+위한 협력 방안을 담은 블레츨리 선언을 발표
+n 첨단 AI를 개발하는 국가와 기업들은 AI 시스템에 대한 안전 테스트 계획에 합의했으며, 
+영국의 AI 안전 연구소가 전 세계 국가와 협력해 테스트를 주도할 예정 
+KEY Contents
+£ AI 안전성 정상회의 참가국들, 블레츨리 선언 통해 AI 안전 보장을 위한 협력에 합의
+n 2023년 11월 1~2일 영국 블레츨리 파크에서 열린 AI 안전성 정상회의(AI Safety Summit)에 
+참가한 28개국 대표들이 AI 위험 관리를 위한 ‘블레츨리 선언’을 발표 
+∙선언은 AI 안전 보장을 위해 국가, 국제기구, 기업, 시민사회, 학계를 포함한 모든 이해관계자의 협력이 
+중요하다고 강조했으며, 특히 최첨단 AI 시스템 개발 기업은 안전 평가를 비롯한 적절한 조치를 취하여 
+AI 시스템의 안전을 보장할 책임이 있다고 지적
+∙각국은 AI 안전 보장을 위해 첨단 AI 개발기업의 투명성 향상, 적절한 평가지표와 안전 테스트 도구 
+개발, 공공부문 역량 구축과 과학 연구개발 등의 분야에서 협력하기로 합의
+£ 영국 총리, 정부 주도의 첨단 AI 시스템 안전 테스트 계획 발표
+n 리시 수낙 영국 총리는 AI 안전성 정상회의를 마무리하며 첨단 AI 모델에 대한 안전성 시험 계획 
+수립과 테스트 수행을 주도할 영국 AI 안전 연구소의 출범을 발표
+∙첨단 AI 모델의 안전 테스트는 국가 안보와 안전, 사회적 피해를 포함한 여러 잠재적 유해 기능에 대한 
+시험을 포함하며, 참석자들은 정부 주도의 외부 안전 테스트에 합의
+∙각국 정부는 테스트와 기타 안전 연구를 위한 공공부문 역량에 투자하고, 테스트 결과가 다른 국가와 
+관련된 경우 해당 국가와 결과를 공유하며, 적절한 시기에 공동 표준 개발을 위해 노력하기로 합의 
+n 참가국들은 튜링상을 수상한 AI 학자인 요슈아 벤지오 교수가 주도하는 ‘과학의 현황(State of 
+the Science)’ 보고서 작성에도 합의했으며, 보고서를 통해 첨단 AI의 위험과 가능성에 관한 
+기존 연구를 과학적으로 평가하고 향후 AI 안전 연구를 위한 우선순위를 제시할 계획 
+n 한국은 영국 정부와 6개월 뒤에 온라인으로 AI 미니 정상회의를 공동 개최하기로 합의했으며, 
+프랑스 정부와는 1년 후 대면 정상회의를 개최할 예정
+☞ 출처: Gov.uk, The Bletchley Declaration by Countries Attending the AI Safety Summit, 1-2 November 2023, 2023.11.01.
+Gov.uk, World leaders, top AI companies set out plan for safety testing of frontier as first global AI Safety Summit 
+concludes, 2023.11.02.
+SPRi AI Brief |  
+2023-12월호
+4
+미국 법원, 예술가들이 생성 AI 기업에 제기한 저작권 소송 기각
+n 미국 캘리포니아 북부지방법원은 미드저니, 스태빌리티AI, 디비언트아트를 대상으로 예술가 
+3인이 제기한 저작권 침해 소송을 기각
+n 법원은 기각 이유로 고소장에 제시된 상당수 작품이 저작권청에 등록되지 않았으며, AI로 
+생성된 이미지와 특정 작품 간 유사성을 입증하기 어렵다는 점을 제시 
+KEY Contents
+£ 예술가들의 AI 저작권 침해 소송, 저작권 미등록과 증거불충분으로 기각
+n 미국 캘리포니아 북부지방법원의 윌리엄 오릭(William Orrick) 판사는 2023년 10월 30일 미드저니
+(Midjourney), 스태빌리티AI(Stability AI), 디비언트아트(DeviantArt)에 제기된 저작권 침해 소송을 기각 
+∙2023년 1월 예술가 사라 앤더슨(Sarah Anderson), 캘리 맥커넌(Kelly McKernan), 칼라 
+오르티즈(Karla Ortiz)는 이미지 생성 AI 서비스를 개발한 3개 기업을 상대로 저작권 침해 소송을 제기
+∙예술가들은 3개 기업이 AI 모델을 학습시키기 위해 원작자 동의 없이 작품을 학습 데이터셋에 
+포함하여 저작권을 침해했다고 주장했으며, 법원은 지난 4월 피소 기업들이 제출한 기각 신청을 
+수용해 소송을 기각 
+n 오릭 판사는 판결문에서 소송을 기각한 핵심 이유로 예술가들의 저작권 미등록을 제시
+∙판결문은 소송을 제기한 캘리 맥커넌과 칼라 오르티즈가 미국 저작권청에 예술 작품에 대한 저작권을 
+제출하지 않았다는 점을 지적했으며, 사라 앤더슨은 고소장에 인용된 수백 개의 작품 중 16개 작품에 
+대해서만 저작권을 보유
+n 판결문은 또한 생성 AI 모델 훈련에 사용된 모든 이미지에 저작권이 있다거나, 생성 AI로 만든 
+이미지가 저작물을 이용해 훈련되었으므로 저작물의 파생 이미지라는 주장은 개연성이 부족하다고 
+지적
+∙AI는 새로운 이미지를 생성할 때 다양한 예술가의 작품을 참조하므로, 생성된 이미지와 저작권을 가진 
+특정 작품과의 실질적 유사성을 입증할 수 없다면 저작권 침해를 인정받기 어려움
+n 오릭 판사는 원고 측에 고소장을 수정하고 저작권이 침해된 특정 이미지를 중심으로 소송 범위를 
+줄여 소송을 다시 제기할 것을 요청
+∙단, 사라 앤더슨이 저작권을 보유한 16개 작품을 무단으로 복제한 스태빌리티AI에 대한 저작권 침해 
+소송은 인정되어 계속 진행됨
+☞ 출처: Venturebeat, Midjourney, Stability AI and DeviantArt win a victory in copyright case by artists- but the 
+fight continues, 2023.10.30.
+1. 정책/법제  
+2. 기업/산업 
+3. 기술/연구 
+ 4. 인력/교육
+미국 연방거래위원회, 저작권청에 소비자 보호와 경쟁 측면의 AI 의견서 제출
+n 미국 FTC는 저작권청이 실시한 저작권과 AI 관련 질의공고에 대하여 소비자 보호와 경쟁 
+측면의 의견을 제시
+n FTC는 생성 AI로 인한 창작자와 소비자 피해의 가능성에 우려를 표시하는 한편, 일부 
+빅테크가 막대한 재원을 활용해 시장 지배력을 더욱 강화할 수 있다는 우려를 제기
+KEY Contents
+£ FTC, 생성 AI로 인한 소비자와 창작자의 피해 및 빅테크의 시장 지배력 강화 우려
+n 미국 연방거래위원회(FTC)가 2023년 10월 30일 저작권청(U.S. Copyright Office, USCO)이 
+지난 9월 발표한 저작권과 AI 관련 질의공고(Notice of Inquiry, NOI)에 대한 의견서를 발표
+∙저작권청은 생성 AI와 관련된 저작권법과 정책 이슈를 조사하고 있으며, 폭넓은 의견 수렴을 통해 
+입법과 규제 조치의 필요성을 검토할 계획
+∙FTC는 생성 AI의 개발과 배포가 소비자, 근로자, 중소기업에 피해를 줄 수 있다며 소비자의 개인정보 
+침해, 차별과 편견의 자동화, 사기 범죄 등 AI 사용과 관련된 위험에 주목
+n FTC는 저작권법에 따른 권리와 책임 범위를 넘어서는 저작권 문제에 주목하여 생성 AI로 인해 
+창작자의 경쟁력이 불공정한 피해를 볼 수 있으며, 소비자가 특정 창작자의 작품을 생성 AI가 
+만들었다고 오해할 소지가 있다고 지적
+∙저작권법에 저촉되는 행위는 불공정 경쟁이나 기만행위에도 해당될 수 있으며, 창작자의 평판 악화, 
+저작물의 가치 저하나 개인정보 유출로 소비자에 상당한 피해를 초래 가능
+n FTC는 일부 빅테크가 막대한 재원을 활용해 생성 AI 사용자의 이탈을 막고 저작권이 있는 상용 
+데이터에 대한 독점 라이선스를 확보해 시장 지배력을 더욱 강화할 수 있다는 우려도 제기
+∙이와 관련 FTC는 아마존 AI 비서 ‘알렉사(Alexa)’와 스마트홈 보안 기기 ‘링(Ring)’이 소비자의 사적 
+정보를 알고리즘 훈련에 사용하여 프라이버시를 침해한 혐의를 조사하는 등 법적 권한을 활용해 AI 
+관련 불법 행위에 대처하고 있음
+* FTC는 2023년 5월 31일 동의를 받지 않고 어린이들의 음성과 위치 정보를 활용한 ‘알렉사’와 고객의 사적 영상에 대하여 
+직원에게 무제한 접근 권한을 부여한 ‘링’에 3,080만 달러(약 420억 원)의 과징금을 부과  
+n FTC는 빠르게 발전하는 생성 AI가 여러 산업과 비즈니스에 변화를 가져올 수 있지만, 현행법상 
+AI에 관한 예외 조항은 없다며, 모든 권한을 활용해 소비자를 보호하고 개방적이고 공정한 경쟁 
+시장을 유지하겠다고 강조
+☞ 출처: FTC, In Comment Submitted to U.S. Copyright Office, FTC Raises AI-related Competition and 
+Consumer Protection Issues, Stressing That It Will Use Its Authority to Protect Competition and 
+Consumers in AI Markets, 2023.10.30.
+SPRi AI Brief |  
+2023-12월호
+6
+EU AI 법 3자 협상, 기반모델 규제 관련 견해차로 난항
+n 유럽의회, EU 집행위원회, EU 이사회가 진행 중인 AI 법 최종협상에서 프랑스, 이탈리아, 
+독일이 기반모델에 대한 규제에 반대하며 협상이 난관에 봉착
+n 프랑스, 이탈리아, 독일 3개국은 기반모델 개발기업에 대하여 자율적 행동강령을 도입하고 
+준수를 의무화하는 방안을 제안
+KEY Contents
+£ AI 법 3자 협상, 이사회 일부 국가가 기반모델 규제에 반대하며 차질
+n 유럽의회, EU 집행위원회, EU 이사회가 ‘AI 법(AI act)’에 대한 최종협상을 진행 중인 가운데, 
+일부 국가가 기반모델에 대한 규제에 반대하며 협상이 난관에 봉착  
+∙10월 24일 열린 3자 협상 회의에서는 사회에 더 큰 영향을 미치는 강력한 AI 모델에 더 엄격한 규칙을 
+적용하는 계층적 접근방식에 따라 기반 모델 규제에 대한 기본적인 합의에 도달
+∙그러나 11월 10일 열린 통신작업반 회의에서 EU 이사회의 프랑스, 독일, 이탈리아 대표가 
+기반모델에 대한 모든 유형의 규제에 반대하며 협상이 중단됨
+n 유럽 정책 미디어 유랙티브(Euractive)에 따르면 프랑스 AI 기업 미스트랄(Mistral)이 로비를 통해 
+기반모델에 대한 규제 반대를 주도  
+∙독일의 대표적인 AI 기업 알레프 알파(Aleph Alpha) 역시 독일 정부에 압력을 행사하고 있으며, 이들 
+기업은 EU의 AI 규제로 인해 미국과 중국의 경쟁사보다 뒤처질 것을 우려 
+£ 독일, 프랑스, 이탈리아 3개국, 기반모델에 대한 ‘의무적 자율규제’ 제안
+n 통신작업반 회의가 결렬된 이후 독일, 프랑스, 이탈리아는 2023년 11월 19일 비공식 문서를 통해 
+‘의무적 자율규제(Mandatory Self-regulation)’ 방식의 기반모델 규제를 제안
+∙3개국은 기반모델 전반에 대한 규제가 기술 중립적이고 위험 기반의 AI 규제 원칙에 어긋난다고 
+주장하며 기반모델 전반에 대한 규제가 아닌, 특정 용도로 사용될 수 있는 AI 시스템에 대한 규제를 요구  
+∙3개국은 자발적인 행동강령을 도입하고 준수를 의무화하는 방안을 제안하며, 기반모델 개발기업에 
+머신러닝 기술 정보와 모델의 기능과 한계를 요약한 ‘모델 카드’ 작성을 요구하겠다고 설명
+∙3개국은 AI 감독기관이 모델 카드를 토대로 기반모델 개발기업의 행동강령 준수 여부를 확인하되, 
+위반 시 곧바로 제재를 가하지 않고 위반행위 분석과 영향 평가를 시행한 후 제재하는 방안을 제안
+☞ 출처: Euractiv, EU’s AI Act negotiations hit the brakes over foundation models, 2023.11.1.
+ Euractiv, France, Germany, Italy push for ‘mandatory self-regulation’ for foundation models in EU’s AI law, 2023.11.19.
+1. 정책/법제  
+2. 기업/산업 
+3. 기술/연구 
+ 4. 인력/교육
+미국 프런티어 모델 포럼, 1,000만 달러 규모의 AI 안전 기금 조성
+n 구글, 앤스로픽, 마이크로소프트, 오픈AI가 참여하는 프런티어 모델 포럼이 자선단체와 함께 AI 
+안전 연구를 위한 1,000만 달러 규모의 AI 안전 기금을 조성
+n 프런티어 모델 포럼은 AI 모델의 취약점을 발견하고 검증하는 레드팀 활동을 지원하기 위한 
+모델 평가 기법 개발에 자금을 중점 지원할 계획
+KEY Contents
+£ 프런티어 모델 포럼, 자선단체와 함께 AI 안전 연구를 위한 기금 조성
+n 구글, 앤스로픽, 마이크로소프트, 오픈AI가 출범한 프런티어 모델 포럼이 2023년 10월 25일 AI 안전 
+연구를 위한 기금을 조성한다고 발표
+∙참여사들은 맥거번 재단(Patrick J. McGovern Foundation), 데이비드 앤 루실 패커드 재단(The 
+David and Lucile Packard Foundation) 등의 자선단체와 함께 AI 안전 연구를 위한 기금에 
+1,000만 달러 이상을 기부 
+∙또한 신기술의 거버넌스와 안전 분야에서 전문성을 갖춘 브루킹스 연구소 출신의 크리스 메서롤(Chris 
+Meserole)을 포럼의 상무이사로 임명
+n 최근 AI 기술이 급속히 발전하면서 AI 안전에 관한 연구가 부족한 시점에, 포럼은 이러한 격차를 해소
+하기 위해 AI 안전 기금을 조성
+∙참여사들은 지난 7월 백악관 주재의 AI 안전 서약에서 외부자의 AI 시스템 취약점 발견과 신고를 
+촉진하기로 약속했으며, 약속을 이행하기 위해 기금을 활용해 외부 연구집단의 AI 시스템 평가에 
+자금을 지원할 계획
+£ AI 안전 기금으로 AI 레드팀을 위한 모델 평가 기법 개발을 중점 지원할 계획
+n 프런티어 모델 포럼은 AI 안전 기금을 통해 AI 레드팀 활동을 위한 새로운 모델 평가 기법의 개발을 
+중점 지원할 예정
+∙포럼에 따르면 AI 레드팀에 대한 자금 지원은 AI 모델의 안전과 보안 기준의 개선과 함께 AI 시스템 
+위험 대응 방안에 관한 산업계와 정부, 시민사회의 통찰력 확보에 도움이 될 전망으로, 포럼은 향후 몇 
+달 안에 기금 지원을 위한 제안 요청을 받을 계획
+n 프런티어 모델 포럼은 출범 이후 업계 전반에 걸쳐 AI 레드팀 구성에 관한 모범사례 공유를 추진하는 
+한편, 첨단 AI 모델의 취약점이나 잠재적으로 위험한 기능 및 위험 완화 관련 정보를 공유할 수 
+있는 공개 절차도 개발 중
+☞ 출처: Google, Anthropic, Google, Microsoft and OpenAI announce Executive Director of the Frontier Model 
+Forum and over $10 million for a new AI Safety Fund, 2023.10.25.
+SPRi AI Brief |  
+2023-12월호
+8
+코히어, 데이터 투명성 확보를 위한 데이터 출처 탐색기 공개
+n 코히어와 12개 기관이  광범위한 데이터셋에 대한 감사를 통해 원본 데이터 출처, 재라이선스 상태, 
+작성자 등 다양한 정보를 제공하는 ‘데이터 출처 탐색기’ 플랫폼을 출시
+n 대화형 플랫폼을 통해 개발자는 데이터셋의 라이선스 상태를 쉽게 파악할 수 있으며 데이터셋의 
+구성과 계보도 추적 가능
+KEY Contents
+£ 데이터 출처 탐색기, 광범위한 데이터셋 정보 제공을 통해 데이터 투명성 향상
+n AI 기업 코히어(Cohere)가 매사추세츠 공과⼤(MIT), 하버드⼤ 로스쿨, 카네기멜론⼤ 등 12개 기관과 
+함께 2023년 10월 25일 ‘데이터 출처 탐색기(Data Provenance Explorer)’ 플랫폼을 공개
+∙AI 모델 훈련에 사용되는 데이터셋의 불분명한 출처로 인해 데이터 투명성이 확보되지 않아 다양한 
+법적·윤리적 문제가 발생
+∙이에 연구진은 가장 널리 사용되는 2,000여 개의 미세조정 데이터셋을 감사 및 추적하여 데이터셋에 
+원본 데이터소스에 대한 태그, 재라이선스(Relicensing) 상태, 작성자, 기타 데이터 속성을 지정하고 
+이러한 정보에 접근할 수 있는 플랫폼을 출시
+∙대화형 플랫폼 형태의 데이터 출처 탐색기를 통해 데이터셋의 라이선스 상태를 쉽게 파악할 수 있으며, 
+주요 데이터셋의 구성과 데이터 계보도 추적 가능
+n 연구진은 오픈소스 데이터셋에 대한 광범위한 감사를 통해 데이터 투명성에 영향을 미치는 주요 
+요인을 발견
+∙깃허브(GitHub), 페이퍼위드코드(Papers with Code)와 같은 크라우드소싱 플랫폼에서 수집한 
+데이터로 훈련된 오픈소스 LLM에서는 데이터 라이선스의 누락 비율이 72~83%에 달함 
+∙또한 크라우드소싱 플랫폼이 할당한 라이선스는 데이터셋 원저작자의 의도보다 더 광범위한 사용을 
+허용한 경우가 상당수
+∙데이터 생태계 분석 결과, 부정확하거나 모호한 라이선스 문서화 등 데이터 출처 입증과 관련된 관행 
+전반에서 구조적 문제가 드러남
+n 연구진은 데이터 출처 탐색기만으로는 해결이 어려운 법적 이슈도 존재한다며 일관된 법적 프레임
+워크의 필요성을 제기
+∙일례로 데이터를 수집한 지역, 모델 훈련 지역, 모델 배포 지역마다 규제가 다르면 어떤 법률을 
+적용해야 하는지 실무자의 판단이 어려울 수 있으며, 서로 다른 라이선스를 적용받는 개별 데이터셋을 
+하나로 통합해 사용하는 경우에도 각각의 라이선스 조건 준수에 어려움이 발생
+☞ 출처 : Cohere, Data Provenance Explorer Launches to Tackle Data Transparency Crisis, 2023.10.25.
+1. 정책/법제  
+2. 기업/산업 
+3. 기술/연구 
+ 4. 인력/교육
+알리바바 클라우드, 최신 LLM ‘통이치엔원 2.0’ 공개
+n 알리바바 클라우드가 복잡한 지침 이해, 광고문구 작성, 추론, 암기 등에서 성능이 향상된 최신 
+LLM ‘통이치엔원 2.0’을 공개
+n 알리바바 클라우드는 산업별로 특화된 생성 AI 모델을 공개하는 한편, 모델 개발과 애플리케이션 
+구축 절차를 간소화하는 올인원 AI 모델 구축 플랫폼도 출시
+KEY Contents
+£ 알리바바의 통이치엔원 2.0, 주요 벤치마크 테스트에서 여타 LLM 능가
+n 중국의 알리바바 클라우드가 2023년 10월 31일 열린 연례 기술 컨퍼런스에서 최신 LLM ‘통이
+치엔원(Tongyi Qianwen) 2.0’을 공개
+∙알리바바 클라우드는 통이치엔원 2.0이 2023년 4월 출시된 1.0 버전보다 복잡한 지침 이해, 
+광고문구 작성, 추론, 암기 등에서 성능이 향상되었다고 설명
+∙통이치엔원 2.0은 언어 이해 테스트(MMLU), 수학(GSM8k), 질문 답변(ARC-C)과 같은 벤치마크 
+테스트에서 라마(Llama-2-70B)와 GPT-3.5를 비롯한 주요 AI 모델을 능가 
+∙통이치엔원 2.0은 알리바바 클라우드의 웹사이트와 모바일 앱을 통해 대중에 제공되며 개발자는 
+API를 통해 사용 가능 
+n 알리바바 클라우드는 여러 산업 영역에서 생성 AI를 활용해 사업 성과를 개선할 수 있도록 지원
+하는 산업별 모델도 출시
+∙산업 영역은 고객지원, 법률 상담, 의료, 금융, 문서관리, 오디오와 동영상 관리, 코드 개발, 캐릭터 
+제작을 포함
+n 알리바바 클라우드는 급증하는 생성 AI 수요에 대응해 모델 개발과 애플리케이션 구축 절차를 
+간소화하는 올인원 AI 모델 구축 플랫폼 ‘젠AI(GenAI)’도 공개
+∙이 플랫폼은 데이터 관리, 모델 배포와 평가, 신속한 엔지니어링을 위한 종합 도구 모음을 제공하여 
+다양한 기업들이 맞춤형 AI 모델을 한층 쉽게 개발할 수 있도록 지원
+∙생성 AI 개발에 필요한 컴퓨팅과 데이터 처리 요구사항을 지원하기 위해 AI 플랫폼(PAI), 
+데이터베이스 솔루션, 컨테이너 서비스와 같은 클라우드 신제품도 발표
+n 알리바바 클라우드는 AI 개발을 촉진하기 위해 올해 말까지 720억 개 매개변수를 가진 통이치엔원 
+모델을 오픈소스화한다는 계획도 공개
+☞ 출처 : Alibaba Cloud, Alibaba Cloud Launches Tongyi Qianwen 2.0 and Industry-specific Models to Support 
+Customers Reap Benefits of Generative AI, 2023.10.31.
+SPRi AI Brief |  
+2023-12월호
+10
+삼성전자, 자체 개발 생성 AI ‘삼성 가우스’ 공개
+n 삼성전자가 온디바이스에서 작동 가능하며 언어, 코드, 이미지의 3개 모델로 구성된 자체 개발 생성 
+AI 모델 ‘삼성 가우스’를 공개
+n 삼성전자는 삼성 가우스를 다양한 제품에 단계적으로 탑재할 계획으로, 온디바이스 작동이 가능한 
+삼성 가우스는 외부로 사용자 정보가 유출될 위험이 없다는 장점을 보유
+KEY Contents
+£ 언어, 코드, 이미지의 3개 모델로 구성된 삼성 가우스, 온디바이스 작동 지원
+n 삼성전자가 2023년 11월 8일 열린 ‘삼성 AI 포럼 2023’ 행사에서 자체 개발한 생성 AI 모델 
+‘삼성 가우스’를 최초 공개
+∙정규분포 이론을 정립한 천재 수학자 가우스(Gauss)의 이름을 본뜬 삼성 가우스는 다양한 상황에 
+최적화된 크기의 모델 선택이 가능
+∙삼성 가우스는 라이선스나 개인정보를 침해하지 않는 안전한 데이터를 통해 학습되었으며, 
+온디바이스에서 작동하도록 설계되어 외부로 사용자의 정보가 유출되지 않는 장점을 보유
+∙삼성전자는 삼성 가우스를 활용한 온디바이스 AI 기술도 소개했으며, 생성 AI 모델을 다양한 제품에 
+단계적으로 탑재할 계획
+n 삼성 가우스는 △텍스트를 생성하는 언어모델 △코드를 생성하는 코드 모델 △이미지를 생성하는 
+이미지 모델의 3개 모델로 구성
+∙언어 모델은 클라우드와 온디바이스 대상 다양한 모델로 구성되며, 메일 작성, 문서 요약, 번역 업무의 
+처리를 지원
+∙코드 모델 기반의 AI 코딩 어시스턴트 ‘코드아이(code.i)’는 대화형 인터페이스로 서비스를 제공하며 
+사내 소프트웨어 개발에 최적화
+∙이미지 모델은 창의적인 이미지를 생성하고 기존 이미지를 원하는 대로 바꿀 수 있도록 지원하며 
+저해상도 이미지의 고해상도 전환도 지원
+n IT 전문지 테크리퍼블릭(TechRepublic)은 온디바이스 AI가 주요 기술 트렌드로 부상했다며, 
+2024년부터 가우스를 탑재한 삼성 스마트폰이 메타의 라마(Llama)2를 탑재한 퀄컴 기기 및 구글 
+어시스턴트를 적용한 구글 픽셀(Pixel)과 경쟁할 것으로 예상
+☞ 출처 : 삼성전자, ‘삼성 AI 포럼’서 자체 개발 생성형 AI ‘삼성 가우스’ 공개, 2023.11.08.
+삼성전자, ‘삼성 개발자 콘퍼런스 코리아 2023’ 개최, 2023.11.14.
+TechRepublic, Samsung Gauss: Samsung Research Reveals Generative AI, 2023.11.08.
+1. 정책/법제  
+2. 기업/산업 
+3. 기술/연구 
+ 4. 인력/교육
+구글, 앤스로픽에 20억 달러 투자로 생성 AI 협력 강화 
+n 구글이 앤스로픽에 최대 20억 달러 투자에 합의하고 5억 달러를 우선 투자했으며, 앤스로픽은 
+구글과 클라우드 서비스 사용 계약도 체결
+n 3대 클라우드 사업자인 구글, 마이크로소프트, 아마존은 차세대 AI 모델의 대표 기업인 
+앤스로픽 및 오픈AI와 협력을 확대하는 추세
+KEY Contents
+£ 구글, 앤스로픽에 최대 20억 달러 투자 합의 및 클라우드 서비스 제공
+n 구글이 2023년 10월 27일 앤스로픽에 최대 20억 달러를 투자하기로 합의했으며, 이 중 5억 
+달러를 우선 투자하고 향후 15억 달러를 추가로 투자할 방침
+∙구글은 2023년 2월 앤스로픽에 이미 5억 5,000만 달러를 투자한 바 있으며, 아마존도 지난 9월 
+앤스로픽에 최대 40억 달러의 투자 계획을 공개
+∙한편, 2023년 11월 8일 블룸버그 보도에 따르면 앤스로픽은 구글의 클라우드 서비스 사용을 위해 
+4년간 30억 달러 규모의 계약을 체결
+∙오픈AI 창업자 그룹의 일원이었던 다리오(Dario Amodei)와 다니엘라 아모데이(Daniela Amodei) 
+남매가 2021년 설립한 앤스로픽은 챗GPT의 대항마 ‘클로드(Claude)’ LLM을 개발
+n 아마존과 구글의 앤스로픽 투자에 앞서, 마이크로소프트는 차세대 AI 모델의 대표 주자인 오픈
+AI와 협력을 확대
+∙마이크로소프트는 오픈AI에 앞서 투자한 30억 달러에 더해 2023년 1월 추가로 100억 달러를 
+투자하기로 하면서 오픈AI의 지분 49%를 확보했으며, 오픈AI는 마이크로소프트의 애저(Azure) 
+클라우드 플랫폼을 사용해 AI 모델을 훈련
+£ 구글, 클라우드 경쟁력 강화를 위해 생성 AI 투자 확대
+n 구글은 수익률이 높은 클라우드 컴퓨팅 시장에서 아마존과 마이크로소프트를 따라잡고자 생성 AI를 
+통한 기업 고객의 클라우드 지출 확대를 위해 AI 투자를 지속  
+∙구글은 앤스로픽 외에도 AI 동영상 제작 도구를 개발하는 런웨이(Runway)와 오픈소스 소프트웨어 
+기업 허깅 페이스(Hugging Face)에도 투자
+∙구글은 챗GPT의 기반 기술과 직접 경쟁할 수 있는 차세대 LLM ‘제미니(Gemini)’를 포함한 자체 AI 
+시스템 개발에도 수십억 달러를 투자했으며, 2024년 제미니를 출시할 계획
+☞ 출처 : The Wall Street Journal, Google Commits $2 Billion in Funding to AI Startup Anthropic, 2023.10.27.
+Bloomberg, AI Startup Anthropic to Use Google Chips in Expanded Partnership, 2023.11.09.
+SPRi AI Brief |  
+2023-12월호
+12
+IDC, 2027년 AI 소프트웨어 매출 2,500억 달러 돌파 전망
+n IDC의 예측에 의하면 AI 소프트웨어 시장은 2027년 2,510억 달러로 달할 전망이며, 생성 
+AI 플랫폼과 애플리케이션은 2027년까지 283억 달러의 매출을 창출할 전망 
+n 2023년 기준 AI 소프트웨어 매출의 3분의 1을 차지하는 최대 시장인 AI 애플리케이션은 
+2027년까지 21.1%의 연평균 성장률을 기록할 전망
+KEY Contents
+£ 기업들의 AI 투자 증가에 힘입어 AI 소프트웨어 시장 급성장 예상
+n 시장조사기관 IDC는 AI 소프트웨어 시장이 2022년 640억 달러에서 2027년 2,510억 달러로 연평
+균 성장률 31.4%를 기록하며 급성장할 것으로 예상
+∙AI 소프트웨어 시장은 AI 플랫폼, AI 애플리케이션, AI 시스템 인프라 소프트웨어(SIS), AI 애플리케이션 
+개발·배포(AI AD&D) 소프트웨어를 포괄
+∙협업, 콘텐츠 관리, 전사적 자원관리(ERM), 공급망 관리, 생산 및 운영, 엔지니어링, 고객관계관리(CRM)를 
+포함하는 AI 애플리케이션은 AI 소프트웨어의 최대 시장으로 2023년 전체 매출의 약 3분의 1을 차지하며 
+2027년까지 21.1%의 연평균 성장률을 기록할 전망
+∙AI 비서를 포함한 AI 모델과 애플리케이션의 개발을 뒷받침하는 AI 플랫폼은 두 번째로 시장 규모가 큰 
+분야로, 2027년까지 35.8%의 연평균 성장률이 예상됨
+∙분석, 비즈니스 인텔리전스, 데이터 관리와 통합을 포함하는 AI SIS는 기존 소프트웨어 시스템과 통합되어 
+방대한 데이터를 활용한 의사결정과 운영 최적화를 지원하며, 현재 매출 규모는 비교적 작지만 5년간 
+연평균 성장률은 32.6%로 시장 전체를 웃돌 전망
+∙애플리케이션 개발, 소프트웨어 품질과 수명주기 관리 소프트웨어, 애플리케이션 플랫폼을 포함하는 AI 
+AD&D는 향후 5년간 카테고리 중 가장 높은 38.7%의 연평균 성장률이 예상됨
+n IDC에 따르면 경제적 불확실성과 시장 역학의 변화에도 AI와 자동화 기술에 대한 기업들의 투자 
+의지는 확고하며, 기업들은 AI 도입이 사업 성공과 경쟁우위에 필수적이라고 인식
+∙IDC 설문조사에 따르면 향후 12개월 동안 응답자의 3분의 1은 기업이 특정 사용 사례나 응용 영역에서 
+외부 AI 소프트웨어의 구매를 고려하거나 외부 AI 소프트웨어와 내부 자원의 결합을 고려
+n 한편, AI 소프트웨어 시장에 포함되지 않는 생성 AI 플랫폼과 애플리케이션은 2027년까지 283억 
+달러의 매출을 창출할 전망 
+☞ 출처 : IDC, IDC Forecasts Revenue for Artificial Intelligence Software Will Reach $279 Billion Worldwide in 
+2027, 2023.10.31.
+1. 정책/법제  
+2. 기업/산업 
+3. 기술/연구 
+ 4. 인력/교육
+빌 게이츠, AI 에이전트로 인한 컴퓨터 사용의 패러다임 변화 전망
+n 빌 게이츠가 5년 내 일상언어로 모든 작업을 처리할 수 있는 AI 에이전트가 보급되며 컴퓨터를 
+사용하는 방식이 완전히 바뀔 것으로 예상
+n 에이전트의 보급은 컴퓨터 분야를 넘어 산업 전 영역에 영향을 미칠 전망으로 특히 의료와 
+교육, 생산성, 엔터테인먼트·쇼핑 영역에서 고가로 제공되던 서비스가 대중화될 전망
+KEY Contents
+£ 5년 내 기기에 일상언어로 말하기만 하면 되는 AI 에이전트의 보급 예상
+n 빌 게이츠 마이크로소프트 창업자가 2023년 11월 9일 공식 블로그를 통해 AI 에이전트가 컴퓨터 
+사용방식과 소프트웨어 산업을 완전히 변화시킬 것이라는 전망을 제시
+∙자연어에 반응하고 사용자에 대한 지식을 바탕으로 다양한 작업을 수행하는 소프트웨어를 의미하는 
+에이전트는 컴퓨터 사용방식이 키보드 입력에서 아이콘 클릭으로 바뀐 이후 최대의 컴퓨팅 혁명을 
+가져올 전망
+∙현재는 컴퓨터 작업 시 작업 내용에 따라 각각 다른 앱을 사용해야 하지만 5년 내 에이전트의 발전으로 
+기기에 일상언어로 말하기만 하면 되는 미래가 도래할 것
+∙온라인에 접속하는 모든 사람이 AI 기반의 개인 비서를 사용할 수 있게 되며, 에이전트는 사용자에 대한 
+풍부한 지식을 바탕으로 맞춤화된 대응이 가능하며 시간이 지날수록 개선됨
+∙일례로 여행 계획 수립 시 AI 챗봇이 예산에 맞는 호텔을 제안하는데 머문다면, 에이전트는 사용자의 여행 
+패턴을 분석해 여행지를 제안하고 관심사에 따른 활동을 추천하며 선호하는 스타일의 레스토랑 예약도 가능  
+£ AI 에이전트가 의료와 교육, 생산성, 엔터테인먼트·쇼핑 영역의 서비스 대중화를 주도할 것
+n 에이전트로 인해 주목할 만한 변화는 고비용 서비스의 대중화로 특히 △의료 △교육 △생산성 △
+엔터테인먼트·쇼핑의 4개 영역에서 대규모 변화 예상
+∙(의료) 에이전트가 환자 분류를 지원하고 건강 문제에 대한 조언을 제공하며 치료의 필요 여부를 결정하면서 
+의료진의 의사결정과 생산성 향상에 기여
+∙(교육) 에이전트가 1대 1 가정교사의 역할을 맡아 모든 학생에게 평등한 교육 기회를 제공할 수 있으며, 
+아이가 좋아하는 게임이나 노래 등을 활용해 시청각 기반의 풍부한 맞춤형 교육 경험을 제공
+∙(생산성) 사용자의 아이디어를 기반으로 에이전트가 사업계획과 발표 자료 작성, 제품 이미지 생성을 
+지원하며, 임원의 개인 비서와 같은 역할도 수행 
+∙(엔터테인먼트·쇼핑) 쇼핑 시 에이전트가 모든 리뷰를 읽고 요약해 최적의 제품을 추천하고 사용자 대신 
+주문할 수 있으며 사용자의 관심사에 맞춤화된 뉴스와 엔터테인먼트를 구독 가능
+☞ 출처 : GatesNotes, AI is about to completely change how you use computers, 2023.11.09.
+SPRi AI Brief |  
+2023-12월호
+14
+유튜브, 2024년부터 AI 생성 콘텐츠 표시 의무화 
+n 유튜브가 몇 달 안에 생성 AI를 사용한 콘텐츠에 AI 라벨 표시를 의무화하기로 했으며, 이를 
+준수하지 않는 콘텐츠는 삭제하고 크리에이터에 대한 수익 배분도 중단할 수 있다고 설명
+n 유튜브는 AI 생성 콘텐츠가 신원 파악이 가능한 개인을 모방한 경우 개인정보 침해 신고 
+절차에 따라 콘텐츠 삭제 요청도 받을 계획
+KEY Contents
+£ 유튜브, 생성 AI 콘텐츠에 AI 라벨 표시 안 하면 콘텐츠 삭제
+n 유튜브가 2023년 11월 14일 공식 블로그를 통해 몇 달 안에 생성 AI를 사용한 콘텐츠에 AI 
+라벨을 표시하는 새로운 규칙을 시행한다고 발표 
+∙실제로 일어나지 않은 사건을 사실적으로 묘사하거나 실제로 하지 않은 말이나 행동을 보여주는 콘텐츠와 
+같이 AI 도구를 사용해 사실적으로 변경되거나 합성된 콘텐츠에는 AI 라벨을 표시 필요
+∙유튜브는 이러한 규칙이 선거나 분쟁 상황, 공중 보건, 공직자 관련 문제와 같이 민감한 주제를 다루는 
+콘텐츠에서 특히 중요하다고 강조했으며, 크리에이터가 AI로 제작한 콘텐츠에 AI 라벨을 표시하지 않으면 
+해당 콘텐츠는 삭제되고 광고 수익을 배분하는 유튜브 파트너 프로그램도 정지될 수 있음
+∙유튜브는 두 가지 방식으로 AI를 이용한 콘텐츠의 변경이나 합성 여부를 시청자에게 전달할 계획으로 
+동영상 설명 패널에 라벨을 표시하는 방식이 기본이며, 민감한 주제를 다루는 특정 유형의 콘텐츠는 동영상 
+플레이어에 더욱 눈에 띄는 라벨을 적용 
+∙유튜브는 커뮤니티 정책에 위반되는 일부 합성 콘텐츠에 대해서는 라벨 지정 여부와 관계없이 삭제할 
+방침으로, 가령 사실적인 폭력을 보여주는 합성 동영상이 시청자에게 충격이나 혐오감을 줄 수 있다면 
+삭제될 수 있음
+£ 유튜브, 특정인을 모방한 AI 생성 콘텐츠에 대한 삭제 요청에도 대응 계획
+n 유튜브는 몇 달 내에 신원 파악이 가능한 개인의 얼굴이나 음성을 모방한 AI 생성 콘텐츠에 대하
+여 개인정보 침해 신고 절차를 마련해 삭제 요청을 받을 계획  
+∙단, 모든 콘텐츠가 삭제 대상은 아니며 유튜브는 콘텐츠가 패러디나 풍자인지, 해당 영상에서 삭제 요청을 
+한 특정인을 식별할 수 있는지, 공직자나 유명인이 등장하는지 등 다양한 요소를 고려할 예정
+∙유튜브는 음반사가 아티스트의 고유한 노래나 목소리를 모방한 AI 생성 음악에 대하여 삭제를 요청할 수 
+있는 기능도 도입할 방침
+☞ 출처 : Youtube, Our approach to responsible AI innovation, 2023.11.14.
+1. 정책/법제  
+2. 기업/산업 
+3. 기술/연구 
+ 4. 인력/교육
+영국 과학혁신기술부, AI 안전 연구소 설립 발표
+n 영국 과학혁신기술부가 첨단 AI 시스템에 대한 평가를 통해 안전성을 보장하기 위한 AI 
+안전 연구소를 설립한다고 발표
+n AI 안전 연구소는 핵심 기능으로 첨단 AI 시스템 평가 개발과 시행, AI 안전 연구 촉진, 
+정보교류 활성화를 추진할 계획
+KEY Contents
+£ 영국 AI 안전 연구소, 첨단 AI 시스템 평가와 AI 안전 연구, 정보 교류 추진
+n 영국 과학혁신기술부가 2023년 11월 2일 첨단 AI 안전에 중점을 둔 국가 연구기관으로 AI 
+안전 연구소(AI Safety Institute)를 설립한다고 발표
+∙AI 안전 연구소는 첨단 AI의 위험을 이해하고 거버넌스 마련에 필요한 사회·기술적 인프라 개발을 통해 
+영국을 AI 안전 연구의 글로벌 허브로 확립하는 것을 목표로 함
+∙영국 정부는 향후 10년간 연구소에 공공자금을 투자해 연구를 지원할 계획으로, 연구소는 △첨단 AI 시스템 
+평가 개발과 시행 △AI 안전 연구 촉진 △정보 교류 활성화를 핵심 기능으로 함
+n (첨단 AI 시스템 평가 개발과 시행) 시스템의 안전 관련 속성을 중심으로 안전과 보안 기능을 이해
+하고 사회적 영향을 평가
+∙평가 우선순위는 △사이버범죄 조장, 허위 정보 유포 등 악의적으로 활용될 수 있는 기능 △사회에 미치는 
+영향 △시스템 안전과 보안 △인간의 통제력 상실 가능성 순
+∙연구소는 외부 기관과 협력해 자체 시스템 평가를 개발 및 수행하고, 평가와 관련된 의견 공유 및 지침 
+마련을 위해 전문가 커뮤니티를 소집할 계획
+n (AI 안전 연구 촉진) 외부 연구자를 소집하고 다양한 예비 연구 프로젝트를 통해 AI 안전 기초연구를 수행
+∙AI 시스템의 효과적 거버넌스를 위한 도구 개발* 및 안전한 AI 시스템 개발을 위한 새로운 접근 방식 연구를 수행
+* 편향된 훈련 데이터에 대한 분석기술, 민감한 정보를 포함하는 AI 시스템에 대한 미세 조정 방법
+n (정보 교류 활성화) 현행 개인정보보호와 데이터 규제 하에서 연구소와 정책입안자, 국제 파트너, 
+학계, 시민사회 및 일반 대중과 정보 공유 채널을 구축
+∙AI 안전성 정상회의(AI Safety Summit)에서 합의된 대로 첨단 AI 모델의 평가 후 해당 모델이 배포된 
+타국의 정부 및 연구소와 평가 결과를 공유하고, 학계와 대중이 AI 시스템의 피해와 취약점을 보고할 수 
+있는 명확한 절차를 수립
+☞ 출처 : Gov.uk, Introducing the AI Safety Institute, 2023.11.02.
+             Venturebeat, Researchers turn to Harry Potter to make AI forget about copyrighted material, 2023.10.06.
+16
+구글 딥마인드, 범용 AI 모델의 기능과 동작에 대한 분류 체계 발표
+n 구글 딥마인드 연구진이 성능과 범용성, 자율성을 기준으로 범용 AI(AGI)의 수준을 
+0~5단계까지 총 6단계로 구분한 프레임워크를 공개
+n 현재 AGI는 단백질 구조를 예측하는 알파폴드와 같은 특정 용도에서는 5단계 수준을 달성했지만 
+광범위하게 활용될 수 있는 범용에서는 1단계 수준에 머물러 있음
+KEY Contents
+£ 챗GPT와 구글 바드와 같은 AI 챗봇은 범용 AI 1단계 수준
+n 구글 딥마인드 연구진은 2023년 11월 4일 범용 AI(Artificial General Intelligence, AGI) 모델을 용도와 
+성능에 따라 분류하는 프레임워크를 제시한 논문을 발표
+∙프레임워크의 목적은 AGI의 성능, 범용성, 자율성 수준을 정의하여 모델 간 비교와 위험 평가, AGI 
+달성까지의 진행 상황을 측정할 수 있는 공통 기준을 제공하기 위함
+n 연구진은 AGI 개념 정의에 필요한 기준을 수립하기 위한 6가지 원칙을 아래와 같이 도출
+∙(프로세스가 아닌 기능에 중점) AI가 어떻게 작동하는지보다 무엇을 할 수 있는지가 더 중요
+∙(범용성과 성능을 모두 평가) 진정한 AGI는 인간을 능가하는 폭넓은 범용성과 기술의 깊이를 모두 요구
+∙(인지와 메타인지 작업에 중점) 물리적 작업의 수행 능력은 AGI의 필수 전제조건이 아니며, 인지 작업과 
+메타인지 작업(예; 새로운 작업의 학습 능력, 인간에게 도움을 요청할 시점을 아는 능력)이 핵심
+∙(실제 구현보다 잠재력에 집중) 통제된 상황에서 발휘되는 성능에 따라 AGI를 규정하고 테스트를 진행 
+∙(생태학적 타당도를 갖춘 벤치마크 사용) AGI에 대한 벤치마크는 사람들이 경제적· 사회적 또는 예술적으로 
+가치 있게 여기는 실질적인 작업을 대상으로 성능 평가 필요
+∙(종점이 아닌 AGI를 향한 경로에 중점) 단계별 접근방식을 통해 AGI의 발전 상태를 점진적으로 측정
+n 연구진은 상기 원칙에 따라 AI를 성능에 따라 0~5단계와 광범위한 목적에 활용될 수 있는 범용 AI 및 특정 
+과업에 활용되는 특수 AI로 분류했으며, 특수 AI에서는 5단계까지 달성되었으나, 범용 AI는 현재 1단계 수준
+성능
+특수 AI 예시
+범용 AI 예시
+0단계: AI 아님
+계산기 소프트웨어, 컴파일러
+아마존 메커니컬 터크
+1단계: 신진(숙련되지 않은 인간)
+GOFAI(Good Old Fashioned Artificial Intelligence) 
+챗GPT, 바드, 라마2
+2단계: 유능(숙련된 인간의 50% 이상)
+스마트 스피커(애플 시리, 아마존 알렉사, 구글 
+어시스턴트), IBM 왓슨 
+미달성
+3단계: 전문가(숙련된 인간의 90% 이상)
+문법 교정기(그래머리), 생성 이미지 모델(달리2)
+미달성
+4단계: 거장(숙련된 인간의 99% 이상) 
+딥블루, 알파고
+미달성
+5단계: 초인간(인간을 100% 능가)
+알파폴드, 알파제로, 스톡피시
+미달성
+<구글 딥마인드의 범용 AI 분류 프레임워크> 
+☞ 출처 : Arxiv.org, Levels of AGI: Operationalizing Progress on the Path to AGI, 2023.11.04.
+1. 정책/법제  
+2. 기업/산업 
+3. 기술/연구 
+ 4. 인력/교육
+갈릴레오의 LLM 환각 지수 평가에서 GPT-4가 가장 우수
+n 주요 LLM의 환각 현상을 평가한 ‘LLM 환각 지수’에 따르면 GPT-4는 작업 유형과 관계없이 
+가장 우수한 성능을 보였으며 GPT-3.5도 거의 동등한 성능을 발휘
+n 오픈소스 모델 중에서는 메타의 라마2가 RAG 없는 질문과 답변 및 긴 형식의 텍스트 
+생성에서 가장 우수한 성능을 발휘
+KEY Contents
+£ 주요 LLM 중 GPT-4가 가장 환각 현상 적고 GPT-3.5 터보도 비슷한 성능 기록
+n 머신러닝 데이터 관리 기업 갈릴레오(Galileo)가 2023년 11월 15일 주요 LLM의 환각 현상을 평가한 
+‘LLM 환각 지수(LLM Hallucination Index)’를 발표
+∙생성 AI의 환각 현상은 AI 시스템이 잘못된 정보를 생성하거나, 현실과 다른 부정확한 결과를 내놓는 
+현상으로, 기업의 AI 도입을 가로막는 주요 장애물이며, 환각 지수는 신뢰할 수 있는 생성 AI 구축을 위해 
+환각을 평가하고 측정하는 구조화된 접근방식을 제공
+∙환각 지수는 △검색 증강 생성(Retrieval-Augmented Generation, RAG)*을 포함한 질문과 답변 △RAG 
+없는 질문과 답변 △긴 형식의 텍스트(보고서나 기사, 에세이) 생성의 3개 작업 유형에 대하여 환각을 
+기준으로 LLM의 순위를 평가
+* 기존에 학습된 데이터가 아닌 외부 소스(데이터셋, 데이터베이스, 문서 등)에서 가져온 정보를 검색해 활용하는 기술
+n 3개의 작업 유형 평가 전체에서 오픈AI의 GPT-4가 최고의 성능을 기록했으며, GPT-3.5 터보도 
+GPT-4와 거의 동등한 성능을 발휘
+∙메타의 라마2(Llama-2-70b)는 RAG 없는 질문과 답변 유형에서 오픈소스 모델 가운데 가장 우수했고 긴 
+형식의 텍스트 생성에서도 GPT-4에 준하는 성능을 기록했으나, RAG 포함 질문과 답변에서는 허깅 
+페이스의  제퍼(Zephyr-7b)가 라마2를 능가
+<갈릴레오의 LLM 환각 지수(RAG 포함 질문과 답변 기준)>
+☞ 출처: Galileo, LLM Hallucination Index, 2023.11.15.
+18
+영국 옥스퍼드 인터넷 연구소, AI 기술자의 임금이 평균 21% 높아
+n 옥스퍼드 인터넷 연구소의 연구에 따르면 특정 기술의 경제적 가치는 다른 기술과 결합 
+가능성이 높을수록 높게 평가됨 
+n AI의 확산은 기술의 경제적 가치에 크게 영향을 미치며, AI 기술을 가진 근로자는 평균 21%, 
+최대 40% 높은 임금을 받을 수 있음  
+KEY Contents
+£ AI 기술 중 머신러닝, 텐서플로우, 딥러닝의 임금 프리미엄이 높게 평가
+n 옥스퍼드 인터넷 연구소(Oxford Internet Institute)가 2023년 10월 24일 962개 기술과 2만 5천 
+명을 대상으로 한 연구에서 AI를 포함한 주요 기술의 경제적 가치를 분석한 결과를 발표 
+∙연구에 따르면 한 기술의 경제적 가치는 근로자의 여타 역량과 얼마나 잘 결합하는지를 보여주는 
+‘상보성(complementarity)’에 따라 결정됨
+∙특정 기술은 다른 기술과 결합 가능성이 높을수록 경제적 가치가 높아지며, 일례로 데이터 분석과 같은 
+기술은 여타 고부가가치 기술과 결합할 수 있어 가치가 높지만, 사진 리터칭 같은 기술은 특정 기술과만 
+결합할 수 있어 가치가 낮게 평가됨 
+∙대부분 직업은 여러 기술의 조합이 필요하며, 근로자의 재교육에서 경제적 효율성을 높이려면 기존 기술과 
+신기술 간 상보성을 극대화할 필요
+n AI의 확산은 기술의 경제적 가치에 크게 영향을 미치는 요소로, AI 기술을 가진 근로자는 평균적으로 
+21% 높은 임금을 획득 가능
+∙AI 기술 중 근로자에 대한 경제적 가치(시간당 임금 증가율 기준) 측면에서 상위 5개 기술은 
+머신러닝(+40%), 텐서플로우(+38%), 딥러닝(+27%), 자연어처리(+19%), 데이터 과학(+17%) 순
+☞ 출처 : Oxford Internet Institute, AI comes out on top: Oxford Study identifies the economic value of specific skills, 2023.10.24.
+<AI 기술 유형 평균 기술 대비 갖는 임금 프리미엄>
+행사명
+행사 주요 개요
+CES 2024
+- 미국 소비자기술 협회(CTA)가 주관하는 세계 최대 가전·IT·소
+비재 전시회로 5G, AR&VR, 디지털헬스, 교통·모빌리티 등 
+주요 카테고리 중심으로 기업들이 최신의 기술 제품군을 전시
+- CTA 사피로 회장은 가장 주목받는 섹터로 AI를 조명하였으며, 
+모든 산업을 포괄한다는 의미에서 ‘올 온(All on)’을 주제로 한 
+이번 전시에는 500곳 이상의 한국기업 참가 예정
+기간
+장소 
+홈페이지
+2024.1.9~12
+미국, 라스베가스
+https://www.ces.tech/
+AIMLA 2024
+- 머신러닝 및 응용에 관한 국제 컨퍼런스(AIMLA 2024)는 
+인공지능 및 머신러닝의 이론, 방법론 및 실용적 접근에 관한 
+지식과 최신 연구 결과 공유
+- 이론 및 실무 측면에서 인공지능, 기계학습의 주요 분야를 
+논의하고, 학계, 산업계의 연구자와 실무자들에게 해당 분
+야의 최첨단 개발 소식 공유
+기간
+장소 
+홈페이지
+2024.1.27~28
+덴마크, 코펜하겐
+https://ccnet2024.org/aimla
+/index
+AAAI Conference 
+on Artificial 
+Intelligence
+- AI 발전 협회 컨퍼런스(AAAI)는 AI 연구를 촉진하고, AI 분야 
+연구원, 실무자, 과학자, 학생 및 공학자 간 교류의 기회 제공
+- 컨퍼런스에서 AI 관련 기술 발표, 특별 트랙, 초청 연사, 
+워크숍, 튜토리얼, 포스터 세션, 주제 발표, 대회, 전시 프
+로그램 등 진행   
+기간
+장소 
+홈페이지
+2024.2.20~27
+캐나다, 밴쿠버
+https://aaai.org/aaai-confere
+nce/
+Ⅱ. 주요 행사 일정
+홈페이지 : https://spri.kr/
+보고서와 관련된 문의는 AI정책연구실(jayoo@spri.kr, 031-739-7352)으로 연락주시기 바랍니다.
+page_content='랭체인 한국어 튜토리얼
+
+- 테디노트 -
+
+
+
+Semantic Search
+
+정의: 의미론적 검색은 사용자의 질의를 단순한 키워드 매칭을 넘어서 그 의미를 파악하여 관련된 결과를 반환하는 검색 방식입니다.
+
+예시: 사용자가 "태양계 행성"이라고 검색하면, "목성", "화성" 등과 같이 관련된 행성에 대한 정보를 반환합니다.
+
+연관키워드: 자연어 처리, 검색 알고리즘, 데이터 마이닝
+
+
+
+Embedding
+
+정의: 임베딩은 단어나 문장 같은 텍스트 데이터를 저차원의 연속적인 벡터로 변환하는 과정입니다. 이를 통해 컴퓨터가 텍스트를 이해하고 처리할 수 있게 합니다.
+
+예시: "사과"라는 단어를 [0.65, -0.23, 0.17]과 같은 벡터로 표현합니다.
+
+연관키워드: 자연어 처리, 벡터화, 딥러닝 
+
+
+
+Token
+
+정의: 토큰은 텍스트를 더 작은 단위로 분할하는 것을 의미합니다. 이는 일반적으로 단어, 문장, 또는 구절일 수 있습니다.
+
+예시: 문장 "나는 학교에 간다"를 "나는", "학교에", "간다"로 분할합니다.
+
+연관키워드: 토큰화, 자연어 처리, 구문 분석' metadata={'source': './data/sample-ppt.pptx'}
+PassengerId: 1
+Survived: 0
+Pclass: 3
+Name: Braund, Mr. Owen Harris
+Sex: male
+Age: 22
+SibSp: 1
+Parch: 0
+Ticket: A/5 21171
+Fare: 7.25
+Cabin: 
+Embarked: S
+PassengerId: 2
+Survived: 1
+Pclass: 1
+Name: Cumings, Mrs. John Bradley (Florence Briggs Thayer)
+Sex: female
+Age: 38
+SibSp: 1
+Parch: 0
+Ticket: PC 17599
+Fare: 71.2833
+Cabin: C85
+Embarked: C
+PassengerId: 3
+Survived: 1
+Pclass: 3
+Name: Heikkinen, Miss. Laina
+Sex: female
+Age: 26
+SibSp: 0
+Parch: 0
+Ticket: STON/O2. 3101282
+Fare: 7.925
+Cabin: 
+Embarked: S
+PassengerId: 4
+Survived: 1
+Pclass: 1
+Name: Futrelle, Mrs. Jacques Heath (Lily May Peel)
+Sex: female
+Age: 35
+SibSp: 1
+Parch: 0
+Ticket: 113803
+Fare: 53.1
+Cabin: C123
+Embarked: S
+PassengerId: 5
+Survived: 0
+Pclass: 3
+Name: Allen, Mr. William Henry
+Sex: male
+Age: 35
+SibSp: 0
+Parch: 0
+Ticket: 373450
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 6
+Survived: 0
+Pclass: 3
+Name: Moran, Mr. James
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 330877
+Fare: 8.4583
+Cabin: 
+Embarked: Q
+PassengerId: 7
+Survived: 0
+Pclass: 1
+Name: McCarthy, Mr. Timothy J
+Sex: male
+Age: 54
+SibSp: 0
+Parch: 0
+Ticket: 17463
+Fare: 51.8625
+Cabin: E46
+Embarked: S
+PassengerId: 8
+Survived: 0
+Pclass: 3
+Name: Palsson, Master. Gosta Leonard
+Sex: male
+Age: 2
+SibSp: 3
+Parch: 1
+Ticket: 349909
+Fare: 21.075
+Cabin: 
+Embarked: S
+PassengerId: 9
+Survived: 1
+Pclass: 3
+Name: Johnson, Mrs. Oscar W (Elisabeth Vilhelmina Berg)
+Sex: female
+Age: 27
+SibSp: 0
+Parch: 2
+Ticket: 347742
+Fare: 11.1333
+Cabin: 
+Embarked: S
+PassengerId: 10
+Survived: 1
+Pclass: 2
+Name: Nasser, Mrs. Nicholas (Adele Achem)
+Sex: female
+Age: 14
+SibSp: 1
+Parch: 0
+Ticket: 237736
+Fare: 30.0708
+Cabin: 
+Embarked: C
+PassengerId: 11
+Survived: 1
+Pclass: 3
+Name: Sandstrom, Miss. Marguerite Rut
+Sex: female
+Age: 4
+SibSp: 1
+Parch: 1
+Ticket: PP 9549
+Fare: 16.7
+Cabin: G6
+Embarked: S
+PassengerId: 12
+Survived: 1
+Pclass: 1
+Name: Bonnell, Miss. Elizabeth
+Sex: female
+Age: 58
+SibSp: 0
+Parch: 0
+Ticket: 113783
+Fare: 26.55
+Cabin: C103
+Embarked: S
+PassengerId: 13
+Survived: 0
+Pclass: 3
+Name: Saundercock, Mr. William Henry
+Sex: male
+Age: 20
+SibSp: 0
+Parch: 0
+Ticket: A/5. 2151
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 14
+Survived: 0
+Pclass: 3
+Name: Andersson, Mr. Anders Johan
+Sex: male
+Age: 39
+SibSp: 1
+Parch: 5
+Ticket: 347082
+Fare: 31.275
+Cabin: 
+Embarked: S
+PassengerId: 15
+Survived: 0
+Pclass: 3
+Name: Vestrom, Miss. Hulda Amanda Adolfina
+Sex: female
+Age: 14
+SibSp: 0
+Parch: 0
+Ticket: 350406
+Fare: 7.8542
+Cabin: 
+Embarked: S
+PassengerId: 16
+Survived: 1
+Pclass: 2
+Name: Hewlett, Mrs. (Mary D Kingcome)
+Sex: female
+Age: 55
+SibSp: 0
+Parch: 0
+Ticket: 248706
+Fare: 16
+Cabin: 
+Embarked: S
+PassengerId: 17
+Survived: 0
+Pclass: 3
+Name: Rice, Master. Eugene
+Sex: male
+Age: 2
+SibSp: 4
+Parch: 1
+Ticket: 382652
+Fare: 29.125
+Cabin: 
+Embarked: Q
+PassengerId: 18
+Survived: 1
+Pclass: 2
+Name: Williams, Mr. Charles Eugene
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 244373
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 19
+Survived: 0
+Pclass: 3
+Name: Vander Planke, Mrs. Julius (Emelia Maria Vandemoortele)
+Sex: female
+Age: 31
+SibSp: 1
+Parch: 0
+Ticket: 345763
+Fare: 18
+Cabin: 
+Embarked: S
+PassengerId: 20
+Survived: 1
+Pclass: 3
+Name: Masselmani, Mrs. Fatima
+Sex: female
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 2649
+Fare: 7.225
+Cabin: 
+Embarked: C
+PassengerId: 21
+Survived: 0
+Pclass: 2
+Name: Fynney, Mr. Joseph J
+Sex: male
+Age: 35
+SibSp: 0
+Parch: 0
+Ticket: 239865
+Fare: 26
+Cabin: 
+Embarked: S
+PassengerId: 22
+Survived: 1
+Pclass: 2
+Name: Beesley, Mr. Lawrence
+Sex: male
+Age: 34
+SibSp: 0
+Parch: 0
+Ticket: 248698
+Fare: 13
+Cabin: D56
+Embarked: S
+PassengerId: 23
+Survived: 1
+Pclass: 3
+Name: McGowan, Miss. Anna "Annie"
+Sex: female
+Age: 15
+SibSp: 0
+Parch: 0
+Ticket: 330923
+Fare: 8.0292
+Cabin: 
+Embarked: Q
+PassengerId: 24
+Survived: 1
+Pclass: 1
+Name: Sloper, Mr. William Thompson
+Sex: male
+Age: 28
+SibSp: 0
+Parch: 0
+Ticket: 113788
+Fare: 35.5
+Cabin: A6
+Embarked: S
+PassengerId: 25
+Survived: 0
+Pclass: 3
+Name: Palsson, Miss. Torborg Danira
+Sex: female
+Age: 8
+SibSp: 3
+Parch: 1
+Ticket: 349909
+Fare: 21.075
+Cabin: 
+Embarked: S
+PassengerId: 26
+Survived: 1
+Pclass: 3
+Name: Asplund, Mrs. Carl Oscar (Selma Augusta Emilia Johansson)
+Sex: female
+Age: 38
+SibSp: 1
+Parch: 5
+Ticket: 347077
+Fare: 31.3875
+Cabin: 
+Embarked: S
+PassengerId: 27
+Survived: 0
+Pclass: 3
+Name: Emir, Mr. Farred Chehab
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 2631
+Fare: 7.225
+Cabin: 
+Embarked: C
+PassengerId: 28
+Survived: 0
+Pclass: 1
+Name: Fortune, Mr. Charles Alexander
+Sex: male
+Age: 19
+SibSp: 3
+Parch: 2
+Ticket: 19950
+Fare: 263
+Cabin: C23 C25 C27
+Embarked: S
+PassengerId: 29
+Survived: 1
+Pclass: 3
+Name: O'Dwyer, Miss. Ellen "Nellie"
+Sex: female
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 330959
+Fare: 7.8792
+Cabin: 
+Embarked: Q
+PassengerId: 30
+Survived: 0
+Pclass: 3
+Name: Todoroff, Mr. Lalio
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 349216
+Fare: 7.8958
+Cabin: 
+Embarked: S
+PassengerId: 31
+Survived: 0
+Pclass: 1
+Name: Uruchurtu, Don. Manuel E
+Sex: male
+Age: 40
+SibSp: 0
+Parch: 0
+Ticket: PC 17601
+Fare: 27.7208
+Cabin: 
+Embarked: C
+PassengerId: 32
+Survived: 1
+Pclass: 1
+Name: Spencer, Mrs. William Augustus (Marie Eugenie)
+Sex: female
+Age: 
+SibSp: 1
+Parch: 0
+Ticket: PC 17569
+Fare: 146.5208
+Cabin: B78
+Embarked: C
+PassengerId: 33
+Survived: 1
+Pclass: 3
+Name: Glynn, Miss. Mary Agatha
+Sex: female
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 335677
+Fare: 7.75
+Cabin: 
+Embarked: Q
+PassengerId: 34
+Survived: 0
+Pclass: 2
+Name: Wheadon, Mr. Edward H
+Sex: male
+Age: 66
+SibSp: 0
+Parch: 0
+Ticket: C.A. 24579
+Fare: 10.5
+Cabin: 
+Embarked: S
+PassengerId: 35
+Survived: 0
+Pclass: 1
+Name: Meyer, Mr. Edgar Joseph
+Sex: male
+Age: 28
+SibSp: 1
+Parch: 0
+Ticket: PC 17604
+Fare: 82.1708
+Cabin: 
+Embarked: C
+PassengerId: 36
+Survived: 0
+Pclass: 1
+Name: Holverson, Mr. Alexander Oskar
+Sex: male
+Age: 42
+SibSp: 1
+Parch: 0
+Ticket: 113789
+Fare: 52
+Cabin: 
+Embarked: S
+PassengerId: 37
+Survived: 1
+Pclass: 3
+Name: Mamee, Mr. Hanna
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 2677
+Fare: 7.2292
+Cabin: 
+Embarked: C
+PassengerId: 38
+Survived: 0
+Pclass: 3
+Name: Cann, Mr. Ernest Charles
+Sex: male
+Age: 21
+SibSp: 0
+Parch: 0
+Ticket: A./5. 2152
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 39
+Survived: 0
+Pclass: 3
+Name: Vander Planke, Miss. Augusta Maria
+Sex: female
+Age: 18
+SibSp: 2
+Parch: 0
+Ticket: 345764
+Fare: 18
+Cabin: 
+Embarked: S
+PassengerId: 40
+Survived: 1
+Pclass: 3
+Name: Nicola-Yarred, Miss. Jamila
+Sex: female
+Age: 14
+SibSp: 1
+Parch: 0
+Ticket: 2651
+Fare: 11.2417
+Cabin: 
+Embarked: C
+PassengerId: 41
+Survived: 0
+Pclass: 3
+Name: Ahlin, Mrs. Johan (Johanna Persdotter Larsson)
+Sex: female
+Age: 40
+SibSp: 1
+Parch: 0
+Ticket: 7546
+Fare: 9.475
+Cabin: 
+Embarked: S
+PassengerId: 42
+Survived: 0
+Pclass: 2
+Name: Turpin, Mrs. William John Robert (Dorothy Ann Wonnacott)
+Sex: female
+Age: 27
+SibSp: 1
+Parch: 0
+Ticket: 11668
+Fare: 21
+Cabin: 
+Embarked: S
+PassengerId: 43
+Survived: 0
+Pclass: 3
+Name: Kraeff, Mr. Theodor
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 349253
+Fare: 7.8958
+Cabin: 
+Embarked: C
+PassengerId: 44
+Survived: 1
+Pclass: 2
+Name: Laroche, Miss. Simonne Marie Anne Andree
+Sex: female
+Age: 3
+SibSp: 1
+Parch: 2
+Ticket: SC/Paris 2123
+Fare: 41.5792
+Cabin: 
+Embarked: C
+PassengerId: 45
+Survived: 1
+Pclass: 3
+Name: Devaney, Miss. Margaret Delia
+Sex: female
+Age: 19
+SibSp: 0
+Parch: 0
+Ticket: 330958
+Fare: 7.8792
+Cabin: 
+Embarked: Q
+PassengerId: 46
+Survived: 0
+Pclass: 3
+Name: Rogers, Mr. William John
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: S.C./A.4. 23567
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 47
+Survived: 0
+Pclass: 3
+Name: Lennon, Mr. Denis
+Sex: male
+Age: 
+SibSp: 1
+Parch: 0
+Ticket: 370371
+Fare: 15.5
+Cabin: 
+Embarked: Q
+PassengerId: 48
+Survived: 1
+Pclass: 3
+Name: O'Driscoll, Miss. Bridget
+Sex: female
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 14311
+Fare: 7.75
+Cabin: 
+Embarked: Q
+PassengerId: 49
+Survived: 0
+Pclass: 3
+Name: Samaan, Mr. Youssef
+Sex: male
+Age: 
+SibSp: 2
+Parch: 0
+Ticket: 2662
+Fare: 21.6792
+Cabin: 
+Embarked: C
+PassengerId: 50
+Survived: 0
+Pclass: 3
+Name: Arnold-Franchi, Mrs. Josef (Josefine Franchi)
+Sex: female
+Age: 18
+SibSp: 1
+Parch: 0
+Ticket: 349237
+Fare: 17.8
+Cabin: 
+Embarked: S
+PassengerId: 51
+Survived: 0
+Pclass: 3
+Name: Panula, Master. Juha Niilo
+Sex: male
+Age: 7
+SibSp: 4
+Parch: 1
+Ticket: 3101295
+Fare: 39.6875
+Cabin: 
+Embarked: S
+PassengerId: 52
+Survived: 0
+Pclass: 3
+Name: Nosworthy, Mr. Richard Cater
+Sex: male
+Age: 21
+SibSp: 0
+Parch: 0
+Ticket: A/4. 39886
+Fare: 7.8
+Cabin: 
+Embarked: S
+PassengerId: 53
+Survived: 1
+Pclass: 1
+Name: Harper, Mrs. Henry Sleeper (Myna Haxtun)
+Sex: female
+Age: 49
+SibSp: 1
+Parch: 0
+Ticket: PC 17572
+Fare: 76.7292
+Cabin: D33
+Embarked: C
+PassengerId: 54
+Survived: 1
+Pclass: 2
+Name: Faunthorpe, Mrs. Lizzie (Elizabeth Anne Wilkinson)
+Sex: female
+Age: 29
+SibSp: 1
+Parch: 0
+Ticket: 2926
+Fare: 26
+Cabin: 
+Embarked: S
+PassengerId: 55
+Survived: 0
+Pclass: 1
+Name: Ostby, Mr. Engelhart Cornelius
+Sex: male
+Age: 65
+SibSp: 0
+Parch: 1
+Ticket: 113509
+Fare: 61.9792
+Cabin: B30
+Embarked: C
+PassengerId: 56
+Survived: 1
+Pclass: 1
+Name: Woolner, Mr. Hugh
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 19947
+Fare: 35.5
+Cabin: C52
+Embarked: S
+PassengerId: 57
+Survived: 1
+Pclass: 2
+Name: Rugg, Miss. Emily
+Sex: female
+Age: 21
+SibSp: 0
+Parch: 0
+Ticket: C.A. 31026
+Fare: 10.5
+Cabin: 
+Embarked: S
+PassengerId: 58
+Survived: 0
+Pclass: 3
+Name: Novel, Mr. Mansouer
+Sex: male
+Age: 28.5
+SibSp: 0
+Parch: 0
+Ticket: 2697
+Fare: 7.2292
+Cabin: 
+Embarked: C
+PassengerId: 59
+Survived: 1
+Pclass: 2
+Name: West, Miss. Constance Mirium
+Sex: female
+Age: 5
+SibSp: 1
+Parch: 2
+Ticket: C.A. 34651
+Fare: 27.75
+Cabin: 
+Embarked: S
+PassengerId: 60
+Survived: 0
+Pclass: 3
+Name: Goodwin, Master. William Frederick
+Sex: male
+Age: 11
+SibSp: 5
+Parch: 2
+Ticket: CA 2144
+Fare: 46.9
+Cabin: 
+Embarked: S
+PassengerId: 61
+Survived: 0
+Pclass: 3
+Name: Sirayanian, Mr. Orsen
+Sex: male
+Age: 22
+SibSp: 0
+Parch: 0
+Ticket: 2669
+Fare: 7.2292
+Cabin: 
+Embarked: C
+PassengerId: 62
+Survived: 1
+Pclass: 1
+Name: Icard, Miss. Amelie
+Sex: female
+Age: 38
+SibSp: 0
+Parch: 0
+Ticket: 113572
+Fare: 80
+Cabin: B28
+Embarked: 
+PassengerId: 63
+Survived: 0
+Pclass: 1
+Name: Harris, Mr. Henry Birkhardt
+Sex: male
+Age: 45
+SibSp: 1
+Parch: 0
+Ticket: 36973
+Fare: 83.475
+Cabin: C83
+Embarked: S
+PassengerId: 64
+Survived: 0
+Pclass: 3
+Name: Skoog, Master. Harald
+Sex: male
+Age: 4
+SibSp: 3
+Parch: 2
+Ticket: 347088
+Fare: 27.9
+Cabin: 
+Embarked: S
+PassengerId: 65
+Survived: 0
+Pclass: 1
+Name: Stewart, Mr. Albert A
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: PC 17605
+Fare: 27.7208
+Cabin: 
+Embarked: C
+PassengerId: 66
+Survived: 1
+Pclass: 3
+Name: Moubarek, Master. Gerios
+Sex: male
+Age: 
+SibSp: 1
+Parch: 1
+Ticket: 2661
+Fare: 15.2458
+Cabin: 
+Embarked: C
+PassengerId: 67
+Survived: 1
+Pclass: 2
+Name: Nye, Mrs. (Elizabeth Ramell)
+Sex: female
+Age: 29
+SibSp: 0
+Parch: 0
+Ticket: C.A. 29395
+Fare: 10.5
+Cabin: F33
+Embarked: S
+PassengerId: 68
+Survived: 0
+Pclass: 3
+Name: Crease, Mr. Ernest James
+Sex: male
+Age: 19
+SibSp: 0
+Parch: 0
+Ticket: S.P. 3464
+Fare: 8.1583
+Cabin: 
+Embarked: S
+PassengerId: 69
+Survived: 1
+Pclass: 3
+Name: Andersson, Miss. Erna Alexandra
+Sex: female
+Age: 17
+SibSp: 4
+Parch: 2
+Ticket: 3101281
+Fare: 7.925
+Cabin: 
+Embarked: S
+PassengerId: 70
+Survived: 0
+Pclass: 3
+Name: Kink, Mr. Vincenz
+Sex: male
+Age: 26
+SibSp: 2
+Parch: 0
+Ticket: 315151
+Fare: 8.6625
+Cabin: 
+Embarked: S
+PassengerId: 71
+Survived: 0
+Pclass: 2
+Name: Jenkin, Mr. Stephen Curnow
+Sex: male
+Age: 32
+SibSp: 0
+Parch: 0
+Ticket: C.A. 33111
+Fare: 10.5
+Cabin: 
+Embarked: S
+PassengerId: 72
+Survived: 0
+Pclass: 3
+Name: Goodwin, Miss. Lillian Amy
+Sex: female
+Age: 16
+SibSp: 5
+Parch: 2
+Ticket: CA 2144
+Fare: 46.9
+Cabin: 
+Embarked: S
+PassengerId: 73
+Survived: 0
+Pclass: 2
+Name: Hood, Mr. Ambrose Jr
+Sex: male
+Age: 21
+SibSp: 0
+Parch: 0
+Ticket: S.O.C. 14879
+Fare: 73.5
+Cabin: 
+Embarked: S
+PassengerId: 74
+Survived: 0
+Pclass: 3
+Name: Chronopoulos, Mr. Apostolos
+Sex: male
+Age: 26
+SibSp: 1
+Parch: 0
+Ticket: 2680
+Fare: 14.4542
+Cabin: 
+Embarked: C
+PassengerId: 75
+Survived: 1
+Pclass: 3
+Name: Bing, Mr. Lee
+Sex: male
+Age: 32
+SibSp: 0
+Parch: 0
+Ticket: 1601
+Fare: 56.4958
+Cabin: 
+Embarked: S
+PassengerId: 76
+Survived: 0
+Pclass: 3
+Name: Moen, Mr. Sigurd Hansen
+Sex: male
+Age: 25
+SibSp: 0
+Parch: 0
+Ticket: 348123
+Fare: 7.65
+Cabin: F G73
+Embarked: S
+PassengerId: 77
+Survived: 0
+Pclass: 3
+Name: Staneff, Mr. Ivan
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 349208
+Fare: 7.8958
+Cabin: 
+Embarked: S
+PassengerId: 78
+Survived: 0
+Pclass: 3
+Name: Moutal, Mr. Rahamin Haim
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 374746
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 79
+Survived: 1
+Pclass: 2
+Name: Caldwell, Master. Alden Gates
+Sex: male
+Age: 0.83
+SibSp: 0
+Parch: 2
+Ticket: 248738
+Fare: 29
+Cabin: 
+Embarked: S
+PassengerId: 80
+Survived: 1
+Pclass: 3
+Name: Dowdell, Miss. Elizabeth
+Sex: female
+Age: 30
+SibSp: 0
+Parch: 0
+Ticket: 364516
+Fare: 12.475
+Cabin: 
+Embarked: S
+PassengerId: 81
+Survived: 0
+Pclass: 3
+Name: Waelens, Mr. Achille
+Sex: male
+Age: 22
+SibSp: 0
+Parch: 0
+Ticket: 345767
+Fare: 9
+Cabin: 
+Embarked: S
+PassengerId: 82
+Survived: 1
+Pclass: 3
+Name: Sheerlinck, Mr. Jan Baptist
+Sex: male
+Age: 29
+SibSp: 0
+Parch: 0
+Ticket: 345779
+Fare: 9.5
+Cabin: 
+Embarked: S
+PassengerId: 83
+Survived: 1
+Pclass: 3
+Name: McDermott, Miss. Brigdet Delia
+Sex: female
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 330932
+Fare: 7.7875
+Cabin: 
+Embarked: Q
+PassengerId: 84
+Survived: 0
+Pclass: 1
+Name: Carrau, Mr. Francisco M
+Sex: male
+Age: 28
+SibSp: 0
+Parch: 0
+Ticket: 113059
+Fare: 47.1
+Cabin: 
+Embarked: S
+PassengerId: 85
+Survived: 1
+Pclass: 2
+Name: Ilett, Miss. Bertha
+Sex: female
+Age: 17
+SibSp: 0
+Parch: 0
+Ticket: SO/C 14885
+Fare: 10.5
+Cabin: 
+Embarked: S
+PassengerId: 86
+Survived: 1
+Pclass: 3
+Name: Backstrom, Mrs. Karl Alfred (Maria Mathilda Gustafsson)
+Sex: female
+Age: 33
+SibSp: 3
+Parch: 0
+Ticket: 3101278
+Fare: 15.85
+Cabin: 
+Embarked: S
+PassengerId: 87
+Survived: 0
+Pclass: 3
+Name: Ford, Mr. William Neal
+Sex: male
+Age: 16
+SibSp: 1
+Parch: 3
+Ticket: W./C. 6608
+Fare: 34.375
+Cabin: 
+Embarked: S
+PassengerId: 88
+Survived: 0
+Pclass: 3
+Name: Slocovski, Mr. Selman Francis
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: SOTON/OQ 392086
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 89
+Survived: 1
+Pclass: 1
+Name: Fortune, Miss. Mabel Helen
+Sex: female
+Age: 23
+SibSp: 3
+Parch: 2
+Ticket: 19950
+Fare: 263
+Cabin: C23 C25 C27
+Embarked: S
+PassengerId: 90
+Survived: 0
+Pclass: 3
+Name: Celotti, Mr. Francesco
+Sex: male
+Age: 24
+SibSp: 0
+Parch: 0
+Ticket: 343275
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 91
+Survived: 0
+Pclass: 3
+Name: Christmann, Mr. Emil
+Sex: male
+Age: 29
+SibSp: 0
+Parch: 0
+Ticket: 343276
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 92
+Survived: 0
+Pclass: 3
+Name: Andreasson, Mr. Paul Edvin
+Sex: male
+Age: 20
+SibSp: 0
+Parch: 0
+Ticket: 347466
+Fare: 7.8542
+Cabin: 
+Embarked: S
+PassengerId: 93
+Survived: 0
+Pclass: 1
+Name: Chaffee, Mr. Herbert Fuller
+Sex: male
+Age: 46
+SibSp: 1
+Parch: 0
+Ticket: W.E.P. 5734
+Fare: 61.175
+Cabin: E31
+Embarked: S
+PassengerId: 94
+Survived: 0
+Pclass: 3
+Name: Dean, Mr. Bertram Frank
+Sex: male
+Age: 26
+SibSp: 1
+Parch: 2
+Ticket: C.A. 2315
+Fare: 20.575
+Cabin: 
+Embarked: S
+PassengerId: 95
+Survived: 0
+Pclass: 3
+Name: Coxon, Mr. Daniel
+Sex: male
+Age: 59
+SibSp: 0
+Parch: 0
+Ticket: 364500
+Fare: 7.25
+Cabin: 
+Embarked: S
+PassengerId: 96
+Survived: 0
+Pclass: 3
+Name: Shorney, Mr. Charles Joseph
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 374910
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 97
+Survived: 0
+Pclass: 1
+Name: Goldschmidt, Mr. George B
+Sex: male
+Age: 71
+SibSp: 0
+Parch: 0
+Ticket: PC 17754
+Fare: 34.6542
+Cabin: A5
+Embarked: C
+PassengerId: 98
+Survived: 1
+Pclass: 1
+Name: Greenfield, Mr. William Bertram
+Sex: male
+Age: 23
+SibSp: 0
+Parch: 1
+Ticket: PC 17759
+Fare: 63.3583
+Cabin: D10 D12
+Embarked: C
+PassengerId: 99
+Survived: 1
+Pclass: 2
+Name: Doling, Mrs. John T (Ada Julia Bone)
+Sex: female
+Age: 34
+SibSp: 0
+Parch: 1
+Ticket: 231919
+Fare: 23
+Cabin: 
+Embarked: S
+PassengerId: 100
+Survived: 0
+Pclass: 2
+Name: Kantor, Mr. Sinai
+Sex: male
+Age: 34
+SibSp: 1
+Parch: 0
+Ticket: 244367
+Fare: 26
+Cabin: 
+Embarked: S
+PassengerId: 101
+Survived: 0
+Pclass: 3
+Name: Petranec, Miss. Matilda
+Sex: female
+Age: 28
+SibSp: 0
+Parch: 0
+Ticket: 349245
+Fare: 7.8958
+Cabin: 
+Embarked: S
+PassengerId: 102
+Survived: 0
+Pclass: 3
+Name: Petroff, Mr. Pastcho ("Pentcho")
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 349215
+Fare: 7.8958
+Cabin: 
+Embarked: S
+PassengerId: 103
+Survived: 0
+Pclass: 1
+Name: White, Mr. Richard Frasar
+Sex: male
+Age: 21
+SibSp: 0
+Parch: 1
+Ticket: 35281
+Fare: 77.2875
+Cabin: D26
+Embarked: S
+PassengerId: 104
+Survived: 0
+Pclass: 3
+Name: Johansson, Mr. Gustaf Joel
+Sex: male
+Age: 33
+SibSp: 0
+Parch: 0
+Ticket: 7540
+Fare: 8.6542
+Cabin: 
+Embarked: S
+PassengerId: 105
+Survived: 0
+Pclass: 3
+Name: Gustafsson, Mr. Anders Vilhelm
+Sex: male
+Age: 37
+SibSp: 2
+Parch: 0
+Ticket: 3101276
+Fare: 7.925
+Cabin: 
+Embarked: S
+PassengerId: 106
+Survived: 0
+Pclass: 3
+Name: Mionoff, Mr. Stoytcho
+Sex: male
+Age: 28
+SibSp: 0
+Parch: 0
+Ticket: 349207
+Fare: 7.8958
+Cabin: 
+Embarked: S
+PassengerId: 107
+Survived: 1
+Pclass: 3
+Name: Salkjelsvik, Miss. Anna Kristine
+Sex: female
+Age: 21
+SibSp: 0
+Parch: 0
+Ticket: 343120
+Fare: 7.65
+Cabin: 
+Embarked: S
+PassengerId: 108
+Survived: 1
+Pclass: 3
+Name: Moss, Mr. Albert Johan
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 312991
+Fare: 7.775
+Cabin: 
+Embarked: S
+PassengerId: 109
+Survived: 0
+Pclass: 3
+Name: Rekic, Mr. Tido
+Sex: male
+Age: 38
+SibSp: 0
+Parch: 0
+Ticket: 349249
+Fare: 7.8958
+Cabin: 
+Embarked: S
+PassengerId: 110
+Survived: 1
+Pclass: 3
+Name: Moran, Miss. Bertha
+Sex: female
+Age: 
+SibSp: 1
+Parch: 0
+Ticket: 371110
+Fare: 24.15
+Cabin: 
+Embarked: Q
+PassengerId: 111
+Survived: 0
+Pclass: 1
+Name: Porter, Mr. Walter Chamberlain
+Sex: male
+Age: 47
+SibSp: 0
+Parch: 0
+Ticket: 110465
+Fare: 52
+Cabin: C110
+Embarked: S
+PassengerId: 112
+Survived: 0
+Pclass: 3
+Name: Zabour, Miss. Hileni
+Sex: female
+Age: 14.5
+SibSp: 1
+Parch: 0
+Ticket: 2665
+Fare: 14.4542
+Cabin: 
+Embarked: C
+PassengerId: 113
+Survived: 0
+Pclass: 3
+Name: Barton, Mr. David John
+Sex: male
+Age: 22
+SibSp: 0
+Parch: 0
+Ticket: 324669
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 114
+Survived: 0
+Pclass: 3
+Name: Jussila, Miss. Katriina
+Sex: female
+Age: 20
+SibSp: 1
+Parch: 0
+Ticket: 4136
+Fare: 9.825
+Cabin: 
+Embarked: S
+PassengerId: 115
+Survived: 0
+Pclass: 3
+Name: Attalah, Miss. Malake
+Sex: female
+Age: 17
+SibSp: 0
+Parch: 0
+Ticket: 2627
+Fare: 14.4583
+Cabin: 
+Embarked: C
+PassengerId: 116
+Survived: 0
+Pclass: 3
+Name: Pekoniemi, Mr. Edvard
+Sex: male
+Age: 21
+SibSp: 0
+Parch: 0
+Ticket: STON/O 2. 3101294
+Fare: 7.925
+Cabin: 
+Embarked: S
+PassengerId: 117
+Survived: 0
+Pclass: 3
+Name: Connors, Mr. Patrick
+Sex: male
+Age: 70.5
+SibSp: 0
+Parch: 0
+Ticket: 370369
+Fare: 7.75
+Cabin: 
+Embarked: Q
+PassengerId: 118
+Survived: 0
+Pclass: 2
+Name: Turpin, Mr. William John Robert
+Sex: male
+Age: 29
+SibSp: 1
+Parch: 0
+Ticket: 11668
+Fare: 21
+Cabin: 
+Embarked: S
+PassengerId: 119
+Survived: 0
+Pclass: 1
+Name: Baxter, Mr. Quigg Edmond
+Sex: male
+Age: 24
+SibSp: 0
+Parch: 1
+Ticket: PC 17558
+Fare: 247.5208
+Cabin: B58 B60
+Embarked: C
+PassengerId: 120
+Survived: 0
+Pclass: 3
+Name: Andersson, Miss. Ellis Anna Maria
+Sex: female
+Age: 2
+SibSp: 4
+Parch: 2
+Ticket: 347082
+Fare: 31.275
+Cabin: 
+Embarked: S
+PassengerId: 121
+Survived: 0
+Pclass: 2
+Name: Hickman, Mr. Stanley George
+Sex: male
+Age: 21
+SibSp: 2
+Parch: 0
+Ticket: S.O.C. 14879
+Fare: 73.5
+Cabin: 
+Embarked: S
+PassengerId: 122
+Survived: 0
+Pclass: 3
+Name: Moore, Mr. Leonard Charles
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: A4. 54510
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 123
+Survived: 0
+Pclass: 2
+Name: Nasser, Mr. Nicholas
+Sex: male
+Age: 32.5
+SibSp: 1
+Parch: 0
+Ticket: 237736
+Fare: 30.0708
+Cabin: 
+Embarked: C
+PassengerId: 124
+Survived: 1
+Pclass: 2
+Name: Webber, Miss. Susan
+Sex: female
+Age: 32.5
+SibSp: 0
+Parch: 0
+Ticket: 27267
+Fare: 13
+Cabin: E101
+Embarked: S
+PassengerId: 125
+Survived: 0
+Pclass: 1
+Name: White, Mr. Percival Wayland
+Sex: male
+Age: 54
+SibSp: 0
+Parch: 1
+Ticket: 35281
+Fare: 77.2875
+Cabin: D26
+Embarked: S
+PassengerId: 126
+Survived: 1
+Pclass: 3
+Name: Nicola-Yarred, Master. Elias
+Sex: male
+Age: 12
+SibSp: 1
+Parch: 0
+Ticket: 2651
+Fare: 11.2417
+Cabin: 
+Embarked: C
+PassengerId: 127
+Survived: 0
+Pclass: 3
+Name: McMahon, Mr. Martin
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 370372
+Fare: 7.75
+Cabin: 
+Embarked: Q
+PassengerId: 128
+Survived: 1
+Pclass: 3
+Name: Madsen, Mr. Fridtjof Arne
+Sex: male
+Age: 24
+SibSp: 0
+Parch: 0
+Ticket: C 17369
+Fare: 7.1417
+Cabin: 
+Embarked: S
+PassengerId: 129
+Survived: 1
+Pclass: 3
+Name: Peter, Miss. Anna
+Sex: female
+Age: 
+SibSp: 1
+Parch: 1
+Ticket: 2668
+Fare: 22.3583
+Cabin: F E69
+Embarked: C
+PassengerId: 130
+Survived: 0
+Pclass: 3
+Name: Ekstrom, Mr. Johan
+Sex: male
+Age: 45
+SibSp: 0
+Parch: 0
+Ticket: 347061
+Fare: 6.975
+Cabin: 
+Embarked: S
+PassengerId: 131
+Survived: 0
+Pclass: 3
+Name: Drazenoic, Mr. Jozef
+Sex: male
+Age: 33
+SibSp: 0
+Parch: 0
+Ticket: 349241
+Fare: 7.8958
+Cabin: 
+Embarked: C
+PassengerId: 132
+Survived: 0
+Pclass: 3
+Name: Coelho, Mr. Domingos Fernandeo
+Sex: male
+Age: 20
+SibSp: 0
+Parch: 0
+Ticket: SOTON/O.Q. 3101307
+Fare: 7.05
+Cabin: 
+Embarked: S
+PassengerId: 133
+Survived: 0
+Pclass: 3
+Name: Robins, Mrs. Alexander A (Grace Charity Laury)
+Sex: female
+Age: 47
+SibSp: 1
+Parch: 0
+Ticket: A/5. 3337
+Fare: 14.5
+Cabin: 
+Embarked: S
+PassengerId: 134
+Survived: 1
+Pclass: 2
+Name: Weisz, Mrs. Leopold (Mathilde Francoise Pede)
+Sex: female
+Age: 29
+SibSp: 1
+Parch: 0
+Ticket: 228414
+Fare: 26
+Cabin: 
+Embarked: S
+PassengerId: 135
+Survived: 0
+Pclass: 2
+Name: Sobey, Mr. Samuel James Hayden
+Sex: male
+Age: 25
+SibSp: 0
+Parch: 0
+Ticket: C.A. 29178
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 136
+Survived: 0
+Pclass: 2
+Name: Richard, Mr. Emile
+Sex: male
+Age: 23
+SibSp: 0
+Parch: 0
+Ticket: SC/PARIS 2133
+Fare: 15.0458
+Cabin: 
+Embarked: C
+PassengerId: 137
+Survived: 1
+Pclass: 1
+Name: Newsom, Miss. Helen Monypeny
+Sex: female
+Age: 19
+SibSp: 0
+Parch: 2
+Ticket: 11752
+Fare: 26.2833
+Cabin: D47
+Embarked: S
+PassengerId: 138
+Survived: 0
+Pclass: 1
+Name: Futrelle, Mr. Jacques Heath
+Sex: male
+Age: 37
+SibSp: 1
+Parch: 0
+Ticket: 113803
+Fare: 53.1
+Cabin: C123
+Embarked: S
+PassengerId: 139
+Survived: 0
+Pclass: 3
+Name: Osen, Mr. Olaf Elon
+Sex: male
+Age: 16
+SibSp: 0
+Parch: 0
+Ticket: 7534
+Fare: 9.2167
+Cabin: 
+Embarked: S
+PassengerId: 140
+Survived: 0
+Pclass: 1
+Name: Giglio, Mr. Victor
+Sex: male
+Age: 24
+SibSp: 0
+Parch: 0
+Ticket: PC 17593
+Fare: 79.2
+Cabin: B86
+Embarked: C
+PassengerId: 141
+Survived: 0
+Pclass: 3
+Name: Boulos, Mrs. Joseph (Sultana)
+Sex: female
+Age: 
+SibSp: 0
+Parch: 2
+Ticket: 2678
+Fare: 15.2458
+Cabin: 
+Embarked: C
+PassengerId: 142
+Survived: 1
+Pclass: 3
+Name: Nysten, Miss. Anna Sofia
+Sex: female
+Age: 22
+SibSp: 0
+Parch: 0
+Ticket: 347081
+Fare: 7.75
+Cabin: 
+Embarked: S
+PassengerId: 143
+Survived: 1
+Pclass: 3
+Name: Hakkarainen, Mrs. Pekka Pietari (Elin Matilda Dolck)
+Sex: female
+Age: 24
+SibSp: 1
+Parch: 0
+Ticket: STON/O2. 3101279
+Fare: 15.85
+Cabin: 
+Embarked: S
+PassengerId: 144
+Survived: 0
+Pclass: 3
+Name: Burke, Mr. Jeremiah
+Sex: male
+Age: 19
+SibSp: 0
+Parch: 0
+Ticket: 365222
+Fare: 6.75
+Cabin: 
+Embarked: Q
+PassengerId: 145
+Survived: 0
+Pclass: 2
+Name: Andrew, Mr. Edgardo Samuel
+Sex: male
+Age: 18
+SibSp: 0
+Parch: 0
+Ticket: 231945
+Fare: 11.5
+Cabin: 
+Embarked: S
+PassengerId: 146
+Survived: 0
+Pclass: 2
+Name: Nicholls, Mr. Joseph Charles
+Sex: male
+Age: 19
+SibSp: 1
+Parch: 1
+Ticket: C.A. 33112
+Fare: 36.75
+Cabin: 
+Embarked: S
+PassengerId: 147
+Survived: 1
+Pclass: 3
+Name: Andersson, Mr. August Edvard ("Wennerstrom")
+Sex: male
+Age: 27
+SibSp: 0
+Parch: 0
+Ticket: 350043
+Fare: 7.7958
+Cabin: 
+Embarked: S
+PassengerId: 148
+Survived: 0
+Pclass: 3
+Name: Ford, Miss. Robina Maggie "Ruby"
+Sex: female
+Age: 9
+SibSp: 2
+Parch: 2
+Ticket: W./C. 6608
+Fare: 34.375
+Cabin: 
+Embarked: S
+PassengerId: 149
+Survived: 0
+Pclass: 2
+Name: Navratil, Mr. Michel ("Louis M Hoffman")
+Sex: male
+Age: 36.5
+SibSp: 0
+Parch: 2
+Ticket: 230080
+Fare: 26
+Cabin: F2
+Embarked: S
+PassengerId: 150
+Survived: 0
+Pclass: 2
+Name: Byles, Rev. Thomas Roussel Davids
+Sex: male
+Age: 42
+SibSp: 0
+Parch: 0
+Ticket: 244310
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 151
+Survived: 0
+Pclass: 2
+Name: Bateman, Rev. Robert James
+Sex: male
+Age: 51
+SibSp: 0
+Parch: 0
+Ticket: S.O.P. 1166
+Fare: 12.525
+Cabin: 
+Embarked: S
+PassengerId: 152
+Survived: 1
+Pclass: 1
+Name: Pears, Mrs. Thomas (Edith Wearne)
+Sex: female
+Age: 22
+SibSp: 1
+Parch: 0
+Ticket: 113776
+Fare: 66.6
+Cabin: C2
+Embarked: S
+PassengerId: 153
+Survived: 0
+Pclass: 3
+Name: Meo, Mr. Alfonzo
+Sex: male
+Age: 55.5
+SibSp: 0
+Parch: 0
+Ticket: A.5. 11206
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 154
+Survived: 0
+Pclass: 3
+Name: van Billiard, Mr. Austin Blyler
+Sex: male
+Age: 40.5
+SibSp: 0
+Parch: 2
+Ticket: A/5. 851
+Fare: 14.5
+Cabin: 
+Embarked: S
+PassengerId: 155
+Survived: 0
+Pclass: 3
+Name: Olsen, Mr. Ole Martin
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: Fa 265302
+Fare: 7.3125
+Cabin: 
+Embarked: S
+PassengerId: 156
+Survived: 0
+Pclass: 1
+Name: Williams, Mr. Charles Duane
+Sex: male
+Age: 51
+SibSp: 0
+Parch: 1
+Ticket: PC 17597
+Fare: 61.3792
+Cabin: 
+Embarked: C
+PassengerId: 157
+Survived: 1
+Pclass: 3
+Name: Gilnagh, Miss. Katherine "Katie"
+Sex: female
+Age: 16
+SibSp: 0
+Parch: 0
+Ticket: 35851
+Fare: 7.7333
+Cabin: 
+Embarked: Q
+PassengerId: 158
+Survived: 0
+Pclass: 3
+Name: Corn, Mr. Harry
+Sex: male
+Age: 30
+SibSp: 0
+Parch: 0
+Ticket: SOTON/OQ 392090
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 159
+Survived: 0
+Pclass: 3
+Name: Smiljanic, Mr. Mile
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 315037
+Fare: 8.6625
+Cabin: 
+Embarked: S
+PassengerId: 160
+Survived: 0
+Pclass: 3
+Name: Sage, Master. Thomas Henry
+Sex: male
+Age: 
+SibSp: 8
+Parch: 2
+Ticket: CA. 2343
+Fare: 69.55
+Cabin: 
+Embarked: S
+PassengerId: 161
+Survived: 0
+Pclass: 3
+Name: Cribb, Mr. John Hatfield
+Sex: male
+Age: 44
+SibSp: 0
+Parch: 1
+Ticket: 371362
+Fare: 16.1
+Cabin: 
+Embarked: S
+PassengerId: 162
+Survived: 1
+Pclass: 2
+Name: Watt, Mrs. James (Elizabeth "Bessie" Inglis Milne)
+Sex: female
+Age: 40
+SibSp: 0
+Parch: 0
+Ticket: C.A. 33595
+Fare: 15.75
+Cabin: 
+Embarked: S
+PassengerId: 163
+Survived: 0
+Pclass: 3
+Name: Bengtsson, Mr. John Viktor
+Sex: male
+Age: 26
+SibSp: 0
+Parch: 0
+Ticket: 347068
+Fare: 7.775
+Cabin: 
+Embarked: S
+PassengerId: 164
+Survived: 0
+Pclass: 3
+Name: Calic, Mr. Jovo
+Sex: male
+Age: 17
+SibSp: 0
+Parch: 0
+Ticket: 315093
+Fare: 8.6625
+Cabin: 
+Embarked: S
+PassengerId: 165
+Survived: 0
+Pclass: 3
+Name: Panula, Master. Eino Viljami
+Sex: male
+Age: 1
+SibSp: 4
+Parch: 1
+Ticket: 3101295
+Fare: 39.6875
+Cabin: 
+Embarked: S
+PassengerId: 166
+Survived: 1
+Pclass: 3
+Name: Goldsmith, Master. Frank John William "Frankie"
+Sex: male
+Age: 9
+SibSp: 0
+Parch: 2
+Ticket: 363291
+Fare: 20.525
+Cabin: 
+Embarked: S
+PassengerId: 167
+Survived: 1
+Pclass: 1
+Name: Chibnall, Mrs. (Edith Martha Bowerman)
+Sex: female
+Age: 
+SibSp: 0
+Parch: 1
+Ticket: 113505
+Fare: 55
+Cabin: E33
+Embarked: S
+PassengerId: 168
+Survived: 0
+Pclass: 3
+Name: Skoog, Mrs. William (Anna Bernhardina Karlsson)
+Sex: female
+Age: 45
+SibSp: 1
+Parch: 4
+Ticket: 347088
+Fare: 27.9
+Cabin: 
+Embarked: S
+PassengerId: 169
+Survived: 0
+Pclass: 1
+Name: Baumann, Mr. John D
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: PC 17318
+Fare: 25.925
+Cabin: 
+Embarked: S
+PassengerId: 170
+Survived: 0
+Pclass: 3
+Name: Ling, Mr. Lee
+Sex: male
+Age: 28
+SibSp: 0
+Parch: 0
+Ticket: 1601
+Fare: 56.4958
+Cabin: 
+Embarked: S
+PassengerId: 171
+Survived: 0
+Pclass: 1
+Name: Van der hoef, Mr. Wyckoff
+Sex: male
+Age: 61
+SibSp: 0
+Parch: 0
+Ticket: 111240
+Fare: 33.5
+Cabin: B19
+Embarked: S
+PassengerId: 172
+Survived: 0
+Pclass: 3
+Name: Rice, Master. Arthur
+Sex: male
+Age: 4
+SibSp: 4
+Parch: 1
+Ticket: 382652
+Fare: 29.125
+Cabin: 
+Embarked: Q
+PassengerId: 173
+Survived: 1
+Pclass: 3
+Name: Johnson, Miss. Eleanor Ileen
+Sex: female
+Age: 1
+SibSp: 1
+Parch: 1
+Ticket: 347742
+Fare: 11.1333
+Cabin: 
+Embarked: S
+PassengerId: 174
+Survived: 0
+Pclass: 3
+Name: Sivola, Mr. Antti Wilhelm
+Sex: male
+Age: 21
+SibSp: 0
+Parch: 0
+Ticket: STON/O 2. 3101280
+Fare: 7.925
+Cabin: 
+Embarked: S
+PassengerId: 175
+Survived: 0
+Pclass: 1
+Name: Smith, Mr. James Clinch
+Sex: male
+Age: 56
+SibSp: 0
+Parch: 0
+Ticket: 17764
+Fare: 30.6958
+Cabin: A7
+Embarked: C
+PassengerId: 176
+Survived: 0
+Pclass: 3
+Name: Klasen, Mr. Klas Albin
+Sex: male
+Age: 18
+SibSp: 1
+Parch: 1
+Ticket: 350404
+Fare: 7.8542
+Cabin: 
+Embarked: S
+PassengerId: 177
+Survived: 0
+Pclass: 3
+Name: Lefebre, Master. Henry Forbes
+Sex: male
+Age: 
+SibSp: 3
+Parch: 1
+Ticket: 4133
+Fare: 25.4667
+Cabin: 
+Embarked: S
+PassengerId: 178
+Survived: 0
+Pclass: 1
+Name: Isham, Miss. Ann Elizabeth
+Sex: female
+Age: 50
+SibSp: 0
+Parch: 0
+Ticket: PC 17595
+Fare: 28.7125
+Cabin: C49
+Embarked: C
+PassengerId: 179
+Survived: 0
+Pclass: 2
+Name: Hale, Mr. Reginald
+Sex: male
+Age: 30
+SibSp: 0
+Parch: 0
+Ticket: 250653
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 180
+Survived: 0
+Pclass: 3
+Name: Leonard, Mr. Lionel
+Sex: male
+Age: 36
+SibSp: 0
+Parch: 0
+Ticket: LINE
+Fare: 0
+Cabin: 
+Embarked: S
+PassengerId: 181
+Survived: 0
+Pclass: 3
+Name: Sage, Miss. Constance Gladys
+Sex: female
+Age: 
+SibSp: 8
+Parch: 2
+Ticket: CA. 2343
+Fare: 69.55
+Cabin: 
+Embarked: S
+PassengerId: 182
+Survived: 0
+Pclass: 2
+Name: Pernot, Mr. Rene
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: SC/PARIS 2131
+Fare: 15.05
+Cabin: 
+Embarked: C
+PassengerId: 183
+Survived: 0
+Pclass: 3
+Name: Asplund, Master. Clarence Gustaf Hugo
+Sex: male
+Age: 9
+SibSp: 4
+Parch: 2
+Ticket: 347077
+Fare: 31.3875
+Cabin: 
+Embarked: S
+PassengerId: 184
+Survived: 1
+Pclass: 2
+Name: Becker, Master. Richard F
+Sex: male
+Age: 1
+SibSp: 2
+Parch: 1
+Ticket: 230136
+Fare: 39
+Cabin: F4
+Embarked: S
+PassengerId: 185
+Survived: 1
+Pclass: 3
+Name: Kink-Heilmann, Miss. Luise Gretchen
+Sex: female
+Age: 4
+SibSp: 0
+Parch: 2
+Ticket: 315153
+Fare: 22.025
+Cabin: 
+Embarked: S
+PassengerId: 186
+Survived: 0
+Pclass: 1
+Name: Rood, Mr. Hugh Roscoe
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 113767
+Fare: 50
+Cabin: A32
+Embarked: S
+PassengerId: 187
+Survived: 1
+Pclass: 3
+Name: O'Brien, Mrs. Thomas (Johanna "Hannah" Godfrey)
+Sex: female
+Age: 
+SibSp: 1
+Parch: 0
+Ticket: 370365
+Fare: 15.5
+Cabin: 
+Embarked: Q
+PassengerId: 188
+Survived: 1
+Pclass: 1
+Name: Romaine, Mr. Charles Hallace ("Mr C Rolmane")
+Sex: male
+Age: 45
+SibSp: 0
+Parch: 0
+Ticket: 111428
+Fare: 26.55
+Cabin: 
+Embarked: S
+PassengerId: 189
+Survived: 0
+Pclass: 3
+Name: Bourke, Mr. John
+Sex: male
+Age: 40
+SibSp: 1
+Parch: 1
+Ticket: 364849
+Fare: 15.5
+Cabin: 
+Embarked: Q
+PassengerId: 190
+Survived: 0
+Pclass: 3
+Name: Turcin, Mr. Stjepan
+Sex: male
+Age: 36
+SibSp: 0
+Parch: 0
+Ticket: 349247
+Fare: 7.8958
+Cabin: 
+Embarked: S
+PassengerId: 191
+Survived: 1
+Pclass: 2
+Name: Pinsky, Mrs. (Rosa)
+Sex: female
+Age: 32
+SibSp: 0
+Parch: 0
+Ticket: 234604
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 192
+Survived: 0
+Pclass: 2
+Name: Carbines, Mr. William
+Sex: male
+Age: 19
+SibSp: 0
+Parch: 0
+Ticket: 28424
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 193
+Survived: 1
+Pclass: 3
+Name: Andersen-Jensen, Miss. Carla Christine Nielsine
+Sex: female
+Age: 19
+SibSp: 1
+Parch: 0
+Ticket: 350046
+Fare: 7.8542
+Cabin: 
+Embarked: S
+PassengerId: 194
+Survived: 1
+Pclass: 2
+Name: Navratil, Master. Michel M
+Sex: male
+Age: 3
+SibSp: 1
+Parch: 1
+Ticket: 230080
+Fare: 26
+Cabin: F2
+Embarked: S
+PassengerId: 195
+Survived: 1
+Pclass: 1
+Name: Brown, Mrs. James Joseph (Margaret Tobin)
+Sex: female
+Age: 44
+SibSp: 0
+Parch: 0
+Ticket: PC 17610
+Fare: 27.7208
+Cabin: B4
+Embarked: C
+PassengerId: 196
+Survived: 1
+Pclass: 1
+Name: Lurette, Miss. Elise
+Sex: female
+Age: 58
+SibSp: 0
+Parch: 0
+Ticket: PC 17569
+Fare: 146.5208
+Cabin: B80
+Embarked: C
+PassengerId: 197
+Survived: 0
+Pclass: 3
+Name: Mernagh, Mr. Robert
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 368703
+Fare: 7.75
+Cabin: 
+Embarked: Q
+PassengerId: 198
+Survived: 0
+Pclass: 3
+Name: Olsen, Mr. Karl Siegwart Andreas
+Sex: male
+Age: 42
+SibSp: 0
+Parch: 1
+Ticket: 4579
+Fare: 8.4042
+Cabin: 
+Embarked: S
+PassengerId: 199
+Survived: 1
+Pclass: 3
+Name: Madigan, Miss. Margaret "Maggie"
+Sex: female
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 370370
+Fare: 7.75
+Cabin: 
+Embarked: Q
+PassengerId: 200
+Survived: 0
+Pclass: 2
+Name: Yrois, Miss. Henriette ("Mrs Harbeck")
+Sex: female
+Age: 24
+SibSp: 0
+Parch: 0
+Ticket: 248747
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 201
+Survived: 0
+Pclass: 3
+Name: Vande Walle, Mr. Nestor Cyriel
+Sex: male
+Age: 28
+SibSp: 0
+Parch: 0
+Ticket: 345770
+Fare: 9.5
+Cabin: 
+Embarked: S
+PassengerId: 202
+Survived: 0
+Pclass: 3
+Name: Sage, Mr. Frederick
+Sex: male
+Age: 
+SibSp: 8
+Parch: 2
+Ticket: CA. 2343
+Fare: 69.55
+Cabin: 
+Embarked: S
+PassengerId: 203
+Survived: 0
+Pclass: 3
+Name: Johanson, Mr. Jakob Alfred
+Sex: male
+Age: 34
+SibSp: 0
+Parch: 0
+Ticket: 3101264
+Fare: 6.4958
+Cabin: 
+Embarked: S
+PassengerId: 204
+Survived: 0
+Pclass: 3
+Name: Youseff, Mr. Gerious
+Sex: male
+Age: 45.5
+SibSp: 0
+Parch: 0
+Ticket: 2628
+Fare: 7.225
+Cabin: 
+Embarked: C
+PassengerId: 205
+Survived: 1
+Pclass: 3
+Name: Cohen, Mr. Gurshon "Gus"
+Sex: male
+Age: 18
+SibSp: 0
+Parch: 0
+Ticket: A/5 3540
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 206
+Survived: 0
+Pclass: 3
+Name: Strom, Miss. Telma Matilda
+Sex: female
+Age: 2
+SibSp: 0
+Parch: 1
+Ticket: 347054
+Fare: 10.4625
+Cabin: G6
+Embarked: S
+PassengerId: 207
+Survived: 0
+Pclass: 3
+Name: Backstrom, Mr. Karl Alfred
+Sex: male
+Age: 32
+SibSp: 1
+Parch: 0
+Ticket: 3101278
+Fare: 15.85
+Cabin: 
+Embarked: S
+PassengerId: 208
+Survived: 1
+Pclass: 3
+Name: Albimona, Mr. Nassef Cassem
+Sex: male
+Age: 26
+SibSp: 0
+Parch: 0
+Ticket: 2699
+Fare: 18.7875
+Cabin: 
+Embarked: C
+PassengerId: 209
+Survived: 1
+Pclass: 3
+Name: Carr, Miss. Helen "Ellen"
+Sex: female
+Age: 16
+SibSp: 0
+Parch: 0
+Ticket: 367231
+Fare: 7.75
+Cabin: 
+Embarked: Q
+PassengerId: 210
+Survived: 1
+Pclass: 1
+Name: Blank, Mr. Henry
+Sex: male
+Age: 40
+SibSp: 0
+Parch: 0
+Ticket: 112277
+Fare: 31
+Cabin: A31
+Embarked: C
+PassengerId: 211
+Survived: 0
+Pclass: 3
+Name: Ali, Mr. Ahmed
+Sex: male
+Age: 24
+SibSp: 0
+Parch: 0
+Ticket: SOTON/O.Q. 3101311
+Fare: 7.05
+Cabin: 
+Embarked: S
+PassengerId: 212
+Survived: 1
+Pclass: 2
+Name: Cameron, Miss. Clear Annie
+Sex: female
+Age: 35
+SibSp: 0
+Parch: 0
+Ticket: F.C.C. 13528
+Fare: 21
+Cabin: 
+Embarked: S
+PassengerId: 213
+Survived: 0
+Pclass: 3
+Name: Perkin, Mr. John Henry
+Sex: male
+Age: 22
+SibSp: 0
+Parch: 0
+Ticket: A/5 21174
+Fare: 7.25
+Cabin: 
+Embarked: S
+PassengerId: 214
+Survived: 0
+Pclass: 2
+Name: Givard, Mr. Hans Kristensen
+Sex: male
+Age: 30
+SibSp: 0
+Parch: 0
+Ticket: 250646
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 215
+Survived: 0
+Pclass: 3
+Name: Kiernan, Mr. Philip
+Sex: male
+Age: 
+SibSp: 1
+Parch: 0
+Ticket: 367229
+Fare: 7.75
+Cabin: 
+Embarked: Q
+PassengerId: 216
+Survived: 1
+Pclass: 1
+Name: Newell, Miss. Madeleine
+Sex: female
+Age: 31
+SibSp: 1
+Parch: 0
+Ticket: 35273
+Fare: 113.275
+Cabin: D36
+Embarked: C
+PassengerId: 217
+Survived: 1
+Pclass: 3
+Name: Honkanen, Miss. Eliina
+Sex: female
+Age: 27
+SibSp: 0
+Parch: 0
+Ticket: STON/O2. 3101283
+Fare: 7.925
+Cabin: 
+Embarked: S
+PassengerId: 218
+Survived: 0
+Pclass: 2
+Name: Jacobsohn, Mr. Sidney Samuel
+Sex: male
+Age: 42
+SibSp: 1
+Parch: 0
+Ticket: 243847
+Fare: 27
+Cabin: 
+Embarked: S
+PassengerId: 219
+Survived: 1
+Pclass: 1
+Name: Bazzani, Miss. Albina
+Sex: female
+Age: 32
+SibSp: 0
+Parch: 0
+Ticket: 11813
+Fare: 76.2917
+Cabin: D15
+Embarked: C
+PassengerId: 220
+Survived: 0
+Pclass: 2
+Name: Harris, Mr. Walter
+Sex: male
+Age: 30
+SibSp: 0
+Parch: 0
+Ticket: W/C 14208
+Fare: 10.5
+Cabin: 
+Embarked: S
+PassengerId: 221
+Survived: 1
+Pclass: 3
+Name: Sunderland, Mr. Victor Francis
+Sex: male
+Age: 16
+SibSp: 0
+Parch: 0
+Ticket: SOTON/OQ 392089
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 222
+Survived: 0
+Pclass: 2
+Name: Bracken, Mr. James H
+Sex: male
+Age: 27
+SibSp: 0
+Parch: 0
+Ticket: 220367
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 223
+Survived: 0
+Pclass: 3
+Name: Green, Mr. George Henry
+Sex: male
+Age: 51
+SibSp: 0
+Parch: 0
+Ticket: 21440
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 224
+Survived: 0
+Pclass: 3
+Name: Nenkoff, Mr. Christo
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 349234
+Fare: 7.8958
+Cabin: 
+Embarked: S
+PassengerId: 225
+Survived: 1
+Pclass: 1
+Name: Hoyt, Mr. Frederick Maxfield
+Sex: male
+Age: 38
+SibSp: 1
+Parch: 0
+Ticket: 19943
+Fare: 90
+Cabin: C93
+Embarked: S
+PassengerId: 226
+Survived: 0
+Pclass: 3
+Name: Berglund, Mr. Karl Ivar Sven
+Sex: male
+Age: 22
+SibSp: 0
+Parch: 0
+Ticket: PP 4348
+Fare: 9.35
+Cabin: 
+Embarked: S
+PassengerId: 227
+Survived: 1
+Pclass: 2
+Name: Mellors, Mr. William John
+Sex: male
+Age: 19
+SibSp: 0
+Parch: 0
+Ticket: SW/PP 751
+Fare: 10.5
+Cabin: 
+Embarked: S
+PassengerId: 228
+Survived: 0
+Pclass: 3
+Name: Lovell, Mr. John Hall ("Henry")
+Sex: male
+Age: 20.5
+SibSp: 0
+Parch: 0
+Ticket: A/5 21173
+Fare: 7.25
+Cabin: 
+Embarked: S
+PassengerId: 229
+Survived: 0
+Pclass: 2
+Name: Fahlstrom, Mr. Arne Jonas
+Sex: male
+Age: 18
+SibSp: 0
+Parch: 0
+Ticket: 236171
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 230
+Survived: 0
+Pclass: 3
+Name: Lefebre, Miss. Mathilde
+Sex: female
+Age: 
+SibSp: 3
+Parch: 1
+Ticket: 4133
+Fare: 25.4667
+Cabin: 
+Embarked: S
+PassengerId: 231
+Survived: 1
+Pclass: 1
+Name: Harris, Mrs. Henry Birkhardt (Irene Wallach)
+Sex: female
+Age: 35
+SibSp: 1
+Parch: 0
+Ticket: 36973
+Fare: 83.475
+Cabin: C83
+Embarked: S
+PassengerId: 232
+Survived: 0
+Pclass: 3
+Name: Larsson, Mr. Bengt Edvin
+Sex: male
+Age: 29
+SibSp: 0
+Parch: 0
+Ticket: 347067
+Fare: 7.775
+Cabin: 
+Embarked: S
+PassengerId: 233
+Survived: 0
+Pclass: 2
+Name: Sjostedt, Mr. Ernst Adolf
+Sex: male
+Age: 59
+SibSp: 0
+Parch: 0
+Ticket: 237442
+Fare: 13.5
+Cabin: 
+Embarked: S
+PassengerId: 234
+Survived: 1
+Pclass: 3
+Name: Asplund, Miss. Lillian Gertrud
+Sex: female
+Age: 5
+SibSp: 4
+Parch: 2
+Ticket: 347077
+Fare: 31.3875
+Cabin: 
+Embarked: S
+PassengerId: 235
+Survived: 0
+Pclass: 2
+Name: Leyson, Mr. Robert William Norman
+Sex: male
+Age: 24
+SibSp: 0
+Parch: 0
+Ticket: C.A. 29566
+Fare: 10.5
+Cabin: 
+Embarked: S
+PassengerId: 236
+Survived: 0
+Pclass: 3
+Name: Harknett, Miss. Alice Phoebe
+Sex: female
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: W./C. 6609
+Fare: 7.55
+Cabin: 
+Embarked: S
+PassengerId: 237
+Survived: 0
+Pclass: 2
+Name: Hold, Mr. Stephen
+Sex: male
+Age: 44
+SibSp: 1
+Parch: 0
+Ticket: 26707
+Fare: 26
+Cabin: 
+Embarked: S
+PassengerId: 238
+Survived: 1
+Pclass: 2
+Name: Collyer, Miss. Marjorie "Lottie"
+Sex: female
+Age: 8
+SibSp: 0
+Parch: 2
+Ticket: C.A. 31921
+Fare: 26.25
+Cabin: 
+Embarked: S
+PassengerId: 239
+Survived: 0
+Pclass: 2
+Name: Pengelly, Mr. Frederick William
+Sex: male
+Age: 19
+SibSp: 0
+Parch: 0
+Ticket: 28665
+Fare: 10.5
+Cabin: 
+Embarked: S
+PassengerId: 240
+Survived: 0
+Pclass: 2
+Name: Hunt, Mr. George Henry
+Sex: male
+Age: 33
+SibSp: 0
+Parch: 0
+Ticket: SCO/W 1585
+Fare: 12.275
+Cabin: 
+Embarked: S
+PassengerId: 241
+Survived: 0
+Pclass: 3
+Name: Zabour, Miss. Thamine
+Sex: female
+Age: 
+SibSp: 1
+Parch: 0
+Ticket: 2665
+Fare: 14.4542
+Cabin: 
+Embarked: C
+PassengerId: 242
+Survived: 1
+Pclass: 3
+Name: Murphy, Miss. Katherine "Kate"
+Sex: female
+Age: 
+SibSp: 1
+Parch: 0
+Ticket: 367230
+Fare: 15.5
+Cabin: 
+Embarked: Q
+PassengerId: 243
+Survived: 0
+Pclass: 2
+Name: Coleridge, Mr. Reginald Charles
+Sex: male
+Age: 29
+SibSp: 0
+Parch: 0
+Ticket: W./C. 14263
+Fare: 10.5
+Cabin: 
+Embarked: S
+PassengerId: 244
+Survived: 0
+Pclass: 3
+Name: Maenpaa, Mr. Matti Alexanteri
+Sex: male
+Age: 22
+SibSp: 0
+Parch: 0
+Ticket: STON/O 2. 3101275
+Fare: 7.125
+Cabin: 
+Embarked: S
+PassengerId: 245
+Survived: 0
+Pclass: 3
+Name: Attalah, Mr. Sleiman
+Sex: male
+Age: 30
+SibSp: 0
+Parch: 0
+Ticket: 2694
+Fare: 7.225
+Cabin: 
+Embarked: C
+PassengerId: 246
+Survived: 0
+Pclass: 1
+Name: Minahan, Dr. William Edward
+Sex: male
+Age: 44
+SibSp: 2
+Parch: 0
+Ticket: 19928
+Fare: 90
+Cabin: C78
+Embarked: Q
+PassengerId: 247
+Survived: 0
+Pclass: 3
+Name: Lindahl, Miss. Agda Thorilda Viktoria
+Sex: female
+Age: 25
+SibSp: 0
+Parch: 0
+Ticket: 347071
+Fare: 7.775
+Cabin: 
+Embarked: S
+PassengerId: 248
+Survived: 1
+Pclass: 2
+Name: Hamalainen, Mrs. William (Anna)
+Sex: female
+Age: 24
+SibSp: 0
+Parch: 2
+Ticket: 250649
+Fare: 14.5
+Cabin: 
+Embarked: S
+PassengerId: 249
+Survived: 1
+Pclass: 1
+Name: Beckwith, Mr. Richard Leonard
+Sex: male
+Age: 37
+SibSp: 1
+Parch: 1
+Ticket: 11751
+Fare: 52.5542
+Cabin: D35
+Embarked: S
+PassengerId: 250
+Survived: 0
+Pclass: 2
+Name: Carter, Rev. Ernest Courtenay
+Sex: male
+Age: 54
+SibSp: 1
+Parch: 0
+Ticket: 244252
+Fare: 26
+Cabin: 
+Embarked: S
+PassengerId: 251
+Survived: 0
+Pclass: 3
+Name: Reed, Mr. James George
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 362316
+Fare: 7.25
+Cabin: 
+Embarked: S
+PassengerId: 252
+Survived: 0
+Pclass: 3
+Name: Strom, Mrs. Wilhelm (Elna Matilda Persson)
+Sex: female
+Age: 29
+SibSp: 1
+Parch: 1
+Ticket: 347054
+Fare: 10.4625
+Cabin: G6
+Embarked: S
+PassengerId: 253
+Survived: 0
+Pclass: 1
+Name: Stead, Mr. William Thomas
+Sex: male
+Age: 62
+SibSp: 0
+Parch: 0
+Ticket: 113514
+Fare: 26.55
+Cabin: C87
+Embarked: S
+PassengerId: 254
+Survived: 0
+Pclass: 3
+Name: Lobb, Mr. William Arthur
+Sex: male
+Age: 30
+SibSp: 1
+Parch: 0
+Ticket: A/5. 3336
+Fare: 16.1
+Cabin: 
+Embarked: S
+PassengerId: 255
+Survived: 0
+Pclass: 3
+Name: Rosblom, Mrs. Viktor (Helena Wilhelmina)
+Sex: female
+Age: 41
+SibSp: 0
+Parch: 2
+Ticket: 370129
+Fare: 20.2125
+Cabin: 
+Embarked: S
+PassengerId: 256
+Survived: 1
+Pclass: 3
+Name: Touma, Mrs. Darwis (Hanne Youssef Razi)
+Sex: female
+Age: 29
+SibSp: 0
+Parch: 2
+Ticket: 2650
+Fare: 15.2458
+Cabin: 
+Embarked: C
+PassengerId: 257
+Survived: 1
+Pclass: 1
+Name: Thorne, Mrs. Gertrude Maybelle
+Sex: female
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: PC 17585
+Fare: 79.2
+Cabin: 
+Embarked: C
+PassengerId: 258
+Survived: 1
+Pclass: 1
+Name: Cherry, Miss. Gladys
+Sex: female
+Age: 30
+SibSp: 0
+Parch: 0
+Ticket: 110152
+Fare: 86.5
+Cabin: B77
+Embarked: S
+PassengerId: 259
+Survived: 1
+Pclass: 1
+Name: Ward, Miss. Anna
+Sex: female
+Age: 35
+SibSp: 0
+Parch: 0
+Ticket: PC 17755
+Fare: 512.3292
+Cabin: 
+Embarked: C
+PassengerId: 260
+Survived: 1
+Pclass: 2
+Name: Parrish, Mrs. (Lutie Davis)
+Sex: female
+Age: 50
+SibSp: 0
+Parch: 1
+Ticket: 230433
+Fare: 26
+Cabin: 
+Embarked: S
+PassengerId: 261
+Survived: 0
+Pclass: 3
+Name: Smith, Mr. Thomas
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 384461
+Fare: 7.75
+Cabin: 
+Embarked: Q
+PassengerId: 262
+Survived: 1
+Pclass: 3
+Name: Asplund, Master. Edvin Rojj Felix
+Sex: male
+Age: 3
+SibSp: 4
+Parch: 2
+Ticket: 347077
+Fare: 31.3875
+Cabin: 
+Embarked: S
+PassengerId: 263
+Survived: 0
+Pclass: 1
+Name: Taussig, Mr. Emil
+Sex: male
+Age: 52
+SibSp: 1
+Parch: 1
+Ticket: 110413
+Fare: 79.65
+Cabin: E67
+Embarked: S
+PassengerId: 264
+Survived: 0
+Pclass: 1
+Name: Harrison, Mr. William
+Sex: male
+Age: 40
+SibSp: 0
+Parch: 0
+Ticket: 112059
+Fare: 0
+Cabin: B94
+Embarked: S
+PassengerId: 265
+Survived: 0
+Pclass: 3
+Name: Henry, Miss. Delia
+Sex: female
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 382649
+Fare: 7.75
+Cabin: 
+Embarked: Q
+PassengerId: 266
+Survived: 0
+Pclass: 2
+Name: Reeves, Mr. David
+Sex: male
+Age: 36
+SibSp: 0
+Parch: 0
+Ticket: C.A. 17248
+Fare: 10.5
+Cabin: 
+Embarked: S
+PassengerId: 267
+Survived: 0
+Pclass: 3
+Name: Panula, Mr. Ernesti Arvid
+Sex: male
+Age: 16
+SibSp: 4
+Parch: 1
+Ticket: 3101295
+Fare: 39.6875
+Cabin: 
+Embarked: S
+PassengerId: 268
+Survived: 1
+Pclass: 3
+Name: Persson, Mr. Ernst Ulrik
+Sex: male
+Age: 25
+SibSp: 1
+Parch: 0
+Ticket: 347083
+Fare: 7.775
+Cabin: 
+Embarked: S
+PassengerId: 269
+Survived: 1
+Pclass: 1
+Name: Graham, Mrs. William Thompson (Edith Junkins)
+Sex: female
+Age: 58
+SibSp: 0
+Parch: 1
+Ticket: PC 17582
+Fare: 153.4625
+Cabin: C125
+Embarked: S
+PassengerId: 270
+Survived: 1
+Pclass: 1
+Name: Bissette, Miss. Amelia
+Sex: female
+Age: 35
+SibSp: 0
+Parch: 0
+Ticket: PC 17760
+Fare: 135.6333
+Cabin: C99
+Embarked: S
+PassengerId: 271
+Survived: 0
+Pclass: 1
+Name: Cairns, Mr. Alexander
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 113798
+Fare: 31
+Cabin: 
+Embarked: S
+PassengerId: 272
+Survived: 1
+Pclass: 3
+Name: Tornquist, Mr. William Henry
+Sex: male
+Age: 25
+SibSp: 0
+Parch: 0
+Ticket: LINE
+Fare: 0
+Cabin: 
+Embarked: S
+PassengerId: 273
+Survived: 1
+Pclass: 2
+Name: Mellinger, Mrs. (Elizabeth Anne Maidment)
+Sex: female
+Age: 41
+SibSp: 0
+Parch: 1
+Ticket: 250644
+Fare: 19.5
+Cabin: 
+Embarked: S
+PassengerId: 274
+Survived: 0
+Pclass: 1
+Name: Natsch, Mr. Charles H
+Sex: male
+Age: 37
+SibSp: 0
+Parch: 1
+Ticket: PC 17596
+Fare: 29.7
+Cabin: C118
+Embarked: C
+PassengerId: 275
+Survived: 1
+Pclass: 3
+Name: Healy, Miss. Hanora "Nora"
+Sex: female
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 370375
+Fare: 7.75
+Cabin: 
+Embarked: Q
+PassengerId: 276
+Survived: 1
+Pclass: 1
+Name: Andrews, Miss. Kornelia Theodosia
+Sex: female
+Age: 63
+SibSp: 1
+Parch: 0
+Ticket: 13502
+Fare: 77.9583
+Cabin: D7
+Embarked: S
+PassengerId: 277
+Survived: 0
+Pclass: 3
+Name: Lindblom, Miss. Augusta Charlotta
+Sex: female
+Age: 45
+SibSp: 0
+Parch: 0
+Ticket: 347073
+Fare: 7.75
+Cabin: 
+Embarked: S
+PassengerId: 278
+Survived: 0
+Pclass: 2
+Name: Parkes, Mr. Francis "Frank"
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 239853
+Fare: 0
+Cabin: 
+Embarked: S
+PassengerId: 279
+Survived: 0
+Pclass: 3
+Name: Rice, Master. Eric
+Sex: male
+Age: 7
+SibSp: 4
+Parch: 1
+Ticket: 382652
+Fare: 29.125
+Cabin: 
+Embarked: Q
+PassengerId: 280
+Survived: 1
+Pclass: 3
+Name: Abbott, Mrs. Stanton (Rosa Hunt)
+Sex: female
+Age: 35
+SibSp: 1
+Parch: 1
+Ticket: C.A. 2673
+Fare: 20.25
+Cabin: 
+Embarked: S
+PassengerId: 281
+Survived: 0
+Pclass: 3
+Name: Duane, Mr. Frank
+Sex: male
+Age: 65
+SibSp: 0
+Parch: 0
+Ticket: 336439
+Fare: 7.75
+Cabin: 
+Embarked: Q
+PassengerId: 282
+Survived: 0
+Pclass: 3
+Name: Olsson, Mr. Nils Johan Goransson
+Sex: male
+Age: 28
+SibSp: 0
+Parch: 0
+Ticket: 347464
+Fare: 7.8542
+Cabin: 
+Embarked: S
+PassengerId: 283
+Survived: 0
+Pclass: 3
+Name: de Pelsmaeker, Mr. Alfons
+Sex: male
+Age: 16
+SibSp: 0
+Parch: 0
+Ticket: 345778
+Fare: 9.5
+Cabin: 
+Embarked: S
+PassengerId: 284
+Survived: 1
+Pclass: 3
+Name: Dorking, Mr. Edward Arthur
+Sex: male
+Age: 19
+SibSp: 0
+Parch: 0
+Ticket: A/5. 10482
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 285
+Survived: 0
+Pclass: 1
+Name: Smith, Mr. Richard William
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 113056
+Fare: 26
+Cabin: A19
+Embarked: S
+PassengerId: 286
+Survived: 0
+Pclass: 3
+Name: Stankovic, Mr. Ivan
+Sex: male
+Age: 33
+SibSp: 0
+Parch: 0
+Ticket: 349239
+Fare: 8.6625
+Cabin: 
+Embarked: C
+PassengerId: 287
+Survived: 1
+Pclass: 3
+Name: de Mulder, Mr. Theodore
+Sex: male
+Age: 30
+SibSp: 0
+Parch: 0
+Ticket: 345774
+Fare: 9.5
+Cabin: 
+Embarked: S
+PassengerId: 288
+Survived: 0
+Pclass: 3
+Name: Naidenoff, Mr. Penko
+Sex: male
+Age: 22
+SibSp: 0
+Parch: 0
+Ticket: 349206
+Fare: 7.8958
+Cabin: 
+Embarked: S
+PassengerId: 289
+Survived: 1
+Pclass: 2
+Name: Hosono, Mr. Masabumi
+Sex: male
+Age: 42
+SibSp: 0
+Parch: 0
+Ticket: 237798
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 290
+Survived: 1
+Pclass: 3
+Name: Connolly, Miss. Kate
+Sex: female
+Age: 22
+SibSp: 0
+Parch: 0
+Ticket: 370373
+Fare: 7.75
+Cabin: 
+Embarked: Q
+PassengerId: 291
+Survived: 1
+Pclass: 1
+Name: Barber, Miss. Ellen "Nellie"
+Sex: female
+Age: 26
+SibSp: 0
+Parch: 0
+Ticket: 19877
+Fare: 78.85
+Cabin: 
+Embarked: S
+PassengerId: 292
+Survived: 1
+Pclass: 1
+Name: Bishop, Mrs. Dickinson H (Helen Walton)
+Sex: female
+Age: 19
+SibSp: 1
+Parch: 0
+Ticket: 11967
+Fare: 91.0792
+Cabin: B49
+Embarked: C
+PassengerId: 293
+Survived: 0
+Pclass: 2
+Name: Levy, Mr. Rene Jacques
+Sex: male
+Age: 36
+SibSp: 0
+Parch: 0
+Ticket: SC/Paris 2163
+Fare: 12.875
+Cabin: D
+Embarked: C
+PassengerId: 294
+Survived: 0
+Pclass: 3
+Name: Haas, Miss. Aloisia
+Sex: female
+Age: 24
+SibSp: 0
+Parch: 0
+Ticket: 349236
+Fare: 8.85
+Cabin: 
+Embarked: S
+PassengerId: 295
+Survived: 0
+Pclass: 3
+Name: Mineff, Mr. Ivan
+Sex: male
+Age: 24
+SibSp: 0
+Parch: 0
+Ticket: 349233
+Fare: 7.8958
+Cabin: 
+Embarked: S
+PassengerId: 296
+Survived: 0
+Pclass: 1
+Name: Lewy, Mr. Ervin G
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: PC 17612
+Fare: 27.7208
+Cabin: 
+Embarked: C
+PassengerId: 297
+Survived: 0
+Pclass: 3
+Name: Hanna, Mr. Mansour
+Sex: male
+Age: 23.5
+SibSp: 0
+Parch: 0
+Ticket: 2693
+Fare: 7.2292
+Cabin: 
+Embarked: C
+PassengerId: 298
+Survived: 0
+Pclass: 1
+Name: Allison, Miss. Helen Loraine
+Sex: female
+Age: 2
+SibSp: 1
+Parch: 2
+Ticket: 113781
+Fare: 151.55
+Cabin: C22 C26
+Embarked: S
+PassengerId: 299
+Survived: 1
+Pclass: 1
+Name: Saalfeld, Mr. Adolphe
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 19988
+Fare: 30.5
+Cabin: C106
+Embarked: S
+PassengerId: 300
+Survived: 1
+Pclass: 1
+Name: Baxter, Mrs. James (Helene DeLaudeniere Chaput)
+Sex: female
+Age: 50
+SibSp: 0
+Parch: 1
+Ticket: PC 17558
+Fare: 247.5208
+Cabin: B58 B60
+Embarked: C
+PassengerId: 301
+Survived: 1
+Pclass: 3
+Name: Kelly, Miss. Anna Katherine "Annie Kate"
+Sex: female
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 9234
+Fare: 7.75
+Cabin: 
+Embarked: Q
+PassengerId: 302
+Survived: 1
+Pclass: 3
+Name: McCoy, Mr. Bernard
+Sex: male
+Age: 
+SibSp: 2
+Parch: 0
+Ticket: 367226
+Fare: 23.25
+Cabin: 
+Embarked: Q
+PassengerId: 303
+Survived: 0
+Pclass: 3
+Name: Johnson, Mr. William Cahoone Jr
+Sex: male
+Age: 19
+SibSp: 0
+Parch: 0
+Ticket: LINE
+Fare: 0
+Cabin: 
+Embarked: S
+PassengerId: 304
+Survived: 1
+Pclass: 2
+Name: Keane, Miss. Nora A
+Sex: female
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 226593
+Fare: 12.35
+Cabin: E101
+Embarked: Q
+PassengerId: 305
+Survived: 0
+Pclass: 3
+Name: Williams, Mr. Howard Hugh "Harry"
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: A/5 2466
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 306
+Survived: 1
+Pclass: 1
+Name: Allison, Master. Hudson Trevor
+Sex: male
+Age: 0.92
+SibSp: 1
+Parch: 2
+Ticket: 113781
+Fare: 151.55
+Cabin: C22 C26
+Embarked: S
+PassengerId: 307
+Survived: 1
+Pclass: 1
+Name: Fleming, Miss. Margaret
+Sex: female
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 17421
+Fare: 110.8833
+Cabin: 
+Embarked: C
+PassengerId: 308
+Survived: 1
+Pclass: 1
+Name: Penasco y Castellana, Mrs. Victor de Satode (Maria Josefa Perez de Soto y Vallejo)
+Sex: female
+Age: 17
+SibSp: 1
+Parch: 0
+Ticket: PC 17758
+Fare: 108.9
+Cabin: C65
+Embarked: C
+PassengerId: 309
+Survived: 0
+Pclass: 2
+Name: Abelson, Mr. Samuel
+Sex: male
+Age: 30
+SibSp: 1
+Parch: 0
+Ticket: P/PP 3381
+Fare: 24
+Cabin: 
+Embarked: C
+PassengerId: 310
+Survived: 1
+Pclass: 1
+Name: Francatelli, Miss. Laura Mabel
+Sex: female
+Age: 30
+SibSp: 0
+Parch: 0
+Ticket: PC 17485
+Fare: 56.9292
+Cabin: E36
+Embarked: C
+PassengerId: 311
+Survived: 1
+Pclass: 1
+Name: Hays, Miss. Margaret Bechstein
+Sex: female
+Age: 24
+SibSp: 0
+Parch: 0
+Ticket: 11767
+Fare: 83.1583
+Cabin: C54
+Embarked: C
+PassengerId: 312
+Survived: 1
+Pclass: 1
+Name: Ryerson, Miss. Emily Borie
+Sex: female
+Age: 18
+SibSp: 2
+Parch: 2
+Ticket: PC 17608
+Fare: 262.375
+Cabin: B57 B59 B63 B66
+Embarked: C
+PassengerId: 313
+Survived: 0
+Pclass: 2
+Name: Lahtinen, Mrs. William (Anna Sylfven)
+Sex: female
+Age: 26
+SibSp: 1
+Parch: 1
+Ticket: 250651
+Fare: 26
+Cabin: 
+Embarked: S
+PassengerId: 314
+Survived: 0
+Pclass: 3
+Name: Hendekovic, Mr. Ignjac
+Sex: male
+Age: 28
+SibSp: 0
+Parch: 0
+Ticket: 349243
+Fare: 7.8958
+Cabin: 
+Embarked: S
+PassengerId: 315
+Survived: 0
+Pclass: 2
+Name: Hart, Mr. Benjamin
+Sex: male
+Age: 43
+SibSp: 1
+Parch: 1
+Ticket: F.C.C. 13529
+Fare: 26.25
+Cabin: 
+Embarked: S
+PassengerId: 316
+Survived: 1
+Pclass: 3
+Name: Nilsson, Miss. Helmina Josefina
+Sex: female
+Age: 26
+SibSp: 0
+Parch: 0
+Ticket: 347470
+Fare: 7.8542
+Cabin: 
+Embarked: S
+PassengerId: 317
+Survived: 1
+Pclass: 2
+Name: Kantor, Mrs. Sinai (Miriam Sternin)
+Sex: female
+Age: 24
+SibSp: 1
+Parch: 0
+Ticket: 244367
+Fare: 26
+Cabin: 
+Embarked: S
+PassengerId: 318
+Survived: 0
+Pclass: 2
+Name: Moraweck, Dr. Ernest
+Sex: male
+Age: 54
+SibSp: 0
+Parch: 0
+Ticket: 29011
+Fare: 14
+Cabin: 
+Embarked: S
+PassengerId: 319
+Survived: 1
+Pclass: 1
+Name: Wick, Miss. Mary Natalie
+Sex: female
+Age: 31
+SibSp: 0
+Parch: 2
+Ticket: 36928
+Fare: 164.8667
+Cabin: C7
+Embarked: S
+PassengerId: 320
+Survived: 1
+Pclass: 1
+Name: Spedden, Mrs. Frederic Oakley (Margaretta Corning Stone)
+Sex: female
+Age: 40
+SibSp: 1
+Parch: 1
+Ticket: 16966
+Fare: 134.5
+Cabin: E34
+Embarked: C
+PassengerId: 321
+Survived: 0
+Pclass: 3
+Name: Dennis, Mr. Samuel
+Sex: male
+Age: 22
+SibSp: 0
+Parch: 0
+Ticket: A/5 21172
+Fare: 7.25
+Cabin: 
+Embarked: S
+PassengerId: 322
+Survived: 0
+Pclass: 3
+Name: Danoff, Mr. Yoto
+Sex: male
+Age: 27
+SibSp: 0
+Parch: 0
+Ticket: 349219
+Fare: 7.8958
+Cabin: 
+Embarked: S
+PassengerId: 323
+Survived: 1
+Pclass: 2
+Name: Slayter, Miss. Hilda Mary
+Sex: female
+Age: 30
+SibSp: 0
+Parch: 0
+Ticket: 234818
+Fare: 12.35
+Cabin: 
+Embarked: Q
+PassengerId: 324
+Survived: 1
+Pclass: 2
+Name: Caldwell, Mrs. Albert Francis (Sylvia Mae Harbaugh)
+Sex: female
+Age: 22
+SibSp: 1
+Parch: 1
+Ticket: 248738
+Fare: 29
+Cabin: 
+Embarked: S
+PassengerId: 325
+Survived: 0
+Pclass: 3
+Name: Sage, Mr. George John Jr
+Sex: male
+Age: 
+SibSp: 8
+Parch: 2
+Ticket: CA. 2343
+Fare: 69.55
+Cabin: 
+Embarked: S
+PassengerId: 326
+Survived: 1
+Pclass: 1
+Name: Young, Miss. Marie Grice
+Sex: female
+Age: 36
+SibSp: 0
+Parch: 0
+Ticket: PC 17760
+Fare: 135.6333
+Cabin: C32
+Embarked: C
+PassengerId: 327
+Survived: 0
+Pclass: 3
+Name: Nysveen, Mr. Johan Hansen
+Sex: male
+Age: 61
+SibSp: 0
+Parch: 0
+Ticket: 345364
+Fare: 6.2375
+Cabin: 
+Embarked: S
+PassengerId: 328
+Survived: 1
+Pclass: 2
+Name: Ball, Mrs. (Ada E Hall)
+Sex: female
+Age: 36
+SibSp: 0
+Parch: 0
+Ticket: 28551
+Fare: 13
+Cabin: D
+Embarked: S
+PassengerId: 329
+Survived: 1
+Pclass: 3
+Name: Goldsmith, Mrs. Frank John (Emily Alice Brown)
+Sex: female
+Age: 31
+SibSp: 1
+Parch: 1
+Ticket: 363291
+Fare: 20.525
+Cabin: 
+Embarked: S
+PassengerId: 330
+Survived: 1
+Pclass: 1
+Name: Hippach, Miss. Jean Gertrude
+Sex: female
+Age: 16
+SibSp: 0
+Parch: 1
+Ticket: 111361
+Fare: 57.9792
+Cabin: B18
+Embarked: C
+PassengerId: 331
+Survived: 1
+Pclass: 3
+Name: McCoy, Miss. Agnes
+Sex: female
+Age: 
+SibSp: 2
+Parch: 0
+Ticket: 367226
+Fare: 23.25
+Cabin: 
+Embarked: Q
+PassengerId: 332
+Survived: 0
+Pclass: 1
+Name: Partner, Mr. Austen
+Sex: male
+Age: 45.5
+SibSp: 0
+Parch: 0
+Ticket: 113043
+Fare: 28.5
+Cabin: C124
+Embarked: S
+PassengerId: 333
+Survived: 0
+Pclass: 1
+Name: Graham, Mr. George Edward
+Sex: male
+Age: 38
+SibSp: 0
+Parch: 1
+Ticket: PC 17582
+Fare: 153.4625
+Cabin: C91
+Embarked: S
+PassengerId: 334
+Survived: 0
+Pclass: 3
+Name: Vander Planke, Mr. Leo Edmondus
+Sex: male
+Age: 16
+SibSp: 2
+Parch: 0
+Ticket: 345764
+Fare: 18
+Cabin: 
+Embarked: S
+PassengerId: 335
+Survived: 1
+Pclass: 1
+Name: Frauenthal, Mrs. Henry William (Clara Heinsheimer)
+Sex: female
+Age: 
+SibSp: 1
+Parch: 0
+Ticket: PC 17611
+Fare: 133.65
+Cabin: 
+Embarked: S
+PassengerId: 336
+Survived: 0
+Pclass: 3
+Name: Denkoff, Mr. Mitto
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 349225
+Fare: 7.8958
+Cabin: 
+Embarked: S
+PassengerId: 337
+Survived: 0
+Pclass: 1
+Name: Pears, Mr. Thomas Clinton
+Sex: male
+Age: 29
+SibSp: 1
+Parch: 0
+Ticket: 113776
+Fare: 66.6
+Cabin: C2
+Embarked: S
+PassengerId: 338
+Survived: 1
+Pclass: 1
+Name: Burns, Miss. Elizabeth Margaret
+Sex: female
+Age: 41
+SibSp: 0
+Parch: 0
+Ticket: 16966
+Fare: 134.5
+Cabin: E40
+Embarked: C
+PassengerId: 339
+Survived: 1
+Pclass: 3
+Name: Dahl, Mr. Karl Edwart
+Sex: male
+Age: 45
+SibSp: 0
+Parch: 0
+Ticket: 7598
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 340
+Survived: 0
+Pclass: 1
+Name: Blackwell, Mr. Stephen Weart
+Sex: male
+Age: 45
+SibSp: 0
+Parch: 0
+Ticket: 113784
+Fare: 35.5
+Cabin: T
+Embarked: S
+PassengerId: 341
+Survived: 1
+Pclass: 2
+Name: Navratil, Master. Edmond Roger
+Sex: male
+Age: 2
+SibSp: 1
+Parch: 1
+Ticket: 230080
+Fare: 26
+Cabin: F2
+Embarked: S
+PassengerId: 342
+Survived: 1
+Pclass: 1
+Name: Fortune, Miss. Alice Elizabeth
+Sex: female
+Age: 24
+SibSp: 3
+Parch: 2
+Ticket: 19950
+Fare: 263
+Cabin: C23 C25 C27
+Embarked: S
+PassengerId: 343
+Survived: 0
+Pclass: 2
+Name: Collander, Mr. Erik Gustaf
+Sex: male
+Age: 28
+SibSp: 0
+Parch: 0
+Ticket: 248740
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 344
+Survived: 0
+Pclass: 2
+Name: Sedgwick, Mr. Charles Frederick Waddington
+Sex: male
+Age: 25
+SibSp: 0
+Parch: 0
+Ticket: 244361
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 345
+Survived: 0
+Pclass: 2
+Name: Fox, Mr. Stanley Hubert
+Sex: male
+Age: 36
+SibSp: 0
+Parch: 0
+Ticket: 229236
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 346
+Survived: 1
+Pclass: 2
+Name: Brown, Miss. Amelia "Mildred"
+Sex: female
+Age: 24
+SibSp: 0
+Parch: 0
+Ticket: 248733
+Fare: 13
+Cabin: F33
+Embarked: S
+PassengerId: 347
+Survived: 1
+Pclass: 2
+Name: Smith, Miss. Marion Elsie
+Sex: female
+Age: 40
+SibSp: 0
+Parch: 0
+Ticket: 31418
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 348
+Survived: 1
+Pclass: 3
+Name: Davison, Mrs. Thomas Henry (Mary E Finck)
+Sex: female
+Age: 
+SibSp: 1
+Parch: 0
+Ticket: 386525
+Fare: 16.1
+Cabin: 
+Embarked: S
+PassengerId: 349
+Survived: 1
+Pclass: 3
+Name: Coutts, Master. William Loch "William"
+Sex: male
+Age: 3
+SibSp: 1
+Parch: 1
+Ticket: C.A. 37671
+Fare: 15.9
+Cabin: 
+Embarked: S
+PassengerId: 350
+Survived: 0
+Pclass: 3
+Name: Dimic, Mr. Jovan
+Sex: male
+Age: 42
+SibSp: 0
+Parch: 0
+Ticket: 315088
+Fare: 8.6625
+Cabin: 
+Embarked: S
+PassengerId: 351
+Survived: 0
+Pclass: 3
+Name: Odahl, Mr. Nils Martin
+Sex: male
+Age: 23
+SibSp: 0
+Parch: 0
+Ticket: 7267
+Fare: 9.225
+Cabin: 
+Embarked: S
+PassengerId: 352
+Survived: 0
+Pclass: 1
+Name: Williams-Lambert, Mr. Fletcher Fellows
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 113510
+Fare: 35
+Cabin: C128
+Embarked: S
+PassengerId: 353
+Survived: 0
+Pclass: 3
+Name: Elias, Mr. Tannous
+Sex: male
+Age: 15
+SibSp: 1
+Parch: 1
+Ticket: 2695
+Fare: 7.2292
+Cabin: 
+Embarked: C
+PassengerId: 354
+Survived: 0
+Pclass: 3
+Name: Arnold-Franchi, Mr. Josef
+Sex: male
+Age: 25
+SibSp: 1
+Parch: 0
+Ticket: 349237
+Fare: 17.8
+Cabin: 
+Embarked: S
+PassengerId: 355
+Survived: 0
+Pclass: 3
+Name: Yousif, Mr. Wazli
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 2647
+Fare: 7.225
+Cabin: 
+Embarked: C
+PassengerId: 356
+Survived: 0
+Pclass: 3
+Name: Vanden Steen, Mr. Leo Peter
+Sex: male
+Age: 28
+SibSp: 0
+Parch: 0
+Ticket: 345783
+Fare: 9.5
+Cabin: 
+Embarked: S
+PassengerId: 357
+Survived: 1
+Pclass: 1
+Name: Bowerman, Miss. Elsie Edith
+Sex: female
+Age: 22
+SibSp: 0
+Parch: 1
+Ticket: 113505
+Fare: 55
+Cabin: E33
+Embarked: S
+PassengerId: 358
+Survived: 0
+Pclass: 2
+Name: Funk, Miss. Annie Clemmer
+Sex: female
+Age: 38
+SibSp: 0
+Parch: 0
+Ticket: 237671
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 359
+Survived: 1
+Pclass: 3
+Name: McGovern, Miss. Mary
+Sex: female
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 330931
+Fare: 7.8792
+Cabin: 
+Embarked: Q
+PassengerId: 360
+Survived: 1
+Pclass: 3
+Name: Mockler, Miss. Helen Mary "Ellie"
+Sex: female
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 330980
+Fare: 7.8792
+Cabin: 
+Embarked: Q
+PassengerId: 361
+Survived: 0
+Pclass: 3
+Name: Skoog, Mr. Wilhelm
+Sex: male
+Age: 40
+SibSp: 1
+Parch: 4
+Ticket: 347088
+Fare: 27.9
+Cabin: 
+Embarked: S
+PassengerId: 362
+Survived: 0
+Pclass: 2
+Name: del Carlo, Mr. Sebastiano
+Sex: male
+Age: 29
+SibSp: 1
+Parch: 0
+Ticket: SC/PARIS 2167
+Fare: 27.7208
+Cabin: 
+Embarked: C
+PassengerId: 363
+Survived: 0
+Pclass: 3
+Name: Barbara, Mrs. (Catherine David)
+Sex: female
+Age: 45
+SibSp: 0
+Parch: 1
+Ticket: 2691
+Fare: 14.4542
+Cabin: 
+Embarked: C
+PassengerId: 364
+Survived: 0
+Pclass: 3
+Name: Asim, Mr. Adola
+Sex: male
+Age: 35
+SibSp: 0
+Parch: 0
+Ticket: SOTON/O.Q. 3101310
+Fare: 7.05
+Cabin: 
+Embarked: S
+PassengerId: 365
+Survived: 0
+Pclass: 3
+Name: O'Brien, Mr. Thomas
+Sex: male
+Age: 
+SibSp: 1
+Parch: 0
+Ticket: 370365
+Fare: 15.5
+Cabin: 
+Embarked: Q
+PassengerId: 366
+Survived: 0
+Pclass: 3
+Name: Adahl, Mr. Mauritz Nils Martin
+Sex: male
+Age: 30
+SibSp: 0
+Parch: 0
+Ticket: C 7076
+Fare: 7.25
+Cabin: 
+Embarked: S
+PassengerId: 367
+Survived: 1
+Pclass: 1
+Name: Warren, Mrs. Frank Manley (Anna Sophia Atkinson)
+Sex: female
+Age: 60
+SibSp: 1
+Parch: 0
+Ticket: 110813
+Fare: 75.25
+Cabin: D37
+Embarked: C
+PassengerId: 368
+Survived: 1
+Pclass: 3
+Name: Moussa, Mrs. (Mantoura Boulos)
+Sex: female
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 2626
+Fare: 7.2292
+Cabin: 
+Embarked: C
+PassengerId: 369
+Survived: 1
+Pclass: 3
+Name: Jermyn, Miss. Annie
+Sex: female
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 14313
+Fare: 7.75
+Cabin: 
+Embarked: Q
+PassengerId: 370
+Survived: 1
+Pclass: 1
+Name: Aubart, Mme. Leontine Pauline
+Sex: female
+Age: 24
+SibSp: 0
+Parch: 0
+Ticket: PC 17477
+Fare: 69.3
+Cabin: B35
+Embarked: C
+PassengerId: 371
+Survived: 1
+Pclass: 1
+Name: Harder, Mr. George Achilles
+Sex: male
+Age: 25
+SibSp: 1
+Parch: 0
+Ticket: 11765
+Fare: 55.4417
+Cabin: E50
+Embarked: C
+PassengerId: 372
+Survived: 0
+Pclass: 3
+Name: Wiklund, Mr. Jakob Alfred
+Sex: male
+Age: 18
+SibSp: 1
+Parch: 0
+Ticket: 3101267
+Fare: 6.4958
+Cabin: 
+Embarked: S
+PassengerId: 373
+Survived: 0
+Pclass: 3
+Name: Beavan, Mr. William Thomas
+Sex: male
+Age: 19
+SibSp: 0
+Parch: 0
+Ticket: 323951
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 374
+Survived: 0
+Pclass: 1
+Name: Ringhini, Mr. Sante
+Sex: male
+Age: 22
+SibSp: 0
+Parch: 0
+Ticket: PC 17760
+Fare: 135.6333
+Cabin: 
+Embarked: C
+PassengerId: 375
+Survived: 0
+Pclass: 3
+Name: Palsson, Miss. Stina Viola
+Sex: female
+Age: 3
+SibSp: 3
+Parch: 1
+Ticket: 349909
+Fare: 21.075
+Cabin: 
+Embarked: S
+PassengerId: 376
+Survived: 1
+Pclass: 1
+Name: Meyer, Mrs. Edgar Joseph (Leila Saks)
+Sex: female
+Age: 
+SibSp: 1
+Parch: 0
+Ticket: PC 17604
+Fare: 82.1708
+Cabin: 
+Embarked: C
+PassengerId: 377
+Survived: 1
+Pclass: 3
+Name: Landergren, Miss. Aurora Adelia
+Sex: female
+Age: 22
+SibSp: 0
+Parch: 0
+Ticket: C 7077
+Fare: 7.25
+Cabin: 
+Embarked: S
+PassengerId: 378
+Survived: 0
+Pclass: 1
+Name: Widener, Mr. Harry Elkins
+Sex: male
+Age: 27
+SibSp: 0
+Parch: 2
+Ticket: 113503
+Fare: 211.5
+Cabin: C82
+Embarked: C
+PassengerId: 379
+Survived: 0
+Pclass: 3
+Name: Betros, Mr. Tannous
+Sex: male
+Age: 20
+SibSp: 0
+Parch: 0
+Ticket: 2648
+Fare: 4.0125
+Cabin: 
+Embarked: C
+PassengerId: 380
+Survived: 0
+Pclass: 3
+Name: Gustafsson, Mr. Karl Gideon
+Sex: male
+Age: 19
+SibSp: 0
+Parch: 0
+Ticket: 347069
+Fare: 7.775
+Cabin: 
+Embarked: S
+PassengerId: 381
+Survived: 1
+Pclass: 1
+Name: Bidois, Miss. Rosalie
+Sex: female
+Age: 42
+SibSp: 0
+Parch: 0
+Ticket: PC 17757
+Fare: 227.525
+Cabin: 
+Embarked: C
+PassengerId: 382
+Survived: 1
+Pclass: 3
+Name: Nakid, Miss. Maria ("Mary")
+Sex: female
+Age: 1
+SibSp: 0
+Parch: 2
+Ticket: 2653
+Fare: 15.7417
+Cabin: 
+Embarked: C
+PassengerId: 383
+Survived: 0
+Pclass: 3
+Name: Tikkanen, Mr. Juho
+Sex: male
+Age: 32
+SibSp: 0
+Parch: 0
+Ticket: STON/O 2. 3101293
+Fare: 7.925
+Cabin: 
+Embarked: S
+PassengerId: 384
+Survived: 1
+Pclass: 1
+Name: Holverson, Mrs. Alexander Oskar (Mary Aline Towner)
+Sex: female
+Age: 35
+SibSp: 1
+Parch: 0
+Ticket: 113789
+Fare: 52
+Cabin: 
+Embarked: S
+PassengerId: 385
+Survived: 0
+Pclass: 3
+Name: Plotcharsky, Mr. Vasil
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 349227
+Fare: 7.8958
+Cabin: 
+Embarked: S
+PassengerId: 386
+Survived: 0
+Pclass: 2
+Name: Davies, Mr. Charles Henry
+Sex: male
+Age: 18
+SibSp: 0
+Parch: 0
+Ticket: S.O.C. 14879
+Fare: 73.5
+Cabin: 
+Embarked: S
+PassengerId: 387
+Survived: 0
+Pclass: 3
+Name: Goodwin, Master. Sidney Leonard
+Sex: male
+Age: 1
+SibSp: 5
+Parch: 2
+Ticket: CA 2144
+Fare: 46.9
+Cabin: 
+Embarked: S
+PassengerId: 388
+Survived: 1
+Pclass: 2
+Name: Buss, Miss. Kate
+Sex: female
+Age: 36
+SibSp: 0
+Parch: 0
+Ticket: 27849
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 389
+Survived: 0
+Pclass: 3
+Name: Sadlier, Mr. Matthew
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 367655
+Fare: 7.7292
+Cabin: 
+Embarked: Q
+PassengerId: 390
+Survived: 1
+Pclass: 2
+Name: Lehmann, Miss. Bertha
+Sex: female
+Age: 17
+SibSp: 0
+Parch: 0
+Ticket: SC 1748
+Fare: 12
+Cabin: 
+Embarked: C
+PassengerId: 391
+Survived: 1
+Pclass: 1
+Name: Carter, Mr. William Ernest
+Sex: male
+Age: 36
+SibSp: 1
+Parch: 2
+Ticket: 113760
+Fare: 120
+Cabin: B96 B98
+Embarked: S
+PassengerId: 392
+Survived: 1
+Pclass: 3
+Name: Jansson, Mr. Carl Olof
+Sex: male
+Age: 21
+SibSp: 0
+Parch: 0
+Ticket: 350034
+Fare: 7.7958
+Cabin: 
+Embarked: S
+PassengerId: 393
+Survived: 0
+Pclass: 3
+Name: Gustafsson, Mr. Johan Birger
+Sex: male
+Age: 28
+SibSp: 2
+Parch: 0
+Ticket: 3101277
+Fare: 7.925
+Cabin: 
+Embarked: S
+PassengerId: 394
+Survived: 1
+Pclass: 1
+Name: Newell, Miss. Marjorie
+Sex: female
+Age: 23
+SibSp: 1
+Parch: 0
+Ticket: 35273
+Fare: 113.275
+Cabin: D36
+Embarked: C
+PassengerId: 395
+Survived: 1
+Pclass: 3
+Name: Sandstrom, Mrs. Hjalmar (Agnes Charlotta Bengtsson)
+Sex: female
+Age: 24
+SibSp: 0
+Parch: 2
+Ticket: PP 9549
+Fare: 16.7
+Cabin: G6
+Embarked: S
+PassengerId: 396
+Survived: 0
+Pclass: 3
+Name: Johansson, Mr. Erik
+Sex: male
+Age: 22
+SibSp: 0
+Parch: 0
+Ticket: 350052
+Fare: 7.7958
+Cabin: 
+Embarked: S
+PassengerId: 397
+Survived: 0
+Pclass: 3
+Name: Olsson, Miss. Elina
+Sex: female
+Age: 31
+SibSp: 0
+Parch: 0
+Ticket: 350407
+Fare: 7.8542
+Cabin: 
+Embarked: S
+PassengerId: 398
+Survived: 0
+Pclass: 2
+Name: McKane, Mr. Peter David
+Sex: male
+Age: 46
+SibSp: 0
+Parch: 0
+Ticket: 28403
+Fare: 26
+Cabin: 
+Embarked: S
+PassengerId: 399
+Survived: 0
+Pclass: 2
+Name: Pain, Dr. Alfred
+Sex: male
+Age: 23
+SibSp: 0
+Parch: 0
+Ticket: 244278
+Fare: 10.5
+Cabin: 
+Embarked: S
+PassengerId: 400
+Survived: 1
+Pclass: 2
+Name: Trout, Mrs. William H (Jessie L)
+Sex: female
+Age: 28
+SibSp: 0
+Parch: 0
+Ticket: 240929
+Fare: 12.65
+Cabin: 
+Embarked: S
+PassengerId: 401
+Survived: 1
+Pclass: 3
+Name: Niskanen, Mr. Juha
+Sex: male
+Age: 39
+SibSp: 0
+Parch: 0
+Ticket: STON/O 2. 3101289
+Fare: 7.925
+Cabin: 
+Embarked: S
+PassengerId: 402
+Survived: 0
+Pclass: 3
+Name: Adams, Mr. John
+Sex: male
+Age: 26
+SibSp: 0
+Parch: 0
+Ticket: 341826
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 403
+Survived: 0
+Pclass: 3
+Name: Jussila, Miss. Mari Aina
+Sex: female
+Age: 21
+SibSp: 1
+Parch: 0
+Ticket: 4137
+Fare: 9.825
+Cabin: 
+Embarked: S
+PassengerId: 404
+Survived: 0
+Pclass: 3
+Name: Hakkarainen, Mr. Pekka Pietari
+Sex: male
+Age: 28
+SibSp: 1
+Parch: 0
+Ticket: STON/O2. 3101279
+Fare: 15.85
+Cabin: 
+Embarked: S
+PassengerId: 405
+Survived: 0
+Pclass: 3
+Name: Oreskovic, Miss. Marija
+Sex: female
+Age: 20
+SibSp: 0
+Parch: 0
+Ticket: 315096
+Fare: 8.6625
+Cabin: 
+Embarked: S
+PassengerId: 406
+Survived: 0
+Pclass: 2
+Name: Gale, Mr. Shadrach
+Sex: male
+Age: 34
+SibSp: 1
+Parch: 0
+Ticket: 28664
+Fare: 21
+Cabin: 
+Embarked: S
+PassengerId: 407
+Survived: 0
+Pclass: 3
+Name: Widegren, Mr. Carl/Charles Peter
+Sex: male
+Age: 51
+SibSp: 0
+Parch: 0
+Ticket: 347064
+Fare: 7.75
+Cabin: 
+Embarked: S
+PassengerId: 408
+Survived: 1
+Pclass: 2
+Name: Richards, Master. William Rowe
+Sex: male
+Age: 3
+SibSp: 1
+Parch: 1
+Ticket: 29106
+Fare: 18.75
+Cabin: 
+Embarked: S
+PassengerId: 409
+Survived: 0
+Pclass: 3
+Name: Birkeland, Mr. Hans Martin Monsen
+Sex: male
+Age: 21
+SibSp: 0
+Parch: 0
+Ticket: 312992
+Fare: 7.775
+Cabin: 
+Embarked: S
+PassengerId: 410
+Survived: 0
+Pclass: 3
+Name: Lefebre, Miss. Ida
+Sex: female
+Age: 
+SibSp: 3
+Parch: 1
+Ticket: 4133
+Fare: 25.4667
+Cabin: 
+Embarked: S
+PassengerId: 411
+Survived: 0
+Pclass: 3
+Name: Sdycoff, Mr. Todor
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 349222
+Fare: 7.8958
+Cabin: 
+Embarked: S
+PassengerId: 412
+Survived: 0
+Pclass: 3
+Name: Hart, Mr. Henry
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 394140
+Fare: 6.8583
+Cabin: 
+Embarked: Q
+PassengerId: 413
+Survived: 1
+Pclass: 1
+Name: Minahan, Miss. Daisy E
+Sex: female
+Age: 33
+SibSp: 1
+Parch: 0
+Ticket: 19928
+Fare: 90
+Cabin: C78
+Embarked: Q
+PassengerId: 414
+Survived: 0
+Pclass: 2
+Name: Cunningham, Mr. Alfred Fleming
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 239853
+Fare: 0
+Cabin: 
+Embarked: S
+PassengerId: 415
+Survived: 1
+Pclass: 3
+Name: Sundman, Mr. Johan Julian
+Sex: male
+Age: 44
+SibSp: 0
+Parch: 0
+Ticket: STON/O 2. 3101269
+Fare: 7.925
+Cabin: 
+Embarked: S
+PassengerId: 416
+Survived: 0
+Pclass: 3
+Name: Meek, Mrs. Thomas (Annie Louise Rowley)
+Sex: female
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 343095
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 417
+Survived: 1
+Pclass: 2
+Name: Drew, Mrs. James Vivian (Lulu Thorne Christian)
+Sex: female
+Age: 34
+SibSp: 1
+Parch: 1
+Ticket: 28220
+Fare: 32.5
+Cabin: 
+Embarked: S
+PassengerId: 418
+Survived: 1
+Pclass: 2
+Name: Silven, Miss. Lyyli Karoliina
+Sex: female
+Age: 18
+SibSp: 0
+Parch: 2
+Ticket: 250652
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 419
+Survived: 0
+Pclass: 2
+Name: Matthews, Mr. William John
+Sex: male
+Age: 30
+SibSp: 0
+Parch: 0
+Ticket: 28228
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 420
+Survived: 0
+Pclass: 3
+Name: Van Impe, Miss. Catharina
+Sex: female
+Age: 10
+SibSp: 0
+Parch: 2
+Ticket: 345773
+Fare: 24.15
+Cabin: 
+Embarked: S
+PassengerId: 421
+Survived: 0
+Pclass: 3
+Name: Gheorgheff, Mr. Stanio
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 349254
+Fare: 7.8958
+Cabin: 
+Embarked: C
+PassengerId: 422
+Survived: 0
+Pclass: 3
+Name: Charters, Mr. David
+Sex: male
+Age: 21
+SibSp: 0
+Parch: 0
+Ticket: A/5. 13032
+Fare: 7.7333
+Cabin: 
+Embarked: Q
+PassengerId: 423
+Survived: 0
+Pclass: 3
+Name: Zimmerman, Mr. Leo
+Sex: male
+Age: 29
+SibSp: 0
+Parch: 0
+Ticket: 315082
+Fare: 7.875
+Cabin: 
+Embarked: S
+PassengerId: 424
+Survived: 0
+Pclass: 3
+Name: Danbom, Mrs. Ernst Gilbert (Anna Sigrid Maria Brogren)
+Sex: female
+Age: 28
+SibSp: 1
+Parch: 1
+Ticket: 347080
+Fare: 14.4
+Cabin: 
+Embarked: S
+PassengerId: 425
+Survived: 0
+Pclass: 3
+Name: Rosblom, Mr. Viktor Richard
+Sex: male
+Age: 18
+SibSp: 1
+Parch: 1
+Ticket: 370129
+Fare: 20.2125
+Cabin: 
+Embarked: S
+PassengerId: 426
+Survived: 0
+Pclass: 3
+Name: Wiseman, Mr. Phillippe
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: A/4. 34244
+Fare: 7.25
+Cabin: 
+Embarked: S
+PassengerId: 427
+Survived: 1
+Pclass: 2
+Name: Clarke, Mrs. Charles V (Ada Maria Winfield)
+Sex: female
+Age: 28
+SibSp: 1
+Parch: 0
+Ticket: 2003
+Fare: 26
+Cabin: 
+Embarked: S
+PassengerId: 428
+Survived: 1
+Pclass: 2
+Name: Phillips, Miss. Kate Florence ("Mrs Kate Louise Phillips Marshall")
+Sex: female
+Age: 19
+SibSp: 0
+Parch: 0
+Ticket: 250655
+Fare: 26
+Cabin: 
+Embarked: S
+PassengerId: 429
+Survived: 0
+Pclass: 3
+Name: Flynn, Mr. James
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 364851
+Fare: 7.75
+Cabin: 
+Embarked: Q
+PassengerId: 430
+Survived: 1
+Pclass: 3
+Name: Pickard, Mr. Berk (Berk Trembisky)
+Sex: male
+Age: 32
+SibSp: 0
+Parch: 0
+Ticket: SOTON/O.Q. 392078
+Fare: 8.05
+Cabin: E10
+Embarked: S
+PassengerId: 431
+Survived: 1
+Pclass: 1
+Name: Bjornstrom-Steffansson, Mr. Mauritz Hakan
+Sex: male
+Age: 28
+SibSp: 0
+Parch: 0
+Ticket: 110564
+Fare: 26.55
+Cabin: C52
+Embarked: S
+PassengerId: 432
+Survived: 1
+Pclass: 3
+Name: Thorneycroft, Mrs. Percival (Florence Kate White)
+Sex: female
+Age: 
+SibSp: 1
+Parch: 0
+Ticket: 376564
+Fare: 16.1
+Cabin: 
+Embarked: S
+PassengerId: 433
+Survived: 1
+Pclass: 2
+Name: Louch, Mrs. Charles Alexander (Alice Adelaide Slow)
+Sex: female
+Age: 42
+SibSp: 1
+Parch: 0
+Ticket: SC/AH 3085
+Fare: 26
+Cabin: 
+Embarked: S
+PassengerId: 434
+Survived: 0
+Pclass: 3
+Name: Kallio, Mr. Nikolai Erland
+Sex: male
+Age: 17
+SibSp: 0
+Parch: 0
+Ticket: STON/O 2. 3101274
+Fare: 7.125
+Cabin: 
+Embarked: S
+PassengerId: 435
+Survived: 0
+Pclass: 1
+Name: Silvey, Mr. William Baird
+Sex: male
+Age: 50
+SibSp: 1
+Parch: 0
+Ticket: 13507
+Fare: 55.9
+Cabin: E44
+Embarked: S
+PassengerId: 436
+Survived: 1
+Pclass: 1
+Name: Carter, Miss. Lucile Polk
+Sex: female
+Age: 14
+SibSp: 1
+Parch: 2
+Ticket: 113760
+Fare: 120
+Cabin: B96 B98
+Embarked: S
+PassengerId: 437
+Survived: 0
+Pclass: 3
+Name: Ford, Miss. Doolina Margaret "Daisy"
+Sex: female
+Age: 21
+SibSp: 2
+Parch: 2
+Ticket: W./C. 6608
+Fare: 34.375
+Cabin: 
+Embarked: S
+PassengerId: 438
+Survived: 1
+Pclass: 2
+Name: Richards, Mrs. Sidney (Emily Hocking)
+Sex: female
+Age: 24
+SibSp: 2
+Parch: 3
+Ticket: 29106
+Fare: 18.75
+Cabin: 
+Embarked: S
+PassengerId: 439
+Survived: 0
+Pclass: 1
+Name: Fortune, Mr. Mark
+Sex: male
+Age: 64
+SibSp: 1
+Parch: 4
+Ticket: 19950
+Fare: 263
+Cabin: C23 C25 C27
+Embarked: S
+PassengerId: 440
+Survived: 0
+Pclass: 2
+Name: Kvillner, Mr. Johan Henrik Johannesson
+Sex: male
+Age: 31
+SibSp: 0
+Parch: 0
+Ticket: C.A. 18723
+Fare: 10.5
+Cabin: 
+Embarked: S
+PassengerId: 441
+Survived: 1
+Pclass: 2
+Name: Hart, Mrs. Benjamin (Esther Ada Bloomfield)
+Sex: female
+Age: 45
+SibSp: 1
+Parch: 1
+Ticket: F.C.C. 13529
+Fare: 26.25
+Cabin: 
+Embarked: S
+PassengerId: 442
+Survived: 0
+Pclass: 3
+Name: Hampe, Mr. Leon
+Sex: male
+Age: 20
+SibSp: 0
+Parch: 0
+Ticket: 345769
+Fare: 9.5
+Cabin: 
+Embarked: S
+PassengerId: 443
+Survived: 0
+Pclass: 3
+Name: Petterson, Mr. Johan Emil
+Sex: male
+Age: 25
+SibSp: 1
+Parch: 0
+Ticket: 347076
+Fare: 7.775
+Cabin: 
+Embarked: S
+PassengerId: 444
+Survived: 1
+Pclass: 2
+Name: Reynaldo, Ms. Encarnacion
+Sex: female
+Age: 28
+SibSp: 0
+Parch: 0
+Ticket: 230434
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 445
+Survived: 1
+Pclass: 3
+Name: Johannesen-Bratthammer, Mr. Bernt
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 65306
+Fare: 8.1125
+Cabin: 
+Embarked: S
+PassengerId: 446
+Survived: 1
+Pclass: 1
+Name: Dodge, Master. Washington
+Sex: male
+Age: 4
+SibSp: 0
+Parch: 2
+Ticket: 33638
+Fare: 81.8583
+Cabin: A34
+Embarked: S
+PassengerId: 447
+Survived: 1
+Pclass: 2
+Name: Mellinger, Miss. Madeleine Violet
+Sex: female
+Age: 13
+SibSp: 0
+Parch: 1
+Ticket: 250644
+Fare: 19.5
+Cabin: 
+Embarked: S
+PassengerId: 448
+Survived: 1
+Pclass: 1
+Name: Seward, Mr. Frederic Kimber
+Sex: male
+Age: 34
+SibSp: 0
+Parch: 0
+Ticket: 113794
+Fare: 26.55
+Cabin: 
+Embarked: S
+PassengerId: 449
+Survived: 1
+Pclass: 3
+Name: Baclini, Miss. Marie Catherine
+Sex: female
+Age: 5
+SibSp: 2
+Parch: 1
+Ticket: 2666
+Fare: 19.2583
+Cabin: 
+Embarked: C
+PassengerId: 450
+Survived: 1
+Pclass: 1
+Name: Peuchen, Major. Arthur Godfrey
+Sex: male
+Age: 52
+SibSp: 0
+Parch: 0
+Ticket: 113786
+Fare: 30.5
+Cabin: C104
+Embarked: S
+PassengerId: 451
+Survived: 0
+Pclass: 2
+Name: West, Mr. Edwy Arthur
+Sex: male
+Age: 36
+SibSp: 1
+Parch: 2
+Ticket: C.A. 34651
+Fare: 27.75
+Cabin: 
+Embarked: S
+PassengerId: 452
+Survived: 0
+Pclass: 3
+Name: Hagland, Mr. Ingvald Olai Olsen
+Sex: male
+Age: 
+SibSp: 1
+Parch: 0
+Ticket: 65303
+Fare: 19.9667
+Cabin: 
+Embarked: S
+PassengerId: 453
+Survived: 0
+Pclass: 1
+Name: Foreman, Mr. Benjamin Laventall
+Sex: male
+Age: 30
+SibSp: 0
+Parch: 0
+Ticket: 113051
+Fare: 27.75
+Cabin: C111
+Embarked: C
+PassengerId: 454
+Survived: 1
+Pclass: 1
+Name: Goldenberg, Mr. Samuel L
+Sex: male
+Age: 49
+SibSp: 1
+Parch: 0
+Ticket: 17453
+Fare: 89.1042
+Cabin: C92
+Embarked: C
+PassengerId: 455
+Survived: 0
+Pclass: 3
+Name: Peduzzi, Mr. Joseph
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: A/5 2817
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 456
+Survived: 1
+Pclass: 3
+Name: Jalsevac, Mr. Ivan
+Sex: male
+Age: 29
+SibSp: 0
+Parch: 0
+Ticket: 349240
+Fare: 7.8958
+Cabin: 
+Embarked: C
+PassengerId: 457
+Survived: 0
+Pclass: 1
+Name: Millet, Mr. Francis Davis
+Sex: male
+Age: 65
+SibSp: 0
+Parch: 0
+Ticket: 13509
+Fare: 26.55
+Cabin: E38
+Embarked: S
+PassengerId: 458
+Survived: 1
+Pclass: 1
+Name: Kenyon, Mrs. Frederick R (Marion)
+Sex: female
+Age: 
+SibSp: 1
+Parch: 0
+Ticket: 17464
+Fare: 51.8625
+Cabin: D21
+Embarked: S
+PassengerId: 459
+Survived: 1
+Pclass: 2
+Name: Toomey, Miss. Ellen
+Sex: female
+Age: 50
+SibSp: 0
+Parch: 0
+Ticket: F.C.C. 13531
+Fare: 10.5
+Cabin: 
+Embarked: S
+PassengerId: 460
+Survived: 0
+Pclass: 3
+Name: O'Connor, Mr. Maurice
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 371060
+Fare: 7.75
+Cabin: 
+Embarked: Q
+PassengerId: 461
+Survived: 1
+Pclass: 1
+Name: Anderson, Mr. Harry
+Sex: male
+Age: 48
+SibSp: 0
+Parch: 0
+Ticket: 19952
+Fare: 26.55
+Cabin: E12
+Embarked: S
+PassengerId: 462
+Survived: 0
+Pclass: 3
+Name: Morley, Mr. William
+Sex: male
+Age: 34
+SibSp: 0
+Parch: 0
+Ticket: 364506
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 463
+Survived: 0
+Pclass: 1
+Name: Gee, Mr. Arthur H
+Sex: male
+Age: 47
+SibSp: 0
+Parch: 0
+Ticket: 111320
+Fare: 38.5
+Cabin: E63
+Embarked: S
+PassengerId: 464
+Survived: 0
+Pclass: 2
+Name: Milling, Mr. Jacob Christian
+Sex: male
+Age: 48
+SibSp: 0
+Parch: 0
+Ticket: 234360
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 465
+Survived: 0
+Pclass: 3
+Name: Maisner, Mr. Simon
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: A/S 2816
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 466
+Survived: 0
+Pclass: 3
+Name: Goncalves, Mr. Manuel Estanslas
+Sex: male
+Age: 38
+SibSp: 0
+Parch: 0
+Ticket: SOTON/O.Q. 3101306
+Fare: 7.05
+Cabin: 
+Embarked: S
+PassengerId: 467
+Survived: 0
+Pclass: 2
+Name: Campbell, Mr. William
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 239853
+Fare: 0
+Cabin: 
+Embarked: S
+PassengerId: 468
+Survived: 0
+Pclass: 1
+Name: Smart, Mr. John Montgomery
+Sex: male
+Age: 56
+SibSp: 0
+Parch: 0
+Ticket: 113792
+Fare: 26.55
+Cabin: 
+Embarked: S
+PassengerId: 469
+Survived: 0
+Pclass: 3
+Name: Scanlan, Mr. James
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 36209
+Fare: 7.725
+Cabin: 
+Embarked: Q
+PassengerId: 470
+Survived: 1
+Pclass: 3
+Name: Baclini, Miss. Helene Barbara
+Sex: female
+Age: 0.75
+SibSp: 2
+Parch: 1
+Ticket: 2666
+Fare: 19.2583
+Cabin: 
+Embarked: C
+PassengerId: 471
+Survived: 0
+Pclass: 3
+Name: Keefe, Mr. Arthur
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 323592
+Fare: 7.25
+Cabin: 
+Embarked: S
+PassengerId: 472
+Survived: 0
+Pclass: 3
+Name: Cacic, Mr. Luka
+Sex: male
+Age: 38
+SibSp: 0
+Parch: 0
+Ticket: 315089
+Fare: 8.6625
+Cabin: 
+Embarked: S
+PassengerId: 473
+Survived: 1
+Pclass: 2
+Name: West, Mrs. Edwy Arthur (Ada Mary Worth)
+Sex: female
+Age: 33
+SibSp: 1
+Parch: 2
+Ticket: C.A. 34651
+Fare: 27.75
+Cabin: 
+Embarked: S
+PassengerId: 474
+Survived: 1
+Pclass: 2
+Name: Jerwan, Mrs. Amin S (Marie Marthe Thuillard)
+Sex: female
+Age: 23
+SibSp: 0
+Parch: 0
+Ticket: SC/AH Basle 541
+Fare: 13.7917
+Cabin: D
+Embarked: C
+PassengerId: 475
+Survived: 0
+Pclass: 3
+Name: Strandberg, Miss. Ida Sofia
+Sex: female
+Age: 22
+SibSp: 0
+Parch: 0
+Ticket: 7553
+Fare: 9.8375
+Cabin: 
+Embarked: S
+PassengerId: 476
+Survived: 0
+Pclass: 1
+Name: Clifford, Mr. George Quincy
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 110465
+Fare: 52
+Cabin: A14
+Embarked: S
+PassengerId: 477
+Survived: 0
+Pclass: 2
+Name: Renouf, Mr. Peter Henry
+Sex: male
+Age: 34
+SibSp: 1
+Parch: 0
+Ticket: 31027
+Fare: 21
+Cabin: 
+Embarked: S
+PassengerId: 478
+Survived: 0
+Pclass: 3
+Name: Braund, Mr. Lewis Richard
+Sex: male
+Age: 29
+SibSp: 1
+Parch: 0
+Ticket: 3460
+Fare: 7.0458
+Cabin: 
+Embarked: S
+PassengerId: 479
+Survived: 0
+Pclass: 3
+Name: Karlsson, Mr. Nils August
+Sex: male
+Age: 22
+SibSp: 0
+Parch: 0
+Ticket: 350060
+Fare: 7.5208
+Cabin: 
+Embarked: S
+PassengerId: 480
+Survived: 1
+Pclass: 3
+Name: Hirvonen, Miss. Hildur E
+Sex: female
+Age: 2
+SibSp: 0
+Parch: 1
+Ticket: 3101298
+Fare: 12.2875
+Cabin: 
+Embarked: S
+PassengerId: 481
+Survived: 0
+Pclass: 3
+Name: Goodwin, Master. Harold Victor
+Sex: male
+Age: 9
+SibSp: 5
+Parch: 2
+Ticket: CA 2144
+Fare: 46.9
+Cabin: 
+Embarked: S
+PassengerId: 482
+Survived: 0
+Pclass: 2
+Name: Frost, Mr. Anthony Wood "Archie"
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 239854
+Fare: 0
+Cabin: 
+Embarked: S
+PassengerId: 483
+Survived: 0
+Pclass: 3
+Name: Rouse, Mr. Richard Henry
+Sex: male
+Age: 50
+SibSp: 0
+Parch: 0
+Ticket: A/5 3594
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 484
+Survived: 1
+Pclass: 3
+Name: Turkula, Mrs. (Hedwig)
+Sex: female
+Age: 63
+SibSp: 0
+Parch: 0
+Ticket: 4134
+Fare: 9.5875
+Cabin: 
+Embarked: S
+PassengerId: 485
+Survived: 1
+Pclass: 1
+Name: Bishop, Mr. Dickinson H
+Sex: male
+Age: 25
+SibSp: 1
+Parch: 0
+Ticket: 11967
+Fare: 91.0792
+Cabin: B49
+Embarked: C
+PassengerId: 486
+Survived: 0
+Pclass: 3
+Name: Lefebre, Miss. Jeannie
+Sex: female
+Age: 
+SibSp: 3
+Parch: 1
+Ticket: 4133
+Fare: 25.4667
+Cabin: 
+Embarked: S
+PassengerId: 487
+Survived: 1
+Pclass: 1
+Name: Hoyt, Mrs. Frederick Maxfield (Jane Anne Forby)
+Sex: female
+Age: 35
+SibSp: 1
+Parch: 0
+Ticket: 19943
+Fare: 90
+Cabin: C93
+Embarked: S
+PassengerId: 488
+Survived: 0
+Pclass: 1
+Name: Kent, Mr. Edward Austin
+Sex: male
+Age: 58
+SibSp: 0
+Parch: 0
+Ticket: 11771
+Fare: 29.7
+Cabin: B37
+Embarked: C
+PassengerId: 489
+Survived: 0
+Pclass: 3
+Name: Somerton, Mr. Francis William
+Sex: male
+Age: 30
+SibSp: 0
+Parch: 0
+Ticket: A.5. 18509
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 490
+Survived: 1
+Pclass: 3
+Name: Coutts, Master. Eden Leslie "Neville"
+Sex: male
+Age: 9
+SibSp: 1
+Parch: 1
+Ticket: C.A. 37671
+Fare: 15.9
+Cabin: 
+Embarked: S
+PassengerId: 491
+Survived: 0
+Pclass: 3
+Name: Hagland, Mr. Konrad Mathias Reiersen
+Sex: male
+Age: 
+SibSp: 1
+Parch: 0
+Ticket: 65304
+Fare: 19.9667
+Cabin: 
+Embarked: S
+PassengerId: 492
+Survived: 0
+Pclass: 3
+Name: Windelov, Mr. Einar
+Sex: male
+Age: 21
+SibSp: 0
+Parch: 0
+Ticket: SOTON/OQ 3101317
+Fare: 7.25
+Cabin: 
+Embarked: S
+PassengerId: 493
+Survived: 0
+Pclass: 1
+Name: Molson, Mr. Harry Markland
+Sex: male
+Age: 55
+SibSp: 0
+Parch: 0
+Ticket: 113787
+Fare: 30.5
+Cabin: C30
+Embarked: S
+PassengerId: 494
+Survived: 0
+Pclass: 1
+Name: Artagaveytia, Mr. Ramon
+Sex: male
+Age: 71
+SibSp: 0
+Parch: 0
+Ticket: PC 17609
+Fare: 49.5042
+Cabin: 
+Embarked: C
+PassengerId: 495
+Survived: 0
+Pclass: 3
+Name: Stanley, Mr. Edward Roland
+Sex: male
+Age: 21
+SibSp: 0
+Parch: 0
+Ticket: A/4 45380
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 496
+Survived: 0
+Pclass: 3
+Name: Yousseff, Mr. Gerious
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 2627
+Fare: 14.4583
+Cabin: 
+Embarked: C
+PassengerId: 497
+Survived: 1
+Pclass: 1
+Name: Eustis, Miss. Elizabeth Mussey
+Sex: female
+Age: 54
+SibSp: 1
+Parch: 0
+Ticket: 36947
+Fare: 78.2667
+Cabin: D20
+Embarked: C
+PassengerId: 498
+Survived: 0
+Pclass: 3
+Name: Shellard, Mr. Frederick William
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: C.A. 6212
+Fare: 15.1
+Cabin: 
+Embarked: S
+PassengerId: 499
+Survived: 0
+Pclass: 1
+Name: Allison, Mrs. Hudson J C (Bessie Waldo Daniels)
+Sex: female
+Age: 25
+SibSp: 1
+Parch: 2
+Ticket: 113781
+Fare: 151.55
+Cabin: C22 C26
+Embarked: S
+PassengerId: 500
+Survived: 0
+Pclass: 3
+Name: Svensson, Mr. Olof
+Sex: male
+Age: 24
+SibSp: 0
+Parch: 0
+Ticket: 350035
+Fare: 7.7958
+Cabin: 
+Embarked: S
+PassengerId: 501
+Survived: 0
+Pclass: 3
+Name: Calic, Mr. Petar
+Sex: male
+Age: 17
+SibSp: 0
+Parch: 0
+Ticket: 315086
+Fare: 8.6625
+Cabin: 
+Embarked: S
+PassengerId: 502
+Survived: 0
+Pclass: 3
+Name: Canavan, Miss. Mary
+Sex: female
+Age: 21
+SibSp: 0
+Parch: 0
+Ticket: 364846
+Fare: 7.75
+Cabin: 
+Embarked: Q
+PassengerId: 503
+Survived: 0
+Pclass: 3
+Name: O'Sullivan, Miss. Bridget Mary
+Sex: female
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 330909
+Fare: 7.6292
+Cabin: 
+Embarked: Q
+PassengerId: 504
+Survived: 0
+Pclass: 3
+Name: Laitinen, Miss. Kristina Sofia
+Sex: female
+Age: 37
+SibSp: 0
+Parch: 0
+Ticket: 4135
+Fare: 9.5875
+Cabin: 
+Embarked: S
+PassengerId: 505
+Survived: 1
+Pclass: 1
+Name: Maioni, Miss. Roberta
+Sex: female
+Age: 16
+SibSp: 0
+Parch: 0
+Ticket: 110152
+Fare: 86.5
+Cabin: B79
+Embarked: S
+PassengerId: 506
+Survived: 0
+Pclass: 1
+Name: Penasco y Castellana, Mr. Victor de Satode
+Sex: male
+Age: 18
+SibSp: 1
+Parch: 0
+Ticket: PC 17758
+Fare: 108.9
+Cabin: C65
+Embarked: C
+PassengerId: 507
+Survived: 1
+Pclass: 2
+Name: Quick, Mrs. Frederick Charles (Jane Richards)
+Sex: female
+Age: 33
+SibSp: 0
+Parch: 2
+Ticket: 26360
+Fare: 26
+Cabin: 
+Embarked: S
+PassengerId: 508
+Survived: 1
+Pclass: 1
+Name: Bradley, Mr. George ("George Arthur Brayton")
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 111427
+Fare: 26.55
+Cabin: 
+Embarked: S
+PassengerId: 509
+Survived: 0
+Pclass: 3
+Name: Olsen, Mr. Henry Margido
+Sex: male
+Age: 28
+SibSp: 0
+Parch: 0
+Ticket: C 4001
+Fare: 22.525
+Cabin: 
+Embarked: S
+PassengerId: 510
+Survived: 1
+Pclass: 3
+Name: Lang, Mr. Fang
+Sex: male
+Age: 26
+SibSp: 0
+Parch: 0
+Ticket: 1601
+Fare: 56.4958
+Cabin: 
+Embarked: S
+PassengerId: 511
+Survived: 1
+Pclass: 3
+Name: Daly, Mr. Eugene Patrick
+Sex: male
+Age: 29
+SibSp: 0
+Parch: 0
+Ticket: 382651
+Fare: 7.75
+Cabin: 
+Embarked: Q
+PassengerId: 512
+Survived: 0
+Pclass: 3
+Name: Webber, Mr. James
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: SOTON/OQ 3101316
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 513
+Survived: 1
+Pclass: 1
+Name: McGough, Mr. James Robert
+Sex: male
+Age: 36
+SibSp: 0
+Parch: 0
+Ticket: PC 17473
+Fare: 26.2875
+Cabin: E25
+Embarked: S
+PassengerId: 514
+Survived: 1
+Pclass: 1
+Name: Rothschild, Mrs. Martin (Elizabeth L. Barrett)
+Sex: female
+Age: 54
+SibSp: 1
+Parch: 0
+Ticket: PC 17603
+Fare: 59.4
+Cabin: 
+Embarked: C
+PassengerId: 515
+Survived: 0
+Pclass: 3
+Name: Coleff, Mr. Satio
+Sex: male
+Age: 24
+SibSp: 0
+Parch: 0
+Ticket: 349209
+Fare: 7.4958
+Cabin: 
+Embarked: S
+PassengerId: 516
+Survived: 0
+Pclass: 1
+Name: Walker, Mr. William Anderson
+Sex: male
+Age: 47
+SibSp: 0
+Parch: 0
+Ticket: 36967
+Fare: 34.0208
+Cabin: D46
+Embarked: S
+PassengerId: 517
+Survived: 1
+Pclass: 2
+Name: Lemore, Mrs. (Amelia Milley)
+Sex: female
+Age: 34
+SibSp: 0
+Parch: 0
+Ticket: C.A. 34260
+Fare: 10.5
+Cabin: F33
+Embarked: S
+PassengerId: 518
+Survived: 0
+Pclass: 3
+Name: Ryan, Mr. Patrick
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 371110
+Fare: 24.15
+Cabin: 
+Embarked: Q
+PassengerId: 519
+Survived: 1
+Pclass: 2
+Name: Angle, Mrs. William A (Florence "Mary" Agnes Hughes)
+Sex: female
+Age: 36
+SibSp: 1
+Parch: 0
+Ticket: 226875
+Fare: 26
+Cabin: 
+Embarked: S
+PassengerId: 520
+Survived: 0
+Pclass: 3
+Name: Pavlovic, Mr. Stefo
+Sex: male
+Age: 32
+SibSp: 0
+Parch: 0
+Ticket: 349242
+Fare: 7.8958
+Cabin: 
+Embarked: S
+PassengerId: 521
+Survived: 1
+Pclass: 1
+Name: Perreault, Miss. Anne
+Sex: female
+Age: 30
+SibSp: 0
+Parch: 0
+Ticket: 12749
+Fare: 93.5
+Cabin: B73
+Embarked: S
+PassengerId: 522
+Survived: 0
+Pclass: 3
+Name: Vovk, Mr. Janko
+Sex: male
+Age: 22
+SibSp: 0
+Parch: 0
+Ticket: 349252
+Fare: 7.8958
+Cabin: 
+Embarked: S
+PassengerId: 523
+Survived: 0
+Pclass: 3
+Name: Lahoud, Mr. Sarkis
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 2624
+Fare: 7.225
+Cabin: 
+Embarked: C
+PassengerId: 524
+Survived: 1
+Pclass: 1
+Name: Hippach, Mrs. Louis Albert (Ida Sophia Fischer)
+Sex: female
+Age: 44
+SibSp: 0
+Parch: 1
+Ticket: 111361
+Fare: 57.9792
+Cabin: B18
+Embarked: C
+PassengerId: 525
+Survived: 0
+Pclass: 3
+Name: Kassem, Mr. Fared
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 2700
+Fare: 7.2292
+Cabin: 
+Embarked: C
+PassengerId: 526
+Survived: 0
+Pclass: 3
+Name: Farrell, Mr. James
+Sex: male
+Age: 40.5
+SibSp: 0
+Parch: 0
+Ticket: 367232
+Fare: 7.75
+Cabin: 
+Embarked: Q
+PassengerId: 527
+Survived: 1
+Pclass: 2
+Name: Ridsdale, Miss. Lucy
+Sex: female
+Age: 50
+SibSp: 0
+Parch: 0
+Ticket: W./C. 14258
+Fare: 10.5
+Cabin: 
+Embarked: S
+PassengerId: 528
+Survived: 0
+Pclass: 1
+Name: Farthing, Mr. John
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: PC 17483
+Fare: 221.7792
+Cabin: C95
+Embarked: S
+PassengerId: 529
+Survived: 0
+Pclass: 3
+Name: Salonen, Mr. Johan Werner
+Sex: male
+Age: 39
+SibSp: 0
+Parch: 0
+Ticket: 3101296
+Fare: 7.925
+Cabin: 
+Embarked: S
+PassengerId: 530
+Survived: 0
+Pclass: 2
+Name: Hocking, Mr. Richard George
+Sex: male
+Age: 23
+SibSp: 2
+Parch: 1
+Ticket: 29104
+Fare: 11.5
+Cabin: 
+Embarked: S
+PassengerId: 531
+Survived: 1
+Pclass: 2
+Name: Quick, Miss. Phyllis May
+Sex: female
+Age: 2
+SibSp: 1
+Parch: 1
+Ticket: 26360
+Fare: 26
+Cabin: 
+Embarked: S
+PassengerId: 532
+Survived: 0
+Pclass: 3
+Name: Toufik, Mr. Nakli
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 2641
+Fare: 7.2292
+Cabin: 
+Embarked: C
+PassengerId: 533
+Survived: 0
+Pclass: 3
+Name: Elias, Mr. Joseph Jr
+Sex: male
+Age: 17
+SibSp: 1
+Parch: 1
+Ticket: 2690
+Fare: 7.2292
+Cabin: 
+Embarked: C
+PassengerId: 534
+Survived: 1
+Pclass: 3
+Name: Peter, Mrs. Catherine (Catherine Rizk)
+Sex: female
+Age: 
+SibSp: 0
+Parch: 2
+Ticket: 2668
+Fare: 22.3583
+Cabin: 
+Embarked: C
+PassengerId: 535
+Survived: 0
+Pclass: 3
+Name: Cacic, Miss. Marija
+Sex: female
+Age: 30
+SibSp: 0
+Parch: 0
+Ticket: 315084
+Fare: 8.6625
+Cabin: 
+Embarked: S
+PassengerId: 536
+Survived: 1
+Pclass: 2
+Name: Hart, Miss. Eva Miriam
+Sex: female
+Age: 7
+SibSp: 0
+Parch: 2
+Ticket: F.C.C. 13529
+Fare: 26.25
+Cabin: 
+Embarked: S
+PassengerId: 537
+Survived: 0
+Pclass: 1
+Name: Butt, Major. Archibald Willingham
+Sex: male
+Age: 45
+SibSp: 0
+Parch: 0
+Ticket: 113050
+Fare: 26.55
+Cabin: B38
+Embarked: S
+PassengerId: 538
+Survived: 1
+Pclass: 1
+Name: LeRoy, Miss. Bertha
+Sex: female
+Age: 30
+SibSp: 0
+Parch: 0
+Ticket: PC 17761
+Fare: 106.425
+Cabin: 
+Embarked: C
+PassengerId: 539
+Survived: 0
+Pclass: 3
+Name: Risien, Mr. Samuel Beard
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 364498
+Fare: 14.5
+Cabin: 
+Embarked: S
+PassengerId: 540
+Survived: 1
+Pclass: 1
+Name: Frolicher, Miss. Hedwig Margaritha
+Sex: female
+Age: 22
+SibSp: 0
+Parch: 2
+Ticket: 13568
+Fare: 49.5
+Cabin: B39
+Embarked: C
+PassengerId: 541
+Survived: 1
+Pclass: 1
+Name: Crosby, Miss. Harriet R
+Sex: female
+Age: 36
+SibSp: 0
+Parch: 2
+Ticket: WE/P 5735
+Fare: 71
+Cabin: B22
+Embarked: S
+PassengerId: 542
+Survived: 0
+Pclass: 3
+Name: Andersson, Miss. Ingeborg Constanzia
+Sex: female
+Age: 9
+SibSp: 4
+Parch: 2
+Ticket: 347082
+Fare: 31.275
+Cabin: 
+Embarked: S
+PassengerId: 543
+Survived: 0
+Pclass: 3
+Name: Andersson, Miss. Sigrid Elisabeth
+Sex: female
+Age: 11
+SibSp: 4
+Parch: 2
+Ticket: 347082
+Fare: 31.275
+Cabin: 
+Embarked: S
+PassengerId: 544
+Survived: 1
+Pclass: 2
+Name: Beane, Mr. Edward
+Sex: male
+Age: 32
+SibSp: 1
+Parch: 0
+Ticket: 2908
+Fare: 26
+Cabin: 
+Embarked: S
+PassengerId: 545
+Survived: 0
+Pclass: 1
+Name: Douglas, Mr. Walter Donald
+Sex: male
+Age: 50
+SibSp: 1
+Parch: 0
+Ticket: PC 17761
+Fare: 106.425
+Cabin: C86
+Embarked: C
+PassengerId: 546
+Survived: 0
+Pclass: 1
+Name: Nicholson, Mr. Arthur Ernest
+Sex: male
+Age: 64
+SibSp: 0
+Parch: 0
+Ticket: 693
+Fare: 26
+Cabin: 
+Embarked: S
+PassengerId: 547
+Survived: 1
+Pclass: 2
+Name: Beane, Mrs. Edward (Ethel Clarke)
+Sex: female
+Age: 19
+SibSp: 1
+Parch: 0
+Ticket: 2908
+Fare: 26
+Cabin: 
+Embarked: S
+PassengerId: 548
+Survived: 1
+Pclass: 2
+Name: Padro y Manent, Mr. Julian
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: SC/PARIS 2146
+Fare: 13.8625
+Cabin: 
+Embarked: C
+PassengerId: 549
+Survived: 0
+Pclass: 3
+Name: Goldsmith, Mr. Frank John
+Sex: male
+Age: 33
+SibSp: 1
+Parch: 1
+Ticket: 363291
+Fare: 20.525
+Cabin: 
+Embarked: S
+PassengerId: 550
+Survived: 1
+Pclass: 2
+Name: Davies, Master. John Morgan Jr
+Sex: male
+Age: 8
+SibSp: 1
+Parch: 1
+Ticket: C.A. 33112
+Fare: 36.75
+Cabin: 
+Embarked: S
+PassengerId: 551
+Survived: 1
+Pclass: 1
+Name: Thayer, Mr. John Borland Jr
+Sex: male
+Age: 17
+SibSp: 0
+Parch: 2
+Ticket: 17421
+Fare: 110.8833
+Cabin: C70
+Embarked: C
+PassengerId: 552
+Survived: 0
+Pclass: 2
+Name: Sharp, Mr. Percival James R
+Sex: male
+Age: 27
+SibSp: 0
+Parch: 0
+Ticket: 244358
+Fare: 26
+Cabin: 
+Embarked: S
+PassengerId: 553
+Survived: 0
+Pclass: 3
+Name: O'Brien, Mr. Timothy
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 330979
+Fare: 7.8292
+Cabin: 
+Embarked: Q
+PassengerId: 554
+Survived: 1
+Pclass: 3
+Name: Leeni, Mr. Fahim ("Philip Zenni")
+Sex: male
+Age: 22
+SibSp: 0
+Parch: 0
+Ticket: 2620
+Fare: 7.225
+Cabin: 
+Embarked: C
+PassengerId: 555
+Survived: 1
+Pclass: 3
+Name: Ohman, Miss. Velin
+Sex: female
+Age: 22
+SibSp: 0
+Parch: 0
+Ticket: 347085
+Fare: 7.775
+Cabin: 
+Embarked: S
+PassengerId: 556
+Survived: 0
+Pclass: 1
+Name: Wright, Mr. George
+Sex: male
+Age: 62
+SibSp: 0
+Parch: 0
+Ticket: 113807
+Fare: 26.55
+Cabin: 
+Embarked: S
+PassengerId: 557
+Survived: 1
+Pclass: 1
+Name: Duff Gordon, Lady. (Lucille Christiana Sutherland) ("Mrs Morgan")
+Sex: female
+Age: 48
+SibSp: 1
+Parch: 0
+Ticket: 11755
+Fare: 39.6
+Cabin: A16
+Embarked: C
+PassengerId: 558
+Survived: 0
+Pclass: 1
+Name: Robbins, Mr. Victor
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: PC 17757
+Fare: 227.525
+Cabin: 
+Embarked: C
+PassengerId: 559
+Survived: 1
+Pclass: 1
+Name: Taussig, Mrs. Emil (Tillie Mandelbaum)
+Sex: female
+Age: 39
+SibSp: 1
+Parch: 1
+Ticket: 110413
+Fare: 79.65
+Cabin: E67
+Embarked: S
+PassengerId: 560
+Survived: 1
+Pclass: 3
+Name: de Messemaeker, Mrs. Guillaume Joseph (Emma)
+Sex: female
+Age: 36
+SibSp: 1
+Parch: 0
+Ticket: 345572
+Fare: 17.4
+Cabin: 
+Embarked: S
+PassengerId: 561
+Survived: 0
+Pclass: 3
+Name: Morrow, Mr. Thomas Rowan
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 372622
+Fare: 7.75
+Cabin: 
+Embarked: Q
+PassengerId: 562
+Survived: 0
+Pclass: 3
+Name: Sivic, Mr. Husein
+Sex: male
+Age: 40
+SibSp: 0
+Parch: 0
+Ticket: 349251
+Fare: 7.8958
+Cabin: 
+Embarked: S
+PassengerId: 563
+Survived: 0
+Pclass: 2
+Name: Norman, Mr. Robert Douglas
+Sex: male
+Age: 28
+SibSp: 0
+Parch: 0
+Ticket: 218629
+Fare: 13.5
+Cabin: 
+Embarked: S
+PassengerId: 564
+Survived: 0
+Pclass: 3
+Name: Simmons, Mr. John
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: SOTON/OQ 392082
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 565
+Survived: 0
+Pclass: 3
+Name: Meanwell, Miss. (Marion Ogden)
+Sex: female
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: SOTON/O.Q. 392087
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 566
+Survived: 0
+Pclass: 3
+Name: Davies, Mr. Alfred J
+Sex: male
+Age: 24
+SibSp: 2
+Parch: 0
+Ticket: A/4 48871
+Fare: 24.15
+Cabin: 
+Embarked: S
+PassengerId: 567
+Survived: 0
+Pclass: 3
+Name: Stoytcheff, Mr. Ilia
+Sex: male
+Age: 19
+SibSp: 0
+Parch: 0
+Ticket: 349205
+Fare: 7.8958
+Cabin: 
+Embarked: S
+PassengerId: 568
+Survived: 0
+Pclass: 3
+Name: Palsson, Mrs. Nils (Alma Cornelia Berglund)
+Sex: female
+Age: 29
+SibSp: 0
+Parch: 4
+Ticket: 349909
+Fare: 21.075
+Cabin: 
+Embarked: S
+PassengerId: 569
+Survived: 0
+Pclass: 3
+Name: Doharr, Mr. Tannous
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 2686
+Fare: 7.2292
+Cabin: 
+Embarked: C
+PassengerId: 570
+Survived: 1
+Pclass: 3
+Name: Jonsson, Mr. Carl
+Sex: male
+Age: 32
+SibSp: 0
+Parch: 0
+Ticket: 350417
+Fare: 7.8542
+Cabin: 
+Embarked: S
+PassengerId: 571
+Survived: 1
+Pclass: 2
+Name: Harris, Mr. George
+Sex: male
+Age: 62
+SibSp: 0
+Parch: 0
+Ticket: S.W./PP 752
+Fare: 10.5
+Cabin: 
+Embarked: S
+PassengerId: 572
+Survived: 1
+Pclass: 1
+Name: Appleton, Mrs. Edward Dale (Charlotte Lamson)
+Sex: female
+Age: 53
+SibSp: 2
+Parch: 0
+Ticket: 11769
+Fare: 51.4792
+Cabin: C101
+Embarked: S
+PassengerId: 573
+Survived: 1
+Pclass: 1
+Name: Flynn, Mr. John Irwin ("Irving")
+Sex: male
+Age: 36
+SibSp: 0
+Parch: 0
+Ticket: PC 17474
+Fare: 26.3875
+Cabin: E25
+Embarked: S
+PassengerId: 574
+Survived: 1
+Pclass: 3
+Name: Kelly, Miss. Mary
+Sex: female
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 14312
+Fare: 7.75
+Cabin: 
+Embarked: Q
+PassengerId: 575
+Survived: 0
+Pclass: 3
+Name: Rush, Mr. Alfred George John
+Sex: male
+Age: 16
+SibSp: 0
+Parch: 0
+Ticket: A/4. 20589
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 576
+Survived: 0
+Pclass: 3
+Name: Patchett, Mr. George
+Sex: male
+Age: 19
+SibSp: 0
+Parch: 0
+Ticket: 358585
+Fare: 14.5
+Cabin: 
+Embarked: S
+PassengerId: 577
+Survived: 1
+Pclass: 2
+Name: Garside, Miss. Ethel
+Sex: female
+Age: 34
+SibSp: 0
+Parch: 0
+Ticket: 243880
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 578
+Survived: 1
+Pclass: 1
+Name: Silvey, Mrs. William Baird (Alice Munger)
+Sex: female
+Age: 39
+SibSp: 1
+Parch: 0
+Ticket: 13507
+Fare: 55.9
+Cabin: E44
+Embarked: S
+PassengerId: 579
+Survived: 0
+Pclass: 3
+Name: Caram, Mrs. Joseph (Maria Elias)
+Sex: female
+Age: 
+SibSp: 1
+Parch: 0
+Ticket: 2689
+Fare: 14.4583
+Cabin: 
+Embarked: C
+PassengerId: 580
+Survived: 1
+Pclass: 3
+Name: Jussila, Mr. Eiriik
+Sex: male
+Age: 32
+SibSp: 0
+Parch: 0
+Ticket: STON/O 2. 3101286
+Fare: 7.925
+Cabin: 
+Embarked: S
+PassengerId: 581
+Survived: 1
+Pclass: 2
+Name: Christy, Miss. Julie Rachel
+Sex: female
+Age: 25
+SibSp: 1
+Parch: 1
+Ticket: 237789
+Fare: 30
+Cabin: 
+Embarked: S
+PassengerId: 582
+Survived: 1
+Pclass: 1
+Name: Thayer, Mrs. John Borland (Marian Longstreth Morris)
+Sex: female
+Age: 39
+SibSp: 1
+Parch: 1
+Ticket: 17421
+Fare: 110.8833
+Cabin: C68
+Embarked: C
+PassengerId: 583
+Survived: 0
+Pclass: 2
+Name: Downton, Mr. William James
+Sex: male
+Age: 54
+SibSp: 0
+Parch: 0
+Ticket: 28403
+Fare: 26
+Cabin: 
+Embarked: S
+PassengerId: 584
+Survived: 0
+Pclass: 1
+Name: Ross, Mr. John Hugo
+Sex: male
+Age: 36
+SibSp: 0
+Parch: 0
+Ticket: 13049
+Fare: 40.125
+Cabin: A10
+Embarked: C
+PassengerId: 585
+Survived: 0
+Pclass: 3
+Name: Paulner, Mr. Uscher
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 3411
+Fare: 8.7125
+Cabin: 
+Embarked: C
+PassengerId: 586
+Survived: 1
+Pclass: 1
+Name: Taussig, Miss. Ruth
+Sex: female
+Age: 18
+SibSp: 0
+Parch: 2
+Ticket: 110413
+Fare: 79.65
+Cabin: E68
+Embarked: S
+PassengerId: 587
+Survived: 0
+Pclass: 2
+Name: Jarvis, Mr. John Denzil
+Sex: male
+Age: 47
+SibSp: 0
+Parch: 0
+Ticket: 237565
+Fare: 15
+Cabin: 
+Embarked: S
+PassengerId: 588
+Survived: 1
+Pclass: 1
+Name: Frolicher-Stehli, Mr. Maxmillian
+Sex: male
+Age: 60
+SibSp: 1
+Parch: 1
+Ticket: 13567
+Fare: 79.2
+Cabin: B41
+Embarked: C
+PassengerId: 589
+Survived: 0
+Pclass: 3
+Name: Gilinski, Mr. Eliezer
+Sex: male
+Age: 22
+SibSp: 0
+Parch: 0
+Ticket: 14973
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 590
+Survived: 0
+Pclass: 3
+Name: Murdlin, Mr. Joseph
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: A./5. 3235
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 591
+Survived: 0
+Pclass: 3
+Name: Rintamaki, Mr. Matti
+Sex: male
+Age: 35
+SibSp: 0
+Parch: 0
+Ticket: STON/O 2. 3101273
+Fare: 7.125
+Cabin: 
+Embarked: S
+PassengerId: 592
+Survived: 1
+Pclass: 1
+Name: Stephenson, Mrs. Walter Bertram (Martha Eustis)
+Sex: female
+Age: 52
+SibSp: 1
+Parch: 0
+Ticket: 36947
+Fare: 78.2667
+Cabin: D20
+Embarked: C
+PassengerId: 593
+Survived: 0
+Pclass: 3
+Name: Elsbury, Mr. William James
+Sex: male
+Age: 47
+SibSp: 0
+Parch: 0
+Ticket: A/5 3902
+Fare: 7.25
+Cabin: 
+Embarked: S
+PassengerId: 594
+Survived: 0
+Pclass: 3
+Name: Bourke, Miss. Mary
+Sex: female
+Age: 
+SibSp: 0
+Parch: 2
+Ticket: 364848
+Fare: 7.75
+Cabin: 
+Embarked: Q
+PassengerId: 595
+Survived: 0
+Pclass: 2
+Name: Chapman, Mr. John Henry
+Sex: male
+Age: 37
+SibSp: 1
+Parch: 0
+Ticket: SC/AH 29037
+Fare: 26
+Cabin: 
+Embarked: S
+PassengerId: 596
+Survived: 0
+Pclass: 3
+Name: Van Impe, Mr. Jean Baptiste
+Sex: male
+Age: 36
+SibSp: 1
+Parch: 1
+Ticket: 345773
+Fare: 24.15
+Cabin: 
+Embarked: S
+PassengerId: 597
+Survived: 1
+Pclass: 2
+Name: Leitch, Miss. Jessie Wills
+Sex: female
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 248727
+Fare: 33
+Cabin: 
+Embarked: S
+PassengerId: 598
+Survived: 0
+Pclass: 3
+Name: Johnson, Mr. Alfred
+Sex: male
+Age: 49
+SibSp: 0
+Parch: 0
+Ticket: LINE
+Fare: 0
+Cabin: 
+Embarked: S
+PassengerId: 599
+Survived: 0
+Pclass: 3
+Name: Boulos, Mr. Hanna
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 2664
+Fare: 7.225
+Cabin: 
+Embarked: C
+PassengerId: 600
+Survived: 1
+Pclass: 1
+Name: Duff Gordon, Sir. Cosmo Edmund ("Mr Morgan")
+Sex: male
+Age: 49
+SibSp: 1
+Parch: 0
+Ticket: PC 17485
+Fare: 56.9292
+Cabin: A20
+Embarked: C
+PassengerId: 601
+Survived: 1
+Pclass: 2
+Name: Jacobsohn, Mrs. Sidney Samuel (Amy Frances Christy)
+Sex: female
+Age: 24
+SibSp: 2
+Parch: 1
+Ticket: 243847
+Fare: 27
+Cabin: 
+Embarked: S
+PassengerId: 602
+Survived: 0
+Pclass: 3
+Name: Slabenoff, Mr. Petco
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 349214
+Fare: 7.8958
+Cabin: 
+Embarked: S
+PassengerId: 603
+Survived: 0
+Pclass: 1
+Name: Harrington, Mr. Charles H
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 113796
+Fare: 42.4
+Cabin: 
+Embarked: S
+PassengerId: 604
+Survived: 0
+Pclass: 3
+Name: Torber, Mr. Ernst William
+Sex: male
+Age: 44
+SibSp: 0
+Parch: 0
+Ticket: 364511
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 605
+Survived: 1
+Pclass: 1
+Name: Homer, Mr. Harry ("Mr E Haven")
+Sex: male
+Age: 35
+SibSp: 0
+Parch: 0
+Ticket: 111426
+Fare: 26.55
+Cabin: 
+Embarked: C
+PassengerId: 606
+Survived: 0
+Pclass: 3
+Name: Lindell, Mr. Edvard Bengtsson
+Sex: male
+Age: 36
+SibSp: 1
+Parch: 0
+Ticket: 349910
+Fare: 15.55
+Cabin: 
+Embarked: S
+PassengerId: 607
+Survived: 0
+Pclass: 3
+Name: Karaic, Mr. Milan
+Sex: male
+Age: 30
+SibSp: 0
+Parch: 0
+Ticket: 349246
+Fare: 7.8958
+Cabin: 
+Embarked: S
+PassengerId: 608
+Survived: 1
+Pclass: 1
+Name: Daniel, Mr. Robert Williams
+Sex: male
+Age: 27
+SibSp: 0
+Parch: 0
+Ticket: 113804
+Fare: 30.5
+Cabin: 
+Embarked: S
+PassengerId: 609
+Survived: 1
+Pclass: 2
+Name: Laroche, Mrs. Joseph (Juliette Marie Louise Lafargue)
+Sex: female
+Age: 22
+SibSp: 1
+Parch: 2
+Ticket: SC/Paris 2123
+Fare: 41.5792
+Cabin: 
+Embarked: C
+PassengerId: 610
+Survived: 1
+Pclass: 1
+Name: Shutes, Miss. Elizabeth W
+Sex: female
+Age: 40
+SibSp: 0
+Parch: 0
+Ticket: PC 17582
+Fare: 153.4625
+Cabin: C125
+Embarked: S
+PassengerId: 611
+Survived: 0
+Pclass: 3
+Name: Andersson, Mrs. Anders Johan (Alfrida Konstantia Brogren)
+Sex: female
+Age: 39
+SibSp: 1
+Parch: 5
+Ticket: 347082
+Fare: 31.275
+Cabin: 
+Embarked: S
+PassengerId: 612
+Survived: 0
+Pclass: 3
+Name: Jardin, Mr. Jose Neto
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: SOTON/O.Q. 3101305
+Fare: 7.05
+Cabin: 
+Embarked: S
+PassengerId: 613
+Survived: 1
+Pclass: 3
+Name: Murphy, Miss. Margaret Jane
+Sex: female
+Age: 
+SibSp: 1
+Parch: 0
+Ticket: 367230
+Fare: 15.5
+Cabin: 
+Embarked: Q
+PassengerId: 614
+Survived: 0
+Pclass: 3
+Name: Horgan, Mr. John
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 370377
+Fare: 7.75
+Cabin: 
+Embarked: Q
+PassengerId: 615
+Survived: 0
+Pclass: 3
+Name: Brocklebank, Mr. William Alfred
+Sex: male
+Age: 35
+SibSp: 0
+Parch: 0
+Ticket: 364512
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 616
+Survived: 1
+Pclass: 2
+Name: Herman, Miss. Alice
+Sex: female
+Age: 24
+SibSp: 1
+Parch: 2
+Ticket: 220845
+Fare: 65
+Cabin: 
+Embarked: S
+PassengerId: 617
+Survived: 0
+Pclass: 3
+Name: Danbom, Mr. Ernst Gilbert
+Sex: male
+Age: 34
+SibSp: 1
+Parch: 1
+Ticket: 347080
+Fare: 14.4
+Cabin: 
+Embarked: S
+PassengerId: 618
+Survived: 0
+Pclass: 3
+Name: Lobb, Mrs. William Arthur (Cordelia K Stanlick)
+Sex: female
+Age: 26
+SibSp: 1
+Parch: 0
+Ticket: A/5. 3336
+Fare: 16.1
+Cabin: 
+Embarked: S
+PassengerId: 619
+Survived: 1
+Pclass: 2
+Name: Becker, Miss. Marion Louise
+Sex: female
+Age: 4
+SibSp: 2
+Parch: 1
+Ticket: 230136
+Fare: 39
+Cabin: F4
+Embarked: S
+PassengerId: 620
+Survived: 0
+Pclass: 2
+Name: Gavey, Mr. Lawrence
+Sex: male
+Age: 26
+SibSp: 0
+Parch: 0
+Ticket: 31028
+Fare: 10.5
+Cabin: 
+Embarked: S
+PassengerId: 621
+Survived: 0
+Pclass: 3
+Name: Yasbeck, Mr. Antoni
+Sex: male
+Age: 27
+SibSp: 1
+Parch: 0
+Ticket: 2659
+Fare: 14.4542
+Cabin: 
+Embarked: C
+PassengerId: 622
+Survived: 1
+Pclass: 1
+Name: Kimball, Mr. Edwin Nelson Jr
+Sex: male
+Age: 42
+SibSp: 1
+Parch: 0
+Ticket: 11753
+Fare: 52.5542
+Cabin: D19
+Embarked: S
+PassengerId: 623
+Survived: 1
+Pclass: 3
+Name: Nakid, Mr. Sahid
+Sex: male
+Age: 20
+SibSp: 1
+Parch: 1
+Ticket: 2653
+Fare: 15.7417
+Cabin: 
+Embarked: C
+PassengerId: 624
+Survived: 0
+Pclass: 3
+Name: Hansen, Mr. Henry Damsgaard
+Sex: male
+Age: 21
+SibSp: 0
+Parch: 0
+Ticket: 350029
+Fare: 7.8542
+Cabin: 
+Embarked: S
+PassengerId: 625
+Survived: 0
+Pclass: 3
+Name: Bowen, Mr. David John "Dai"
+Sex: male
+Age: 21
+SibSp: 0
+Parch: 0
+Ticket: 54636
+Fare: 16.1
+Cabin: 
+Embarked: S
+PassengerId: 626
+Survived: 0
+Pclass: 1
+Name: Sutton, Mr. Frederick
+Sex: male
+Age: 61
+SibSp: 0
+Parch: 0
+Ticket: 36963
+Fare: 32.3208
+Cabin: D50
+Embarked: S
+PassengerId: 627
+Survived: 0
+Pclass: 2
+Name: Kirkland, Rev. Charles Leonard
+Sex: male
+Age: 57
+SibSp: 0
+Parch: 0
+Ticket: 219533
+Fare: 12.35
+Cabin: 
+Embarked: Q
+PassengerId: 628
+Survived: 1
+Pclass: 1
+Name: Longley, Miss. Gretchen Fiske
+Sex: female
+Age: 21
+SibSp: 0
+Parch: 0
+Ticket: 13502
+Fare: 77.9583
+Cabin: D9
+Embarked: S
+PassengerId: 629
+Survived: 0
+Pclass: 3
+Name: Bostandyeff, Mr. Guentcho
+Sex: male
+Age: 26
+SibSp: 0
+Parch: 0
+Ticket: 349224
+Fare: 7.8958
+Cabin: 
+Embarked: S
+PassengerId: 630
+Survived: 0
+Pclass: 3
+Name: O'Connell, Mr. Patrick D
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 334912
+Fare: 7.7333
+Cabin: 
+Embarked: Q
+PassengerId: 631
+Survived: 1
+Pclass: 1
+Name: Barkworth, Mr. Algernon Henry Wilson
+Sex: male
+Age: 80
+SibSp: 0
+Parch: 0
+Ticket: 27042
+Fare: 30
+Cabin: A23
+Embarked: S
+PassengerId: 632
+Survived: 0
+Pclass: 3
+Name: Lundahl, Mr. Johan Svensson
+Sex: male
+Age: 51
+SibSp: 0
+Parch: 0
+Ticket: 347743
+Fare: 7.0542
+Cabin: 
+Embarked: S
+PassengerId: 633
+Survived: 1
+Pclass: 1
+Name: Stahelin-Maeglin, Dr. Max
+Sex: male
+Age: 32
+SibSp: 0
+Parch: 0
+Ticket: 13214
+Fare: 30.5
+Cabin: B50
+Embarked: C
+PassengerId: 634
+Survived: 0
+Pclass: 1
+Name: Parr, Mr. William Henry Marsh
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 112052
+Fare: 0
+Cabin: 
+Embarked: S
+PassengerId: 635
+Survived: 0
+Pclass: 3
+Name: Skoog, Miss. Mabel
+Sex: female
+Age: 9
+SibSp: 3
+Parch: 2
+Ticket: 347088
+Fare: 27.9
+Cabin: 
+Embarked: S
+PassengerId: 636
+Survived: 1
+Pclass: 2
+Name: Davis, Miss. Mary
+Sex: female
+Age: 28
+SibSp: 0
+Parch: 0
+Ticket: 237668
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 637
+Survived: 0
+Pclass: 3
+Name: Leinonen, Mr. Antti Gustaf
+Sex: male
+Age: 32
+SibSp: 0
+Parch: 0
+Ticket: STON/O 2. 3101292
+Fare: 7.925
+Cabin: 
+Embarked: S
+PassengerId: 638
+Survived: 0
+Pclass: 2
+Name: Collyer, Mr. Harvey
+Sex: male
+Age: 31
+SibSp: 1
+Parch: 1
+Ticket: C.A. 31921
+Fare: 26.25
+Cabin: 
+Embarked: S
+PassengerId: 639
+Survived: 0
+Pclass: 3
+Name: Panula, Mrs. Juha (Maria Emilia Ojala)
+Sex: female
+Age: 41
+SibSp: 0
+Parch: 5
+Ticket: 3101295
+Fare: 39.6875
+Cabin: 
+Embarked: S
+PassengerId: 640
+Survived: 0
+Pclass: 3
+Name: Thorneycroft, Mr. Percival
+Sex: male
+Age: 
+SibSp: 1
+Parch: 0
+Ticket: 376564
+Fare: 16.1
+Cabin: 
+Embarked: S
+PassengerId: 641
+Survived: 0
+Pclass: 3
+Name: Jensen, Mr. Hans Peder
+Sex: male
+Age: 20
+SibSp: 0
+Parch: 0
+Ticket: 350050
+Fare: 7.8542
+Cabin: 
+Embarked: S
+PassengerId: 642
+Survived: 1
+Pclass: 1
+Name: Sagesser, Mlle. Emma
+Sex: female
+Age: 24
+SibSp: 0
+Parch: 0
+Ticket: PC 17477
+Fare: 69.3
+Cabin: B35
+Embarked: C
+PassengerId: 643
+Survived: 0
+Pclass: 3
+Name: Skoog, Miss. Margit Elizabeth
+Sex: female
+Age: 2
+SibSp: 3
+Parch: 2
+Ticket: 347088
+Fare: 27.9
+Cabin: 
+Embarked: S
+PassengerId: 644
+Survived: 1
+Pclass: 3
+Name: Foo, Mr. Choong
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 1601
+Fare: 56.4958
+Cabin: 
+Embarked: S
+PassengerId: 645
+Survived: 1
+Pclass: 3
+Name: Baclini, Miss. Eugenie
+Sex: female
+Age: 0.75
+SibSp: 2
+Parch: 1
+Ticket: 2666
+Fare: 19.2583
+Cabin: 
+Embarked: C
+PassengerId: 646
+Survived: 1
+Pclass: 1
+Name: Harper, Mr. Henry Sleeper
+Sex: male
+Age: 48
+SibSp: 1
+Parch: 0
+Ticket: PC 17572
+Fare: 76.7292
+Cabin: D33
+Embarked: C
+PassengerId: 647
+Survived: 0
+Pclass: 3
+Name: Cor, Mr. Liudevit
+Sex: male
+Age: 19
+SibSp: 0
+Parch: 0
+Ticket: 349231
+Fare: 7.8958
+Cabin: 
+Embarked: S
+PassengerId: 648
+Survived: 1
+Pclass: 1
+Name: Simonius-Blumer, Col. Oberst Alfons
+Sex: male
+Age: 56
+SibSp: 0
+Parch: 0
+Ticket: 13213
+Fare: 35.5
+Cabin: A26
+Embarked: C
+PassengerId: 649
+Survived: 0
+Pclass: 3
+Name: Willey, Mr. Edward
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: S.O./P.P. 751
+Fare: 7.55
+Cabin: 
+Embarked: S
+PassengerId: 650
+Survived: 1
+Pclass: 3
+Name: Stanley, Miss. Amy Zillah Elsie
+Sex: female
+Age: 23
+SibSp: 0
+Parch: 0
+Ticket: CA. 2314
+Fare: 7.55
+Cabin: 
+Embarked: S
+PassengerId: 651
+Survived: 0
+Pclass: 3
+Name: Mitkoff, Mr. Mito
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 349221
+Fare: 7.8958
+Cabin: 
+Embarked: S
+PassengerId: 652
+Survived: 1
+Pclass: 2
+Name: Doling, Miss. Elsie
+Sex: female
+Age: 18
+SibSp: 0
+Parch: 1
+Ticket: 231919
+Fare: 23
+Cabin: 
+Embarked: S
+PassengerId: 653
+Survived: 0
+Pclass: 3
+Name: Kalvik, Mr. Johannes Halvorsen
+Sex: male
+Age: 21
+SibSp: 0
+Parch: 0
+Ticket: 8475
+Fare: 8.4333
+Cabin: 
+Embarked: S
+PassengerId: 654
+Survived: 1
+Pclass: 3
+Name: O'Leary, Miss. Hanora "Norah"
+Sex: female
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 330919
+Fare: 7.8292
+Cabin: 
+Embarked: Q
+PassengerId: 655
+Survived: 0
+Pclass: 3
+Name: Hegarty, Miss. Hanora "Nora"
+Sex: female
+Age: 18
+SibSp: 0
+Parch: 0
+Ticket: 365226
+Fare: 6.75
+Cabin: 
+Embarked: Q
+PassengerId: 656
+Survived: 0
+Pclass: 2
+Name: Hickman, Mr. Leonard Mark
+Sex: male
+Age: 24
+SibSp: 2
+Parch: 0
+Ticket: S.O.C. 14879
+Fare: 73.5
+Cabin: 
+Embarked: S
+PassengerId: 657
+Survived: 0
+Pclass: 3
+Name: Radeff, Mr. Alexander
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 349223
+Fare: 7.8958
+Cabin: 
+Embarked: S
+PassengerId: 658
+Survived: 0
+Pclass: 3
+Name: Bourke, Mrs. John (Catherine)
+Sex: female
+Age: 32
+SibSp: 1
+Parch: 1
+Ticket: 364849
+Fare: 15.5
+Cabin: 
+Embarked: Q
+PassengerId: 659
+Survived: 0
+Pclass: 2
+Name: Eitemiller, Mr. George Floyd
+Sex: male
+Age: 23
+SibSp: 0
+Parch: 0
+Ticket: 29751
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 660
+Survived: 0
+Pclass: 1
+Name: Newell, Mr. Arthur Webster
+Sex: male
+Age: 58
+SibSp: 0
+Parch: 2
+Ticket: 35273
+Fare: 113.275
+Cabin: D48
+Embarked: C
+PassengerId: 661
+Survived: 1
+Pclass: 1
+Name: Frauenthal, Dr. Henry William
+Sex: male
+Age: 50
+SibSp: 2
+Parch: 0
+Ticket: PC 17611
+Fare: 133.65
+Cabin: 
+Embarked: S
+PassengerId: 662
+Survived: 0
+Pclass: 3
+Name: Badt, Mr. Mohamed
+Sex: male
+Age: 40
+SibSp: 0
+Parch: 0
+Ticket: 2623
+Fare: 7.225
+Cabin: 
+Embarked: C
+PassengerId: 663
+Survived: 0
+Pclass: 1
+Name: Colley, Mr. Edward Pomeroy
+Sex: male
+Age: 47
+SibSp: 0
+Parch: 0
+Ticket: 5727
+Fare: 25.5875
+Cabin: E58
+Embarked: S
+PassengerId: 664
+Survived: 0
+Pclass: 3
+Name: Coleff, Mr. Peju
+Sex: male
+Age: 36
+SibSp: 0
+Parch: 0
+Ticket: 349210
+Fare: 7.4958
+Cabin: 
+Embarked: S
+PassengerId: 665
+Survived: 1
+Pclass: 3
+Name: Lindqvist, Mr. Eino William
+Sex: male
+Age: 20
+SibSp: 1
+Parch: 0
+Ticket: STON/O 2. 3101285
+Fare: 7.925
+Cabin: 
+Embarked: S
+PassengerId: 666
+Survived: 0
+Pclass: 2
+Name: Hickman, Mr. Lewis
+Sex: male
+Age: 32
+SibSp: 2
+Parch: 0
+Ticket: S.O.C. 14879
+Fare: 73.5
+Cabin: 
+Embarked: S
+PassengerId: 667
+Survived: 0
+Pclass: 2
+Name: Butler, Mr. Reginald Fenton
+Sex: male
+Age: 25
+SibSp: 0
+Parch: 0
+Ticket: 234686
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 668
+Survived: 0
+Pclass: 3
+Name: Rommetvedt, Mr. Knud Paust
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 312993
+Fare: 7.775
+Cabin: 
+Embarked: S
+PassengerId: 669
+Survived: 0
+Pclass: 3
+Name: Cook, Mr. Jacob
+Sex: male
+Age: 43
+SibSp: 0
+Parch: 0
+Ticket: A/5 3536
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 670
+Survived: 1
+Pclass: 1
+Name: Taylor, Mrs. Elmer Zebley (Juliet Cummins Wright)
+Sex: female
+Age: 
+SibSp: 1
+Parch: 0
+Ticket: 19996
+Fare: 52
+Cabin: C126
+Embarked: S
+PassengerId: 671
+Survived: 1
+Pclass: 2
+Name: Brown, Mrs. Thomas William Solomon (Elizabeth Catherine Ford)
+Sex: female
+Age: 40
+SibSp: 1
+Parch: 1
+Ticket: 29750
+Fare: 39
+Cabin: 
+Embarked: S
+PassengerId: 672
+Survived: 0
+Pclass: 1
+Name: Davidson, Mr. Thornton
+Sex: male
+Age: 31
+SibSp: 1
+Parch: 0
+Ticket: F.C. 12750
+Fare: 52
+Cabin: B71
+Embarked: S
+PassengerId: 673
+Survived: 0
+Pclass: 2
+Name: Mitchell, Mr. Henry Michael
+Sex: male
+Age: 70
+SibSp: 0
+Parch: 0
+Ticket: C.A. 24580
+Fare: 10.5
+Cabin: 
+Embarked: S
+PassengerId: 674
+Survived: 1
+Pclass: 2
+Name: Wilhelms, Mr. Charles
+Sex: male
+Age: 31
+SibSp: 0
+Parch: 0
+Ticket: 244270
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 675
+Survived: 0
+Pclass: 2
+Name: Watson, Mr. Ennis Hastings
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 239856
+Fare: 0
+Cabin: 
+Embarked: S
+PassengerId: 676
+Survived: 0
+Pclass: 3
+Name: Edvardsson, Mr. Gustaf Hjalmar
+Sex: male
+Age: 18
+SibSp: 0
+Parch: 0
+Ticket: 349912
+Fare: 7.775
+Cabin: 
+Embarked: S
+PassengerId: 677
+Survived: 0
+Pclass: 3
+Name: Sawyer, Mr. Frederick Charles
+Sex: male
+Age: 24.5
+SibSp: 0
+Parch: 0
+Ticket: 342826
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 678
+Survived: 1
+Pclass: 3
+Name: Turja, Miss. Anna Sofia
+Sex: female
+Age: 18
+SibSp: 0
+Parch: 0
+Ticket: 4138
+Fare: 9.8417
+Cabin: 
+Embarked: S
+PassengerId: 679
+Survived: 0
+Pclass: 3
+Name: Goodwin, Mrs. Frederick (Augusta Tyler)
+Sex: female
+Age: 43
+SibSp: 1
+Parch: 6
+Ticket: CA 2144
+Fare: 46.9
+Cabin: 
+Embarked: S
+PassengerId: 680
+Survived: 1
+Pclass: 1
+Name: Cardeza, Mr. Thomas Drake Martinez
+Sex: male
+Age: 36
+SibSp: 0
+Parch: 1
+Ticket: PC 17755
+Fare: 512.3292
+Cabin: B51 B53 B55
+Embarked: C
+PassengerId: 681
+Survived: 0
+Pclass: 3
+Name: Peters, Miss. Katie
+Sex: female
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 330935
+Fare: 8.1375
+Cabin: 
+Embarked: Q
+PassengerId: 682
+Survived: 1
+Pclass: 1
+Name: Hassab, Mr. Hammad
+Sex: male
+Age: 27
+SibSp: 0
+Parch: 0
+Ticket: PC 17572
+Fare: 76.7292
+Cabin: D49
+Embarked: C
+PassengerId: 683
+Survived: 0
+Pclass: 3
+Name: Olsvigen, Mr. Thor Anderson
+Sex: male
+Age: 20
+SibSp: 0
+Parch: 0
+Ticket: 6563
+Fare: 9.225
+Cabin: 
+Embarked: S
+PassengerId: 684
+Survived: 0
+Pclass: 3
+Name: Goodwin, Mr. Charles Edward
+Sex: male
+Age: 14
+SibSp: 5
+Parch: 2
+Ticket: CA 2144
+Fare: 46.9
+Cabin: 
+Embarked: S
+PassengerId: 685
+Survived: 0
+Pclass: 2
+Name: Brown, Mr. Thomas William Solomon
+Sex: male
+Age: 60
+SibSp: 1
+Parch: 1
+Ticket: 29750
+Fare: 39
+Cabin: 
+Embarked: S
+PassengerId: 686
+Survived: 0
+Pclass: 2
+Name: Laroche, Mr. Joseph Philippe Lemercier
+Sex: male
+Age: 25
+SibSp: 1
+Parch: 2
+Ticket: SC/Paris 2123
+Fare: 41.5792
+Cabin: 
+Embarked: C
+PassengerId: 687
+Survived: 0
+Pclass: 3
+Name: Panula, Mr. Jaako Arnold
+Sex: male
+Age: 14
+SibSp: 4
+Parch: 1
+Ticket: 3101295
+Fare: 39.6875
+Cabin: 
+Embarked: S
+PassengerId: 688
+Survived: 0
+Pclass: 3
+Name: Dakic, Mr. Branko
+Sex: male
+Age: 19
+SibSp: 0
+Parch: 0
+Ticket: 349228
+Fare: 10.1708
+Cabin: 
+Embarked: S
+PassengerId: 689
+Survived: 0
+Pclass: 3
+Name: Fischer, Mr. Eberhard Thelander
+Sex: male
+Age: 18
+SibSp: 0
+Parch: 0
+Ticket: 350036
+Fare: 7.7958
+Cabin: 
+Embarked: S
+PassengerId: 690
+Survived: 1
+Pclass: 1
+Name: Madill, Miss. Georgette Alexandra
+Sex: female
+Age: 15
+SibSp: 0
+Parch: 1
+Ticket: 24160
+Fare: 211.3375
+Cabin: B5
+Embarked: S
+PassengerId: 691
+Survived: 1
+Pclass: 1
+Name: Dick, Mr. Albert Adrian
+Sex: male
+Age: 31
+SibSp: 1
+Parch: 0
+Ticket: 17474
+Fare: 57
+Cabin: B20
+Embarked: S
+PassengerId: 692
+Survived: 1
+Pclass: 3
+Name: Karun, Miss. Manca
+Sex: female
+Age: 4
+SibSp: 0
+Parch: 1
+Ticket: 349256
+Fare: 13.4167
+Cabin: 
+Embarked: C
+PassengerId: 693
+Survived: 1
+Pclass: 3
+Name: Lam, Mr. Ali
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 1601
+Fare: 56.4958
+Cabin: 
+Embarked: S
+PassengerId: 694
+Survived: 0
+Pclass: 3
+Name: Saad, Mr. Khalil
+Sex: male
+Age: 25
+SibSp: 0
+Parch: 0
+Ticket: 2672
+Fare: 7.225
+Cabin: 
+Embarked: C
+PassengerId: 695
+Survived: 0
+Pclass: 1
+Name: Weir, Col. John
+Sex: male
+Age: 60
+SibSp: 0
+Parch: 0
+Ticket: 113800
+Fare: 26.55
+Cabin: 
+Embarked: S
+PassengerId: 696
+Survived: 0
+Pclass: 2
+Name: Chapman, Mr. Charles Henry
+Sex: male
+Age: 52
+SibSp: 0
+Parch: 0
+Ticket: 248731
+Fare: 13.5
+Cabin: 
+Embarked: S
+PassengerId: 697
+Survived: 0
+Pclass: 3
+Name: Kelly, Mr. James
+Sex: male
+Age: 44
+SibSp: 0
+Parch: 0
+Ticket: 363592
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 698
+Survived: 1
+Pclass: 3
+Name: Mullens, Miss. Katherine "Katie"
+Sex: female
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 35852
+Fare: 7.7333
+Cabin: 
+Embarked: Q
+PassengerId: 699
+Survived: 0
+Pclass: 1
+Name: Thayer, Mr. John Borland
+Sex: male
+Age: 49
+SibSp: 1
+Parch: 1
+Ticket: 17421
+Fare: 110.8833
+Cabin: C68
+Embarked: C
+PassengerId: 700
+Survived: 0
+Pclass: 3
+Name: Humblen, Mr. Adolf Mathias Nicolai Olsen
+Sex: male
+Age: 42
+SibSp: 0
+Parch: 0
+Ticket: 348121
+Fare: 7.65
+Cabin: F G63
+Embarked: S
+PassengerId: 701
+Survived: 1
+Pclass: 1
+Name: Astor, Mrs. John Jacob (Madeleine Talmadge Force)
+Sex: female
+Age: 18
+SibSp: 1
+Parch: 0
+Ticket: PC 17757
+Fare: 227.525
+Cabin: C62 C64
+Embarked: C
+PassengerId: 702
+Survived: 1
+Pclass: 1
+Name: Silverthorne, Mr. Spencer Victor
+Sex: male
+Age: 35
+SibSp: 0
+Parch: 0
+Ticket: PC 17475
+Fare: 26.2875
+Cabin: E24
+Embarked: S
+PassengerId: 703
+Survived: 0
+Pclass: 3
+Name: Barbara, Miss. Saiide
+Sex: female
+Age: 18
+SibSp: 0
+Parch: 1
+Ticket: 2691
+Fare: 14.4542
+Cabin: 
+Embarked: C
+PassengerId: 704
+Survived: 0
+Pclass: 3
+Name: Gallagher, Mr. Martin
+Sex: male
+Age: 25
+SibSp: 0
+Parch: 0
+Ticket: 36864
+Fare: 7.7417
+Cabin: 
+Embarked: Q
+PassengerId: 705
+Survived: 0
+Pclass: 3
+Name: Hansen, Mr. Henrik Juul
+Sex: male
+Age: 26
+SibSp: 1
+Parch: 0
+Ticket: 350025
+Fare: 7.8542
+Cabin: 
+Embarked: S
+PassengerId: 706
+Survived: 0
+Pclass: 2
+Name: Morley, Mr. Henry Samuel ("Mr Henry Marshall")
+Sex: male
+Age: 39
+SibSp: 0
+Parch: 0
+Ticket: 250655
+Fare: 26
+Cabin: 
+Embarked: S
+PassengerId: 707
+Survived: 1
+Pclass: 2
+Name: Kelly, Mrs. Florence "Fannie"
+Sex: female
+Age: 45
+SibSp: 0
+Parch: 0
+Ticket: 223596
+Fare: 13.5
+Cabin: 
+Embarked: S
+PassengerId: 708
+Survived: 1
+Pclass: 1
+Name: Calderhead, Mr. Edward Pennington
+Sex: male
+Age: 42
+SibSp: 0
+Parch: 0
+Ticket: PC 17476
+Fare: 26.2875
+Cabin: E24
+Embarked: S
+PassengerId: 709
+Survived: 1
+Pclass: 1
+Name: Cleaver, Miss. Alice
+Sex: female
+Age: 22
+SibSp: 0
+Parch: 0
+Ticket: 113781
+Fare: 151.55
+Cabin: 
+Embarked: S
+PassengerId: 710
+Survived: 1
+Pclass: 3
+Name: Moubarek, Master. Halim Gonios ("William George")
+Sex: male
+Age: 
+SibSp: 1
+Parch: 1
+Ticket: 2661
+Fare: 15.2458
+Cabin: 
+Embarked: C
+PassengerId: 711
+Survived: 1
+Pclass: 1
+Name: Mayne, Mlle. Berthe Antonine ("Mrs de Villiers")
+Sex: female
+Age: 24
+SibSp: 0
+Parch: 0
+Ticket: PC 17482
+Fare: 49.5042
+Cabin: C90
+Embarked: C
+PassengerId: 712
+Survived: 0
+Pclass: 1
+Name: Klaber, Mr. Herman
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 113028
+Fare: 26.55
+Cabin: C124
+Embarked: S
+PassengerId: 713
+Survived: 1
+Pclass: 1
+Name: Taylor, Mr. Elmer Zebley
+Sex: male
+Age: 48
+SibSp: 1
+Parch: 0
+Ticket: 19996
+Fare: 52
+Cabin: C126
+Embarked: S
+PassengerId: 714
+Survived: 0
+Pclass: 3
+Name: Larsson, Mr. August Viktor
+Sex: male
+Age: 29
+SibSp: 0
+Parch: 0
+Ticket: 7545
+Fare: 9.4833
+Cabin: 
+Embarked: S
+PassengerId: 715
+Survived: 0
+Pclass: 2
+Name: Greenberg, Mr. Samuel
+Sex: male
+Age: 52
+SibSp: 0
+Parch: 0
+Ticket: 250647
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 716
+Survived: 0
+Pclass: 3
+Name: Soholt, Mr. Peter Andreas Lauritz Andersen
+Sex: male
+Age: 19
+SibSp: 0
+Parch: 0
+Ticket: 348124
+Fare: 7.65
+Cabin: F G73
+Embarked: S
+PassengerId: 717
+Survived: 1
+Pclass: 1
+Name: Endres, Miss. Caroline Louise
+Sex: female
+Age: 38
+SibSp: 0
+Parch: 0
+Ticket: PC 17757
+Fare: 227.525
+Cabin: C45
+Embarked: C
+PassengerId: 718
+Survived: 1
+Pclass: 2
+Name: Troutt, Miss. Edwina Celia "Winnie"
+Sex: female
+Age: 27
+SibSp: 0
+Parch: 0
+Ticket: 34218
+Fare: 10.5
+Cabin: E101
+Embarked: S
+PassengerId: 719
+Survived: 0
+Pclass: 3
+Name: McEvoy, Mr. Michael
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 36568
+Fare: 15.5
+Cabin: 
+Embarked: Q
+PassengerId: 720
+Survived: 0
+Pclass: 3
+Name: Johnson, Mr. Malkolm Joackim
+Sex: male
+Age: 33
+SibSp: 0
+Parch: 0
+Ticket: 347062
+Fare: 7.775
+Cabin: 
+Embarked: S
+PassengerId: 721
+Survived: 1
+Pclass: 2
+Name: Harper, Miss. Annie Jessie "Nina"
+Sex: female
+Age: 6
+SibSp: 0
+Parch: 1
+Ticket: 248727
+Fare: 33
+Cabin: 
+Embarked: S
+PassengerId: 722
+Survived: 0
+Pclass: 3
+Name: Jensen, Mr. Svend Lauritz
+Sex: male
+Age: 17
+SibSp: 1
+Parch: 0
+Ticket: 350048
+Fare: 7.0542
+Cabin: 
+Embarked: S
+PassengerId: 723
+Survived: 0
+Pclass: 2
+Name: Gillespie, Mr. William Henry
+Sex: male
+Age: 34
+SibSp: 0
+Parch: 0
+Ticket: 12233
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 724
+Survived: 0
+Pclass: 2
+Name: Hodges, Mr. Henry Price
+Sex: male
+Age: 50
+SibSp: 0
+Parch: 0
+Ticket: 250643
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 725
+Survived: 1
+Pclass: 1
+Name: Chambers, Mr. Norman Campbell
+Sex: male
+Age: 27
+SibSp: 1
+Parch: 0
+Ticket: 113806
+Fare: 53.1
+Cabin: E8
+Embarked: S
+PassengerId: 726
+Survived: 0
+Pclass: 3
+Name: Oreskovic, Mr. Luka
+Sex: male
+Age: 20
+SibSp: 0
+Parch: 0
+Ticket: 315094
+Fare: 8.6625
+Cabin: 
+Embarked: S
+PassengerId: 727
+Survived: 1
+Pclass: 2
+Name: Renouf, Mrs. Peter Henry (Lillian Jefferys)
+Sex: female
+Age: 30
+SibSp: 3
+Parch: 0
+Ticket: 31027
+Fare: 21
+Cabin: 
+Embarked: S
+PassengerId: 728
+Survived: 1
+Pclass: 3
+Name: Mannion, Miss. Margareth
+Sex: female
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 36866
+Fare: 7.7375
+Cabin: 
+Embarked: Q
+PassengerId: 729
+Survived: 0
+Pclass: 2
+Name: Bryhl, Mr. Kurt Arnold Gottfrid
+Sex: male
+Age: 25
+SibSp: 1
+Parch: 0
+Ticket: 236853
+Fare: 26
+Cabin: 
+Embarked: S
+PassengerId: 730
+Survived: 0
+Pclass: 3
+Name: Ilmakangas, Miss. Pieta Sofia
+Sex: female
+Age: 25
+SibSp: 1
+Parch: 0
+Ticket: STON/O2. 3101271
+Fare: 7.925
+Cabin: 
+Embarked: S
+PassengerId: 731
+Survived: 1
+Pclass: 1
+Name: Allen, Miss. Elisabeth Walton
+Sex: female
+Age: 29
+SibSp: 0
+Parch: 0
+Ticket: 24160
+Fare: 211.3375
+Cabin: B5
+Embarked: S
+PassengerId: 732
+Survived: 0
+Pclass: 3
+Name: Hassan, Mr. Houssein G N
+Sex: male
+Age: 11
+SibSp: 0
+Parch: 0
+Ticket: 2699
+Fare: 18.7875
+Cabin: 
+Embarked: C
+PassengerId: 733
+Survived: 0
+Pclass: 2
+Name: Knight, Mr. Robert J
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 239855
+Fare: 0
+Cabin: 
+Embarked: S
+PassengerId: 734
+Survived: 0
+Pclass: 2
+Name: Berriman, Mr. William John
+Sex: male
+Age: 23
+SibSp: 0
+Parch: 0
+Ticket: 28425
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 735
+Survived: 0
+Pclass: 2
+Name: Troupiansky, Mr. Moses Aaron
+Sex: male
+Age: 23
+SibSp: 0
+Parch: 0
+Ticket: 233639
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 736
+Survived: 0
+Pclass: 3
+Name: Williams, Mr. Leslie
+Sex: male
+Age: 28.5
+SibSp: 0
+Parch: 0
+Ticket: 54636
+Fare: 16.1
+Cabin: 
+Embarked: S
+PassengerId: 737
+Survived: 0
+Pclass: 3
+Name: Ford, Mrs. Edward (Margaret Ann Watson)
+Sex: female
+Age: 48
+SibSp: 1
+Parch: 3
+Ticket: W./C. 6608
+Fare: 34.375
+Cabin: 
+Embarked: S
+PassengerId: 738
+Survived: 1
+Pclass: 1
+Name: Lesurer, Mr. Gustave J
+Sex: male
+Age: 35
+SibSp: 0
+Parch: 0
+Ticket: PC 17755
+Fare: 512.3292
+Cabin: B101
+Embarked: C
+PassengerId: 739
+Survived: 0
+Pclass: 3
+Name: Ivanoff, Mr. Kanio
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 349201
+Fare: 7.8958
+Cabin: 
+Embarked: S
+PassengerId: 740
+Survived: 0
+Pclass: 3
+Name: Nankoff, Mr. Minko
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 349218
+Fare: 7.8958
+Cabin: 
+Embarked: S
+PassengerId: 741
+Survived: 1
+Pclass: 1
+Name: Hawksford, Mr. Walter James
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 16988
+Fare: 30
+Cabin: D45
+Embarked: S
+PassengerId: 742
+Survived: 0
+Pclass: 1
+Name: Cavendish, Mr. Tyrell William
+Sex: male
+Age: 36
+SibSp: 1
+Parch: 0
+Ticket: 19877
+Fare: 78.85
+Cabin: C46
+Embarked: S
+PassengerId: 743
+Survived: 1
+Pclass: 1
+Name: Ryerson, Miss. Susan Parker "Suzette"
+Sex: female
+Age: 21
+SibSp: 2
+Parch: 2
+Ticket: PC 17608
+Fare: 262.375
+Cabin: B57 B59 B63 B66
+Embarked: C
+PassengerId: 744
+Survived: 0
+Pclass: 3
+Name: McNamee, Mr. Neal
+Sex: male
+Age: 24
+SibSp: 1
+Parch: 0
+Ticket: 376566
+Fare: 16.1
+Cabin: 
+Embarked: S
+PassengerId: 745
+Survived: 1
+Pclass: 3
+Name: Stranden, Mr. Juho
+Sex: male
+Age: 31
+SibSp: 0
+Parch: 0
+Ticket: STON/O 2. 3101288
+Fare: 7.925
+Cabin: 
+Embarked: S
+PassengerId: 746
+Survived: 0
+Pclass: 1
+Name: Crosby, Capt. Edward Gifford
+Sex: male
+Age: 70
+SibSp: 1
+Parch: 1
+Ticket: WE/P 5735
+Fare: 71
+Cabin: B22
+Embarked: S
+PassengerId: 747
+Survived: 0
+Pclass: 3
+Name: Abbott, Mr. Rossmore Edward
+Sex: male
+Age: 16
+SibSp: 1
+Parch: 1
+Ticket: C.A. 2673
+Fare: 20.25
+Cabin: 
+Embarked: S
+PassengerId: 748
+Survived: 1
+Pclass: 2
+Name: Sinkkonen, Miss. Anna
+Sex: female
+Age: 30
+SibSp: 0
+Parch: 0
+Ticket: 250648
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 749
+Survived: 0
+Pclass: 1
+Name: Marvin, Mr. Daniel Warner
+Sex: male
+Age: 19
+SibSp: 1
+Parch: 0
+Ticket: 113773
+Fare: 53.1
+Cabin: D30
+Embarked: S
+PassengerId: 750
+Survived: 0
+Pclass: 3
+Name: Connaghton, Mr. Michael
+Sex: male
+Age: 31
+SibSp: 0
+Parch: 0
+Ticket: 335097
+Fare: 7.75
+Cabin: 
+Embarked: Q
+PassengerId: 751
+Survived: 1
+Pclass: 2
+Name: Wells, Miss. Joan
+Sex: female
+Age: 4
+SibSp: 1
+Parch: 1
+Ticket: 29103
+Fare: 23
+Cabin: 
+Embarked: S
+PassengerId: 752
+Survived: 1
+Pclass: 3
+Name: Moor, Master. Meier
+Sex: male
+Age: 6
+SibSp: 0
+Parch: 1
+Ticket: 392096
+Fare: 12.475
+Cabin: E121
+Embarked: S
+PassengerId: 753
+Survived: 0
+Pclass: 3
+Name: Vande Velde, Mr. Johannes Joseph
+Sex: male
+Age: 33
+SibSp: 0
+Parch: 0
+Ticket: 345780
+Fare: 9.5
+Cabin: 
+Embarked: S
+PassengerId: 754
+Survived: 0
+Pclass: 3
+Name: Jonkoff, Mr. Lalio
+Sex: male
+Age: 23
+SibSp: 0
+Parch: 0
+Ticket: 349204
+Fare: 7.8958
+Cabin: 
+Embarked: S
+PassengerId: 755
+Survived: 1
+Pclass: 2
+Name: Herman, Mrs. Samuel (Jane Laver)
+Sex: female
+Age: 48
+SibSp: 1
+Parch: 2
+Ticket: 220845
+Fare: 65
+Cabin: 
+Embarked: S
+PassengerId: 756
+Survived: 1
+Pclass: 2
+Name: Hamalainen, Master. Viljo
+Sex: male
+Age: 0.67
+SibSp: 1
+Parch: 1
+Ticket: 250649
+Fare: 14.5
+Cabin: 
+Embarked: S
+PassengerId: 757
+Survived: 0
+Pclass: 3
+Name: Carlsson, Mr. August Sigfrid
+Sex: male
+Age: 28
+SibSp: 0
+Parch: 0
+Ticket: 350042
+Fare: 7.7958
+Cabin: 
+Embarked: S
+PassengerId: 758
+Survived: 0
+Pclass: 2
+Name: Bailey, Mr. Percy Andrew
+Sex: male
+Age: 18
+SibSp: 0
+Parch: 0
+Ticket: 29108
+Fare: 11.5
+Cabin: 
+Embarked: S
+PassengerId: 759
+Survived: 0
+Pclass: 3
+Name: Theobald, Mr. Thomas Leonard
+Sex: male
+Age: 34
+SibSp: 0
+Parch: 0
+Ticket: 363294
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 760
+Survived: 1
+Pclass: 1
+Name: Rothes, the Countess. of (Lucy Noel Martha Dyer-Edwards)
+Sex: female
+Age: 33
+SibSp: 0
+Parch: 0
+Ticket: 110152
+Fare: 86.5
+Cabin: B77
+Embarked: S
+PassengerId: 761
+Survived: 0
+Pclass: 3
+Name: Garfirth, Mr. John
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 358585
+Fare: 14.5
+Cabin: 
+Embarked: S
+PassengerId: 762
+Survived: 0
+Pclass: 3
+Name: Nirva, Mr. Iisakki Antino Aijo
+Sex: male
+Age: 41
+SibSp: 0
+Parch: 0
+Ticket: SOTON/O2 3101272
+Fare: 7.125
+Cabin: 
+Embarked: S
+PassengerId: 763
+Survived: 1
+Pclass: 3
+Name: Barah, Mr. Hanna Assi
+Sex: male
+Age: 20
+SibSp: 0
+Parch: 0
+Ticket: 2663
+Fare: 7.2292
+Cabin: 
+Embarked: C
+PassengerId: 764
+Survived: 1
+Pclass: 1
+Name: Carter, Mrs. William Ernest (Lucile Polk)
+Sex: female
+Age: 36
+SibSp: 1
+Parch: 2
+Ticket: 113760
+Fare: 120
+Cabin: B96 B98
+Embarked: S
+PassengerId: 765
+Survived: 0
+Pclass: 3
+Name: Eklund, Mr. Hans Linus
+Sex: male
+Age: 16
+SibSp: 0
+Parch: 0
+Ticket: 347074
+Fare: 7.775
+Cabin: 
+Embarked: S
+PassengerId: 766
+Survived: 1
+Pclass: 1
+Name: Hogeboom, Mrs. John C (Anna Andrews)
+Sex: female
+Age: 51
+SibSp: 1
+Parch: 0
+Ticket: 13502
+Fare: 77.9583
+Cabin: D11
+Embarked: S
+PassengerId: 767
+Survived: 0
+Pclass: 1
+Name: Brewe, Dr. Arthur Jackson
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 112379
+Fare: 39.6
+Cabin: 
+Embarked: C
+PassengerId: 768
+Survived: 0
+Pclass: 3
+Name: Mangan, Miss. Mary
+Sex: female
+Age: 30.5
+SibSp: 0
+Parch: 0
+Ticket: 364850
+Fare: 7.75
+Cabin: 
+Embarked: Q
+PassengerId: 769
+Survived: 0
+Pclass: 3
+Name: Moran, Mr. Daniel J
+Sex: male
+Age: 
+SibSp: 1
+Parch: 0
+Ticket: 371110
+Fare: 24.15
+Cabin: 
+Embarked: Q
+PassengerId: 770
+Survived: 0
+Pclass: 3
+Name: Gronnestad, Mr. Daniel Danielsen
+Sex: male
+Age: 32
+SibSp: 0
+Parch: 0
+Ticket: 8471
+Fare: 8.3625
+Cabin: 
+Embarked: S
+PassengerId: 771
+Survived: 0
+Pclass: 3
+Name: Lievens, Mr. Rene Aime
+Sex: male
+Age: 24
+SibSp: 0
+Parch: 0
+Ticket: 345781
+Fare: 9.5
+Cabin: 
+Embarked: S
+PassengerId: 772
+Survived: 0
+Pclass: 3
+Name: Jensen, Mr. Niels Peder
+Sex: male
+Age: 48
+SibSp: 0
+Parch: 0
+Ticket: 350047
+Fare: 7.8542
+Cabin: 
+Embarked: S
+PassengerId: 773
+Survived: 0
+Pclass: 2
+Name: Mack, Mrs. (Mary)
+Sex: female
+Age: 57
+SibSp: 0
+Parch: 0
+Ticket: S.O./P.P. 3
+Fare: 10.5
+Cabin: E77
+Embarked: S
+PassengerId: 774
+Survived: 0
+Pclass: 3
+Name: Elias, Mr. Dibo
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 2674
+Fare: 7.225
+Cabin: 
+Embarked: C
+PassengerId: 775
+Survived: 1
+Pclass: 2
+Name: Hocking, Mrs. Elizabeth (Eliza Needs)
+Sex: female
+Age: 54
+SibSp: 1
+Parch: 3
+Ticket: 29105
+Fare: 23
+Cabin: 
+Embarked: S
+PassengerId: 776
+Survived: 0
+Pclass: 3
+Name: Myhrman, Mr. Pehr Fabian Oliver Malkolm
+Sex: male
+Age: 18
+SibSp: 0
+Parch: 0
+Ticket: 347078
+Fare: 7.75
+Cabin: 
+Embarked: S
+PassengerId: 777
+Survived: 0
+Pclass: 3
+Name: Tobin, Mr. Roger
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 383121
+Fare: 7.75
+Cabin: F38
+Embarked: Q
+PassengerId: 778
+Survived: 1
+Pclass: 3
+Name: Emanuel, Miss. Virginia Ethel
+Sex: female
+Age: 5
+SibSp: 0
+Parch: 0
+Ticket: 364516
+Fare: 12.475
+Cabin: 
+Embarked: S
+PassengerId: 779
+Survived: 0
+Pclass: 3
+Name: Kilgannon, Mr. Thomas J
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 36865
+Fare: 7.7375
+Cabin: 
+Embarked: Q
+PassengerId: 780
+Survived: 1
+Pclass: 1
+Name: Robert, Mrs. Edward Scott (Elisabeth Walton McMillan)
+Sex: female
+Age: 43
+SibSp: 0
+Parch: 1
+Ticket: 24160
+Fare: 211.3375
+Cabin: B3
+Embarked: S
+PassengerId: 781
+Survived: 1
+Pclass: 3
+Name: Ayoub, Miss. Banoura
+Sex: female
+Age: 13
+SibSp: 0
+Parch: 0
+Ticket: 2687
+Fare: 7.2292
+Cabin: 
+Embarked: C
+PassengerId: 782
+Survived: 1
+Pclass: 1
+Name: Dick, Mrs. Albert Adrian (Vera Gillespie)
+Sex: female
+Age: 17
+SibSp: 1
+Parch: 0
+Ticket: 17474
+Fare: 57
+Cabin: B20
+Embarked: S
+PassengerId: 783
+Survived: 0
+Pclass: 1
+Name: Long, Mr. Milton Clyde
+Sex: male
+Age: 29
+SibSp: 0
+Parch: 0
+Ticket: 113501
+Fare: 30
+Cabin: D6
+Embarked: S
+PassengerId: 784
+Survived: 0
+Pclass: 3
+Name: Johnston, Mr. Andrew G
+Sex: male
+Age: 
+SibSp: 1
+Parch: 2
+Ticket: W./C. 6607
+Fare: 23.45
+Cabin: 
+Embarked: S
+PassengerId: 785
+Survived: 0
+Pclass: 3
+Name: Ali, Mr. William
+Sex: male
+Age: 25
+SibSp: 0
+Parch: 0
+Ticket: SOTON/O.Q. 3101312
+Fare: 7.05
+Cabin: 
+Embarked: S
+PassengerId: 786
+Survived: 0
+Pclass: 3
+Name: Harmer, Mr. Abraham (David Lishin)
+Sex: male
+Age: 25
+SibSp: 0
+Parch: 0
+Ticket: 374887
+Fare: 7.25
+Cabin: 
+Embarked: S
+PassengerId: 787
+Survived: 1
+Pclass: 3
+Name: Sjoblom, Miss. Anna Sofia
+Sex: female
+Age: 18
+SibSp: 0
+Parch: 0
+Ticket: 3101265
+Fare: 7.4958
+Cabin: 
+Embarked: S
+PassengerId: 788
+Survived: 0
+Pclass: 3
+Name: Rice, Master. George Hugh
+Sex: male
+Age: 8
+SibSp: 4
+Parch: 1
+Ticket: 382652
+Fare: 29.125
+Cabin: 
+Embarked: Q
+PassengerId: 789
+Survived: 1
+Pclass: 3
+Name: Dean, Master. Bertram Vere
+Sex: male
+Age: 1
+SibSp: 1
+Parch: 2
+Ticket: C.A. 2315
+Fare: 20.575
+Cabin: 
+Embarked: S
+PassengerId: 790
+Survived: 0
+Pclass: 1
+Name: Guggenheim, Mr. Benjamin
+Sex: male
+Age: 46
+SibSp: 0
+Parch: 0
+Ticket: PC 17593
+Fare: 79.2
+Cabin: B82 B84
+Embarked: C
+PassengerId: 791
+Survived: 0
+Pclass: 3
+Name: Keane, Mr. Andrew "Andy"
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 12460
+Fare: 7.75
+Cabin: 
+Embarked: Q
+PassengerId: 792
+Survived: 0
+Pclass: 2
+Name: Gaskell, Mr. Alfred
+Sex: male
+Age: 16
+SibSp: 0
+Parch: 0
+Ticket: 239865
+Fare: 26
+Cabin: 
+Embarked: S
+PassengerId: 793
+Survived: 0
+Pclass: 3
+Name: Sage, Miss. Stella Anna
+Sex: female
+Age: 
+SibSp: 8
+Parch: 2
+Ticket: CA. 2343
+Fare: 69.55
+Cabin: 
+Embarked: S
+PassengerId: 794
+Survived: 0
+Pclass: 1
+Name: Hoyt, Mr. William Fisher
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: PC 17600
+Fare: 30.6958
+Cabin: 
+Embarked: C
+PassengerId: 795
+Survived: 0
+Pclass: 3
+Name: Dantcheff, Mr. Ristiu
+Sex: male
+Age: 25
+SibSp: 0
+Parch: 0
+Ticket: 349203
+Fare: 7.8958
+Cabin: 
+Embarked: S
+PassengerId: 796
+Survived: 0
+Pclass: 2
+Name: Otter, Mr. Richard
+Sex: male
+Age: 39
+SibSp: 0
+Parch: 0
+Ticket: 28213
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 797
+Survived: 1
+Pclass: 1
+Name: Leader, Dr. Alice (Farnham)
+Sex: female
+Age: 49
+SibSp: 0
+Parch: 0
+Ticket: 17465
+Fare: 25.9292
+Cabin: D17
+Embarked: S
+PassengerId: 798
+Survived: 1
+Pclass: 3
+Name: Osman, Mrs. Mara
+Sex: female
+Age: 31
+SibSp: 0
+Parch: 0
+Ticket: 349244
+Fare: 8.6833
+Cabin: 
+Embarked: S
+PassengerId: 799
+Survived: 0
+Pclass: 3
+Name: Ibrahim Shawah, Mr. Yousseff
+Sex: male
+Age: 30
+SibSp: 0
+Parch: 0
+Ticket: 2685
+Fare: 7.2292
+Cabin: 
+Embarked: C
+PassengerId: 800
+Survived: 0
+Pclass: 3
+Name: Van Impe, Mrs. Jean Baptiste (Rosalie Paula Govaert)
+Sex: female
+Age: 30
+SibSp: 1
+Parch: 1
+Ticket: 345773
+Fare: 24.15
+Cabin: 
+Embarked: S
+PassengerId: 801
+Survived: 0
+Pclass: 2
+Name: Ponesell, Mr. Martin
+Sex: male
+Age: 34
+SibSp: 0
+Parch: 0
+Ticket: 250647
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 802
+Survived: 1
+Pclass: 2
+Name: Collyer, Mrs. Harvey (Charlotte Annie Tate)
+Sex: female
+Age: 31
+SibSp: 1
+Parch: 1
+Ticket: C.A. 31921
+Fare: 26.25
+Cabin: 
+Embarked: S
+PassengerId: 803
+Survived: 1
+Pclass: 1
+Name: Carter, Master. William Thornton II
+Sex: male
+Age: 11
+SibSp: 1
+Parch: 2
+Ticket: 113760
+Fare: 120
+Cabin: B96 B98
+Embarked: S
+PassengerId: 804
+Survived: 1
+Pclass: 3
+Name: Thomas, Master. Assad Alexander
+Sex: male
+Age: 0.42
+SibSp: 0
+Parch: 1
+Ticket: 2625
+Fare: 8.5167
+Cabin: 
+Embarked: C
+PassengerId: 805
+Survived: 1
+Pclass: 3
+Name: Hedman, Mr. Oskar Arvid
+Sex: male
+Age: 27
+SibSp: 0
+Parch: 0
+Ticket: 347089
+Fare: 6.975
+Cabin: 
+Embarked: S
+PassengerId: 806
+Survived: 0
+Pclass: 3
+Name: Johansson, Mr. Karl Johan
+Sex: male
+Age: 31
+SibSp: 0
+Parch: 0
+Ticket: 347063
+Fare: 7.775
+Cabin: 
+Embarked: S
+PassengerId: 807
+Survived: 0
+Pclass: 1
+Name: Andrews, Mr. Thomas Jr
+Sex: male
+Age: 39
+SibSp: 0
+Parch: 0
+Ticket: 112050
+Fare: 0
+Cabin: A36
+Embarked: S
+PassengerId: 808
+Survived: 0
+Pclass: 3
+Name: Pettersson, Miss. Ellen Natalia
+Sex: female
+Age: 18
+SibSp: 0
+Parch: 0
+Ticket: 347087
+Fare: 7.775
+Cabin: 
+Embarked: S
+PassengerId: 809
+Survived: 0
+Pclass: 2
+Name: Meyer, Mr. August
+Sex: male
+Age: 39
+SibSp: 0
+Parch: 0
+Ticket: 248723
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 810
+Survived: 1
+Pclass: 1
+Name: Chambers, Mrs. Norman Campbell (Bertha Griggs)
+Sex: female
+Age: 33
+SibSp: 1
+Parch: 0
+Ticket: 113806
+Fare: 53.1
+Cabin: E8
+Embarked: S
+PassengerId: 811
+Survived: 0
+Pclass: 3
+Name: Alexander, Mr. William
+Sex: male
+Age: 26
+SibSp: 0
+Parch: 0
+Ticket: 3474
+Fare: 7.8875
+Cabin: 
+Embarked: S
+PassengerId: 812
+Survived: 0
+Pclass: 3
+Name: Lester, Mr. James
+Sex: male
+Age: 39
+SibSp: 0
+Parch: 0
+Ticket: A/4 48871
+Fare: 24.15
+Cabin: 
+Embarked: S
+PassengerId: 813
+Survived: 0
+Pclass: 2
+Name: Slemen, Mr. Richard James
+Sex: male
+Age: 35
+SibSp: 0
+Parch: 0
+Ticket: 28206
+Fare: 10.5
+Cabin: 
+Embarked: S
+PassengerId: 814
+Survived: 0
+Pclass: 3
+Name: Andersson, Miss. Ebba Iris Alfrida
+Sex: female
+Age: 6
+SibSp: 4
+Parch: 2
+Ticket: 347082
+Fare: 31.275
+Cabin: 
+Embarked: S
+PassengerId: 815
+Survived: 0
+Pclass: 3
+Name: Tomlin, Mr. Ernest Portage
+Sex: male
+Age: 30.5
+SibSp: 0
+Parch: 0
+Ticket: 364499
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 816
+Survived: 0
+Pclass: 1
+Name: Fry, Mr. Richard
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 112058
+Fare: 0
+Cabin: B102
+Embarked: S
+PassengerId: 817
+Survived: 0
+Pclass: 3
+Name: Heininen, Miss. Wendla Maria
+Sex: female
+Age: 23
+SibSp: 0
+Parch: 0
+Ticket: STON/O2. 3101290
+Fare: 7.925
+Cabin: 
+Embarked: S
+PassengerId: 818
+Survived: 0
+Pclass: 2
+Name: Mallet, Mr. Albert
+Sex: male
+Age: 31
+SibSp: 1
+Parch: 1
+Ticket: S.C./PARIS 2079
+Fare: 37.0042
+Cabin: 
+Embarked: C
+PassengerId: 819
+Survived: 0
+Pclass: 3
+Name: Holm, Mr. John Fredrik Alexander
+Sex: male
+Age: 43
+SibSp: 0
+Parch: 0
+Ticket: C 7075
+Fare: 6.45
+Cabin: 
+Embarked: S
+PassengerId: 820
+Survived: 0
+Pclass: 3
+Name: Skoog, Master. Karl Thorsten
+Sex: male
+Age: 10
+SibSp: 3
+Parch: 2
+Ticket: 347088
+Fare: 27.9
+Cabin: 
+Embarked: S
+PassengerId: 821
+Survived: 1
+Pclass: 1
+Name: Hays, Mrs. Charles Melville (Clara Jennings Gregg)
+Sex: female
+Age: 52
+SibSp: 1
+Parch: 1
+Ticket: 12749
+Fare: 93.5
+Cabin: B69
+Embarked: S
+PassengerId: 822
+Survived: 1
+Pclass: 3
+Name: Lulic, Mr. Nikola
+Sex: male
+Age: 27
+SibSp: 0
+Parch: 0
+Ticket: 315098
+Fare: 8.6625
+Cabin: 
+Embarked: S
+PassengerId: 823
+Survived: 0
+Pclass: 1
+Name: Reuchlin, Jonkheer. John George
+Sex: male
+Age: 38
+SibSp: 0
+Parch: 0
+Ticket: 19972
+Fare: 0
+Cabin: 
+Embarked: S
+PassengerId: 824
+Survived: 1
+Pclass: 3
+Name: Moor, Mrs. (Beila)
+Sex: female
+Age: 27
+SibSp: 0
+Parch: 1
+Ticket: 392096
+Fare: 12.475
+Cabin: E121
+Embarked: S
+PassengerId: 825
+Survived: 0
+Pclass: 3
+Name: Panula, Master. Urho Abraham
+Sex: male
+Age: 2
+SibSp: 4
+Parch: 1
+Ticket: 3101295
+Fare: 39.6875
+Cabin: 
+Embarked: S
+PassengerId: 826
+Survived: 0
+Pclass: 3
+Name: Flynn, Mr. John
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 368323
+Fare: 6.95
+Cabin: 
+Embarked: Q
+PassengerId: 827
+Survived: 0
+Pclass: 3
+Name: Lam, Mr. Len
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 1601
+Fare: 56.4958
+Cabin: 
+Embarked: S
+PassengerId: 828
+Survived: 1
+Pclass: 2
+Name: Mallet, Master. Andre
+Sex: male
+Age: 1
+SibSp: 0
+Parch: 2
+Ticket: S.C./PARIS 2079
+Fare: 37.0042
+Cabin: 
+Embarked: C
+PassengerId: 829
+Survived: 1
+Pclass: 3
+Name: McCormack, Mr. Thomas Joseph
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 367228
+Fare: 7.75
+Cabin: 
+Embarked: Q
+PassengerId: 830
+Survived: 1
+Pclass: 1
+Name: Stone, Mrs. George Nelson (Martha Evelyn)
+Sex: female
+Age: 62
+SibSp: 0
+Parch: 0
+Ticket: 113572
+Fare: 80
+Cabin: B28
+Embarked: 
+PassengerId: 831
+Survived: 1
+Pclass: 3
+Name: Yasbeck, Mrs. Antoni (Selini Alexander)
+Sex: female
+Age: 15
+SibSp: 1
+Parch: 0
+Ticket: 2659
+Fare: 14.4542
+Cabin: 
+Embarked: C
+PassengerId: 832
+Survived: 1
+Pclass: 2
+Name: Richards, Master. George Sibley
+Sex: male
+Age: 0.83
+SibSp: 1
+Parch: 1
+Ticket: 29106
+Fare: 18.75
+Cabin: 
+Embarked: S
+PassengerId: 833
+Survived: 0
+Pclass: 3
+Name: Saad, Mr. Amin
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 2671
+Fare: 7.2292
+Cabin: 
+Embarked: C
+PassengerId: 834
+Survived: 0
+Pclass: 3
+Name: Augustsson, Mr. Albert
+Sex: male
+Age: 23
+SibSp: 0
+Parch: 0
+Ticket: 347468
+Fare: 7.8542
+Cabin: 
+Embarked: S
+PassengerId: 835
+Survived: 0
+Pclass: 3
+Name: Allum, Mr. Owen George
+Sex: male
+Age: 18
+SibSp: 0
+Parch: 0
+Ticket: 2223
+Fare: 8.3
+Cabin: 
+Embarked: S
+PassengerId: 836
+Survived: 1
+Pclass: 1
+Name: Compton, Miss. Sara Rebecca
+Sex: female
+Age: 39
+SibSp: 1
+Parch: 1
+Ticket: PC 17756
+Fare: 83.1583
+Cabin: E49
+Embarked: C
+PassengerId: 837
+Survived: 0
+Pclass: 3
+Name: Pasic, Mr. Jakob
+Sex: male
+Age: 21
+SibSp: 0
+Parch: 0
+Ticket: 315097
+Fare: 8.6625
+Cabin: 
+Embarked: S
+PassengerId: 838
+Survived: 0
+Pclass: 3
+Name: Sirota, Mr. Maurice
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 392092
+Fare: 8.05
+Cabin: 
+Embarked: S
+PassengerId: 839
+Survived: 1
+Pclass: 3
+Name: Chip, Mr. Chang
+Sex: male
+Age: 32
+SibSp: 0
+Parch: 0
+Ticket: 1601
+Fare: 56.4958
+Cabin: 
+Embarked: S
+PassengerId: 840
+Survived: 1
+Pclass: 1
+Name: Marechal, Mr. Pierre
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 11774
+Fare: 29.7
+Cabin: C47
+Embarked: C
+PassengerId: 841
+Survived: 0
+Pclass: 3
+Name: Alhomaki, Mr. Ilmari Rudolf
+Sex: male
+Age: 20
+SibSp: 0
+Parch: 0
+Ticket: SOTON/O2 3101287
+Fare: 7.925
+Cabin: 
+Embarked: S
+PassengerId: 842
+Survived: 0
+Pclass: 2
+Name: Mudd, Mr. Thomas Charles
+Sex: male
+Age: 16
+SibSp: 0
+Parch: 0
+Ticket: S.O./P.P. 3
+Fare: 10.5
+Cabin: 
+Embarked: S
+PassengerId: 843
+Survived: 1
+Pclass: 1
+Name: Serepeca, Miss. Augusta
+Sex: female
+Age: 30
+SibSp: 0
+Parch: 0
+Ticket: 113798
+Fare: 31
+Cabin: 
+Embarked: C
+PassengerId: 844
+Survived: 0
+Pclass: 3
+Name: Lemberopolous, Mr. Peter L
+Sex: male
+Age: 34.5
+SibSp: 0
+Parch: 0
+Ticket: 2683
+Fare: 6.4375
+Cabin: 
+Embarked: C
+PassengerId: 845
+Survived: 0
+Pclass: 3
+Name: Culumovic, Mr. Jeso
+Sex: male
+Age: 17
+SibSp: 0
+Parch: 0
+Ticket: 315090
+Fare: 8.6625
+Cabin: 
+Embarked: S
+PassengerId: 846
+Survived: 0
+Pclass: 3
+Name: Abbing, Mr. Anthony
+Sex: male
+Age: 42
+SibSp: 0
+Parch: 0
+Ticket: C.A. 5547
+Fare: 7.55
+Cabin: 
+Embarked: S
+PassengerId: 847
+Survived: 0
+Pclass: 3
+Name: Sage, Mr. Douglas Bullen
+Sex: male
+Age: 
+SibSp: 8
+Parch: 2
+Ticket: CA. 2343
+Fare: 69.55
+Cabin: 
+Embarked: S
+PassengerId: 848
+Survived: 0
+Pclass: 3
+Name: Markoff, Mr. Marin
+Sex: male
+Age: 35
+SibSp: 0
+Parch: 0
+Ticket: 349213
+Fare: 7.8958
+Cabin: 
+Embarked: C
+PassengerId: 849
+Survived: 0
+Pclass: 2
+Name: Harper, Rev. John
+Sex: male
+Age: 28
+SibSp: 0
+Parch: 1
+Ticket: 248727
+Fare: 33
+Cabin: 
+Embarked: S
+PassengerId: 850
+Survived: 1
+Pclass: 1
+Name: Goldenberg, Mrs. Samuel L (Edwiga Grabowska)
+Sex: female
+Age: 
+SibSp: 1
+Parch: 0
+Ticket: 17453
+Fare: 89.1042
+Cabin: C92
+Embarked: C
+PassengerId: 851
+Survived: 0
+Pclass: 3
+Name: Andersson, Master. Sigvard Harald Elias
+Sex: male
+Age: 4
+SibSp: 4
+Parch: 2
+Ticket: 347082
+Fare: 31.275
+Cabin: 
+Embarked: S
+PassengerId: 852
+Survived: 0
+Pclass: 3
+Name: Svensson, Mr. Johan
+Sex: male
+Age: 74
+SibSp: 0
+Parch: 0
+Ticket: 347060
+Fare: 7.775
+Cabin: 
+Embarked: S
+PassengerId: 853
+Survived: 0
+Pclass: 3
+Name: Boulos, Miss. Nourelain
+Sex: female
+Age: 9
+SibSp: 1
+Parch: 1
+Ticket: 2678
+Fare: 15.2458
+Cabin: 
+Embarked: C
+PassengerId: 854
+Survived: 1
+Pclass: 1
+Name: Lines, Miss. Mary Conover
+Sex: female
+Age: 16
+SibSp: 0
+Parch: 1
+Ticket: PC 17592
+Fare: 39.4
+Cabin: D28
+Embarked: S
+PassengerId: 855
+Survived: 0
+Pclass: 2
+Name: Carter, Mrs. Ernest Courtenay (Lilian Hughes)
+Sex: female
+Age: 44
+SibSp: 1
+Parch: 0
+Ticket: 244252
+Fare: 26
+Cabin: 
+Embarked: S
+PassengerId: 856
+Survived: 1
+Pclass: 3
+Name: Aks, Mrs. Sam (Leah Rosen)
+Sex: female
+Age: 18
+SibSp: 0
+Parch: 1
+Ticket: 392091
+Fare: 9.35
+Cabin: 
+Embarked: S
+PassengerId: 857
+Survived: 1
+Pclass: 1
+Name: Wick, Mrs. George Dennick (Mary Hitchcock)
+Sex: female
+Age: 45
+SibSp: 1
+Parch: 1
+Ticket: 36928
+Fare: 164.8667
+Cabin: 
+Embarked: S
+PassengerId: 858
+Survived: 1
+Pclass: 1
+Name: Daly, Mr. Peter Denis
+Sex: male
+Age: 51
+SibSp: 0
+Parch: 0
+Ticket: 113055
+Fare: 26.55
+Cabin: E17
+Embarked: S
+PassengerId: 859
+Survived: 1
+Pclass: 3
+Name: Baclini, Mrs. Solomon (Latifa Qurban)
+Sex: female
+Age: 24
+SibSp: 0
+Parch: 3
+Ticket: 2666
+Fare: 19.2583
+Cabin: 
+Embarked: C
+PassengerId: 860
+Survived: 0
+Pclass: 3
+Name: Razi, Mr. Raihed
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 2629
+Fare: 7.2292
+Cabin: 
+Embarked: C
+PassengerId: 861
+Survived: 0
+Pclass: 3
+Name: Hansen, Mr. Claus Peter
+Sex: male
+Age: 41
+SibSp: 2
+Parch: 0
+Ticket: 350026
+Fare: 14.1083
+Cabin: 
+Embarked: S
+PassengerId: 862
+Survived: 0
+Pclass: 2
+Name: Giles, Mr. Frederick Edward
+Sex: male
+Age: 21
+SibSp: 1
+Parch: 0
+Ticket: 28134
+Fare: 11.5
+Cabin: 
+Embarked: S
+PassengerId: 863
+Survived: 1
+Pclass: 1
+Name: Swift, Mrs. Frederick Joel (Margaret Welles Barron)
+Sex: female
+Age: 48
+SibSp: 0
+Parch: 0
+Ticket: 17466
+Fare: 25.9292
+Cabin: D17
+Embarked: S
+PassengerId: 864
+Survived: 0
+Pclass: 3
+Name: Sage, Miss. Dorothy Edith "Dolly"
+Sex: female
+Age: 
+SibSp: 8
+Parch: 2
+Ticket: CA. 2343
+Fare: 69.55
+Cabin: 
+Embarked: S
+PassengerId: 865
+Survived: 0
+Pclass: 2
+Name: Gill, Mr. John William
+Sex: male
+Age: 24
+SibSp: 0
+Parch: 0
+Ticket: 233866
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 866
+Survived: 1
+Pclass: 2
+Name: Bystrom, Mrs. (Karolina)
+Sex: female
+Age: 42
+SibSp: 0
+Parch: 0
+Ticket: 236852
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 867
+Survived: 1
+Pclass: 2
+Name: Duran y More, Miss. Asuncion
+Sex: female
+Age: 27
+SibSp: 1
+Parch: 0
+Ticket: SC/PARIS 2149
+Fare: 13.8583
+Cabin: 
+Embarked: C
+PassengerId: 868
+Survived: 0
+Pclass: 1
+Name: Roebling, Mr. Washington Augustus II
+Sex: male
+Age: 31
+SibSp: 0
+Parch: 0
+Ticket: PC 17590
+Fare: 50.4958
+Cabin: A24
+Embarked: S
+PassengerId: 869
+Survived: 0
+Pclass: 3
+Name: van Melkebeke, Mr. Philemon
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 345777
+Fare: 9.5
+Cabin: 
+Embarked: S
+PassengerId: 870
+Survived: 1
+Pclass: 3
+Name: Johnson, Master. Harold Theodor
+Sex: male
+Age: 4
+SibSp: 1
+Parch: 1
+Ticket: 347742
+Fare: 11.1333
+Cabin: 
+Embarked: S
+PassengerId: 871
+Survived: 0
+Pclass: 3
+Name: Balkic, Mr. Cerin
+Sex: male
+Age: 26
+SibSp: 0
+Parch: 0
+Ticket: 349248
+Fare: 7.8958
+Cabin: 
+Embarked: S
+PassengerId: 872
+Survived: 1
+Pclass: 1
+Name: Beckwith, Mrs. Richard Leonard (Sallie Monypeny)
+Sex: female
+Age: 47
+SibSp: 1
+Parch: 1
+Ticket: 11751
+Fare: 52.5542
+Cabin: D35
+Embarked: S
+PassengerId: 873
+Survived: 0
+Pclass: 1
+Name: Carlsson, Mr. Frans Olof
+Sex: male
+Age: 33
+SibSp: 0
+Parch: 0
+Ticket: 695
+Fare: 5
+Cabin: B51 B53 B55
+Embarked: S
+PassengerId: 874
+Survived: 0
+Pclass: 3
+Name: Vander Cruyssen, Mr. Victor
+Sex: male
+Age: 47
+SibSp: 0
+Parch: 0
+Ticket: 345765
+Fare: 9
+Cabin: 
+Embarked: S
+PassengerId: 875
+Survived: 1
+Pclass: 2
+Name: Abelson, Mrs. Samuel (Hannah Wizosky)
+Sex: female
+Age: 28
+SibSp: 1
+Parch: 0
+Ticket: P/PP 3381
+Fare: 24
+Cabin: 
+Embarked: C
+PassengerId: 876
+Survived: 1
+Pclass: 3
+Name: Najib, Miss. Adele Kiamie "Jane"
+Sex: female
+Age: 15
+SibSp: 0
+Parch: 0
+Ticket: 2667
+Fare: 7.225
+Cabin: 
+Embarked: C
+PassengerId: 877
+Survived: 0
+Pclass: 3
+Name: Gustafsson, Mr. Alfred Ossian
+Sex: male
+Age: 20
+SibSp: 0
+Parch: 0
+Ticket: 7534
+Fare: 9.8458
+Cabin: 
+Embarked: S
+PassengerId: 878
+Survived: 0
+Pclass: 3
+Name: Petroff, Mr. Nedelio
+Sex: male
+Age: 19
+SibSp: 0
+Parch: 0
+Ticket: 349212
+Fare: 7.8958
+Cabin: 
+Embarked: S
+PassengerId: 879
+Survived: 0
+Pclass: 3
+Name: Laleff, Mr. Kristo
+Sex: male
+Age: 
+SibSp: 0
+Parch: 0
+Ticket: 349217
+Fare: 7.8958
+Cabin: 
+Embarked: S
+PassengerId: 880
+Survived: 1
+Pclass: 1
+Name: Potter, Mrs. Thomas Jr (Lily Alexenia Wilson)
+Sex: female
+Age: 56
+SibSp: 0
+Parch: 1
+Ticket: 11767
+Fare: 83.1583
+Cabin: C50
+Embarked: C
+PassengerId: 881
+Survived: 1
+Pclass: 2
+Name: Shelley, Mrs. William (Imanita Parrish Hall)
+Sex: female
+Age: 25
+SibSp: 0
+Parch: 1
+Ticket: 230433
+Fare: 26
+Cabin: 
+Embarked: S
+PassengerId: 882
+Survived: 0
+Pclass: 3
+Name: Markun, Mr. Johann
+Sex: male
+Age: 33
+SibSp: 0
+Parch: 0
+Ticket: 349257
+Fare: 7.8958
+Cabin: 
+Embarked: S
+PassengerId: 883
+Survived: 0
+Pclass: 3
+Name: Dahlberg, Miss. Gerda Ulrika
+Sex: female
+Age: 22
+SibSp: 0
+Parch: 0
+Ticket: 7552
+Fare: 10.5167
+Cabin: 
+Embarked: S
+PassengerId: 884
+Survived: 0
+Pclass: 2
+Name: Banfield, Mr. Frederick James
+Sex: male
+Age: 28
+SibSp: 0
+Parch: 0
+Ticket: C.A./SOTON 34068
+Fare: 10.5
+Cabin: 
+Embarked: S
+PassengerId: 885
+Survived: 0
+Pclass: 3
+Name: Sutehall, Mr. Henry Jr
+Sex: male
+Age: 25
+SibSp: 0
+Parch: 0
+Ticket: SOTON/OQ 392076
+Fare: 7.05
+Cabin: 
+Embarked: S
+PassengerId: 886
+Survived: 0
+Pclass: 3
+Name: Rice, Mrs. William (Margaret Norton)
+Sex: female
+Age: 39
+SibSp: 0
+Parch: 5
+Ticket: 382652
+Fare: 29.125
+Cabin: 
+Embarked: Q
+PassengerId: 887
+Survived: 0
+Pclass: 2
+Name: Montvila, Rev. Juozas
+Sex: male
+Age: 27
+SibSp: 0
+Parch: 0
+Ticket: 211536
+Fare: 13
+Cabin: 
+Embarked: S
+PassengerId: 888
+Survived: 1
+Pclass: 1
+Name: Graham, Miss. Margaret Edith
+Sex: female
+Age: 19
+SibSp: 0
+Parch: 0
+Ticket: 112053
+Fare: 30
+Cabin: B42
+Embarked: S
+PassengerId: 889
+Survived: 0
+Pclass: 3
+Name: Johnston, Miss. Catherine Helen "Carrie"
+Sex: female
+Age: 
+SibSp: 1
+Parch: 2
+Ticket: W./C. 6607
+Fare: 23.45
+Cabin: 
+Embarked: S
+PassengerId: 890
+Survived: 1
+Pclass: 1
+Name: Behr, Mr. Karl Howell
+Sex: male
+Age: 26
+SibSp: 0
+Parch: 0
+Ticket: 111369
+Fare: 30
+Cabin: C148
+Embarked: C
+PassengerId: 891
+Survived: 0
+Pclass: 3
+Name: Dooley, Mr. Patrick
+Sex: male
+Age: 32
+SibSp: 0
+Parch: 0
+Ticket: 370376
+Fare: 7.75
+Cabin: 
+Embarked: Q
+PDF Path: data/SPRI_AI_Brief_2023년12월호_F.pdf
+[HUMAN]
+삼성 가우스에 대해 설명해주세요
+
+[AI]
+삼성 가우스는 삼성전자가 개발한 생성 AI 모델로, 언어, 코드, 이미지의 세 가지 종류의 모델로 구성되어 있습니다. 이 모델은 온디바이스에서 작동되며, 사용자 정보 유출 위험이 없어 안전성을 강조합니다. 삼성전자는 가우스를 다양한 제품에 단계적으로 탑재할 계획입니다.
+[대화 세션ID]: abc123
+<class 'list'>
+[대화 세션ID]: rag123
+코히어와 12개 기관이 함께한 데이터 출처 탐색기,  
+투명한 데이터 세상으로 나아가는 길을 열어,  
+원본 데이터와 라이선스 상태를 쉽게 알 수 있어,  
+법적 문제도 줄어들고 윤리적 고민도 덜어.
+
+알리바바 클라우드의 통이치엔원 2.0,  
+복잡한 지침도 척척, 광고도 잘 써,  
+여러 산업에 맞춘 AI 모델로,  
+사업 성과를 높여주는 힘을 가져.
+
+데이터 투명성과 AI의 발전,  
+모두가 함께 만들어가는 미래의 길,  
+우리는 더 나은 세상을 위해,  
+지금 이 순간을 노래해!
+설치 성공!
+확인
+[Document(metadata={'source': 'data/sample-word-document.docx'}, page_content='Semantic Search\n\n\n\n정의: 의미론적 검색은 사용자의 질의를 단순한 키워드 매칭을 넘어서 그 의미를 파악하여 관련된 결과를 반환하는 검색 방식입니다.\n\n예시: 사용자가 "태양계 행성"이라고 검색하면, "목성", "화성" 등과 같이 관련된 행성에 대한 정보를 반환합니다.\n\n연관키워드: 자연어 처리, 검색 알고리즘, 데이터 마이닝\n\n\n\nEmbedding\n\n\n\n정의: 임베딩은 단어나 문장 같은 텍스트 데이터를 저차원의 연속적인 벡터로 변환하는 과정입니다. 이를 통해 컴퓨터가 텍스트를 이해하고 처리할 수 있게 합니다.\n\n예시: "사과"라는 단어를 [0.65, -0.23, 0.17]과 같은 벡터로 표현합니다.\n\n연관키워드: 자연어 처리, 벡터화, 딥러닝\n\n\n\nToken\n\n\n\n정의: 토큰은 텍스트를 더 작은 단위로 분할하는 것을 의미합니다. 이는 일반적으로 단어, 문장, 또는 구절일 수 있습니다.\n\n예시: 문장 "나는 학교에 간다"를 "나는", "학교에", "간다"로 분할합니다.\n\n연관키워드: 토큰화, 자연어 처리, 구문 분석\n\n\n\nTokenizer\n\n\n\n정의: 토크나이저는 텍스트 데이터를 토큰으로 분할하는 도구입니다. 이는 자연어 처리에서 데이터를 전처리하는 데 사용됩니다.\n\n예시: "I love programming."이라는 문장을 ["I", "love", "programming", "."]으로 분할합니다.\n\n연관키워드: 토큰화, 자연어 처리, 구문 분석\n\n\n\nVectorStore\n\n\n\n정의: 벡터스토어는 벡터 형식으로 변환된 데이터를 저장하는 시스템입니다. 이는 검색, 분류 및 기타 데이터 분석 작업에 사용됩니다.\n\n예시: 단어 임베딩 벡터들을 데이터베이스에 저장하여 빠르게 접근할 수 있습니다.\n\n연관키워드: 임베딩, 데이터베이스, 벡터화\n\n\n\nSQL\n\n\n\n정의: SQL(Structured Query Language)은 데이터베이스에서 데이터를 관리하기 위한 프로그래밍 언어입니다. 데이터 조회, 수정, 삽입, 삭제 등 다양한 작업을 수행할 수 있습니다.\n\n예시: SELECT * FROM users WHERE age > 18;은 18세 이상의 사용자 정보를 조회합니다.\n\n연관키워드: 데이터베이스, 쿼리, 데이터 관리\n\n\n\nCSV\n\n\n\n정의: CSV(Comma-Separated Values)는 데이터를 저장하는 파일 형식으로, 각 데이터 값은 쉼표로 구분됩니다. 표 형태의 데이터를 간단하게 저장하고 교환할 때 사용됩니다.\n\n예시: 이름, 나이, 직업이라는 헤더를 가진 CSV 파일에는 홍길동, 30, 개발자와 같은 데이터가 포함될 수 있습니다.\n\n연관키워드: 데이터 형식, 파일 처리, 데이터 교환\n\n\n\nJSON\n\n\n\n정의: JSON(JavaScript Object Notation)은 경량의 데이터 교환 형식으로, 사람과 기계 모두에게 읽기 쉬운 텍스트를 사용하여 데이터 객체를 표현합니다.\n\n예시: {"이름": "홍길동", "나이": 30, "직업": "개발자"}는 JSON 형식의 데이터입니다.\n\n연관키워드: 데이터 교환, 웹 개발, API\n\n\n\nTransformer\n\n\n\n정의: 트랜스포머는 자연어 처리에서 사용되는 딥러닝 모델의 한 유형으로, 주로 번역, 요약, 텍스트 생성 등에 사용됩니다. 이는 Attention 메커니즘을 기반으로 합니다.\n\n예시: 구글 번역기는 트랜스포머 모델을 사용하여 다양한 언어 간의 번역을 수행합니다.\n\n연관키워드: 딥러닝, 자연어 처리, Attention\n\n\n\nHuggingFace\n\n\n\n정의: HuggingFace는 자연어 처리를 위한 다양한 사전 훈련된 모델과 도구를 제공하는 라이브러리입니다. 이는 연구자와 개발자들이 쉽게 NLP 작업을 수행할 수 있도록 돕습니다.\n\n예시: HuggingFace의 Transformers 라이브러리를 사용하여 감정 분석, 텍스트 생성 등의 작업을 수행할 수 있습니다.\n\n연관키워드: 자연어 처리, 딥러닝, 라이브러리\n\n\n\nDigital Transformation\n\n\n\n정의: 디지털 변환은 기술을 활용하여 기업의 서비스, 문화, 운영을 혁신하는 과정입니다. 이는 비즈니스 모델을 개선하고 디지털 기술을 통해 경쟁력을 높이는 데 중점을 둡니다.\n\n예시: 기업이 클라우드 컴퓨팅을 도입하여 데이터 저장과 처리를 혁신하는 것은 디지털 변환의 예입니다.\n\n연관키워드: 혁신, 기술, 비즈니스 모델\n\n\n\nCrawling\n\n\n\n정의: 크롤링은 자동화된 방식으로 웹 페이지를 방문하여 데이터를 수집하는 과정입니다. 이는 검색 엔진 최적화나 데이터 분석에 자주 사용됩니다.\n\n예시: 구글 검색 엔진이 인터넷 상의 웹사이트를 방문하여 콘텐츠를 수집하고 인덱싱하는 것이 크롤링입니다.\n\n연관키워드: 데이터 수집, 웹 스크래핑, 검색 엔진\n\n\n\nWord2Vec\n\n\n\n정의: Word2Vec은 단어를 벡터 공간에 매핑하여 단어 간의 의미적 관계를 나타내는 자연어 처리 기술입니다. 이는 단어의 문맥적 유사성을 기반으로 벡터를 생성합니다.\n\n예시: Word2Vec 모델에서 "왕"과 "여왕"은 서로 가까운 위치에 벡터로 표현됩니다.\n\n연관키워드: 자연어 처리, 임베딩, 의미론적 유사성\n\nLLM (Large Language Model)\n\n\n\n정의: LLM은 대규모의 텍스트 데이터로 훈련된 큰 규모의 언어 모델을 의미합니다. 이러한 모델은 다양한 자연어 이해 및 생성 작업에 사용됩니다.\n\n예시: OpenAI의 GPT 시리즈는 대표적인 대규모 언어 모델입니다.\n\n연관키워드: 자연어 처리, 딥러닝, 텍스트 생성\n\n\n\nFAISS (Facebook AI Similarity Search)\n\n\n\n정의: FAISS는 페이스북에서 개발한 고속 유사성 검색 라이브러리로, 특히 대규모 벡터 집합에서 유사 벡터를 효과적으로 검색할 수 있도록 설계되었습니다.\n\n예시: 수백만 개의 이미지 벡터 중에서 비슷한 이미지를 빠르게 찾는 데 FAISS가 사용될 수 있습니다.\n\n연관키워드: 벡터 검색, 머신러닝, 데이터베이스 최적화\n\n\n\nOpen Source\n\n\n\n정의: 오픈 소스는 소스 코드가 공개되어 누구나 자유롭게 사용, 수정, 배포할 수 있는 소프트웨어를 의미합니다. 이는 협업과 혁신을 촉진하는 데 중요한 역할을 합니다.\n\n예시: 리눅스 운영 체제는 대표적인 오픈 소스 프로젝트입니다.\n\n연관키워드: 소프트웨어 개발, 커뮤니티, 기술 협업\n\n\n\nStructured Data\n\n\n\n정의: 구조화된 데이터는 정해진 형식이나 스키마에 따라 조직된 데이터입니다. 이는 데이터베이스, 스프레드시트 등에서 쉽게 검색하고 분석할 수 있습니다.\n\n예시: 관계형 데이터베이스에 저장된 고객 정보 테이블은 구조화된 데이터의 예입니다.\n\n연관키워드: 데이터베이스, 데이터 분석, 데이터 모델링\n\n\n\nParser\n\n\n\n정의: 파서는 주어진 데이터(문자열, 파일 등)를 분석하여 구조화된 형태로 변환하는 도구입니다. 이는 프로그래밍 언어의 구문 분석이나 파일 데이터 처리에 사용됩니다.\n\n예시: HTML 문서를 구문 분석하여 웹 페이지의 DOM 구조를 생성하는 것은 파싱의 한 예입니다.\n\n연관키워드: 구문 분석, 컴파일러, 데이터 처리\n\n\n\nTF-IDF (Term Frequency-Inverse Document Frequency)\n\n\n\n정의: TF-IDF는 문서 내에서 단어의 중요도를 평가하는 데 사용되는 통계적 척도입니다. 이는 문서 내 단어의 빈도와 전체 문서 집합에서 그 단어의 희소성을 고려합니다.\n\n예시: 많은 문서에서 자주 등장하지 않는 단어는 높은 TF-IDF 값을 가집니다.\n\n연관키워드: 자연어 처리, 정보 검색, 데이터 마이닝\n\n\n\nDeep Learning\n\n\n\n정의: 딥러닝은 인공신경망을 이용하여 복잡한 문제를 해결하는 머신러닝의 한 분야입니다. 이는 데이터에서 고수준의 표현을 학습하는 데 중점을 둡니다.\n\n예시: 이미지 인식, 음성 인식, 자연어 처리 등에서 딥러닝 모델이 활용됩니다.\n\n연관키워드: 인공신경망, 머신러닝, 데이터 분석\n\n\n\nSchema\n\n\n\n정의: 스키마는 데이터베이스나 파일의 구조를 정의하는 것으로, 데이터가 어떻게 저장되고 조직되는지에 대한 청사진을 제공합니다.\n\n예시: 관계형 데이터베이스의 테이블 스키마는 열 이름, 데이터 타입, 키 제약 조건 등을 정의합니다.\n\n연관키워드: 데이터베이스, 데이터 모델링, 데이터 관리\n\n\n\nDataFrame\n\n\n\n정의: DataFrame은 행과 열로 이루어진 테이블 형태의 데이터 구조로, 주로 데이터 분석 및 처리에 사용됩니다.\n\n예시: 판다스 라이브러리에서 DataFrame은 다양한 데이터 타입의 열을 가질 수 있으며, 데이터 조작과 분석을 용이하게 합니다.\n\n연관키워드: 데이터 분석, 판다스, 데이터 처리\n\n\n\nAttention 메커니즘\n\n\n\n정의: Attention 메커니즘은 딥러닝에서 중요한 정보에 더 많은 \'주의\'를 기울이도록 하는 기법입니다. 이는 주로 시퀀스 데이터(예: 텍스트, 시계열 데이터)에서 사용됩니다.\n\n예시: 번역 모델에서 Attention 메커니즘은 입력 문장의 중요한 부분에 더 집중하여 정확한 번역을 생성합니다.\n\n연관키워드: 딥러닝, 자연어 처리, 시퀀스 모델링\n\n\n\n판다스 (Pandas)\n\n\n\n정의: 판다스는 파이썬 프로그래밍 언어를 위한 데이터 분석 및 조작 도구를 제공하는 라이브러리입니다. 이는 데이터 분석 작업을 효율적으로 수행할 수 있게 합니다.\n\n예시: 판다스를 사용하여 CSV 파일을 읽고, 데이터를 정제하며, 다양한 분석을 수행할 수 있습니다.\n\n연관키워드: 데이터 분석, 파이썬, 데이터 처리\n\n\n\nGPT (Generative Pretrained Transformer)\n\n\n\n정의: GPT는 대규모의 데이터셋으로 사전 훈련된 생성적 언어 모델로, 다양한 텍스트 기반 작업에 활용됩니다. 이는 입력된 텍스트에 기반하여 자연스러운 언어를 생성할 수 있습니다.\n\n예시: 사용자가 제공한 질문에 대해 자세한 답변을 생성하는 챗봇은 GPT 모델을 사용할 수 있습니다.\n\n연관키워드: 자연어 처리, 텍스트 생성, 딥러닝\n\n\n\nInstructGPT\n\n\n\n정의: InstructGPT는 사용자의 지시에 따라 특정한 작업을 수행하기 위해 최적화된 GPT 모델입니다. 이 모델은 보다 정확하고 관련성 높은 결과를 생성하도록 설계되었습니다.\n\n예시: 사용자가 "이메일 초안 작성"과 같은 특정 지시를 제공하면, InstructGPT는 관련 내용을 기반으로 이메일을 작성합니다.\n\n연관키워드: 인공지능, 자연어 이해, 명령 기반 처리\n\n\n\nKeyword Search\n\n\n\n정의: 키워드 검색은 사용자가 입력한 키워드를 기반으로 정보를 찾는 과정입니다. 이는 대부분의 검색 엔진과 데이터베이스 시스템에서 기본적인 검색 방식으로 사용됩니다.\n\n예시: 사용자가 "커피숍 서울"이라고 검색하면, 관련된 커피숍 목록을 반환합니다.\n\n연관키워드: 검색 엔진, 데이터 검색, 정보 검색\n\n\n\nPage Rank\n\n\n\n정의: 페이지 랭크는 웹 페이지의 중요도를 평가하는 알고리즘으로, 주로 검색 엔진 결과의 순위를 결정하는 데 사용됩니다. 이는 웹 페이지 간의 링크 구조를 분석하여 평가합니다.\n\n예시: 구글 검색 엔진은 페이지 랭크 알고리즘을 사용하여 검색 결과의 순위를 정합니다.\n\n연관키워드: 검색 엔진 최적화, 웹 분석, 링크 분석\n\n\n\n데이터 마이닝\n\n\n\n정의: 데이터 마이닝은 대량의 데이터에서 유용한 정보를 발굴하는 과정입니다. 이는 통계, 머신러닝, 패턴 인식 등의 기술을 활용합니다.\n\n예시: 소매업체가 고객 구매 데이터를 분석하여 판매 전략을 수립하는 것은 데이터 마이닝의 예입니다.\n\n연관키워드: 빅데이터, 패턴 인식, 예측 분석\n\n\n\n멀티모달 (Multimodal)\n\n\n\n정의: 멀티모달은 여러 종류의 데이터 모드(예: 텍스트, 이미지, 소리 등)를 결합하여 처리하는 기술입니다. 이는 서로 다른 형식의 데이터 간의 상호 작용을 통해 보다 풍부하고 정확한 정보를 추출하거나 예측하는 데 사용됩니다.\n\n예시: 이미지와 설명 텍스트를 함께 분석하여 더 정확한 이미지 분류를 수행하는 시스템은 멀티모달 기술의 예입니다.\n\n연관키워드: 데이터 융합, 인공지능, 딥러닝')]

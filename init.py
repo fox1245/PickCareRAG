@@ -1,4 +1,5 @@
 # API 키를 환경변수로 관리하기 위한 설정 파일
+import platform
 from dotenv import load_dotenv
 from langchain_teddynote import logging
 import bs4
@@ -7,6 +8,7 @@ from langchain_experimental.text_splitter import SemanticChunker
 from langchain_community.document_loaders import WebBaseLoader
 from langchain_community.vectorstores import Chroma, FAISS
 from langchain_core.output_parsers import StrOutputParser,  JsonOutputParser
+from langchain_community.document_loaders import Docx2txtLoader
 from langchain_core.runnables import RunnablePassthrough
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from typing import List, Tuple
@@ -46,15 +48,21 @@ from langchain_core.runnables import RunnableLambda, RunnablePassthrough
 from unstructured.partition.pdf import partition_pdf
 import shutil
 import threading
-import pythoncom
-import win32com.client
-from pyhwpx import Hwp
+if platform.system() == "Windows":
+    
+    import pythoncom
+    import win32com.client
+    from pyhwpx import Hwp
+elif platform.system() == 'Linux':
+    print("한글, word 로더 사용불가")
+    
 from langchain_core.documents import Document
 from langchain.schema import format_document
 import matplotlib.pyplot as plt
 from stable_diffusion_cpp import StableDiffusion
 from tqdm import tqdm
 from stable_diffusion_cpp import StableDiffusion
+
 
 
 

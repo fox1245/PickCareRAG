@@ -1,19 +1,20 @@
 import init
-init.os.environ['ATTN_BACKEND'] = 'flash-attn'
-init.os.environ['SPCONV_ALGO'] = 'native' 
 import imageio 
 from PIL import Image
 from TRELLIS.trellis.pipelines import TrellisImageTo3DPipeline
 from TRELLIS.trellis.utils import render_utils, postprocessing_utils
 
-#hugginfface 모델 허브에서 모델 끌어오기
-pipeline = TrellisImageTo3DPipeline.from_pretrained("JeffreyXiang/TRELLIS-image-large")
-pipeline.cuda()
+
 
 
 
 #이미지 로드
 def create_3d_from_image(file_path, seed = 1, steps = 12, cfg_strength = 7.5, output_file = "sample_mesh.mp4", fps = 30):
+    init.os.environ['ATTN_BACKEND'] = 'flash-attn'
+    init.os.environ['SPCONV_ALGO'] = 'native' 
+    #hugginfface 모델 허브에서 모델 끌어오기
+    pipeline = TrellisImageTo3DPipeline.from_pretrained("JeffreyXiang/TRELLIS-image-large")
+    pipeline.cuda()
     image = Image.open(file_path)
     #파이프라인 구동
     outputs = pipeline.run(
