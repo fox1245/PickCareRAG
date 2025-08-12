@@ -9,6 +9,36 @@ from dotenv import load_dotenv
 from langchain_core.messages import BaseMessage  # 추가: 메시지 타입 확인 위해 (핵심 추출 시 유용)
 
 
+def track_token_usage(loaded_response, cumulative_tokens=0):
+    """
+    JSON 로드된 agent_response에서 토큰 사용량 추적 및 누적하는 함수.
+    - loaded_response: load_agent_response_from_json() 반환 dict.
+    - cumulative_tokens: 이전 누적 토큰 (기본 0, 세션 유지 시 사용).
+    반환: (total_tokens 이번 회, cumulative_tokens 업데이트).
+    """
+    try:
+        total_this_time = 0
+        messages = loaded_response.get('messages', [])
+        for msg in messages:
+            # response_metadata 체크 강화: dict 여부 확인 (끈질기게 안전하게)
+            if 'response_metadata' in msg and isinstance(msg['response_metadata'], dict) and 'token_usage' in msg['response_metadata'] and isinstance(msg['response_metadata']['token_usage'], dict):
+                total_this_time += msg['response_metadata']['token_usage'].get('total_tokens', 0)
+            # usage_metadata 체크 강화: dict 여부 확인
+            elif 'usage_metadata' in msg and isinstance(msg['usage_metadata'], dict):
+                total_this_time += msg['usage_metadata'].get('total_tokens', 0)
+            # 옵션: 무시되는 msg 로그 (디버깅용, 나중 제거 가능)
+            # else:
+            #     print(f"Skipping token track for msg type: {msg.get('type', 'unknown')} - no valid metadata.")
+
+        cumulative_tokens += total_this_time
+        print(f"Tokens used this time: {total_this_time}")
+        print(f"Cumulative tokens: {cumulative_tokens} (estimated cost: ${cumulative_tokens * 0.00001:.4f} assuming $0.01/1M tokens)")  # 비용 추정 (GPT-5 기준 조정)
+        return total_this_time, cumulative_tokens
+    except Exception as e:
+        print(f"Error tracking tokens: {str(e)} (possibly in msg: {msg.get('type', 'unknown')})")  # 에러 핸들링 강화: msg 타입 로그
+        return 0, cumulative_tokens
+
+
 def load_agent_response_from_json(filename='agent_response.json'):
     """
     JSON 파일에서 agent_response를 로드하고, dict로 반환하는 함수.
@@ -149,6 +179,11 @@ async def test():
                         if 'response_metadata' in last_msg and 'token_usage' in last_msg['response_metadata']:
                             total_tokens = last_msg['response_metadata']['token_usage']['total_tokens']
                             print(f"Total tokens used: {total_tokens}")
+                            
+                            
+                    # 새 : 토큰 추적 호출 (누적 변수로 세션 관리)
+                    cumulative_tokens = 0 #세션 시작 시 초기화( 파일로 저장 가능)
+                    _, cumulative_tokens = track_token_usage(loaded_response, cumulative_tokens)
                 
                 
     except Exception as e:
