@@ -49,18 +49,9 @@ from langchain_core.runnables import RunnableLambda, RunnablePassthrough
 from unstructured.partition.pdf import partition_pdf
 import shutil
 import threading
-if platform.system() == "Windows":
-    
-    import pythoncom
-    import win32com.client
-    from pyhwpx import Hwp
-elif platform.system() == 'Linux':
-    print("한글, word 로더 사용불가")
-    
 from langchain_core.documents import Document
 from langchain.schema import format_document
 import matplotlib.pyplot as plt
-from stable_diffusion_cpp import StableDiffusion
 from tqdm import tqdm
 
 

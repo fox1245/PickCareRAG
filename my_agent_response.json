@@ -1,0 +1,58 @@
+{
+    "messages": [
+        {
+            "type": "HumanMessage",
+            "content": "{hwp_path} 파일을 읽고 {QA}",
+            "tool_calls": null,
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "id": "99493ef1-ad43-4c6f-80ca-c9e88fa7dff6",
+            "usage_metadata": null
+        },
+        {
+            "type": "AIMessage",
+            "content": "어떤 .hwp/.hwpx 파일을 읽을까요? 아래 두 정보를 알려주세요.\n- 파일 경로: (예: /path/to/file.hwp)\n- 요청/질문(QA): (예: “문서 요약해줘” 또는 “표만 추출해줘”)",
+            "tool_calls": [],
+            "additional_kwargs": {
+                "refusal": null
+            },
+            "response_metadata": {
+                "token_usage": {
+                    "completion_tokens": 520,
+                    "prompt_tokens": 265,
+                    "total_tokens": 785,
+                    "completion_tokens_details": {
+                        "accepted_prediction_tokens": 0,
+                        "audio_tokens": 0,
+                        "reasoning_tokens": 448,
+                        "rejected_prediction_tokens": 0
+                    },
+                    "prompt_tokens_details": {
+                        "audio_tokens": 0,
+                        "cached_tokens": 0
+                    }
+                },
+                "model_name": "gpt-5-2025-08-07",
+                "system_fingerprint": null,
+                "id": "chatcmpl-C3bYBcBKZPrI6c4hHGrHIa72wpdQ3",
+                "service_tier": "default",
+                "finish_reason": "stop",
+                "logprobs": null
+            },
+            "id": "run--148e0423-04ad-4b6b-83d8-5f224273bbf1-0",
+            "usage_metadata": {
+                "input_tokens": 265,
+                "output_tokens": 520,
+                "total_tokens": 785,
+                "input_token_details": {
+                    "audio": 0,
+                    "cache_read": 0
+                },
+                "output_token_details": {
+                    "audio": 0,
+                    "reasoning": 448
+                }
+            }
+        }
+    ]
+}

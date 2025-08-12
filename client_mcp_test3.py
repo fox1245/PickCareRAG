@@ -9,6 +9,12 @@ from dotenv import load_dotenv
 from langchain_core.messages import BaseMessage  # 추가: 메시지 타입 확인 위해 (핵심 추출 시 유용)
 from langchain_teddynote import logging
 from dotenv import load_dotenv
+import traceback  # 추가: traceback 로그용
+from langchain_core.exceptions import LangChainException
+from asyncio.exceptions import CancelledError
+import os
+import mcp_test
+from fastmcp import Client
 load_dotenv()
 
 logging.langsmith("MCP Project Client")
@@ -134,66 +140,62 @@ server_params = StdioServerParameters(
     args=["./mcp_test.py"],  # 절대 경로 추천: e.g., "Q:/Coding/PickCareRAG/mcp_test.py"
 )
 
-async def test(message : str):
-    try:
-        async with stdio_client(server_params) as (read, write):
-            print("Connected to server via stdio.")
-            async with ClientSession(read, write) as session:
-                await session.initialize()
-                print("Session initialized.")
 
-                tools = await load_mcp_tools(session)
-                print(f"Tools loaded: {len(tools)} tools available.")
 
-                agent = create_react_agent("openai:gpt-5", tools)  # gpt-5로 필요 시 변경
-                print("Agent created.")
 
-                agent_response = await agent.ainvoke({"messages": f"{message}"})
-                print("Full agent response (for debug):", agent_response)  # 옵션: 전체 출력 (디버깅용, 나중 제거 가능)
+async def do():
+    async with stdio_client(server_params) as (read, write):
+        async with ClientSession(read, write) as session:
+            #Initialize the connection
+            await session.initialize()
+            
+            
+            #Get tools
+            tools = await load_mcp_tools(session)
+            
+            #Creat and run the test
+            agent = create_react_agent("openai:gpt-5", tools)
+            hwp_path = r"Q:\Coding\PickCareRAG\디지털 정부혁신 추진계획.hwp"
+            QA = "요약하세요"
+            agent_response = await agent.ainvoke({"messages": f"{hwp_path} 의 파일을 {QA}"})
+            print(agent_response)
+            
+async def do2():
+    async with stdio_client(server_params) as (read, write):
+        async with ClientSession(read, write) as session:
+            #Initialize the connection
+            await session.initialize()
+            
+            
+            #Get tools
+            tools = await load_mcp_tools(session)
+            
+            #Creat and run the test
+            agent = create_react_agent("openai:gpt-5", tools)
+            agent_response = await agent.ainvoke({"messages": "what's (3 + 5) x 12?"})
+            print(agent_response)
+              
+    
+        
+    
 
-                # 추가: 핵심 내용 추출 로직 (끈질기게 안전하게 구현)
-                if 'messages' in agent_response and agent_response['messages']:
-                    last_message = agent_response['messages'][-1]
-                    if isinstance(last_message, BaseMessage) and hasattr(last_message, 'content'):
-                        final_content = last_message.content.strip()  # 불필요 공백 제거
-                        if final_content:
-                            print(f"Final answer: {final_content}")
-                        else:
-                            # Fallback: 만약 content 비어 있으면 이전 ToolMessage 확인
-                            for msg in reversed(agent_response['messages'][:-1]):
-                                if hasattr(msg, 'content') and msg.content:
-                                    print(f"Fallback answer from tool: {msg.content.strip()}")
-                                    break
-                    else:
-                        print("Warning: No valid content in last message.")
-                else:
-                    print("Error: Invalid agent response structure.")
-                    
-                save_agent_response_to_json(agent_response, filename = 'my_agent_response.json')
-                # 새: 로드 함수 호출
-                loaded_response = load_agent_response_from_json(filename='my_agent_response.json')
-                if loaded_response:
-                    # 분석 예시: final content 추출 (끈질기게 유용하게)
-                    messages = loaded_response['messages']
-                    if messages:
-                        last_msg = messages[-1]
-                        if 'content' in last_msg and last_msg['content']:
-                            print(f"Loaded final answer: {last_msg['content'].strip()}")
-                            # 출력 예: "Loaded final answer: 96"
-                        # 추가 분석: 토큰 사용량 로그
-                        if 'response_metadata' in last_msg and 'token_usage' in last_msg['response_metadata']:
-                            total_tokens = last_msg['response_metadata']['token_usage']['total_tokens']
-                            print(f"Total tokens used: {total_tokens}")
-                            
-                            
-                    # 새 : 토큰 추적 호출 (누적 변수로 세션 관리)
-                    cumulative_tokens = 0 #세션 시작 시 초기화( 파일로 저장 가능)
-                    _, cumulative_tokens = track_token_usage(loaded_response, cumulative_tokens)
-                
-                
-    except Exception as e:
-        print(f"Error during execution: {str(e)}")
+
+        
+        
+        
+        
+async def direct_test():
+    hwp_path = r"Q:\Coding\PickCareRAG\디지털 정부혁신 추진계획.hwp"
+    QA = "요약하세요"
+    response = await mcp_test.HWPask2(hwp_path, QA)
+    print("Direct async response:", response)
+
+
+
 
 if __name__ == "__main__":
-    #asyncio.run(test(message = "https://n.news.naver.com/article/437/0000378416  의 네이버 뉴스를 읽고, 부영그룹의 출산 장려 정책에 대해 설명해주세요. 그리고 한국어로 답변해주셔야 합니다."))
-    asyncio.run(test(message = "pdf를 읽고 삼성 가우스에 대해 설명해주세요"))
+    hwp_path = r"Q:\Coding\PickCareRAG\디지털 정부혁신 추진계획.hwp"
+    QA = "요약하세요"
+    asyncio.run(direct_test())
+    asyncio.run(do2())
+    #asyncio.run(do())
