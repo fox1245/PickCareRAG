@@ -32,5 +32,9 @@ cuda_12.4.0_550.54.14_linux.run
 nvinfer_10.dll
 faiss
 toshowshow.txt
+requirement*.txt
+py311_*.yaml
+python311_*.yaml
+py311.yaml
 
 

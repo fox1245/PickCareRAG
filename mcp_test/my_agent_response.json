@@ -1,0 +1,58 @@
+{
+    "messages": [
+        {
+            "type": "HumanMessage",
+            "content": "what's (3 + 5) x 12?",
+            "tool_calls": null,
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "id": "09e0b499-ae83-4425-9716-55c2fd2d2b02",
+            "usage_metadata": null
+        },
+        {
+            "type": "AIMessage",
+            "content": "96",
+            "tool_calls": [],
+            "additional_kwargs": {
+                "refusal": null
+            },
+            "response_metadata": {
+                "token_usage": {
+                    "completion_tokens": 266,
+                    "prompt_tokens": 160,
+                    "total_tokens": 426,
+                    "completion_tokens_details": {
+                        "accepted_prediction_tokens": 0,
+                        "audio_tokens": 0,
+                        "reasoning_tokens": 256,
+                        "rejected_prediction_tokens": 0
+                    },
+                    "prompt_tokens_details": {
+                        "audio_tokens": 0,
+                        "cached_tokens": 0
+                    }
+                },
+                "model_name": "gpt-5-2025-08-07",
+                "system_fingerprint": null,
+                "id": "chatcmpl-C3ZgXIZtHCnDOX0DrA5hsWRplXOC1",
+                "service_tier": "default",
+                "finish_reason": "stop",
+                "logprobs": null
+            },
+            "id": "run--39d82b43-f7fb-4fd4-9083-7018767c4bb1-0",
+            "usage_metadata": {
+                "input_tokens": 160,
+                "output_tokens": 266,
+                "total_tokens": 426,
+                "input_token_details": {
+                    "audio": 0,
+                    "cache_read": 0
+                },
+                "output_token_details": {
+                    "audio": 0,
+                    "reasoning": 256
+                }
+            }
+        }
+    ]
+}
