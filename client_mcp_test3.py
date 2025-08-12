@@ -7,6 +7,11 @@ from langchain_mcp_adapters.tools import load_mcp_tools
 from langgraph.prebuilt import create_react_agent
 from dotenv import load_dotenv
 from langchain_core.messages import BaseMessage  # 추가: 메시지 타입 확인 위해 (핵심 추출 시 유용)
+from langchain_teddynote import logging
+from dotenv import load_dotenv
+load_dotenv()
+
+logging.langsmith("MCP Project Client")
 
 
 def track_token_usage(loaded_response, cumulative_tokens=0):
@@ -190,4 +195,5 @@ async def test(message : str):
         print(f"Error during execution: {str(e)}")
 
 if __name__ == "__main__":
-    asyncio.run(test(""))
+    #asyncio.run(test(message = "https://n.news.naver.com/article/437/0000378416  의 네이버 뉴스를 읽고, 부영그룹의 출산 장려 정책에 대해 설명해주세요. 그리고 한국어로 답변해주셔야 합니다."))
+    asyncio.run(test(message = "pdf를 읽고 삼성 가우스에 대해 설명해주세요"))
