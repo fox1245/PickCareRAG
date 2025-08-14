@@ -1,11 +1,11 @@
-import init
+from langchain_community.document_loaders import PyMuPDFLoader
 from Loader import Loader
 
 class pdfLoader(Loader):
     def __init__(self, file_path, extract_bool = True):
         self.path = file_path
         self.extract_bool = extract_bool
-        self.loader = init.PyMuPDFLoader(self.path, extract_images= self.extract_bool)
+        self.loader = PyMuPDFLoader(self.path, extract_images= self.extract_bool)
         
         
 

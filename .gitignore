@@ -36,5 +36,6 @@ requirement*.txt
 py311_*.yaml
 python311_*.yaml
 py311.yaml
-
+ignore_directory
+ingore_directory/
 
