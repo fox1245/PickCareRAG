@@ -26,8 +26,6 @@ MCP서버를 경유한 생성형 AI서비스 지원
 
 
 *현재 미비상황*
-
-1. MCP서버 구현(langgraph 기반)
-2. AWS EC2와 통신할 Restful api기능의 구현
-3. dockerfile 작성
-4. 벡터스토어 생성 시 캐시된 벡터 스토어를 사용하도록 처리하는 것(InMemory) 도입
+1. AWS EC2와 통신할 Restful api기능의 구현
+2. dockerfile 작성
+3. 벡터스토어 생성 시 캐시된 벡터 스토어를 사용하도록 처리하는 것(InMemory) 도입
