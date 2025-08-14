@@ -1,25 +1,33 @@
 import asyncio
 import logging
-import sys  # 추가: stdin.readline() 위해
+import sys
 from langchain_mcp_adapters.client import MultiServerMCPClient
 from langgraph.prebuilt import create_react_agent
 from langchain_core.messages import HumanMessage
 from dotenv import load_dotenv
 from langchain_teddynote import logging as teddy_logging
+import os  # 추가: 환경 변수 설정 용
 
-# 로깅 설정 수정: 콘솔 핸들러 제거 (로그 파일로만), 레벨 INFO로 낮춤 – 입력/출력 깨끗하게
+# langsmith 완전 비활성화 (추가: 최상단)
+os.environ["LANGCHAIN_TRACING_V2"] = "false"
+os.environ["LANGCHAIN_ENDPOINT"] = ""  # 엔드포인트 비우기 (추가 보안)
+
+# 로깅 설정 수정: 콘솔 핸들러 제거 (파일만), level=INFO 유지
 logging.basicConfig(
-    level=logging.DEBUG,
+    level=logging.INFO,
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-    handlers=[logging.FileHandler("test_mcp4.log", encoding='utf-8'),  # 파일 utf-8
-              logging.StreamHandler()],  # 콘솔 유지
+    handlers=[logging.FileHandler("client_mcp_test2.log", encoding='utf-8')]  # 수정: StreamHandler 제거, utf-8 인코딩
 )
 logger = logging.getLogger(__name__)
 
-# LangSmith 로깅 (필요 시 유지, 하지만 콘솔 영향 최소화)
-teddy_logging.langsmith("MCP Project Client")
+# teddy_logging.langsmith("MCP Project Client") 호출 제거 (또는 주석 처리)
+# teddy_logging.langsmith("MCP Project Client")  # 제거: langsmith 로깅 비활성화
 
 load_dotenv()
+
+# 콘솔 출력 인코딩 utf-8로 설정 (추가: 이모지 에러 방지)
+sys.stdout.reconfigure(encoding='utf-8')
+sys.stderr.reconfigure(encoding='utf-8')
 
 async def run_agent(QA, file_path):
     try:
@@ -28,49 +36,45 @@ async def run_agent(QA, file_path):
                 "pdf_rag": {"url": "http://localhost:8000/mcp/", "transport": "streamable_http"},
             }
         )
-        logger.info("MultiServerMCPClient 초기화 완료")
+        # logger.info 제거: 콘솔 깨끗하게 (주석 처리)
+        # logger.info("MultiServerMCPClient 초기화 완료")
 
         tools = await client.get_tools()
         if not tools:
             raise ValueError("도구 로드 실패: 서버 연결 확인 필요")
-        logger.info(f"로드된 도구: {[tool.name for tool in tools]}")
+        # logger.info(f"로드된 도구: {[tool.name for tool in tools]}")  # 주석 처리
 
         agent = create_react_agent(
             model="openai:gpt-4o-mini",
             tools=tools,
             config={"configurable": {"retry_policy": {"max_attempts": 3, "wait_exponential_multiplier": 1000}}}
         )
-        logger.info("에이전트 생성 완료")
+        # logger.info("에이전트 생성 완료")
 
-        
         content = "PDFask 도구를 호출하여 '{}' 파일에 대해 다음 질문 처리: '{}'".format(file_path, QA)
         input_message = {"messages": [HumanMessage(content=content)]}
-        logger.info(f"에이전트 요청: {input_message}")
+        # logger.info(f"에이전트 요청: {input_message}")  # 주석 처리
 
         async with asyncio.timeout(300):
             agent_response = await agent.ainvoke(input_message)
-            logger.debug(f"중간 응답: {agent_response.get('intermediate_steps', [])}")
+            # logger.debug(f"중간 응답: {agent_response.get('intermediate_steps', [])}")  # 주석 처리
 
-        logger.info(f"에이전트 응답: {agent_response}")
-        
-        # 수정: 최종 AI 응답만 추출해 깔끔 출력 (messages[-1].content)
+        # logger.info(f"에이전트 응답: {agent_response}")  # 주석 처리 (이게 UnicodeError 유발자)
+
         final_message = agent_response.get("messages", [])[-1]
         if hasattr(final_message, 'content'):
-            print("\nAI 응답:", final_message.content, "\n")  # 센스 있게 포맷팅
+            print("\nAI 응답:", final_message.content, "\n")
         else:
             print("\nAI 응답: (내용 없음)\n")
 
     except asyncio.TimeoutError:
-        logger.error("요청 타임아웃 발생 – 서버 로그와 네트워크 확인 요망")
         print("타임아웃 에러: 서버 확인하세요.")
     except Exception as e:
-        logger.error(f"에러 발생: {e}", exc_info=True)
         print(f"에러: {e} – 로그 파일 확인하세요.")
 
 if __name__ == "__main__":
     while True:
         try:
-            # 수정: input() 대신 sys.stdin.readline() – asyncio 콘솔 지연 방지
             print("질문 내용을 입력해주세요: ")
             QA = sys.stdin.readline().strip()
             print()
@@ -84,4 +88,3 @@ if __name__ == "__main__":
             break
         except Exception as runtime_exception:
             print(f"런타임 에러: {runtime_exception}")
-            logger.error(f"런타임 에러: {runtime_exception}", exc_info=True)

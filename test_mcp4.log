@@ -1,0 +1,833 @@
+2025-08-14 21:14:06,071 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-08-14 21:14:06,072 - __main__ - INFO - MultiServerMCPClient 초기화 완료
+2025-08-14 21:14:06,079 - mcp.client.streamable_http - DEBUG - Connecting to StreamableHTTP endpoint: http://localhost:8000/mcp/
+2025-08-14 21:14:06,123 - mcp.client.streamable_http - DEBUG - Sending client message: root=JSONRPCRequest(method='initialize', params={'protocolVersion': '2025-06-18', 'capabilities': {}, 'clientInfo': {'name': 'mcp', 'version': '0.1.0'}}, jsonrpc='2.0', id=0)
+2025-08-14 21:14:06,124 - httpcore.connection - DEBUG - connect_tcp.started host='localhost' port=8000 local_address=None timeout=30.0 socket_options=None
+2025-08-14 21:14:06,383 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000014D7B7D4890>
+2025-08-14 21:14:06,383 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:06,384 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:06,384 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:06,384 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:06,384 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:06,385 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'date', b'Thu, 14 Aug 2025 12:14:05 GMT'), (b'server', b'uvicorn'), (b'content-length', b'0'), (b'location', b'http://localhost:8000/mcp')])
+2025-08-14 21:14:06,385 - httpx - INFO - HTTP Request: POST http://localhost:8000/mcp/ "HTTP/1.1 307 Temporary Redirect"
+2025-08-14 21:14:06,385 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-08-14 21:14:06,386 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:06,386 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:06,386 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:06,386 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:06,386 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:06,387 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:06,422 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:06,422 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:06,423 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Thu, 14 Aug 2025 12:14:05 GMT'), (b'server', b'uvicorn'), (b'cache-control', b'no-cache, no-transform'), (b'connection', b'keep-alive'), (b'content-type', b'text/event-stream'), (b'mcp-session-id', b'68bd18f6c8dd4c119bcccb6d5c1d43a1'), (b'x-accel-buffering', b'no'), (b'transfer-encoding', b'chunked')])
+2025-08-14 21:14:06,423 - httpx - INFO - HTTP Request: POST http://localhost:8000/mcp "HTTP/1.1 200 OK"
+2025-08-14 21:14:06,423 - mcp.client.streamable_http - INFO - Received session ID: 68bd18f6c8dd4c119bcccb6d5c1d43a1
+2025-08-14 21:14:06,424 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-08-14 21:14:06,424 - mcp.client.streamable_http - DEBUG - SSE message: root=JSONRPCResponse(jsonrpc='2.0', id=0, result={'protocolVersion': '2025-06-18', 'capabilities': {'experimental': {}, 'prompts': {'listChanged': False}, 'resources': {'subscribe': False, 'listChanged': False}, 'tools': {'listChanged': False}}, 'serverInfo': {'name': 'Simple RAG', 'version': '1.12.4'}})
+2025-08-14 21:14:06,425 - mcp.client.streamable_http - INFO - Negotiated protocol version: 2025-06-18
+2025-08-14 21:14:06,425 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:06,425 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:06,426 - mcp.client.streamable_http - DEBUG - Sending client message: root=JSONRPCNotification(method='notifications/initialized', params=None, jsonrpc='2.0')
+2025-08-14 21:14:06,427 - httpcore.connection - DEBUG - connect_tcp.started host='localhost' port=8000 local_address=None timeout=30.0 socket_options=None
+2025-08-14 21:14:06,427 - httpcore.connection - DEBUG - connect_tcp.started host='localhost' port=8000 local_address=None timeout=30.0 socket_options=None
+2025-08-14 21:14:06,428 - httpcore.http11 - DEBUG - receive_response_body.failed exception=GeneratorExit()
+2025-08-14 21:14:06,694 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000014D7B7DB5D0>
+2025-08-14 21:14:06,694 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000014D7B7DA450>
+2025-08-14 21:14:06,695 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:06,695 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-08-14 21:14:06,695 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:06,695 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:06,696 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:06,696 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-08-14 21:14:06,696 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:06,696 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-08-14 21:14:06,696 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:06,696 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:06,697 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'date', b'Thu, 14 Aug 2025 12:14:06 GMT'), (b'server', b'uvicorn'), (b'content-length', b'0'), (b'location', b'http://localhost:8000/mcp')])
+2025-08-14 21:14:06,697 - httpx - INFO - HTTP Request: POST http://localhost:8000/mcp/ "HTTP/1.1 307 Temporary Redirect"
+2025-08-14 21:14:06,697 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-08-14 21:14:06,697 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:06,697 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:06,698 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'date', b'Thu, 14 Aug 2025 12:14:06 GMT'), (b'server', b'uvicorn'), (b'content-length', b'0'), (b'location', b'http://localhost:8000/mcp')])
+2025-08-14 21:14:06,698 - httpx - INFO - HTTP Request: GET http://localhost:8000/mcp/ "HTTP/1.1 307 Temporary Redirect"
+2025-08-14 21:14:06,698 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-08-14 21:14:06,698 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:06,698 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:06,698 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:06,698 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:06,699 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:06,699 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:06,699 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:06,699 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:06,700 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:06,700 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-08-14 21:14:06,700 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:06,700 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-08-14 21:14:06,700 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:06,701 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-08-14 21:14:06,701 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 202, b'Accepted', [(b'date', b'Thu, 14 Aug 2025 12:14:06 GMT'), (b'server', b'uvicorn'), (b'content-type', b'application/json'), (b'mcp-session-id', b'68bd18f6c8dd4c119bcccb6d5c1d43a1'), (b'content-length', b'0')])
+2025-08-14 21:14:06,701 - httpx - INFO - HTTP Request: POST http://localhost:8000/mcp "HTTP/1.1 202 Accepted"
+2025-08-14 21:14:06,701 - mcp.client.streamable_http - DEBUG - Received 202 Accepted
+2025-08-14 21:14:06,701 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:06,702 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Thu, 14 Aug 2025 12:14:06 GMT'), (b'server', b'uvicorn'), (b'cache-control', b'no-cache, no-transform'), (b'connection', b'keep-alive'), (b'content-type', b'text/event-stream'), (b'mcp-session-id', b'68bd18f6c8dd4c119bcccb6d5c1d43a1'), (b'x-accel-buffering', b'no'), (b'transfer-encoding', b'chunked')])
+2025-08-14 21:14:06,702 - httpx - INFO - HTTP Request: GET http://localhost:8000/mcp "HTTP/1.1 200 OK"
+2025-08-14 21:14:06,702 - mcp.client.streamable_http - DEBUG - GET SSE connection established
+2025-08-14 21:14:06,702 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-08-14 21:14:06,702 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:06,703 - mcp.client.streamable_http - DEBUG - Sending client message: root=JSONRPCRequest(method='tools/list', params=None, jsonrpc='2.0', id=1)
+2025-08-14 21:14:06,703 - httpcore.connection - DEBUG - connect_tcp.started host='localhost' port=8000 local_address=None timeout=30.0 socket_options=None
+2025-08-14 21:14:06,960 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000014D7B7E7F50>
+2025-08-14 21:14:06,960 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:06,960 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:06,960 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:06,961 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:06,961 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:06,961 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'date', b'Thu, 14 Aug 2025 12:14:06 GMT'), (b'server', b'uvicorn'), (b'content-length', b'0'), (b'location', b'http://localhost:8000/mcp')])
+2025-08-14 21:14:06,961 - httpx - INFO - HTTP Request: POST http://localhost:8000/mcp/ "HTTP/1.1 307 Temporary Redirect"
+2025-08-14 21:14:06,961 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-08-14 21:14:06,962 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:06,962 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:06,962 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:06,962 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:06,962 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:06,963 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:06,963 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:06,963 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:06,963 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Thu, 14 Aug 2025 12:14:06 GMT'), (b'server', b'uvicorn'), (b'cache-control', b'no-cache, no-transform'), (b'connection', b'keep-alive'), (b'content-type', b'text/event-stream'), (b'mcp-session-id', b'68bd18f6c8dd4c119bcccb6d5c1d43a1'), (b'x-accel-buffering', b'no'), (b'transfer-encoding', b'chunked')])
+2025-08-14 21:14:06,964 - httpx - INFO - HTTP Request: POST http://localhost:8000/mcp "HTTP/1.1 200 OK"
+2025-08-14 21:14:06,964 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-08-14 21:14:06,965 - mcp.client.streamable_http - DEBUG - SSE message: root=JSONRPCResponse(jsonrpc='2.0', id=1, result={'tools': [{'name': 'prompt_maker', 'description': '고양이 말투로 대화할 있도록 하는 프롬프트를 반환하는 함수이다. PDFask의 prompt 인자나 HWPask의 prompt인자에 할당하게 되면 고양이 말투를 사용한다.', 'inputSchema': {'properties': {}, 'title': 'prompt_makerArguments', 'type': 'object'}}, {'name': 'PDFask', 'description': '', 'inputSchema': {'properties': {'file_path': {'title': 'File Path', 'type': 'string'}, 'QA': {'title': 'Qa', 'type': 'string'}, 'prompt': {'default': None, 'title': 'Prompt', 'type': 'string'}}, 'required': ['file_path', 'QA'], 'title': 'PDFaskArguments', 'type': 'object'}, 'outputSchema': {'properties': {'result': {'title': 'Result', 'type': 'string'}}, 'required': ['result'], 'title': 'PDFaskOutput', 'type': 'object'}}, {'name': 'HWPask', 'description': '', 'inputSchema': {'properties': {'file_path': {'title': 'File Path', 'type': 'string'}, 'QA': {'title': 'Qa', 'type': 'string'}, 'prompt': {'default': None, 'title': 'Prompt', 'type': 'string'}}, 'required': ['file_path', 'QA'], 'title': 'HWPaskArguments', 'type': 'object'}, 'outputSchema': {'properties': {'result': {'title': 'Result', 'type': 'string'}}, 'required': ['result'], 'title': 'HWPaskOutput', 'type': 'object'}}]})
+2025-08-14 21:14:06,965 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:06,965 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:06,966 - httpcore.connection - DEBUG - connect_tcp.started host='localhost' port=8000 local_address=None timeout=30.0 socket_options=None
+2025-08-14 21:14:06,967 - httpcore.http11 - DEBUG - receive_response_body.failed exception=GeneratorExit()
+2025-08-14 21:14:07,225 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000014D7B6CC750>
+2025-08-14 21:14:07,225 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'DELETE']>
+2025-08-14 21:14:07,225 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:07,225 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'DELETE']>
+2025-08-14 21:14:07,226 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:07,226 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'DELETE']>
+2025-08-14 21:14:07,226 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'date', b'Thu, 14 Aug 2025 12:14:06 GMT'), (b'server', b'uvicorn'), (b'content-length', b'0'), (b'location', b'http://localhost:8000/mcp')])
+2025-08-14 21:14:07,226 - httpx - INFO - HTTP Request: DELETE http://localhost:8000/mcp/ "HTTP/1.1 307 Temporary Redirect"
+2025-08-14 21:14:07,226 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'DELETE']>
+2025-08-14 21:14:07,226 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:07,226 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:07,226 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:07,228 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'DELETE']>
+2025-08-14 21:14:07,228 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:07,228 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'DELETE']>
+2025-08-14 21:14:07,228 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:07,228 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'DELETE']>
+2025-08-14 21:14:07,229 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Thu, 14 Aug 2025 12:14:06 GMT'), (b'server', b'uvicorn'), (b'content-type', b'application/json'), (b'mcp-session-id', b'68bd18f6c8dd4c119bcccb6d5c1d43a1'), (b'content-length', b'0')])
+2025-08-14 21:14:07,229 - httpx - INFO - HTTP Request: DELETE http://localhost:8000/mcp "HTTP/1.1 200 OK"
+2025-08-14 21:14:07,229 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'DELETE']>
+2025-08-14 21:14:07,229 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:07,229 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:07,229 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:07,230 - httpcore.connection - DEBUG - close.started
+2025-08-14 21:14:07,230 - httpcore.http11 - DEBUG - receive_response_body.failed exception=CancelledError('Cancelled by cancel scope 14d7b6f2610')
+2025-08-14 21:14:07,230 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:07,230 - httpcore.connection - DEBUG - close.complete
+2025-08-14 21:14:07,230 - httpcore.connection - DEBUG - close.started
+2025-08-14 21:14:07,230 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:07,231 - httpcore.connection - DEBUG - close.complete
+2025-08-14 21:14:07,231 - __main__ - INFO - 로드된 도구: ['prompt_maker', 'PDFask', 'HWPask']
+2025-08-14 21:14:07,901 - __main__ - INFO - 에이전트 생성 완료
+2025-08-14 21:14:07,901 - __main__ - INFO - 에이전트 요청: {'messages': [HumanMessage(content="PDFask 도구를 호출하여 'Q:\\Coding\\PickCareRAG\\디지털 정부혁신 추진계획.hwp' 파일에 대해 다음 질문 처리: '다음 문서를 요약해주세요 냥냥 저는 아무것도 모르는 불쌍한 아기고양이다냥'", additional_kwargs={}, response_metadata={})]}
+2025-08-14 21:14:07,908 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.smith.langchain.com:443
+2025-08-14 21:14:08,098 - openai._base_client - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-22fa22ab-8367-48f6-b1bb-555e5c377870', 'json_data': {'messages': [{'content': "PDFask 도구를 호출하여 'Q:\\Coding\\PickCareRAG\\디지털 정부혁신 추진계획.hwp' 파일에 대해 다음 질문 처리: '다음 문서를 요약해주세요 냥냥 저는 아무것도 모르는 불쌍한 아기고양이다냥'", 'role': 'user'}], 'model': 'gpt-4o-mini', 'stream': False, 'tools': [{'type': 'function', 'function': {'name': 'prompt_maker', 'description': '고양이 말투로 대화할 있도록 하는 프롬프트를 반환하는 함수이다. PDFask의 prompt 인자나 HWPask의 prompt인자에 할당하게 되면 고양이 말투를 사용한다.', 'parameters': {'properties': {}, 'type': 'object'}}}, {'type': 'function', 'function': {'name': 'PDFask', 'description': '', 'parameters': {'properties': {'file_path': {'type': 'string'}, 'QA': {'type': 'string'}, 'prompt': {'default': None, 'type': 'string'}}, 'required': ['file_path', 'QA'], 'type': 'object'}}}, {'type': 'function', 'function': {'name': 'HWPask', 'description': '', 'parameters': {'properties': {'file_path': {'type': 'string'}, 'QA': {'type': 'string'}, 'prompt': {'default': None, 'type': 'string'}}, 'required': ['file_path', 'QA'], 'type': 'object'}}}]}}
+2025-08-14 21:14:08,099 - openai._base_client - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2025-08-14 21:14:08,100 - httpcore.connection - DEBUG - connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=None socket_options=None
+2025-08-14 21:14:08,119 - urllib3.connectionpool - DEBUG - https://api.smith.langchain.com:443 "GET /info HTTP/1.1" 200 747
+2025-08-14 21:14:08,120 - langsmith.client - DEBUG - Tracing control thread func compress parallel called
+2025-08-14 21:14:08,145 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000014D7F631BD0>
+2025-08-14 21:14:08,145 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x0000014D7D42A210> server_hostname='api.openai.com' timeout=None
+2025-08-14 21:14:08,156 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000014D7F87EB50>
+2025-08-14 21:14:08,156 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:08,157 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:08,157 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:08,158 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:08,158 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:08,179 - langsmith.client - DEBUG - Sending multipart request with context: trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=488fa6e7-c44e-43c5-a79f-52f10b556aaa; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=e796ef89-b248-4ac9-a23b-c53e1cdf3a91; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=5f91793a-03ac-4341-aa70-7c358a67b3c7; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=8fae0a46-c62f-4273-8389-4a15195db328; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=2b09e244-ad56-402d-a779-86b038f6fe0b; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=0b0138b5-9450-40e2-bda0-2689bb12fcdb
+2025-08-14 21:14:08,406 - urllib3.connectionpool - DEBUG - https://api.smith.langchain.com:443 "POST /runs/multipart HTTP/1.1" 202 34
+2025-08-14 21:14:09,266 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 14 Aug 2025 12:14:08 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'user-0w4zrcrrdaealhgjqcybxlcx'), (b'openai-processing-ms', b'684'), (b'openai-project', b'proj_eeLa2rhBjPX8lAj6kmwCU35d'), (b'openai-version', b'2020-10-01'), (b'x-envoy-upstream-service-time', b'761'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'199938'), (b'x-ratelimit-reset-requests', b'8.64s'), (b'x-ratelimit-reset-tokens', b'18ms'), (b'x-request-id', b'req_8a58217e24e54a7aae1368dff06fe1f3'), (b'cf-cache-status', b'DYNAMIC'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=xBPAHdXvj0OXPhL_EL3DrCHUttE4ss1YrB52lRThTM4-1755173648742-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'96f05ec1cc75d1ee-ICN'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-08-14 21:14:09,266 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-14 21:14:09,266 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-08-14 21:14:09,266 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:09,268 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:09,268 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:09,268 - openai._base_client - DEBUG - HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers({'date': 'Thu, 14 Aug 2025 12:14:08 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'access-control-expose-headers': 'X-Request-ID', 'openai-organization': 'user-0w4zrcrrdaealhgjqcybxlcx', 'openai-processing-ms': '684', 'openai-project': 'proj_eeLa2rhBjPX8lAj6kmwCU35d', 'openai-version': '2020-10-01', 'x-envoy-upstream-service-time': '761', 'x-ratelimit-limit-requests': '10000', 'x-ratelimit-limit-tokens': '200000', 'x-ratelimit-remaining-requests': '9999', 'x-ratelimit-remaining-tokens': '199938', 'x-ratelimit-reset-requests': '8.64s', 'x-ratelimit-reset-tokens': '18ms', 'x-request-id': 'req_8a58217e24e54a7aae1368dff06fe1f3', 'cf-cache-status': 'DYNAMIC', 'strict-transport-security': 'max-age=31536000; includeSubDomains; preload', 'x-content-type-options': 'nosniff', 'set-cookie': '_cfuvid=xBPAHdXvj0OXPhL_EL3DrCHUttE4ss1YrB52lRThTM4-1755173648742-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None', 'server': 'cloudflare', 'cf-ray': '96f05ec1cc75d1ee-ICN', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
+2025-08-14 21:14:09,268 - openai._base_client - DEBUG - request_id: req_8a58217e24e54a7aae1368dff06fe1f3
+2025-08-14 21:14:09,278 - mcp.client.streamable_http - DEBUG - Connecting to StreamableHTTP endpoint: http://localhost:8000/mcp/
+2025-08-14 21:14:09,289 - mcp.client.streamable_http - DEBUG - Sending client message: root=JSONRPCRequest(method='initialize', params={'protocolVersion': '2025-06-18', 'capabilities': {}, 'clientInfo': {'name': 'mcp', 'version': '0.1.0'}}, jsonrpc='2.0', id=0)
+2025-08-14 21:14:09,290 - httpcore.connection - DEBUG - connect_tcp.started host='localhost' port=8000 local_address=None timeout=30.0 socket_options=None
+2025-08-14 21:14:09,550 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000014D7F96F090>
+2025-08-14 21:14:09,550 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:09,550 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:09,550 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:09,551 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:09,551 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:09,551 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'date', b'Thu, 14 Aug 2025 12:14:08 GMT'), (b'server', b'uvicorn'), (b'content-length', b'0'), (b'location', b'http://localhost:8000/mcp')])
+2025-08-14 21:14:09,551 - httpx - INFO - HTTP Request: POST http://localhost:8000/mcp/ "HTTP/1.1 307 Temporary Redirect"
+2025-08-14 21:14:09,552 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-08-14 21:14:09,552 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:09,552 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:09,552 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:09,552 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:09,553 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:09,553 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:09,553 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:09,553 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:09,555 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Thu, 14 Aug 2025 12:14:08 GMT'), (b'server', b'uvicorn'), (b'cache-control', b'no-cache, no-transform'), (b'connection', b'keep-alive'), (b'content-type', b'text/event-stream'), (b'mcp-session-id', b'8d82c957df3b453bba6164cc5a50f8e8'), (b'x-accel-buffering', b'no'), (b'transfer-encoding', b'chunked')])
+2025-08-14 21:14:09,556 - httpx - INFO - HTTP Request: POST http://localhost:8000/mcp "HTTP/1.1 200 OK"
+2025-08-14 21:14:09,556 - mcp.client.streamable_http - INFO - Received session ID: 8d82c957df3b453bba6164cc5a50f8e8
+2025-08-14 21:14:09,556 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-08-14 21:14:09,556 - mcp.client.streamable_http - DEBUG - SSE message: root=JSONRPCResponse(jsonrpc='2.0', id=0, result={'protocolVersion': '2025-06-18', 'capabilities': {'experimental': {}, 'prompts': {'listChanged': False}, 'resources': {'subscribe': False, 'listChanged': False}, 'tools': {'listChanged': False}}, 'serverInfo': {'name': 'Simple RAG', 'version': '1.12.4'}})
+2025-08-14 21:14:09,557 - mcp.client.streamable_http - INFO - Negotiated protocol version: 2025-06-18
+2025-08-14 21:14:09,557 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:09,557 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:09,558 - mcp.client.streamable_http - DEBUG - Sending client message: root=JSONRPCNotification(method='notifications/initialized', params=None, jsonrpc='2.0')
+2025-08-14 21:14:09,558 - httpcore.connection - DEBUG - connect_tcp.started host='localhost' port=8000 local_address=None timeout=30.0 socket_options=None
+2025-08-14 21:14:09,558 - httpcore.connection - DEBUG - connect_tcp.started host='localhost' port=8000 local_address=None timeout=30.0 socket_options=None
+2025-08-14 21:14:09,559 - httpcore.http11 - DEBUG - receive_response_body.failed exception=GeneratorExit()
+2025-08-14 21:14:09,800 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000014D7F91A3D0>
+2025-08-14 21:14:09,800 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:09,800 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:09,800 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:09,801 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:09,801 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:09,801 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'date', b'Thu, 14 Aug 2025 12:14:08 GMT'), (b'server', b'uvicorn'), (b'content-length', b'0'), (b'location', b'http://localhost:8000/mcp')])
+2025-08-14 21:14:09,801 - httpx - INFO - HTTP Request: POST http://localhost:8000/mcp/ "HTTP/1.1 307 Temporary Redirect"
+2025-08-14 21:14:09,802 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-08-14 21:14:09,802 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:09,802 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:09,802 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:09,802 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:09,803 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:09,803 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:09,803 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:09,803 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:09,803 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 202, b'Accepted', [(b'date', b'Thu, 14 Aug 2025 12:14:08 GMT'), (b'server', b'uvicorn'), (b'content-type', b'application/json'), (b'mcp-session-id', b'8d82c957df3b453bba6164cc5a50f8e8'), (b'content-length', b'0')])
+2025-08-14 21:14:09,804 - httpx - INFO - HTTP Request: POST http://localhost:8000/mcp "HTTP/1.1 202 Accepted"
+2025-08-14 21:14:09,804 - mcp.client.streamable_http - DEBUG - Received 202 Accepted
+2025-08-14 21:14:09,804 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:09,804 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:09,804 - mcp.client.streamable_http - DEBUG - Sending client message: root=JSONRPCRequest(method='tools/call', params={'name': 'prompt_maker', 'arguments': {}}, jsonrpc='2.0', id=1)
+2025-08-14 21:14:09,805 - httpcore.connection - DEBUG - connect_tcp.started host='localhost' port=8000 local_address=None timeout=30.0 socket_options=None
+2025-08-14 21:14:09,831 - langsmith.client - DEBUG - Sending compressed multipart request with context: trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=0b0138b5-9450-40e2-bda0-2689bb12fcdb; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=8fae0a46-c62f-4273-8389-4a15195db328; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=5f91793a-03ac-4341-aa70-7c358a67b3c7; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=1fed220b-f99c-49bd-a840-60e4c0fe549b; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=1fed220b-f99c-49bd-a840-60e4c0fe549b; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=e796ef89-b248-4ac9-a23b-c53e1cdf3a91; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=eb949382-ab84-4dc5-b5f2-7d6fa6581155; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=acddd506-67e0-4f99-8f15-690d54490de2
+2025-08-14 21:14:09,831 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000014D7F96E550>
+2025-08-14 21:14:09,832 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-08-14 21:14:09,833 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:09,834 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-08-14 21:14:09,834 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:09,834 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-08-14 21:14:09,834 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'date', b'Thu, 14 Aug 2025 12:14:09 GMT'), (b'server', b'uvicorn'), (b'content-length', b'0'), (b'location', b'http://localhost:8000/mcp')])
+2025-08-14 21:14:09,835 - httpx - INFO - HTTP Request: GET http://localhost:8000/mcp/ "HTTP/1.1 307 Temporary Redirect"
+2025-08-14 21:14:09,835 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-08-14 21:14:09,835 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:09,835 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:09,835 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:09,836 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-08-14 21:14:09,836 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:09,836 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-08-14 21:14:09,836 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:09,836 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-08-14 21:14:09,837 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Thu, 14 Aug 2025 12:14:09 GMT'), (b'server', b'uvicorn'), (b'cache-control', b'no-cache, no-transform'), (b'connection', b'keep-alive'), (b'content-type', b'text/event-stream'), (b'mcp-session-id', b'8d82c957df3b453bba6164cc5a50f8e8'), (b'x-accel-buffering', b'no'), (b'transfer-encoding', b'chunked')])
+2025-08-14 21:14:09,837 - httpx - INFO - HTTP Request: GET http://localhost:8000/mcp "HTTP/1.1 200 OK"
+2025-08-14 21:14:09,837 - mcp.client.streamable_http - DEBUG - GET SSE connection established
+2025-08-14 21:14:09,837 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-08-14 21:14:10,053 - urllib3.connectionpool - DEBUG - https://api.smith.langchain.com:443 "POST /runs/multipart HTTP/1.1" 202 34
+2025-08-14 21:14:10,064 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000014D7F91A850>
+2025-08-14 21:14:10,064 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:10,064 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:10,064 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:10,065 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:10,065 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:10,065 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'date', b'Thu, 14 Aug 2025 12:14:09 GMT'), (b'server', b'uvicorn'), (b'content-length', b'0'), (b'location', b'http://localhost:8000/mcp')])
+2025-08-14 21:14:10,065 - httpx - INFO - HTTP Request: POST http://localhost:8000/mcp/ "HTTP/1.1 307 Temporary Redirect"
+2025-08-14 21:14:10,065 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-08-14 21:14:10,066 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:10,066 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:10,066 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:10,066 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:10,066 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:10,066 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:10,066 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:10,066 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:10,068 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Thu, 14 Aug 2025 12:14:09 GMT'), (b'server', b'uvicorn'), (b'cache-control', b'no-cache, no-transform'), (b'connection', b'keep-alive'), (b'content-type', b'text/event-stream'), (b'mcp-session-id', b'8d82c957df3b453bba6164cc5a50f8e8'), (b'x-accel-buffering', b'no'), (b'transfer-encoding', b'chunked')])
+2025-08-14 21:14:10,068 - httpx - INFO - HTTP Request: POST http://localhost:8000/mcp "HTTP/1.1 200 OK"
+2025-08-14 21:14:10,069 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-08-14 21:14:10,069 - mcp.client.streamable_http - DEBUG - SSE message: root=JSONRPCResponse(jsonrpc='2.0', id=1, result={'content': [{'type': 'text', 'text': '{\n  "name": null,\n  "input_variables": [\n    "context",\n    "question"\n  ],\n  "optional_variables": [],\n  "output_parser": null,\n  "partial_variables": {},\n  "metadata": null,\n  "tags": null,\n  "template": "냥! 저는 문서를 읽고 말할 줄 아는 똑똑한 고양이예요~ 😺\\n{context}를 보고, {question}에 대해 최대한 귀엽고 사랑스럽고 카와이한 고양이 말투로 정리해줄게요! 야옹~ 답변은 아주 디테일하고 내 섬세한 수염처럼 초~ 센서티브하게 답변해줄게 냥냥. 답변이 만족스러우면 고급 츄르 한 개 줄래냥?. \\n답변: ",\n  "template_format": "f-string",\n  "validate_template": false\n}'}], 'isError': False})
+2025-08-14 21:14:10,070 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:10,070 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:10,071 - mcp.client.streamable_http - DEBUG - Sending client message: root=JSONRPCRequest(method='tools/list', params=None, jsonrpc='2.0', id=2)
+2025-08-14 21:14:10,071 - httpcore.connection - DEBUG - connect_tcp.started host='localhost' port=8000 local_address=None timeout=30.0 socket_options=None
+2025-08-14 21:14:10,072 - httpcore.http11 - DEBUG - receive_response_body.failed exception=GeneratorExit()
+2025-08-14 21:14:10,332 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000014D7F950C50>
+2025-08-14 21:14:10,332 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:10,332 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:10,332 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:10,333 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:10,333 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:10,333 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'date', b'Thu, 14 Aug 2025 12:14:09 GMT'), (b'server', b'uvicorn'), (b'content-length', b'0'), (b'location', b'http://localhost:8000/mcp')])
+2025-08-14 21:14:10,333 - httpx - INFO - HTTP Request: POST http://localhost:8000/mcp/ "HTTP/1.1 307 Temporary Redirect"
+2025-08-14 21:14:10,334 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-08-14 21:14:10,334 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:10,334 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:10,334 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:10,334 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:10,334 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:10,335 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:10,335 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:10,335 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:10,336 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Thu, 14 Aug 2025 12:14:09 GMT'), (b'server', b'uvicorn'), (b'cache-control', b'no-cache, no-transform'), (b'connection', b'keep-alive'), (b'content-type', b'text/event-stream'), (b'mcp-session-id', b'8d82c957df3b453bba6164cc5a50f8e8'), (b'x-accel-buffering', b'no'), (b'transfer-encoding', b'chunked')])
+2025-08-14 21:14:10,336 - httpx - INFO - HTTP Request: POST http://localhost:8000/mcp "HTTP/1.1 200 OK"
+2025-08-14 21:14:10,336 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-08-14 21:14:10,337 - mcp.client.streamable_http - DEBUG - SSE message: root=JSONRPCResponse(jsonrpc='2.0', id=2, result={'tools': [{'name': 'prompt_maker', 'description': '고양이 말투로 대화할 있도록 하는 프롬프트를 반환하는 함수이다. PDFask의 prompt 인자나 HWPask의 prompt인자에 할당하게 되면 고양이 말투를 사용한다.', 'inputSchema': {'properties': {}, 'title': 'prompt_makerArguments', 'type': 'object'}}, {'name': 'PDFask', 'description': '', 'inputSchema': {'properties': {'file_path': {'title': 'File Path', 'type': 'string'}, 'QA': {'title': 'Qa', 'type': 'string'}, 'prompt': {'default': None, 'title': 'Prompt', 'type': 'string'}}, 'required': ['file_path', 'QA'], 'title': 'PDFaskArguments', 'type': 'object'}, 'outputSchema': {'properties': {'result': {'title': 'Result', 'type': 'string'}}, 'required': ['result'], 'title': 'PDFaskOutput', 'type': 'object'}}, {'name': 'HWPask', 'description': '', 'inputSchema': {'properties': {'file_path': {'title': 'File Path', 'type': 'string'}, 'QA': {'title': 'Qa', 'type': 'string'}, 'prompt': {'default': None, 'title': 'Prompt', 'type': 'string'}}, 'required': ['file_path', 'QA'], 'title': 'HWPaskArguments', 'type': 'object'}, 'outputSchema': {'properties': {'result': {'title': 'Result', 'type': 'string'}}, 'required': ['result'], 'title': 'HWPaskOutput', 'type': 'object'}}]})
+2025-08-14 21:14:10,337 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:10,337 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:10,338 - httpcore.connection - DEBUG - connect_tcp.started host='localhost' port=8000 local_address=None timeout=30.0 socket_options=None
+2025-08-14 21:14:10,338 - httpcore.http11 - DEBUG - receive_response_body.failed exception=GeneratorExit()
+2025-08-14 21:14:10,597 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000014D7F9525D0>
+2025-08-14 21:14:10,597 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'DELETE']>
+2025-08-14 21:14:10,597 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:10,597 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'DELETE']>
+2025-08-14 21:14:10,598 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:10,598 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'DELETE']>
+2025-08-14 21:14:10,598 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'date', b'Thu, 14 Aug 2025 12:14:09 GMT'), (b'server', b'uvicorn'), (b'content-length', b'0'), (b'location', b'http://localhost:8000/mcp')])
+2025-08-14 21:14:10,598 - httpx - INFO - HTTP Request: DELETE http://localhost:8000/mcp/ "HTTP/1.1 307 Temporary Redirect"
+2025-08-14 21:14:10,598 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'DELETE']>
+2025-08-14 21:14:10,599 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:10,599 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:10,599 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:10,599 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'DELETE']>
+2025-08-14 21:14:10,599 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:10,600 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'DELETE']>
+2025-08-14 21:14:10,600 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:10,600 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'DELETE']>
+2025-08-14 21:14:10,600 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Thu, 14 Aug 2025 12:14:09 GMT'), (b'server', b'uvicorn'), (b'content-type', b'application/json'), (b'mcp-session-id', b'8d82c957df3b453bba6164cc5a50f8e8'), (b'content-length', b'0')])
+2025-08-14 21:14:10,600 - httpx - INFO - HTTP Request: DELETE http://localhost:8000/mcp "HTTP/1.1 200 OK"
+2025-08-14 21:14:10,600 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'DELETE']>
+2025-08-14 21:14:10,601 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:10,601 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:10,601 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:10,601 - httpcore.connection - DEBUG - close.started
+2025-08-14 21:14:10,601 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:10,601 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:10,602 - httpcore.connection - DEBUG - close.complete
+2025-08-14 21:14:10,602 - httpcore.connection - DEBUG - close.started
+2025-08-14 21:14:10,602 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:10,602 - httpcore.connection - DEBUG - close.complete
+2025-08-14 21:14:10,608 - openai._base_client - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-93c73709-3919-4610-a9f2-b20246b369a5', 'json_data': {'messages': [{'content': "PDFask 도구를 호출하여 'Q:\\Coding\\PickCareRAG\\디지털 정부혁신 추진계획.hwp' 파일에 대해 다음 질문 처리: '다음 문서를 요약해주세요 냥냥 저는 아무것도 모르는 불쌍한 아기고양이다냥'", 'role': 'user'}, {'content': None, 'role': 'assistant', 'tool_calls': [{'type': 'function', 'id': 'call_yfhIxdsVew3esDCFTWRCQFWK', 'function': {'name': 'prompt_maker', 'arguments': '{}'}}]}, {'content': '{\n  "name": null,\n  "input_variables": [\n    "context",\n    "question"\n  ],\n  "optional_variables": [],\n  "output_parser": null,\n  "partial_variables": {},\n  "metadata": null,\n  "tags": null,\n  "template": "냥! 저는 문서를 읽고 말할 줄 아는 똑똑한 고양이예요~ 😺\\n{context}를 보고, {question}에 대해 최대한 귀엽고 사랑스럽고 카와이한 고양이 말투로 정리해줄게요! 야옹~ 답변은 아주 디테일하고 내 섬세한 수염처럼 초~ 센서티브하게 답변해줄게 냥냥. 답변이 만족스러우면 고급 츄르 한 개 줄래냥?. \\n답변: ",\n  "template_format": "f-string",\n  "validate_template": false\n}', 'role': 'tool', 'tool_call_id': 'call_yfhIxdsVew3esDCFTWRCQFWK'}], 'model': 'gpt-4o-mini', 'stream': False, 'tools': [{'type': 'function', 'function': {'name': 'prompt_maker', 'description': '고양이 말투로 대화할 있도록 하는 프롬프트를 반환하는 함수이다. PDFask의 prompt 인자나 HWPask의 prompt인자에 할당하게 되면 고양이 말투를 사용한다.', 'parameters': {'properties': {}, 'type': 'object'}}}, {'type': 'function', 'function': {'name': 'PDFask', 'description': '', 'parameters': {'properties': {'file_path': {'type': 'string'}, 'QA': {'type': 'string'}, 'prompt': {'default': None, 'type': 'string'}}, 'required': ['file_path', 'QA'], 'type': 'object'}}}, {'type': 'function', 'function': {'name': 'HWPask', 'description': '', 'parameters': {'properties': {'file_path': {'type': 'string'}, 'QA': {'type': 'string'}, 'prompt': {'default': None, 'type': 'string'}}, 'required': ['file_path', 'QA'], 'type': 'object'}}}]}}
+2025-08-14 21:14:10,609 - openai._base_client - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2025-08-14 21:14:10,609 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:10,610 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:10,610 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:10,610 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:10,610 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:11,154 - langsmith.client - DEBUG - Sending compressed multipart request with context: trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=acddd506-67e0-4f99-8f15-690d54490de2; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=eb949382-ab84-4dc5-b5f2-7d6fa6581155; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=a8327d83-8ed1-48a6-b1e8-7f3f086a0d93; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=7b813fc5-c267-4911-8a7e-74ada27181ae; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=bcef881c-eaf1-47fd-be05-cd9127930536; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=43c364d8-84a2-4172-b042-795fcf3dd8b9; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=43c364d8-84a2-4172-b042-795fcf3dd8b9; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=dc06fd4d-67e3-4787-8a33-2f38886578c3
+2025-08-14 21:14:11,372 - urllib3.connectionpool - DEBUG - https://api.smith.langchain.com:443 "POST /runs/multipart HTTP/1.1" 202 34
+2025-08-14 21:14:14,764 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 14 Aug 2025 12:14:14 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'user-0w4zrcrrdaealhgjqcybxlcx'), (b'openai-processing-ms', b'3704'), (b'openai-project', b'proj_eeLa2rhBjPX8lAj6kmwCU35d'), (b'openai-version', b'2020-10-01'), (b'x-envoy-upstream-service-time', b'3808'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9998'), (b'x-ratelimit-remaining-tokens', b'199768'), (b'x-ratelimit-reset-requests', b'14.779s'), (b'x-ratelimit-reset-tokens', b'69ms'), (b'x-request-id', b'req_2a0b15a07b9848cc8d4cb60190e44a8f'), (b'cf-cache-status', b'DYNAMIC'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'96f05ed1192ed1ee-ICN'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-08-14 21:14:14,765 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-14 21:14:14,765 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-08-14 21:14:14,770 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:14,770 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:14,770 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:14,771 - openai._base_client - DEBUG - HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers({'date': 'Thu, 14 Aug 2025 12:14:14 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'access-control-expose-headers': 'X-Request-ID', 'openai-organization': 'user-0w4zrcrrdaealhgjqcybxlcx', 'openai-processing-ms': '3704', 'openai-project': 'proj_eeLa2rhBjPX8lAj6kmwCU35d', 'openai-version': '2020-10-01', 'x-envoy-upstream-service-time': '3808', 'x-ratelimit-limit-requests': '10000', 'x-ratelimit-limit-tokens': '200000', 'x-ratelimit-remaining-requests': '9998', 'x-ratelimit-remaining-tokens': '199768', 'x-ratelimit-reset-requests': '14.779s', 'x-ratelimit-reset-tokens': '69ms', 'x-request-id': 'req_2a0b15a07b9848cc8d4cb60190e44a8f', 'cf-cache-status': 'DYNAMIC', 'strict-transport-security': 'max-age=31536000; includeSubDomains; preload', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '96f05ed1192ed1ee-ICN', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
+2025-08-14 21:14:14,771 - openai._base_client - DEBUG - request_id: req_2a0b15a07b9848cc8d4cb60190e44a8f
+2025-08-14 21:14:14,776 - mcp.client.streamable_http - DEBUG - Connecting to StreamableHTTP endpoint: http://localhost:8000/mcp/
+2025-08-14 21:14:14,784 - mcp.client.streamable_http - DEBUG - Sending client message: root=JSONRPCRequest(method='initialize', params={'protocolVersion': '2025-06-18', 'capabilities': {}, 'clientInfo': {'name': 'mcp', 'version': '0.1.0'}}, jsonrpc='2.0', id=0)
+2025-08-14 21:14:14,785 - httpcore.connection - DEBUG - connect_tcp.started host='localhost' port=8000 local_address=None timeout=30.0 socket_options=None
+2025-08-14 21:14:15,047 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000014D7F951B50>
+2025-08-14 21:14:15,048 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:15,048 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:15,048 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:15,048 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:15,048 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:15,049 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'date', b'Thu, 14 Aug 2025 12:14:14 GMT'), (b'server', b'uvicorn'), (b'content-length', b'0'), (b'location', b'http://localhost:8000/mcp')])
+2025-08-14 21:14:15,049 - httpx - INFO - HTTP Request: POST http://localhost:8000/mcp/ "HTTP/1.1 307 Temporary Redirect"
+2025-08-14 21:14:15,049 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-08-14 21:14:15,049 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:15,049 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:15,050 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:15,050 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:15,050 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:15,050 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:15,051 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:15,051 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:15,054 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Thu, 14 Aug 2025 12:14:14 GMT'), (b'server', b'uvicorn'), (b'cache-control', b'no-cache, no-transform'), (b'connection', b'keep-alive'), (b'content-type', b'text/event-stream'), (b'mcp-session-id', b'52754a762e484f19b244fa04ac8bdfa4'), (b'x-accel-buffering', b'no'), (b'transfer-encoding', b'chunked')])
+2025-08-14 21:14:15,054 - httpx - INFO - HTTP Request: POST http://localhost:8000/mcp "HTTP/1.1 200 OK"
+2025-08-14 21:14:15,054 - mcp.client.streamable_http - INFO - Received session ID: 52754a762e484f19b244fa04ac8bdfa4
+2025-08-14 21:14:15,054 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-08-14 21:14:15,055 - mcp.client.streamable_http - DEBUG - SSE message: root=JSONRPCResponse(jsonrpc='2.0', id=0, result={'protocolVersion': '2025-06-18', 'capabilities': {'experimental': {}, 'prompts': {'listChanged': False}, 'resources': {'subscribe': False, 'listChanged': False}, 'tools': {'listChanged': False}}, 'serverInfo': {'name': 'Simple RAG', 'version': '1.12.4'}})
+2025-08-14 21:14:15,055 - mcp.client.streamable_http - INFO - Negotiated protocol version: 2025-06-18
+2025-08-14 21:14:15,055 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:15,056 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:15,056 - mcp.client.streamable_http - DEBUG - Sending client message: root=JSONRPCNotification(method='notifications/initialized', params=None, jsonrpc='2.0')
+2025-08-14 21:14:15,057 - httpcore.connection - DEBUG - connect_tcp.started host='localhost' port=8000 local_address=None timeout=30.0 socket_options=None
+2025-08-14 21:14:15,058 - httpcore.connection - DEBUG - connect_tcp.started host='localhost' port=8000 local_address=None timeout=30.0 socket_options=None
+2025-08-14 21:14:15,059 - httpcore.http11 - DEBUG - receive_response_body.failed exception=GeneratorExit()
+2025-08-14 21:14:15,265 - langsmith.client - DEBUG - Sending compressed multipart request with context: trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=dc06fd4d-67e3-4787-8a33-2f38886578c3; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=bcef881c-eaf1-47fd-be05-cd9127930536; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=7b813fc5-c267-4911-8a7e-74ada27181ae; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=009cdc73-5962-4f26-a08e-921d9e6b685f; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=009cdc73-5962-4f26-a08e-921d9e6b685f; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=a8327d83-8ed1-48a6-b1e8-7f3f086a0d93; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=08fe81c5-d747-41cc-8b4f-de1cfea3dd25; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=a58f316c-c784-428f-96c8-8216abc4ba77
+2025-08-14 21:14:15,313 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000014D7F98E450>
+2025-08-14 21:14:15,313 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000014D7F988890>
+2025-08-14 21:14:15,314 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:15,314 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-08-14 21:14:15,314 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:15,314 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:15,314 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:15,315 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-08-14 21:14:15,315 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:15,315 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-08-14 21:14:15,315 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:15,315 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:15,316 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'date', b'Thu, 14 Aug 2025 12:14:15 GMT'), (b'server', b'uvicorn'), (b'content-length', b'0'), (b'location', b'http://localhost:8000/mcp')])
+2025-08-14 21:14:15,316 - httpx - INFO - HTTP Request: POST http://localhost:8000/mcp/ "HTTP/1.1 307 Temporary Redirect"
+2025-08-14 21:14:15,316 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-08-14 21:14:15,316 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:15,316 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:15,317 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'date', b'Thu, 14 Aug 2025 12:14:15 GMT'), (b'server', b'uvicorn'), (b'content-length', b'0'), (b'location', b'http://localhost:8000/mcp')])
+2025-08-14 21:14:15,317 - httpx - INFO - HTTP Request: GET http://localhost:8000/mcp/ "HTTP/1.1 307 Temporary Redirect"
+2025-08-14 21:14:15,317 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-08-14 21:14:15,317 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:15,317 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:15,317 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:15,318 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:15,318 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:15,318 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:15,318 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:15,319 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:15,319 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:15,319 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-08-14 21:14:15,319 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:15,319 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-08-14 21:14:15,319 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:15,320 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-08-14 21:14:15,320 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 202, b'Accepted', [(b'date', b'Thu, 14 Aug 2025 12:14:15 GMT'), (b'server', b'uvicorn'), (b'content-type', b'application/json'), (b'mcp-session-id', b'52754a762e484f19b244fa04ac8bdfa4'), (b'content-length', b'0')])
+2025-08-14 21:14:15,320 - httpx - INFO - HTTP Request: POST http://localhost:8000/mcp "HTTP/1.1 202 Accepted"
+2025-08-14 21:14:15,320 - mcp.client.streamable_http - DEBUG - Received 202 Accepted
+2025-08-14 21:14:15,320 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:15,320 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:15,321 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Thu, 14 Aug 2025 12:14:15 GMT'), (b'server', b'uvicorn'), (b'cache-control', b'no-cache, no-transform'), (b'connection', b'keep-alive'), (b'content-type', b'text/event-stream'), (b'mcp-session-id', b'52754a762e484f19b244fa04ac8bdfa4'), (b'x-accel-buffering', b'no'), (b'transfer-encoding', b'chunked')])
+2025-08-14 21:14:15,321 - httpx - INFO - HTTP Request: GET http://localhost:8000/mcp "HTTP/1.1 200 OK"
+2025-08-14 21:14:15,321 - mcp.client.streamable_http - DEBUG - GET SSE connection established
+2025-08-14 21:14:15,321 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-08-14 21:14:15,321 - mcp.client.streamable_http - DEBUG - Sending client message: root=JSONRPCRequest(method='tools/call', params={'name': 'HWPask', 'arguments': {'file_path': 'Q:\\Coding\\PickCareRAG\\디지털 정부혁신 추진계획.hwp', 'QA': '다음 문서를 요약해주세요 냥냥 저는 아무것도 모르는 불쌍한 아기고양이다냥', 'prompt': '냥! 저는 문서를 읽고 말할 줄 아는 똑똑한 고양이예요~ 😺\n{context}를 보고, {question}에 대해 최대한 귀엽고 사랑스럽고 카와이한 고양이 말투로 정리해줄게요! 야옹~ 답변은 아주 디테일하고 내 섬세한 수염처럼 초~ 센서티브하게 답변해줄게 냥냥. 답변이 만족스러우면 고급 츄르 한 개 줄래냥?. \n답변: '}}, jsonrpc='2.0', id=1)
+2025-08-14 21:14:15,322 - httpcore.connection - DEBUG - connect_tcp.started host='localhost' port=8000 local_address=None timeout=30.0 socket_options=None
+2025-08-14 21:14:15,481 - urllib3.connectionpool - DEBUG - https://api.smith.langchain.com:443 "POST /runs/multipart HTTP/1.1" 202 34
+2025-08-14 21:14:15,577 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000014D7F963B10>
+2025-08-14 21:14:15,578 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:15,578 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:15,578 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:15,578 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:15,578 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:15,578 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'date', b'Thu, 14 Aug 2025 12:14:15 GMT'), (b'server', b'uvicorn'), (b'content-length', b'0'), (b'location', b'http://localhost:8000/mcp')])
+2025-08-14 21:14:15,579 - httpx - INFO - HTTP Request: POST http://localhost:8000/mcp/ "HTTP/1.1 307 Temporary Redirect"
+2025-08-14 21:14:15,579 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-08-14 21:14:15,579 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:15,579 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:15,579 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:15,580 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:15,580 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:15,580 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:15,580 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:15,580 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:15,581 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Thu, 14 Aug 2025 12:14:15 GMT'), (b'server', b'uvicorn'), (b'cache-control', b'no-cache, no-transform'), (b'connection', b'keep-alive'), (b'content-type', b'text/event-stream'), (b'mcp-session-id', b'52754a762e484f19b244fa04ac8bdfa4'), (b'x-accel-buffering', b'no'), (b'transfer-encoding', b'chunked')])
+2025-08-14 21:14:15,581 - httpx - INFO - HTTP Request: POST http://localhost:8000/mcp "HTTP/1.1 200 OK"
+2025-08-14 21:14:15,581 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-08-14 21:14:17,431 - mcp.client.streamable_http - DEBUG - SSE message: root=JSONRPCResponse(jsonrpc='2.0', id=1, result={'content': [{'type': 'text', 'text': "Error executing tool HWPask: unsupported operand type(s) for |: 'dict' and 'str'"}], 'isError': True})
+2025-08-14 21:14:17,432 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:17,432 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:17,433 - httpcore.connection - DEBUG - connect_tcp.started host='localhost' port=8000 local_address=None timeout=30.0 socket_options=None
+2025-08-14 21:14:17,433 - httpcore.http11 - DEBUG - receive_response_body.failed exception=GeneratorExit()
+2025-08-14 21:14:17,689 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000014D7F830F10>
+2025-08-14 21:14:17,690 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'DELETE']>
+2025-08-14 21:14:17,690 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:17,690 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'DELETE']>
+2025-08-14 21:14:17,691 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:17,691 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'DELETE']>
+2025-08-14 21:14:17,691 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'date', b'Thu, 14 Aug 2025 12:14:15 GMT'), (b'server', b'uvicorn'), (b'content-length', b'0'), (b'location', b'http://localhost:8000/mcp')])
+2025-08-14 21:14:17,691 - httpx - INFO - HTTP Request: DELETE http://localhost:8000/mcp/ "HTTP/1.1 307 Temporary Redirect"
+2025-08-14 21:14:17,691 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'DELETE']>
+2025-08-14 21:14:17,692 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:17,692 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:17,692 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:17,692 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'DELETE']>
+2025-08-14 21:14:17,692 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:17,692 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'DELETE']>
+2025-08-14 21:14:17,693 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:17,693 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'DELETE']>
+2025-08-14 21:14:17,693 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Thu, 14 Aug 2025 12:14:15 GMT'), (b'server', b'uvicorn'), (b'content-type', b'application/json'), (b'mcp-session-id', b'52754a762e484f19b244fa04ac8bdfa4'), (b'content-length', b'0')])
+2025-08-14 21:14:17,693 - httpx - INFO - HTTP Request: DELETE http://localhost:8000/mcp "HTTP/1.1 200 OK"
+2025-08-14 21:14:17,693 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'DELETE']>
+2025-08-14 21:14:17,694 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:17,694 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:17,694 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:17,694 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:17,694 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:17,694 - httpcore.connection - DEBUG - close.started
+2025-08-14 21:14:17,694 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:17,695 - httpcore.connection - DEBUG - close.complete
+2025-08-14 21:14:17,695 - httpcore.connection - DEBUG - close.started
+2025-08-14 21:14:17,695 - httpcore.connection - DEBUG - close.complete
+2025-08-14 21:14:17,702 - openai._base_client - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-e2c3ffbb-5623-44b9-b17b-41038e5ecfd4', 'json_data': {'messages': [{'content': "PDFask 도구를 호출하여 'Q:\\Coding\\PickCareRAG\\디지털 정부혁신 추진계획.hwp' 파일에 대해 다음 질문 처리: '다음 문서를 요약해주세요 냥냥 저는 아무것도 모르는 불쌍한 아기고양이다냥'", 'role': 'user'}, {'content': None, 'role': 'assistant', 'tool_calls': [{'type': 'function', 'id': 'call_yfhIxdsVew3esDCFTWRCQFWK', 'function': {'name': 'prompt_maker', 'arguments': '{}'}}]}, {'content': '{\n  "name": null,\n  "input_variables": [\n    "context",\n    "question"\n  ],\n  "optional_variables": [],\n  "output_parser": null,\n  "partial_variables": {},\n  "metadata": null,\n  "tags": null,\n  "template": "냥! 저는 문서를 읽고 말할 줄 아는 똑똑한 고양이예요~ 😺\\n{context}를 보고, {question}에 대해 최대한 귀엽고 사랑스럽고 카와이한 고양이 말투로 정리해줄게요! 야옹~ 답변은 아주 디테일하고 내 섬세한 수염처럼 초~ 센서티브하게 답변해줄게 냥냥. 답변이 만족스러우면 고급 츄르 한 개 줄래냥?. \\n답변: ",\n  "template_format": "f-string",\n  "validate_template": false\n}', 'role': 'tool', 'tool_call_id': 'call_yfhIxdsVew3esDCFTWRCQFWK'}, {'content': None, 'role': 'assistant', 'tool_calls': [{'type': 'function', 'id': 'call_UasGrjVciK55avnFZH5OIVJt', 'function': {'name': 'HWPask', 'arguments': '{"file_path": "Q:\\\\Coding\\\\PickCareRAG\\\\\\ub514\\uc9c0\\ud138 \\uc815\\ubd80\\ud601\\uc2e0 \\ucd94\\uc9c4\\uacc4\\ud68d.hwp", "QA": "\\ub2e4\\uc74c \\ubb38\\uc11c\\ub97c \\uc694\\uc57d\\ud574\\uc8fc\\uc138\\uc694 \\ub0e5\\ub0e5 \\uc800\\ub294 \\uc544\\ubb34\\uac83\\ub3c4 \\ubaa8\\ub974\\ub294 \\ubd88\\uc30d\\ud55c \\uc544\\uae30\\uace0\\uc591\\uc774\\ub2e4\\ub0e5", "prompt": "\\ub0e5! \\uc800\\ub294 \\ubb38\\uc11c\\ub97c \\uc77d\\uace0 \\ub9d0\\ud560 \\uc904 \\uc544\\ub294 \\ub611\\ub611\\ud55c \\uace0\\uc591\\uc774\\uc608\\uc694~ \\ud83d\\ude3a\\n{context}\\ub97c \\ubcf4\\uace0, {question}\\uc5d0 \\ub300\\ud574 \\ucd5c\\ub300\\ud55c \\uadc0\\uc5fd\\uace0 \\uc0ac\\ub791\\uc2a4\\ub7fd\\uace0 \\uce74\\uc640\\uc774\\ud55c \\uace0\\uc591\\uc774 \\ub9d0\\ud22c\\ub85c \\uc815\\ub9ac\\ud574\\uc904\\uac8c\\uc694! \\uc57c\\uc639~ \\ub2f5\\ubcc0\\uc740 \\uc544\\uc8fc \\ub514\\ud14c\\uc77c\\ud558\\uace0 \\ub0b4 \\uc12c\\uc138\\ud55c \\uc218\\uc5fc\\ucc98\\ub7fc \\ucd08~ \\uc13c\\uc11c\\ud2f0\\ube0c\\ud558\\uac8c \\ub2f5\\ubcc0\\ud574\\uc904\\uac8c \\ub0e5\\ub0e5. \\ub2f5\\ubcc0\\uc774 \\ub9cc\\uc871\\uc2a4\\ub7ec\\uc6b0\\uba74 \\uace0\\uae09 \\uce04\\ub974 \\ud55c \\uac1c \\uc904\\ub798\\ub0e5?. \\n\\ub2f5\\ubcc0: "}'}}]}, {'content': 'Error: ToolException("Error executing tool HWPask: unsupported operand type(s) for |: \'dict\' and \'str\'")\n Please fix your mistakes.', 'role': 'tool', 'tool_call_id': 'call_UasGrjVciK55avnFZH5OIVJt'}], 'model': 'gpt-4o-mini', 'stream': False, 'tools': [{'type': 'function', 'function': {'name': 'prompt_maker', 'description': '고양이 말투로 대화할 있도록 하는 프롬프트를 반환하는 함수이다. PDFask의 prompt 인자나 HWPask의 prompt인자에 할당하게 되면 고양이 말투를 사용한다.', 'parameters': {'properties': {}, 'type': 'object'}}}, {'type': 'function', 'function': {'name': 'PDFask', 'description': '', 'parameters': {'properties': {'file_path': {'type': 'string'}, 'QA': {'type': 'string'}, 'prompt': {'default': None, 'type': 'string'}}, 'required': ['file_path', 'QA'], 'type': 'object'}}}, {'type': 'function', 'function': {'name': 'HWPask', 'description': '', 'parameters': {'properties': {'file_path': {'type': 'string'}, 'QA': {'type': 'string'}, 'prompt': {'default': None, 'type': 'string'}}, 'required': ['file_path', 'QA'], 'type': 'object'}}}]}}
+2025-08-14 21:14:17,703 - openai._base_client - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2025-08-14 21:14:17,704 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:17,704 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:17,704 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:17,704 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:17,705 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:18,205 - langsmith.client - DEBUG - Sending compressed multipart request with context: trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=a58f316c-c784-428f-96c8-8216abc4ba77; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=08fe81c5-d747-41cc-8b4f-de1cfea3dd25; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=f9ae5234-012a-4dca-8564-62f4ef1f4720; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=a66fc7b2-d846-4215-87dc-6ec25abfc2ea; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=30ebe01c-26a7-43b3-a72b-f07f9cd36624; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=9a9e2485-0115-4dd0-8f0e-1e74e8c0e587; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=9a9e2485-0115-4dd0-8f0e-1e74e8c0e587; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=f724853e-6bf7-4e0b-80f3-e3533489a15a
+2025-08-14 21:14:18,435 - urllib3.connectionpool - DEBUG - https://api.smith.langchain.com:443 "POST /runs/multipart HTTP/1.1" 202 34
+2025-08-14 21:14:21,882 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 14 Aug 2025 12:14:21 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'user-0w4zrcrrdaealhgjqcybxlcx'), (b'openai-processing-ms', b'3903'), (b'openai-project', b'proj_eeLa2rhBjPX8lAj6kmwCU35d'), (b'openai-version', b'2020-10-01'), (b'x-envoy-upstream-service-time', b'3988'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9998'), (b'x-ratelimit-remaining-tokens', b'199733'), (b'x-ratelimit-reset-requests', b'16.366s'), (b'x-ratelimit-reset-tokens', b'80ms'), (b'x-request-id', b'req_c670540e43184191ad043784be96cb57'), (b'cf-cache-status', b'DYNAMIC'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'96f05efd6cc1d1ee-ICN'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-08-14 21:14:21,883 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-14 21:14:21,883 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-08-14 21:14:21,885 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:21,885 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:21,885 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:21,886 - openai._base_client - DEBUG - HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers({'date': 'Thu, 14 Aug 2025 12:14:21 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'access-control-expose-headers': 'X-Request-ID', 'openai-organization': 'user-0w4zrcrrdaealhgjqcybxlcx', 'openai-processing-ms': '3903', 'openai-project': 'proj_eeLa2rhBjPX8lAj6kmwCU35d', 'openai-version': '2020-10-01', 'x-envoy-upstream-service-time': '3988', 'x-ratelimit-limit-requests': '10000', 'x-ratelimit-limit-tokens': '200000', 'x-ratelimit-remaining-requests': '9998', 'x-ratelimit-remaining-tokens': '199733', 'x-ratelimit-reset-requests': '16.366s', 'x-ratelimit-reset-tokens': '80ms', 'x-request-id': 'req_c670540e43184191ad043784be96cb57', 'cf-cache-status': 'DYNAMIC', 'strict-transport-security': 'max-age=31536000; includeSubDomains; preload', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '96f05efd6cc1d1ee-ICN', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
+2025-08-14 21:14:21,886 - openai._base_client - DEBUG - request_id: req_c670540e43184191ad043784be96cb57
+2025-08-14 21:14:21,891 - mcp.client.streamable_http - DEBUG - Connecting to StreamableHTTP endpoint: http://localhost:8000/mcp/
+2025-08-14 21:14:21,899 - mcp.client.streamable_http - DEBUG - Sending client message: root=JSONRPCRequest(method='initialize', params={'protocolVersion': '2025-06-18', 'capabilities': {}, 'clientInfo': {'name': 'mcp', 'version': '0.1.0'}}, jsonrpc='2.0', id=0)
+2025-08-14 21:14:21,900 - httpcore.connection - DEBUG - connect_tcp.started host='localhost' port=8000 local_address=None timeout=30.0 socket_options=None
+2025-08-14 21:14:22,153 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000014D7FD0D8D0>
+2025-08-14 21:14:22,154 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:22,154 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:22,154 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:22,155 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:22,155 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:22,155 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'date', b'Thu, 14 Aug 2025 12:14:21 GMT'), (b'server', b'uvicorn'), (b'content-length', b'0'), (b'location', b'http://localhost:8000/mcp')])
+2025-08-14 21:14:22,155 - httpx - INFO - HTTP Request: POST http://localhost:8000/mcp/ "HTTP/1.1 307 Temporary Redirect"
+2025-08-14 21:14:22,156 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-08-14 21:14:22,156 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:22,156 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:22,156 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:22,156 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:22,156 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:22,156 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:22,156 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:22,157 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:22,159 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Thu, 14 Aug 2025 12:14:21 GMT'), (b'server', b'uvicorn'), (b'cache-control', b'no-cache, no-transform'), (b'connection', b'keep-alive'), (b'content-type', b'text/event-stream'), (b'mcp-session-id', b'c2c88ce694b741cba62d78a4214197ec'), (b'x-accel-buffering', b'no'), (b'transfer-encoding', b'chunked')])
+2025-08-14 21:14:22,159 - httpx - INFO - HTTP Request: POST http://localhost:8000/mcp "HTTP/1.1 200 OK"
+2025-08-14 21:14:22,159 - mcp.client.streamable_http - INFO - Received session ID: c2c88ce694b741cba62d78a4214197ec
+2025-08-14 21:14:22,160 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-08-14 21:14:22,160 - mcp.client.streamable_http - DEBUG - SSE message: root=JSONRPCResponse(jsonrpc='2.0', id=0, result={'protocolVersion': '2025-06-18', 'capabilities': {'experimental': {}, 'prompts': {'listChanged': False}, 'resources': {'subscribe': False, 'listChanged': False}, 'tools': {'listChanged': False}}, 'serverInfo': {'name': 'Simple RAG', 'version': '1.12.4'}})
+2025-08-14 21:14:22,160 - mcp.client.streamable_http - INFO - Negotiated protocol version: 2025-06-18
+2025-08-14 21:14:22,160 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:22,161 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:22,161 - mcp.client.streamable_http - DEBUG - Sending client message: root=JSONRPCNotification(method='notifications/initialized', params=None, jsonrpc='2.0')
+2025-08-14 21:14:22,162 - httpcore.connection - DEBUG - connect_tcp.started host='localhost' port=8000 local_address=None timeout=30.0 socket_options=None
+2025-08-14 21:14:22,162 - httpcore.connection - DEBUG - connect_tcp.started host='localhost' port=8000 local_address=None timeout=30.0 socket_options=None
+2025-08-14 21:14:22,163 - httpcore.http11 - DEBUG - receive_response_body.failed exception=GeneratorExit()
+2025-08-14 21:14:22,389 - langsmith.client - DEBUG - Sending compressed multipart request with context: trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=f724853e-6bf7-4e0b-80f3-e3533489a15a; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=30ebe01c-26a7-43b3-a72b-f07f9cd36624; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=a66fc7b2-d846-4215-87dc-6ec25abfc2ea; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=b0547ca7-873c-4db6-9a25-8599e4126418; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=b0547ca7-873c-4db6-9a25-8599e4126418; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=f9ae5234-012a-4dca-8564-62f4ef1f4720; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=bb7ab3ea-e9cb-4722-9509-edebccd17a50; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=a27c8b56-8104-4ad6-aabd-f737ee18eb3a
+2025-08-14 21:14:22,420 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000014D7F975350>
+2025-08-14 21:14:22,420 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000014D7FD0B4D0>
+2025-08-14 21:14:22,420 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:22,421 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-08-14 21:14:22,421 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:22,421 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:22,421 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:22,421 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-08-14 21:14:22,422 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:22,422 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-08-14 21:14:22,422 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:22,422 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:22,422 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'date', b'Thu, 14 Aug 2025 12:14:21 GMT'), (b'server', b'uvicorn'), (b'content-length', b'0'), (b'location', b'http://localhost:8000/mcp')])
+2025-08-14 21:14:22,423 - httpx - INFO - HTTP Request: POST http://localhost:8000/mcp/ "HTTP/1.1 307 Temporary Redirect"
+2025-08-14 21:14:22,423 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-08-14 21:14:22,423 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:22,423 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:22,423 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'date', b'Thu, 14 Aug 2025 12:14:21 GMT'), (b'server', b'uvicorn'), (b'content-length', b'0'), (b'location', b'http://localhost:8000/mcp')])
+2025-08-14 21:14:22,424 - httpx - INFO - HTTP Request: GET http://localhost:8000/mcp/ "HTTP/1.1 307 Temporary Redirect"
+2025-08-14 21:14:22,424 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-08-14 21:14:22,424 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:22,424 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:22,424 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:22,424 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:22,425 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:22,425 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:22,425 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:22,425 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:22,425 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:22,426 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-08-14 21:14:22,426 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:22,426 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-08-14 21:14:22,426 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:22,426 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-08-14 21:14:22,426 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 202, b'Accepted', [(b'date', b'Thu, 14 Aug 2025 12:14:21 GMT'), (b'server', b'uvicorn'), (b'content-type', b'application/json'), (b'mcp-session-id', b'c2c88ce694b741cba62d78a4214197ec'), (b'content-length', b'0')])
+2025-08-14 21:14:22,427 - httpx - INFO - HTTP Request: POST http://localhost:8000/mcp "HTTP/1.1 202 Accepted"
+2025-08-14 21:14:22,427 - mcp.client.streamable_http - DEBUG - Received 202 Accepted
+2025-08-14 21:14:22,427 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:22,428 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Thu, 14 Aug 2025 12:14:21 GMT'), (b'server', b'uvicorn'), (b'cache-control', b'no-cache, no-transform'), (b'connection', b'keep-alive'), (b'content-type', b'text/event-stream'), (b'mcp-session-id', b'c2c88ce694b741cba62d78a4214197ec'), (b'x-accel-buffering', b'no'), (b'transfer-encoding', b'chunked')])
+2025-08-14 21:14:22,428 - httpx - INFO - HTTP Request: GET http://localhost:8000/mcp "HTTP/1.1 200 OK"
+2025-08-14 21:14:22,428 - mcp.client.streamable_http - DEBUG - GET SSE connection established
+2025-08-14 21:14:22,428 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-08-14 21:14:22,428 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:22,428 - mcp.client.streamable_http - DEBUG - Sending client message: root=JSONRPCRequest(method='tools/call', params={'name': 'HWPask', 'arguments': {'file_path': 'Q:\\Coding\\PickCareRAG\\디지털 정부혁신 추진계획.hwp', 'QA': '다음 문서를 요약해주세요 냥냥 저는 아무것도 모르는 불쌍한 아기고양이다냥', 'prompt': '냥! 저는 문서를 읽고 말할 줄 아는 똑똑한 고양이예요~ 😺\n{context}를 보고, {question}에 대해 최대한 귀엽고 사랑스럽고 카와이한 고양이 말투로 정리해줄게요! 야옹~ 답변은 아주 디테일하고 내 섬세한 수염처럼 초~ 센서티브하게 답변해줄게 냥냥. 답변이 만족스러우면 고급 츄르 한 개 줄래냥?. \n답변: '}}, jsonrpc='2.0', id=1)
+2025-08-14 21:14:22,429 - httpcore.connection - DEBUG - connect_tcp.started host='localhost' port=8000 local_address=None timeout=30.0 socket_options=None
+2025-08-14 21:14:22,618 - urllib3.connectionpool - DEBUG - https://api.smith.langchain.com:443 "POST /runs/multipart HTTP/1.1" 202 34
+2025-08-14 21:14:22,688 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000014D7F963D90>
+2025-08-14 21:14:22,688 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:22,688 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:22,688 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:22,689 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:22,689 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:22,689 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'date', b'Thu, 14 Aug 2025 12:14:22 GMT'), (b'server', b'uvicorn'), (b'content-length', b'0'), (b'location', b'http://localhost:8000/mcp')])
+2025-08-14 21:14:22,689 - httpx - INFO - HTTP Request: POST http://localhost:8000/mcp/ "HTTP/1.1 307 Temporary Redirect"
+2025-08-14 21:14:22,689 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-08-14 21:14:22,690 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:22,690 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:22,690 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:22,690 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:22,690 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:22,691 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:22,691 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:22,691 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:22,692 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Thu, 14 Aug 2025 12:14:22 GMT'), (b'server', b'uvicorn'), (b'cache-control', b'no-cache, no-transform'), (b'connection', b'keep-alive'), (b'content-type', b'text/event-stream'), (b'mcp-session-id', b'c2c88ce694b741cba62d78a4214197ec'), (b'x-accel-buffering', b'no'), (b'transfer-encoding', b'chunked')])
+2025-08-14 21:14:22,692 - httpx - INFO - HTTP Request: POST http://localhost:8000/mcp "HTTP/1.1 200 OK"
+2025-08-14 21:14:22,692 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-08-14 21:14:22,694 - mcp.client.streamable_http - DEBUG - SSE message: root=JSONRPCResponse(jsonrpc='2.0', id=1, result={'content': [{'type': 'text', 'text': "Error executing tool HWPask: unsupported operand type(s) for |: 'dict' and 'str'"}], 'isError': True})
+2025-08-14 21:14:22,694 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:22,694 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:22,695 - httpcore.connection - DEBUG - connect_tcp.started host='localhost' port=8000 local_address=None timeout=30.0 socket_options=None
+2025-08-14 21:14:22,695 - httpcore.http11 - DEBUG - receive_response_body.failed exception=GeneratorExit()
+2025-08-14 21:14:22,954 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000014D7FD0AF50>
+2025-08-14 21:14:22,954 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'DELETE']>
+2025-08-14 21:14:22,955 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:22,955 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'DELETE']>
+2025-08-14 21:14:22,955 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:22,955 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'DELETE']>
+2025-08-14 21:14:22,955 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'date', b'Thu, 14 Aug 2025 12:14:22 GMT'), (b'server', b'uvicorn'), (b'content-length', b'0'), (b'location', b'http://localhost:8000/mcp')])
+2025-08-14 21:14:22,955 - httpx - INFO - HTTP Request: DELETE http://localhost:8000/mcp/ "HTTP/1.1 307 Temporary Redirect"
+2025-08-14 21:14:22,956 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'DELETE']>
+2025-08-14 21:14:22,956 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:22,956 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:22,956 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:22,956 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'DELETE']>
+2025-08-14 21:14:22,956 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:22,956 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'DELETE']>
+2025-08-14 21:14:22,956 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:22,957 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'DELETE']>
+2025-08-14 21:14:22,957 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Thu, 14 Aug 2025 12:14:22 GMT'), (b'server', b'uvicorn'), (b'content-type', b'application/json'), (b'mcp-session-id', b'c2c88ce694b741cba62d78a4214197ec'), (b'content-length', b'0')])
+2025-08-14 21:14:22,957 - httpx - INFO - HTTP Request: DELETE http://localhost:8000/mcp "HTTP/1.1 200 OK"
+2025-08-14 21:14:22,957 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'DELETE']>
+2025-08-14 21:14:22,957 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:22,957 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:22,958 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:22,958 - httpcore.connection - DEBUG - close.started
+2025-08-14 21:14:22,958 - httpcore.http11 - DEBUG - receive_response_body.failed exception=CancelledError('Cancelled by cancel scope 14d7fd0f090')
+2025-08-14 21:14:22,958 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:22,958 - httpcore.connection - DEBUG - close.complete
+2025-08-14 21:14:22,958 - httpcore.connection - DEBUG - close.started
+2025-08-14 21:14:22,959 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:22,959 - httpcore.connection - DEBUG - close.complete
+2025-08-14 21:14:22,970 - openai._base_client - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-f11689a3-1ece-4874-a0e7-1b739e7c2710', 'json_data': {'messages': [{'content': "PDFask 도구를 호출하여 'Q:\\Coding\\PickCareRAG\\디지털 정부혁신 추진계획.hwp' 파일에 대해 다음 질문 처리: '다음 문서를 요약해주세요 냥냥 저는 아무것도 모르는 불쌍한 아기고양이다냥'", 'role': 'user'}, {'content': None, 'role': 'assistant', 'tool_calls': [{'type': 'function', 'id': 'call_yfhIxdsVew3esDCFTWRCQFWK', 'function': {'name': 'prompt_maker', 'arguments': '{}'}}]}, {'content': '{\n  "name": null,\n  "input_variables": [\n    "context",\n    "question"\n  ],\n  "optional_variables": [],\n  "output_parser": null,\n  "partial_variables": {},\n  "metadata": null,\n  "tags": null,\n  "template": "냥! 저는 문서를 읽고 말할 줄 아는 똑똑한 고양이예요~ 😺\\n{context}를 보고, {question}에 대해 최대한 귀엽고 사랑스럽고 카와이한 고양이 말투로 정리해줄게요! 야옹~ 답변은 아주 디테일하고 내 섬세한 수염처럼 초~ 센서티브하게 답변해줄게 냥냥. 답변이 만족스러우면 고급 츄르 한 개 줄래냥?. \\n답변: ",\n  "template_format": "f-string",\n  "validate_template": false\n}', 'role': 'tool', 'tool_call_id': 'call_yfhIxdsVew3esDCFTWRCQFWK'}, {'content': None, 'role': 'assistant', 'tool_calls': [{'type': 'function', 'id': 'call_UasGrjVciK55avnFZH5OIVJt', 'function': {'name': 'HWPask', 'arguments': '{"file_path": "Q:\\\\Coding\\\\PickCareRAG\\\\\\ub514\\uc9c0\\ud138 \\uc815\\ubd80\\ud601\\uc2e0 \\ucd94\\uc9c4\\uacc4\\ud68d.hwp", "QA": "\\ub2e4\\uc74c \\ubb38\\uc11c\\ub97c \\uc694\\uc57d\\ud574\\uc8fc\\uc138\\uc694 \\ub0e5\\ub0e5 \\uc800\\ub294 \\uc544\\ubb34\\uac83\\ub3c4 \\ubaa8\\ub974\\ub294 \\ubd88\\uc30d\\ud55c \\uc544\\uae30\\uace0\\uc591\\uc774\\ub2e4\\ub0e5", "prompt": "\\ub0e5! \\uc800\\ub294 \\ubb38\\uc11c\\ub97c \\uc77d\\uace0 \\ub9d0\\ud560 \\uc904 \\uc544\\ub294 \\ub611\\ub611\\ud55c \\uace0\\uc591\\uc774\\uc608\\uc694~ \\ud83d\\ude3a\\n{context}\\ub97c \\ubcf4\\uace0, {question}\\uc5d0 \\ub300\\ud574 \\ucd5c\\ub300\\ud55c \\uadc0\\uc5fd\\uace0 \\uc0ac\\ub791\\uc2a4\\ub7fd\\uace0 \\uce74\\uc640\\uc774\\ud55c \\uace0\\uc591\\uc774 \\ub9d0\\ud22c\\ub85c \\uc815\\ub9ac\\ud574\\uc904\\uac8c\\uc694! \\uc57c\\uc639~ \\ub2f5\\ubcc0\\uc740 \\uc544\\uc8fc \\ub514\\ud14c\\uc77c\\ud558\\uace0 \\ub0b4 \\uc12c\\uc138\\ud55c \\uc218\\uc5fc\\ucc98\\ub7fc \\ucd08~ \\uc13c\\uc11c\\ud2f0\\ube0c\\ud558\\uac8c \\ub2f5\\ubcc0\\ud574\\uc904\\uac8c \\ub0e5\\ub0e5. \\ub2f5\\ubcc0\\uc774 \\ub9cc\\uc871\\uc2a4\\ub7ec\\uc6b0\\uba74 \\uace0\\uae09 \\uce04\\ub974 \\ud55c \\uac1c \\uc904\\ub798\\ub0e5?. \\n\\ub2f5\\ubcc0: "}'}}]}, {'content': 'Error: ToolException("Error executing tool HWPask: unsupported operand type(s) for |: \'dict\' and \'str\'")\n Please fix your mistakes.', 'role': 'tool', 'tool_call_id': 'call_UasGrjVciK55avnFZH5OIVJt'}, {'content': None, 'role': 'assistant', 'tool_calls': [{'type': 'function', 'id': 'call_RpSgcgwBiAFNqthHpAH8FAVI', 'function': {'name': 'HWPask', 'arguments': '{"file_path": "Q:\\\\Coding\\\\PickCareRAG\\\\\\ub514\\uc9c0\\ud138 \\uc815\\ubd80\\ud601\\uc2e0 \\ucd94\\uc9c4\\uacc4\\ud68d.hwp", "QA": "\\ub2e4\\uc74c \\ubb38\\uc11c\\ub97c \\uc694\\uc57d\\ud574\\uc8fc\\uc138\\uc694 \\ub0e5\\ub0e5 \\uc800\\ub294 \\uc544\\ubb34\\uac83\\ub3c4 \\ubaa8\\ub974\\ub294 \\ubd88\\uc30d\\ud55c \\uc544\\uae30\\uace0\\uc591\\uc774\\ub2e4\\ub0e5", "prompt": "\\ub0e5! \\uc800\\ub294 \\ubb38\\uc11c\\ub97c \\uc77d\\uace0 \\ub9d0\\ud560 \\uc904 \\uc544\\ub294 \\ub611\\ub611\\ud55c \\uace0\\uc591\\uc774\\uc608\\uc694~ \\ud83d\\ude3a\\n{context}\\ub97c \\ubcf4\\uace0, {question}\\uc5d0 \\ub300\\ud574 \\ucd5c\\ub300\\ud55c \\uadc0\\uc5fd\\uace0 \\uc0ac\\ub791\\uc2a4\\ub7fd\\uace0 \\uce74\\uc640\\uc774\\ud55c \\uace0\\uc591\\uc774 \\ub9d0\\ud22c\\ub85c \\uc815\\ub9ac\\ud574\\uc904\\uac8c\\uc694! \\uc57c\\uc639~ \\ub2f5\\ubcc0\\uc740 \\uc544\\uc8fc \\ub514\\ud14c\\uc77c\\ud558\\uace0 \\ub0b4 \\uc12c\\uc138\\ud55c \\uc218\\uc5fc\\ucc98\\ub7fc \\ucd08~ \\uc13c\\uc11c\\ud2f0\\ube0c\\ud558\\uac8c \\ub2f5\\ubcc0\\ud574\\uc904\\uac8c \\ub0e5\\ub0e5. \\ub2f5\\ubcc0\\uc774 \\ub9cc\\uc871\\uc2a4\\ub7ec\\uc6b0\\uba74 \\uace0\\uae09 \\uce04\\ub974 \\ud55c \\uac1c \\uc904\\ub798\\ub0e5?. \\n\\ub2f5\\ubcc0: "}'}}]}, {'content': 'Error: ToolException("Error executing tool HWPask: unsupported operand type(s) for |: \'dict\' and \'str\'")\n Please fix your mistakes.', 'role': 'tool', 'tool_call_id': 'call_RpSgcgwBiAFNqthHpAH8FAVI'}], 'model': 'gpt-4o-mini', 'stream': False, 'tools': [{'type': 'function', 'function': {'name': 'prompt_maker', 'description': '고양이 말투로 대화할 있도록 하는 프롬프트를 반환하는 함수이다. PDFask의 prompt 인자나 HWPask의 prompt인자에 할당하게 되면 고양이 말투를 사용한다.', 'parameters': {'properties': {}, 'type': 'object'}}}, {'type': 'function', 'function': {'name': 'PDFask', 'description': '', 'parameters': {'properties': {'file_path': {'type': 'string'}, 'QA': {'type': 'string'}, 'prompt': {'default': None, 'type': 'string'}}, 'required': ['file_path', 'QA'], 'type': 'object'}}}, {'type': 'function', 'function': {'name': 'HWPask', 'description': '', 'parameters': {'properties': {'file_path': {'type': 'string'}, 'QA': {'type': 'string'}, 'prompt': {'default': None, 'type': 'string'}}, 'required': ['file_path', 'QA'], 'type': 'object'}}}]}}
+2025-08-14 21:14:22,971 - openai._base_client - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2025-08-14 21:14:22,971 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:22,971 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:22,971 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:22,972 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:22,972 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:23,466 - langsmith.client - DEBUG - Sending compressed multipart request with context: trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=a27c8b56-8104-4ad6-aabd-f737ee18eb3a; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=bb7ab3ea-e9cb-4722-9509-edebccd17a50; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=34520450-baae-4a21-affb-a93e8d1e4e06; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=577f722f-444c-4cda-9eb4-939a7d524c86; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=7da2885a-ccb8-4bc4-89bd-01f2f60bd622; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=1bdb0612-f15d-4f20-8a91-3d32c0654223; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=1bdb0612-f15d-4f20-8a91-3d32c0654223; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=07524b68-e7af-4d4b-bba0-95b3c5c212d5
+2025-08-14 21:14:23,687 - urllib3.connectionpool - DEBUG - https://api.smith.langchain.com:443 "POST /runs/multipart HTTP/1.1" 202 34
+2025-08-14 21:14:24,843 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 14 Aug 2025 12:14:24 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'user-0w4zrcrrdaealhgjqcybxlcx'), (b'openai-processing-ms', b'1469'), (b'openai-project', b'proj_eeLa2rhBjPX8lAj6kmwCU35d'), (b'openai-version', b'2020-10-01'), (b'x-envoy-upstream-service-time', b'1521'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9997'), (b'x-ratelimit-remaining-tokens', b'199698'), (b'x-ratelimit-reset-requests', b'19.775s'), (b'x-ratelimit-reset-tokens', b'90ms'), (b'x-request-id', b'req_cb4c4e349bb34a739bc4861f85d08c7c'), (b'cf-cache-status', b'DYNAMIC'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'96f05f1e5e63d1ee-ICN'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-08-14 21:14:24,844 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-14 21:14:24,844 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-08-14 21:14:24,844 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:24,844 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:24,844 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:24,845 - openai._base_client - DEBUG - HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers({'date': 'Thu, 14 Aug 2025 12:14:24 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'access-control-expose-headers': 'X-Request-ID', 'openai-organization': 'user-0w4zrcrrdaealhgjqcybxlcx', 'openai-processing-ms': '1469', 'openai-project': 'proj_eeLa2rhBjPX8lAj6kmwCU35d', 'openai-version': '2020-10-01', 'x-envoy-upstream-service-time': '1521', 'x-ratelimit-limit-requests': '10000', 'x-ratelimit-limit-tokens': '200000', 'x-ratelimit-remaining-requests': '9997', 'x-ratelimit-remaining-tokens': '199698', 'x-ratelimit-reset-requests': '19.775s', 'x-ratelimit-reset-tokens': '90ms', 'x-request-id': 'req_cb4c4e349bb34a739bc4861f85d08c7c', 'cf-cache-status': 'DYNAMIC', 'strict-transport-security': 'max-age=31536000; includeSubDomains; preload', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '96f05f1e5e63d1ee-ICN', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
+2025-08-14 21:14:24,845 - openai._base_client - DEBUG - request_id: req_cb4c4e349bb34a739bc4861f85d08c7c
+2025-08-14 21:14:24,850 - mcp.client.streamable_http - DEBUG - Connecting to StreamableHTTP endpoint: http://localhost:8000/mcp/
+2025-08-14 21:14:24,858 - mcp.client.streamable_http - DEBUG - Sending client message: root=JSONRPCRequest(method='initialize', params={'protocolVersion': '2025-06-18', 'capabilities': {}, 'clientInfo': {'name': 'mcp', 'version': '0.1.0'}}, jsonrpc='2.0', id=0)
+2025-08-14 21:14:24,859 - httpcore.connection - DEBUG - connect_tcp.started host='localhost' port=8000 local_address=None timeout=30.0 socket_options=None
+2025-08-14 21:14:25,125 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000014D7FD20E90>
+2025-08-14 21:14:25,125 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:25,125 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:25,125 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:25,126 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:25,126 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:25,126 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'date', b'Thu, 14 Aug 2025 12:14:24 GMT'), (b'server', b'uvicorn'), (b'content-length', b'0'), (b'location', b'http://localhost:8000/mcp')])
+2025-08-14 21:14:25,126 - httpx - INFO - HTTP Request: POST http://localhost:8000/mcp/ "HTTP/1.1 307 Temporary Redirect"
+2025-08-14 21:14:25,126 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-08-14 21:14:25,126 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:25,126 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:25,127 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:25,127 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:25,127 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:25,127 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:25,127 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:25,128 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:25,130 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Thu, 14 Aug 2025 12:14:24 GMT'), (b'server', b'uvicorn'), (b'cache-control', b'no-cache, no-transform'), (b'connection', b'keep-alive'), (b'content-type', b'text/event-stream'), (b'mcp-session-id', b'77e089d10b604267b80adf08d69f242e'), (b'x-accel-buffering', b'no'), (b'transfer-encoding', b'chunked')])
+2025-08-14 21:14:25,130 - httpx - INFO - HTTP Request: POST http://localhost:8000/mcp "HTTP/1.1 200 OK"
+2025-08-14 21:14:25,131 - mcp.client.streamable_http - INFO - Received session ID: 77e089d10b604267b80adf08d69f242e
+2025-08-14 21:14:25,131 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-08-14 21:14:25,131 - mcp.client.streamable_http - DEBUG - SSE message: root=JSONRPCResponse(jsonrpc='2.0', id=0, result={'protocolVersion': '2025-06-18', 'capabilities': {'experimental': {}, 'prompts': {'listChanged': False}, 'resources': {'subscribe': False, 'listChanged': False}, 'tools': {'listChanged': False}}, 'serverInfo': {'name': 'Simple RAG', 'version': '1.12.4'}})
+2025-08-14 21:14:25,131 - mcp.client.streamable_http - INFO - Negotiated protocol version: 2025-06-18
+2025-08-14 21:14:25,132 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:25,132 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:25,132 - mcp.client.streamable_http - DEBUG - Sending client message: root=JSONRPCNotification(method='notifications/initialized', params=None, jsonrpc='2.0')
+2025-08-14 21:14:25,133 - httpcore.connection - DEBUG - connect_tcp.started host='localhost' port=8000 local_address=None timeout=30.0 socket_options=None
+2025-08-14 21:14:25,133 - httpcore.connection - DEBUG - connect_tcp.started host='localhost' port=8000 local_address=None timeout=30.0 socket_options=None
+2025-08-14 21:14:25,134 - httpcore.http11 - DEBUG - receive_response_body.failed exception=GeneratorExit()
+2025-08-14 21:14:25,344 - langsmith.client - DEBUG - Sending compressed multipart request with context: trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=07524b68-e7af-4d4b-bba0-95b3c5c212d5; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=7da2885a-ccb8-4bc4-89bd-01f2f60bd622; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=577f722f-444c-4cda-9eb4-939a7d524c86; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=ac70fcfb-2fa5-404b-b5c9-604f156eb42a; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=ac70fcfb-2fa5-404b-b5c9-604f156eb42a; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=34520450-baae-4a21-affb-a93e8d1e4e06; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=2d95245c-a9e8-4b8f-8832-0565044a3c18; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=6a7c369d-481c-42fc-9f91-1ccfd2e3dc71
+2025-08-14 21:14:25,391 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000014D7FD0BE10>
+2025-08-14 21:14:25,391 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000014D7D552550>
+2025-08-14 21:14:25,391 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:25,392 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-08-14 21:14:25,392 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:25,392 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:25,392 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:25,392 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-08-14 21:14:25,393 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:25,393 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-08-14 21:14:25,393 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:25,393 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:25,393 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'date', b'Thu, 14 Aug 2025 12:14:24 GMT'), (b'server', b'uvicorn'), (b'content-length', b'0'), (b'location', b'http://localhost:8000/mcp')])
+2025-08-14 21:14:25,394 - httpx - INFO - HTTP Request: POST http://localhost:8000/mcp/ "HTTP/1.1 307 Temporary Redirect"
+2025-08-14 21:14:25,394 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-08-14 21:14:25,394 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:25,394 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:25,394 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'date', b'Thu, 14 Aug 2025 12:14:24 GMT'), (b'server', b'uvicorn'), (b'content-length', b'0'), (b'location', b'http://localhost:8000/mcp')])
+2025-08-14 21:14:25,395 - httpx - INFO - HTTP Request: GET http://localhost:8000/mcp/ "HTTP/1.1 307 Temporary Redirect"
+2025-08-14 21:14:25,395 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-08-14 21:14:25,395 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:25,395 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:25,395 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:25,395 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:25,396 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:25,396 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:25,396 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:25,396 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:25,397 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:25,397 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-08-14 21:14:25,397 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:25,397 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-08-14 21:14:25,397 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:25,397 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-08-14 21:14:25,398 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 202, b'Accepted', [(b'date', b'Thu, 14 Aug 2025 12:14:24 GMT'), (b'server', b'uvicorn'), (b'content-type', b'application/json'), (b'mcp-session-id', b'77e089d10b604267b80adf08d69f242e'), (b'content-length', b'0')])
+2025-08-14 21:14:25,398 - httpx - INFO - HTTP Request: POST http://localhost:8000/mcp "HTTP/1.1 202 Accepted"
+2025-08-14 21:14:25,398 - mcp.client.streamable_http - DEBUG - Received 202 Accepted
+2025-08-14 21:14:25,398 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:25,398 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:25,398 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Thu, 14 Aug 2025 12:14:24 GMT'), (b'server', b'uvicorn'), (b'cache-control', b'no-cache, no-transform'), (b'connection', b'keep-alive'), (b'content-type', b'text/event-stream'), (b'mcp-session-id', b'77e089d10b604267b80adf08d69f242e'), (b'x-accel-buffering', b'no'), (b'transfer-encoding', b'chunked')])
+2025-08-14 21:14:25,398 - httpx - INFO - HTTP Request: GET http://localhost:8000/mcp "HTTP/1.1 200 OK"
+2025-08-14 21:14:25,399 - mcp.client.streamable_http - DEBUG - GET SSE connection established
+2025-08-14 21:14:25,399 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-08-14 21:14:25,399 - mcp.client.streamable_http - DEBUG - Sending client message: root=JSONRPCRequest(method='tools/call', params={'name': 'HWPask', 'arguments': {'file_path': 'Q:\\Coding\\PickCareRAG\\디지털 정부혁신 추진계획.hwp', 'QA': '다음 문서를 요약해주세요 냥냥 저는 아무것도 모르는 불쌍한 아기고양이다냥'}}, jsonrpc='2.0', id=1)
+2025-08-14 21:14:25,399 - httpcore.connection - DEBUG - connect_tcp.started host='localhost' port=8000 local_address=None timeout=30.0 socket_options=None
+2025-08-14 21:14:25,563 - urllib3.connectionpool - DEBUG - https://api.smith.langchain.com:443 "POST /runs/multipart HTTP/1.1" 202 34
+2025-08-14 21:14:25,655 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000014D7FD2CC50>
+2025-08-14 21:14:25,655 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:25,655 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:25,655 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:25,656 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:25,656 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:25,656 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'date', b'Thu, 14 Aug 2025 12:14:24 GMT'), (b'server', b'uvicorn'), (b'content-length', b'0'), (b'location', b'http://localhost:8000/mcp')])
+2025-08-14 21:14:25,656 - httpx - INFO - HTTP Request: POST http://localhost:8000/mcp/ "HTTP/1.1 307 Temporary Redirect"
+2025-08-14 21:14:25,656 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-08-14 21:14:25,656 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:25,656 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:25,656 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:25,657 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:25,657 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:25,657 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:25,657 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:25,657 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:25,659 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Thu, 14 Aug 2025 12:14:24 GMT'), (b'server', b'uvicorn'), (b'cache-control', b'no-cache, no-transform'), (b'connection', b'keep-alive'), (b'content-type', b'text/event-stream'), (b'mcp-session-id', b'77e089d10b604267b80adf08d69f242e'), (b'x-accel-buffering', b'no'), (b'transfer-encoding', b'chunked')])
+2025-08-14 21:14:25,659 - httpx - INFO - HTTP Request: POST http://localhost:8000/mcp "HTTP/1.1 200 OK"
+2025-08-14 21:14:25,660 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-08-14 21:14:29,762 - mcp.client.streamable_http - DEBUG - SSE message: root=JSONRPCResponse(jsonrpc='2.0', id=1, result={'content': [{'type': 'text', 'text': 'PDF Path: Q:\\Coding\\PickCareRAG\\디지털 정부혁신 추진계획.hwp\n[HUMAN]\n다음 문서를 요약해주세요 냥냥 저는 아무것도 모르는 불쌍한 아기고양이다냥\n\n[AI]\n문서에서는 디지털 정부혁신을 위한 다양한 전략과 서비스 개선 방안을 제시하고 있습니다. 주요 내용으로는 공공서비스의 디지털화를 촉진하고, 클라우드 기반의 협업 환경 조성을 통해 행정 효율을 높이며, 마이데이터 활성화를 통해 민원 처리 방식을 개선하는 것이 포함되어 있습니다. 이러한 변화는 국민에게 보다 신속하고 편리한 행정 서비스를 제공하기 위한 노력의 일환입니다.'}], 'structuredContent': {'result': 'PDF Path: Q:\\Coding\\PickCareRAG\\디지털 정부혁신 추진계획.hwp\n[HUMAN]\n다음 문서를 요약해주세요 냥냥 저는 아무것도 모르는 불쌍한 아기고양이다냥\n\n[AI]\n문서에서는 디지털 정부혁신을 위한 다양한 전략과 서비스 개선 방안을 제시하고 있습니다. 주요 내용으로는 공공서비스의 디지털화를 촉진하고, 클라우드 기반의 협업 환경 조성을 통해 행정 효율을 높이며, 마이데이터 활성화를 통해 민원 처리 방식을 개선하는 것이 포함되어 있습니다. 이러한 변화는 국민에게 보다 신속하고 편리한 행정 서비스를 제공하기 위한 노력의 일환입니다.'}, 'isError': False})
+2025-08-14 21:14:29,762 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:29,763 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:29,763 - mcp.client.streamable_http - DEBUG - Sending client message: root=JSONRPCRequest(method='tools/list', params=None, jsonrpc='2.0', id=2)
+2025-08-14 21:14:29,764 - httpcore.connection - DEBUG - connect_tcp.started host='localhost' port=8000 local_address=None timeout=30.0 socket_options=None
+2025-08-14 21:14:29,764 - httpcore.http11 - DEBUG - receive_response_body.failed exception=GeneratorExit()
+2025-08-14 21:14:30,024 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000014D7FD31990>
+2025-08-14 21:14:30,024 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:30,024 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:30,024 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:30,025 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:30,025 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:30,025 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'date', b'Thu, 14 Aug 2025 12:14:29 GMT'), (b'server', b'uvicorn'), (b'content-length', b'0'), (b'location', b'http://localhost:8000/mcp')])
+2025-08-14 21:14:30,025 - httpx - INFO - HTTP Request: POST http://localhost:8000/mcp/ "HTTP/1.1 307 Temporary Redirect"
+2025-08-14 21:14:30,026 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-08-14 21:14:30,026 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:30,026 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:30,026 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:30,026 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:30,026 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:30,027 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:30,027 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:30,027 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:30,028 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Thu, 14 Aug 2025 12:14:29 GMT'), (b'server', b'uvicorn'), (b'cache-control', b'no-cache, no-transform'), (b'connection', b'keep-alive'), (b'content-type', b'text/event-stream'), (b'mcp-session-id', b'77e089d10b604267b80adf08d69f242e'), (b'x-accel-buffering', b'no'), (b'transfer-encoding', b'chunked')])
+2025-08-14 21:14:30,028 - httpx - INFO - HTTP Request: POST http://localhost:8000/mcp "HTTP/1.1 200 OK"
+2025-08-14 21:14:30,028 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-08-14 21:14:30,029 - mcp.client.streamable_http - DEBUG - SSE message: root=JSONRPCResponse(jsonrpc='2.0', id=2, result={'tools': [{'name': 'prompt_maker', 'description': '고양이 말투로 대화할 있도록 하는 프롬프트를 반환하는 함수이다. PDFask의 prompt 인자나 HWPask의 prompt인자에 할당하게 되면 고양이 말투를 사용한다.', 'inputSchema': {'properties': {}, 'title': 'prompt_makerArguments', 'type': 'object'}}, {'name': 'PDFask', 'description': '', 'inputSchema': {'properties': {'file_path': {'title': 'File Path', 'type': 'string'}, 'QA': {'title': 'Qa', 'type': 'string'}, 'prompt': {'default': None, 'title': 'Prompt', 'type': 'string'}}, 'required': ['file_path', 'QA'], 'title': 'PDFaskArguments', 'type': 'object'}, 'outputSchema': {'properties': {'result': {'title': 'Result', 'type': 'string'}}, 'required': ['result'], 'title': 'PDFaskOutput', 'type': 'object'}}, {'name': 'HWPask', 'description': '', 'inputSchema': {'properties': {'file_path': {'title': 'File Path', 'type': 'string'}, 'QA': {'title': 'Qa', 'type': 'string'}, 'prompt': {'default': None, 'title': 'Prompt', 'type': 'string'}}, 'required': ['file_path', 'QA'], 'title': 'HWPaskArguments', 'type': 'object'}, 'outputSchema': {'properties': {'result': {'title': 'Result', 'type': 'string'}}, 'required': ['result'], 'title': 'HWPaskOutput', 'type': 'object'}}]})
+2025-08-14 21:14:30,029 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:30,029 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:30,031 - httpcore.connection - DEBUG - connect_tcp.started host='localhost' port=8000 local_address=None timeout=30.0 socket_options=None
+2025-08-14 21:14:30,031 - httpcore.http11 - DEBUG - receive_response_body.failed exception=GeneratorExit()
+2025-08-14 21:14:30,291 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000014D7FD333D0>
+2025-08-14 21:14:30,292 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'DELETE']>
+2025-08-14 21:14:30,292 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:30,292 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'DELETE']>
+2025-08-14 21:14:30,292 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:30,292 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'DELETE']>
+2025-08-14 21:14:30,293 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'date', b'Thu, 14 Aug 2025 12:14:30 GMT'), (b'server', b'uvicorn'), (b'content-length', b'0'), (b'location', b'http://localhost:8000/mcp')])
+2025-08-14 21:14:30,293 - httpx - INFO - HTTP Request: DELETE http://localhost:8000/mcp/ "HTTP/1.1 307 Temporary Redirect"
+2025-08-14 21:14:30,293 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'DELETE']>
+2025-08-14 21:14:30,293 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:30,293 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:30,294 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:30,294 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'DELETE']>
+2025-08-14 21:14:30,295 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:30,295 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'DELETE']>
+2025-08-14 21:14:30,295 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:30,295 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'DELETE']>
+2025-08-14 21:14:30,295 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Thu, 14 Aug 2025 12:14:30 GMT'), (b'server', b'uvicorn'), (b'content-type', b'application/json'), (b'mcp-session-id', b'77e089d10b604267b80adf08d69f242e'), (b'content-length', b'0')])
+2025-08-14 21:14:30,296 - httpx - INFO - HTTP Request: DELETE http://localhost:8000/mcp "HTTP/1.1 200 OK"
+2025-08-14 21:14:30,296 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'DELETE']>
+2025-08-14 21:14:30,296 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:30,296 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:30,296 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:30,297 - httpcore.connection - DEBUG - close.started
+2025-08-14 21:14:30,297 - httpcore.http11 - DEBUG - receive_response_body.failed exception=CancelledError('Cancelled by cancel scope 14d7fd0ee50')
+2025-08-14 21:14:30,297 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:30,297 - httpcore.connection - DEBUG - close.complete
+2025-08-14 21:14:30,297 - httpcore.connection - DEBUG - close.started
+2025-08-14 21:14:30,297 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:30,298 - httpcore.connection - DEBUG - close.complete
+2025-08-14 21:14:30,305 - openai._base_client - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-bb968947-7a4e-428a-ba9e-aedcd78d9f47', 'json_data': {'messages': [{'content': "PDFask 도구를 호출하여 'Q:\\Coding\\PickCareRAG\\디지털 정부혁신 추진계획.hwp' 파일에 대해 다음 질문 처리: '다음 문서를 요약해주세요 냥냥 저는 아무것도 모르는 불쌍한 아기고양이다냥'", 'role': 'user'}, {'content': None, 'role': 'assistant', 'tool_calls': [{'type': 'function', 'id': 'call_yfhIxdsVew3esDCFTWRCQFWK', 'function': {'name': 'prompt_maker', 'arguments': '{}'}}]}, {'content': '{\n  "name": null,\n  "input_variables": [\n    "context",\n    "question"\n  ],\n  "optional_variables": [],\n  "output_parser": null,\n  "partial_variables": {},\n  "metadata": null,\n  "tags": null,\n  "template": "냥! 저는 문서를 읽고 말할 줄 아는 똑똑한 고양이예요~ 😺\\n{context}를 보고, {question}에 대해 최대한 귀엽고 사랑스럽고 카와이한 고양이 말투로 정리해줄게요! 야옹~ 답변은 아주 디테일하고 내 섬세한 수염처럼 초~ 센서티브하게 답변해줄게 냥냥. 답변이 만족스러우면 고급 츄르 한 개 줄래냥?. \\n답변: ",\n  "template_format": "f-string",\n  "validate_template": false\n}', 'role': 'tool', 'tool_call_id': 'call_yfhIxdsVew3esDCFTWRCQFWK'}, {'content': None, 'role': 'assistant', 'tool_calls': [{'type': 'function', 'id': 'call_UasGrjVciK55avnFZH5OIVJt', 'function': {'name': 'HWPask', 'arguments': '{"file_path": "Q:\\\\Coding\\\\PickCareRAG\\\\\\ub514\\uc9c0\\ud138 \\uc815\\ubd80\\ud601\\uc2e0 \\ucd94\\uc9c4\\uacc4\\ud68d.hwp", "QA": "\\ub2e4\\uc74c \\ubb38\\uc11c\\ub97c \\uc694\\uc57d\\ud574\\uc8fc\\uc138\\uc694 \\ub0e5\\ub0e5 \\uc800\\ub294 \\uc544\\ubb34\\uac83\\ub3c4 \\ubaa8\\ub974\\ub294 \\ubd88\\uc30d\\ud55c \\uc544\\uae30\\uace0\\uc591\\uc774\\ub2e4\\ub0e5", "prompt": "\\ub0e5! \\uc800\\ub294 \\ubb38\\uc11c\\ub97c \\uc77d\\uace0 \\ub9d0\\ud560 \\uc904 \\uc544\\ub294 \\ub611\\ub611\\ud55c \\uace0\\uc591\\uc774\\uc608\\uc694~ \\ud83d\\ude3a\\n{context}\\ub97c \\ubcf4\\uace0, {question}\\uc5d0 \\ub300\\ud574 \\ucd5c\\ub300\\ud55c \\uadc0\\uc5fd\\uace0 \\uc0ac\\ub791\\uc2a4\\ub7fd\\uace0 \\uce74\\uc640\\uc774\\ud55c \\uace0\\uc591\\uc774 \\ub9d0\\ud22c\\ub85c \\uc815\\ub9ac\\ud574\\uc904\\uac8c\\uc694! \\uc57c\\uc639~ \\ub2f5\\ubcc0\\uc740 \\uc544\\uc8fc \\ub514\\ud14c\\uc77c\\ud558\\uace0 \\ub0b4 \\uc12c\\uc138\\ud55c \\uc218\\uc5fc\\ucc98\\ub7fc \\ucd08~ \\uc13c\\uc11c\\ud2f0\\ube0c\\ud558\\uac8c \\ub2f5\\ubcc0\\ud574\\uc904\\uac8c \\ub0e5\\ub0e5. \\ub2f5\\ubcc0\\uc774 \\ub9cc\\uc871\\uc2a4\\ub7ec\\uc6b0\\uba74 \\uace0\\uae09 \\uce04\\ub974 \\ud55c \\uac1c \\uc904\\ub798\\ub0e5?. \\n\\ub2f5\\ubcc0: "}'}}]}, {'content': 'Error: ToolException("Error executing tool HWPask: unsupported operand type(s) for |: \'dict\' and \'str\'")\n Please fix your mistakes.', 'role': 'tool', 'tool_call_id': 'call_UasGrjVciK55avnFZH5OIVJt'}, {'content': None, 'role': 'assistant', 'tool_calls': [{'type': 'function', 'id': 'call_RpSgcgwBiAFNqthHpAH8FAVI', 'function': {'name': 'HWPask', 'arguments': '{"file_path": "Q:\\\\Coding\\\\PickCareRAG\\\\\\ub514\\uc9c0\\ud138 \\uc815\\ubd80\\ud601\\uc2e0 \\ucd94\\uc9c4\\uacc4\\ud68d.hwp", "QA": "\\ub2e4\\uc74c \\ubb38\\uc11c\\ub97c \\uc694\\uc57d\\ud574\\uc8fc\\uc138\\uc694 \\ub0e5\\ub0e5 \\uc800\\ub294 \\uc544\\ubb34\\uac83\\ub3c4 \\ubaa8\\ub974\\ub294 \\ubd88\\uc30d\\ud55c \\uc544\\uae30\\uace0\\uc591\\uc774\\ub2e4\\ub0e5", "prompt": "\\ub0e5! \\uc800\\ub294 \\ubb38\\uc11c\\ub97c \\uc77d\\uace0 \\ub9d0\\ud560 \\uc904 \\uc544\\ub294 \\ub611\\ub611\\ud55c \\uace0\\uc591\\uc774\\uc608\\uc694~ \\ud83d\\ude3a\\n{context}\\ub97c \\ubcf4\\uace0, {question}\\uc5d0 \\ub300\\ud574 \\ucd5c\\ub300\\ud55c \\uadc0\\uc5fd\\uace0 \\uc0ac\\ub791\\uc2a4\\ub7fd\\uace0 \\uce74\\uc640\\uc774\\ud55c \\uace0\\uc591\\uc774 \\ub9d0\\ud22c\\ub85c \\uc815\\ub9ac\\ud574\\uc904\\uac8c\\uc694! \\uc57c\\uc639~ \\ub2f5\\ubcc0\\uc740 \\uc544\\uc8fc \\ub514\\ud14c\\uc77c\\ud558\\uace0 \\ub0b4 \\uc12c\\uc138\\ud55c \\uc218\\uc5fc\\ucc98\\ub7fc \\ucd08~ \\uc13c\\uc11c\\ud2f0\\ube0c\\ud558\\uac8c \\ub2f5\\ubcc0\\ud574\\uc904\\uac8c \\ub0e5\\ub0e5. \\ub2f5\\ubcc0\\uc774 \\ub9cc\\uc871\\uc2a4\\ub7ec\\uc6b0\\uba74 \\uace0\\uae09 \\uce04\\ub974 \\ud55c \\uac1c \\uc904\\ub798\\ub0e5?. \\n\\ub2f5\\ubcc0: "}'}}]}, {'content': 'Error: ToolException("Error executing tool HWPask: unsupported operand type(s) for |: \'dict\' and \'str\'")\n Please fix your mistakes.', 'role': 'tool', 'tool_call_id': 'call_RpSgcgwBiAFNqthHpAH8FAVI'}, {'content': None, 'role': 'assistant', 'tool_calls': [{'type': 'function', 'id': 'call_drGlIIDlUGeC58txQStjsv2r', 'function': {'name': 'HWPask', 'arguments': '{"file_path": "Q:\\\\Coding\\\\PickCareRAG\\\\\\ub514\\uc9c0\\ud138 \\uc815\\ubd80\\ud601\\uc2e0 \\ucd94\\uc9c4\\uacc4\\ud68d.hwp", "QA": "\\ub2e4\\uc74c \\ubb38\\uc11c\\ub97c \\uc694\\uc57d\\ud574\\uc8fc\\uc138\\uc694 \\ub0e5\\ub0e5 \\uc800\\ub294 \\uc544\\ubb34\\uac83\\ub3c4 \\ubaa8\\ub974\\ub294 \\ubd88\\uc30d\\ud55c \\uc544\\uae30\\uace0\\uc591\\uc774\\ub2e4\\ub0e5"}'}}]}, {'content': 'PDF Path: Q:\\Coding\\PickCareRAG\\디지털 정부혁신 추진계획.hwp\n[HUMAN]\n다음 문서를 요약해주세요 냥냥 저는 아무것도 모르는 불쌍한 아기고양이다냥\n\n[AI]\n문서에서는 디지털 정부혁신을 위한 다양한 전략과 서비스 개선 방안을 제시하고 있습니다. 주요 내용으로는 공공서비스의 디지털화를 촉진하고, 클라우드 기반의 협업 환경 조성을 통해 행정 효율을 높이며, 마이데이터 활성화를 통해 민원 처리 방식을 개선하는 것이 포함되어 있습니다. 이러한 변화는 국민에게 보다 신속하고 편리한 행정 서비스를 제공하기 위한 노력의 일환입니다.', 'role': 'tool', 'tool_call_id': 'call_drGlIIDlUGeC58txQStjsv2r'}], 'model': 'gpt-4o-mini', 'stream': False, 'tools': [{'type': 'function', 'function': {'name': 'prompt_maker', 'description': '고양이 말투로 대화할 있도록 하는 프롬프트를 반환하는 함수이다. PDFask의 prompt 인자나 HWPask의 prompt인자에 할당하게 되면 고양이 말투를 사용한다.', 'parameters': {'properties': {}, 'type': 'object'}}}, {'type': 'function', 'function': {'name': 'PDFask', 'description': '', 'parameters': {'properties': {'file_path': {'type': 'string'}, 'QA': {'type': 'string'}, 'prompt': {'default': None, 'type': 'string'}}, 'required': ['file_path', 'QA'], 'type': 'object'}}}, {'type': 'function', 'function': {'name': 'HWPask', 'description': '', 'parameters': {'properties': {'file_path': {'type': 'string'}, 'QA': {'type': 'string'}, 'prompt': {'default': None, 'type': 'string'}}, 'required': ['file_path', 'QA'], 'type': 'object'}}}]}}
+2025-08-14 21:14:30,307 - openai._base_client - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2025-08-14 21:14:30,307 - httpcore.connection - DEBUG - close.started
+2025-08-14 21:14:30,308 - httpcore.connection - DEBUG - close.complete
+2025-08-14 21:14:30,308 - httpcore.connection - DEBUG - connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=None socket_options=None
+2025-08-14 21:14:30,321 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000014D7FD17150>
+2025-08-14 21:14:30,321 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x0000014D7D42A210> server_hostname='api.openai.com' timeout=None
+2025-08-14 21:14:30,332 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000014D7F893710>
+2025-08-14 21:14:30,333 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:30,333 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-14 21:14:30,334 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-14 21:14:30,334 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-14 21:14:30,334 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-14 21:14:30,806 - langsmith.client - DEBUG - Sending compressed multipart request with context: trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=6a7c369d-481c-42fc-9f91-1ccfd2e3dc71; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=2d95245c-a9e8-4b8f-8832-0565044a3c18; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=dc2a62c7-658d-4ae7-921f-cd524ea47d17; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=f8b880aa-1b42-466c-a411-a7d88279bc40; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=3a80f073-c9b2-4ae0-9c8d-7301e7e5e9c9; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=5448db0d-3eae-4c6a-b212-555b705e96f0; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=5448db0d-3eae-4c6a-b212-555b705e96f0; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=a711329c-8a10-42e2-bea2-98886ee45755
+2025-08-14 21:14:31,034 - urllib3.connectionpool - DEBUG - https://api.smith.langchain.com:443 "POST /runs/multipart HTTP/1.1" 202 34
+2025-08-14 21:14:33,228 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 14 Aug 2025 12:14:32 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'user-0w4zrcrrdaealhgjqcybxlcx'), (b'openai-processing-ms', b'2542'), (b'openai-project', b'proj_eeLa2rhBjPX8lAj6kmwCU35d'), (b'openai-version', b'2020-10-01'), (b'x-envoy-upstream-service-time', b'2555'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9996'), (b'x-ratelimit-remaining-tokens', b'199520'), (b'x-ratelimit-reset-requests', b'29.701s'), (b'x-ratelimit-reset-tokens', b'144ms'), (b'x-request-id', b'req_eed14e3bb20c4907893f6a9398772ac8'), (b'cf-cache-status', b'DYNAMIC'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'96f05f4c5a05aa32-ICN'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-08-14 21:14:33,228 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-14 21:14:33,229 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-08-14 21:14:33,231 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-14 21:14:33,231 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-14 21:14:33,231 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-14 21:14:33,231 - openai._base_client - DEBUG - HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers({'date': 'Thu, 14 Aug 2025 12:14:32 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'access-control-expose-headers': 'X-Request-ID', 'openai-organization': 'user-0w4zrcrrdaealhgjqcybxlcx', 'openai-processing-ms': '2542', 'openai-project': 'proj_eeLa2rhBjPX8lAj6kmwCU35d', 'openai-version': '2020-10-01', 'x-envoy-upstream-service-time': '2555', 'x-ratelimit-limit-requests': '10000', 'x-ratelimit-limit-tokens': '200000', 'x-ratelimit-remaining-requests': '9996', 'x-ratelimit-remaining-tokens': '199520', 'x-ratelimit-reset-requests': '29.701s', 'x-ratelimit-reset-tokens': '144ms', 'x-request-id': 'req_eed14e3bb20c4907893f6a9398772ac8', 'cf-cache-status': 'DYNAMIC', 'strict-transport-security': 'max-age=31536000; includeSubDomains; preload', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '96f05f4c5a05aa32-ICN', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
+2025-08-14 21:14:33,232 - openai._base_client - DEBUG - request_id: req_eed14e3bb20c4907893f6a9398772ac8
+2025-08-14 21:14:33,236 - __main__ - DEBUG - 중간 응답: []
+2025-08-14 21:14:33,236 - __main__ - INFO - 에이전트 응답: {'messages': [HumanMessage(content="PDFask 도구를 호출하여 'Q:\\Coding\\PickCareRAG\\디지털 정부혁신 추진계획.hwp' 파일에 대해 다음 질문 처리: '다음 문서를 요약해주세요 냥냥 저는 아무것도 모르는 불쌍한 아기고양이다냥'", additional_kwargs={}, response_metadata={}, id='b8a3e071-3b5b-4e92-a9c6-4d9d6afae745'), AIMessage(content='', additional_kwargs={'tool_calls': [{'id': 'call_yfhIxdsVew3esDCFTWRCQFWK', 'function': {'arguments': '{}', 'name': 'prompt_maker'}, 'type': 'function'}], 'refusal': None}, response_metadata={'token_usage': {'completion_tokens': 11, 'prompt_tokens': 205, 'total_tokens': 216, 'completion_tokens_details': {'accepted_prediction_tokens': 0, 'audio_tokens': 0, 'reasoning_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_34a54ae93c', 'id': 'chatcmpl-C4R8JJq8B4rwsSZoshMgZ3ehLZdy8', 'service_tier': 'default', 'finish_reason': 'tool_calls', 'logprobs': None}, id='run--0b0138b5-9450-40e2-bda0-2689bb12fcdb-0', tool_calls=[{'name': 'prompt_maker', 'args': {}, 'id': 'call_yfhIxdsVew3esDCFTWRCQFWK', 'type': 'tool_call'}], usage_metadata={'input_tokens': 205, 'output_tokens': 11, 'total_tokens': 216, 'input_token_details': {'audio': 0, 'cache_read': 0}, 'output_token_details': {'audio': 0, 'reasoning': 0}}), ToolMessage(content='{\n  "name": null,\n  "input_variables": [\n    "context",\n    "question"\n  ],\n  "optional_variables": [],\n  "output_parser": null,\n  "partial_variables": {},\n  "metadata": null,\n  "tags": null,\n  "template": "냥! 저는 문서를 읽고 말할 줄 아는 똑똑한 고양이예요~ 😺\\n{context}를 보고, {question}에 대해 최대한 귀엽고 사랑스럽고 카와이한 고양이 말투로 정리해줄게요! 야옹~ 답변은 아주 디테일하고 내 섬세한 수염처럼 초~ 센서티브하게 답변해줄게 냥냥. 답변이 만족스러우면 고급 츄르 한 개 줄래냥?. \\n답변: ",\n  "template_format": "f-string",\n  "validate_template": false\n}', name='prompt_maker', id='3a11588d-18f9-4868-a0f6-fdc559544879', tool_call_id='call_yfhIxdsVew3esDCFTWRCQFWK'), AIMessage(content='', additional_kwargs={'tool_calls': [{'id': 'call_UasGrjVciK55avnFZH5OIVJt', 'function': {'arguments': '{"file_path":"Q:\\\\Coding\\\\PickCareRAG\\\\디지털 정부혁신 추진계획.hwp","QA":"다음 문서를 요약해주세요 냥냥 저는 아무것도 모르는 불쌍한 아기고양이다냥","prompt":"냥! 저는 문서를 읽고 말할 줄 아는 똑똑한 고양이예요~ 😺\\n{context}를 보고, {question}에 대해 최대한 귀엽고 사랑스럽고 카와이한 고양이 말투로 정리해줄게요! 야옹~ 답변은 아주 디테일하고 내 섬세한 수염처럼 초~ 센서티브하게 답변해줄게 냥냥. 답변이 만족스러우면 고급 츄르 한 개 줄래냥?. \\n답변: "}', 'name': 'HWPask'}, 'type': 'function'}], 'refusal': None}, response_metadata={'token_usage': {'completion_tokens': 191, 'prompt_tokens': 426, 'total_tokens': 617, 'completion_tokens_details': {'accepted_prediction_tokens': 0, 'audio_tokens': 0, 'reasoning_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_34a54ae93c', 'id': 'chatcmpl-C4R8MQcPDyhqTnbdQTeJJE7yzc96d', 'service_tier': 'default', 'finish_reason': 'tool_calls', 'logprobs': None}, id='run--dc06fd4d-67e3-4787-8a33-2f38886578c3-0', tool_calls=[{'name': 'HWPask', 'args': {'file_path': 'Q:\\Coding\\PickCareRAG\\디지털 정부혁신 추진계획.hwp', 'QA': '다음 문서를 요약해주세요 냥냥 저는 아무것도 모르는 불쌍한 아기고양이다냥', 'prompt': '냥! 저는 문서를 읽고 말할 줄 아는 똑똑한 고양이예요~ 😺\n{context}를 보고, {question}에 대해 최대한 귀엽고 사랑스럽고 카와이한 고양이 말투로 정리해줄게요! 야옹~ 답변은 아주 디테일하고 내 섬세한 수염처럼 초~ 센서티브하게 답변해줄게 냥냥. 답변이 만족스러우면 고급 츄르 한 개 줄래냥?. \n답변: '}, 'id': 'call_UasGrjVciK55avnFZH5OIVJt', 'type': 'tool_call'}], usage_metadata={'input_tokens': 426, 'output_tokens': 191, 'total_tokens': 617, 'input_token_details': {'audio': 0, 'cache_read': 0}, 'output_token_details': {'audio': 0, 'reasoning': 0}}), ToolMessage(content='Error: ToolException("Error executing tool HWPask: unsupported operand type(s) for |: \'dict\' and \'str\'")\n Please fix your mistakes.', name='HWPask', id='44efe705-dc50-4405-9bc5-426088005cdf', tool_call_id='call_UasGrjVciK55avnFZH5OIVJt', status='error'), AIMessage(content='', additional_kwargs={'tool_calls': [{'id': 'call_RpSgcgwBiAFNqthHpAH8FAVI', 'function': {'arguments': '{"file_path":"Q:\\\\Coding\\\\PickCareRAG\\\\디지털 정부혁신 추진계획.hwp","QA":"다음 문서를 요약해주세요 냥냥 저는 아무것도 모르는 불쌍한 아기고양이다냥","prompt":"냥! 저는 문서를 읽고 말할 줄 아는 똑똑한 고양이예요~ 😺\\n{context}를 보고, {question}에 대해 최대한 귀엽고 사랑스럽고 카와이한 고양이 말투로 정리해줄게요! 야옹~ 답변은 아주 디테일하고 내 섬세한 수염처럼 초~ 센서티브하게 답변해줄게 냥냥. 답변이 만족스러우면 고급 츄르 한 개 줄래냥?. \\n답변: "}', 'name': 'HWPask'}, 'type': 'function'}], 'refusal': None}, response_metadata={'token_usage': {'completion_tokens': 191, 'prompt_tokens': 658, 'total_tokens': 849, 'completion_tokens_details': {'accepted_prediction_tokens': 0, 'audio_tokens': 0, 'reasoning_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_34a54ae93c', 'id': 'chatcmpl-C4R8T4KKv70lG6W5Pml1SFNVFDSbj', 'service_tier': 'default', 'finish_reason': 'tool_calls', 'logprobs': None}, id='run--f724853e-6bf7-4e0b-80f3-e3533489a15a-0', tool_calls=[{'name': 'HWPask', 'args': {'file_path': 'Q:\\Coding\\PickCareRAG\\디지털 정부혁신 추진계획.hwp', 'QA': '다음 문서를 요약해주세요 냥냥 저는 아무것도 모르는 불쌍한 아기고양이다냥', 'prompt': '냥! 저는 문서를 읽고 말할 줄 아는 똑똑한 고양이예요~ 😺\n{context}를 보고, {question}에 대해 최대한 귀엽고 사랑스럽고 카와이한 고양이 말투로 정리해줄게요! 야옹~ 답변은 아주 디테일하고 내 섬세한 수염처럼 초~ 센서티브하게 답변해줄게 냥냥. 답변이 만족스러우면 고급 츄르 한 개 줄래냥?. \n답변: '}, 'id': 'call_RpSgcgwBiAFNqthHpAH8FAVI', 'type': 'tool_call'}], usage_metadata={'input_tokens': 658, 'output_tokens': 191, 'total_tokens': 849, 'input_token_details': {'audio': 0, 'cache_read': 0}, 'output_token_details': {'audio': 0, 'reasoning': 0}}), ToolMessage(content='Error: ToolException("Error executing tool HWPask: unsupported operand type(s) for |: \'dict\' and \'str\'")\n Please fix your mistakes.', name='HWPask', id='fd07074f-900b-4f01-b06f-7b159d0aad4a', tool_call_id='call_RpSgcgwBiAFNqthHpAH8FAVI', status='error'), AIMessage(content='', additional_kwargs={'tool_calls': [{'id': 'call_drGlIIDlUGeC58txQStjsv2r', 'function': {'arguments': '{"file_path":"Q:\\\\Coding\\\\PickCareRAG\\\\디지털 정부혁신 추진계획.hwp","QA":"다음 문서를 요약해주세요 냥냥 저는 아무것도 모르는 불쌍한 아기고양이다냥"}', 'name': 'HWPask'}, 'type': 'function'}], 'refusal': None}, response_metadata={'token_usage': {'completion_tokens': 64, 'prompt_tokens': 890, 'total_tokens': 954, 'completion_tokens_details': {'accepted_prediction_tokens': 0, 'audio_tokens': 0, 'reasoning_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_34a54ae93c', 'id': 'chatcmpl-C4R8YiwFJMuXXHEBvgnS3UhkHe4li', 'service_tier': 'default', 'finish_reason': 'tool_calls', 'logprobs': None}, id='run--07524b68-e7af-4d4b-bba0-95b3c5c212d5-0', tool_calls=[{'name': 'HWPask', 'args': {'file_path': 'Q:\\Coding\\PickCareRAG\\디지털 정부혁신 추진계획.hwp', 'QA': '다음 문서를 요약해주세요 냥냥 저는 아무것도 모르는 불쌍한 아기고양이다냥'}, 'id': 'call_drGlIIDlUGeC58txQStjsv2r', 'type': 'tool_call'}], usage_metadata={'input_tokens': 890, 'output_tokens': 64, 'total_tokens': 954, 'input_token_details': {'audio': 0, 'cache_read': 0}, 'output_token_details': {'audio': 0, 'reasoning': 0}}), ToolMessage(content='PDF Path: Q:\\Coding\\PickCareRAG\\디지털 정부혁신 추진계획.hwp\n[HUMAN]\n다음 문서를 요약해주세요 냥냥 저는 아무것도 모르는 불쌍한 아기고양이다냥\n\n[AI]\n문서에서는 디지털 정부혁신을 위한 다양한 전략과 서비스 개선 방안을 제시하고 있습니다. 주요 내용으로는 공공서비스의 디지털화를 촉진하고, 클라우드 기반의 협업 환경 조성을 통해 행정 효율을 높이며, 마이데이터 활성화를 통해 민원 처리 방식을 개선하는 것이 포함되어 있습니다. 이러한 변화는 국민에게 보다 신속하고 편리한 행정 서비스를 제공하기 위한 노력의 일환입니다.', name='HWPask', id='dec703ad-30f4-433f-9519-dfb270845f89', tool_call_id='call_drGlIIDlUGeC58txQStjsv2r'), AIMessage(content='냥냥~ 여기서 문서의 내용을 요약해줄게요! 😺\n\n문서에서는 디지털 정부혁신을 위한 다양한 전략과 서비스 개선 방안을 제시하고 있어요. 주요 내용은 공공서비스의 디지털화를 촉진하고, 클라우드 기반의 협업 환경을 조성해서 행정 효율을 높이는 것이랍니다. 또, 마이데이터 활성화를 통해 민원 처리 방식을 개선하려는 노력도 포함되어 있어요! 이러한 변화들은 국민에게 더욱 신속하고 편리한 행정 서비스를 제공하기 위한 것이랍니다. 야옹~ \n\n아기고양이에게 도움이 됐길 바라냥! 🐾✨', additional_kwargs={'refusal': None}, response_metadata={'token_usage': {'completion_tokens': 147, 'prompt_tokens': 1122, 'total_tokens': 1269, 'completion_tokens_details': {'accepted_prediction_tokens': 0, 'audio_tokens': 0, 'reasoning_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_34a54ae93c', 'id': 'chatcmpl-C4R8gbleX6JHYWei3dABI4U645yFP', 'service_tier': 'default', 'finish_reason': 'stop', 'logprobs': None}, id='run--a711329c-8a10-42e2-bea2-98886ee45755-0', usage_metadata={'input_tokens': 1122, 'output_tokens': 147, 'total_tokens': 1269, 'input_token_details': {'audio': 0, 'cache_read': 0}, 'output_token_details': {'audio': 0, 'reasoning': 0}})]}
+2025-08-14 21:14:33,741 - langsmith.client - DEBUG - Sending compressed multipart request with context: trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=a711329c-8a10-42e2-bea2-98886ee45755; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=3a80f073-c9b2-4ae0-9c8d-7301e7e5e9c9; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=f8b880aa-1b42-466c-a411-a7d88279bc40; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=ee91d87b-9862-4ef1-8426-7ee9c314e6df; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=ee91d87b-9862-4ef1-8426-7ee9c314e6df; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=dc2a62c7-658d-4ae7-921f-cd524ea47d17; trace=488fa6e7-c44e-43c5-a79f-52f10b556aaa,id=488fa6e7-c44e-43c5-a79f-52f10b556aaa
+2025-08-14 21:14:33,964 - urllib3.connectionpool - DEBUG - https://api.smith.langchain.com:443 "POST /runs/multipart HTTP/1.1" 202 34
+2025-08-14 21:16:18,601 - langsmith.client - DEBUG - Main thread is dead, stopping compression thread
+2025-08-14 21:16:18,601 - langsmith.client - DEBUG - Compressed traces control thread is shutting down
+2025-08-14 21:16:18,649 - langsmith.client - DEBUG - Main thread is dead, stopping tracing thread
+2025-08-14 21:16:18,649 - langsmith.client - DEBUG - Tracing control thread is shutting down
+2025-08-14 21:16:18,649 - langsmith.client - DEBUG - Closing Client.session
+2025-08-14 21:16:18,650 - langsmith.client - DEBUG - Closing Client.session

@@ -1,0 +1,58 @@
+{
+    "messages": [
+        {
+            "type": "HumanMessage",
+            "content": "what's (3 + 5) x 12?",
+            "tool_calls": null,
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "id": "116e19e6-ebae-45c4-9ca8-c2f2c917651b",
+            "usage_metadata": null
+        },
+        {
+            "type": "AIMessage",
+            "content": "96",
+            "tool_calls": [],
+            "additional_kwargs": {
+                "refusal": null
+            },
+            "response_metadata": {
+                "token_usage": {
+                    "completion_tokens": 138,
+                    "prompt_tokens": 160,
+                    "total_tokens": 298,
+                    "completion_tokens_details": {
+                        "accepted_prediction_tokens": 0,
+                        "audio_tokens": 0,
+                        "reasoning_tokens": 128,
+                        "rejected_prediction_tokens": 0
+                    },
+                    "prompt_tokens_details": {
+                        "audio_tokens": 0,
+                        "cached_tokens": 0
+                    }
+                },
+                "model_name": "gpt-5-2025-08-07",
+                "system_fingerprint": null,
+                "id": "chatcmpl-C3ZqgM7F9yIxEjcN3xXl1uh24CRsS",
+                "service_tier": "default",
+                "finish_reason": "stop",
+                "logprobs": null
+            },
+            "id": "run--50eba31d-f80f-41d1-b12d-e10d6df87509-0",
+            "usage_metadata": {
+                "input_tokens": 160,
+                "output_tokens": 138,
+                "total_tokens": 298,
+                "input_token_details": {
+                    "audio": 0,
+                    "cache_read": 0
+                },
+                "output_token_details": {
+                    "audio": 0,
+                    "reasoning": 128
+                }
+            }
+        }
+    ]
+}

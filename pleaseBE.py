@@ -2,6 +2,7 @@ import asyncio
 import logging
 from mcp.server.fastmcp import FastMCP
 import pdfLoader2 as PDF  # 기존 모듈 유지
+import pdfLoader2 as PDF  # 기존 모듈 유지
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.retrievers import BM25Retriever
 from langchain_community.vectorstores import FAISS
