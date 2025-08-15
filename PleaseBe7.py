@@ -13,13 +13,16 @@ from langchain_core.runnables import RunnablePassthrough
 from langchain_core.output_parsers import StrOutputParser
 from pathlib import Path
 from dotenv import load_dotenv
-from functools import lru_cache
 from langchain_core.documents import Document
 from langchain_core.prompts import PromptTemplate
 from langchain_core.runnables import RunnableLambda
 from langchain_core.runnables import RunnableMap
+from datetime import datetime
 import os
 import re
+import json
+from jsonLoader import jsonLoader
+
 
 # 로깅 설정 (상세 로그 강화)
 logging.basicConfig(
@@ -38,11 +41,120 @@ logger.info("환경 변수 로드 완료")
 
 mcp = FastMCP("Simple RAG")
 retriever_cache = {}  # 기존 캐시 유지
+vectorstore_cache = {}  # 신규: vectorstore 캐시 (hash 에러 피함)
 
 def format_docs(docs):
     return "\n\n".join(doc.page_content for doc in docs)
 
+# 수정: 글로벌 RunnableLambda로 정의해서 모든 도구에서 공유
 format_docs_runnable = RunnableLambda(format_docs)
+
+
+def flatten_json(data, prefix=''):  # 추가: 플래튼 헬퍼 함수 (재귀, 인터넷 없이 구현)
+    """JSON을 평탄화하는 헬퍼. 중첩을 'key.subkey'로 변환."""
+    flat = {}
+    if isinstance(data, dict):
+        for key, value in data.items():
+            new_key = f"{prefix}.{key}" if prefix else key
+            if isinstance(value, (dict, list)):
+                flat.update(flatten_json(value, new_key))
+            else:
+                flat[new_key] = value
+    elif isinstance(data, list):
+        for i, item in enumerate(data):
+            new_key = f"{prefix}[{i}]"
+            flat.update(flatten_json(item, new_key))
+    else:
+        flat[prefix] = data
+    return flat
+
+@mcp.tool()
+async def JSONask(file_path: str, QA: str, jq_schema: str = None, prompt: str = None, k: int = 3, text_content: bool = False, model: str = "gpt-4o-mini") -> str:
+    """JSON 파일을 처리하는 도구. jq_schema 옵션(기본 None: 플래튼 모드). RAG로 QA 답변."""
+    try:
+        file_path = Path(file_path).resolve()
+        if not file_path.exists() or file_path.suffix.lower() != '.json':
+            folder_path = Path(SHARED_FOLDER_PATH).resolve()
+            matching_files = [f for f in folder_path.glob('*.json') if 'pet' in f.name.lower() or '펫' in f.name.lower()]
+            if matching_files:
+                file_path = matching_files[0]  # 첫 번째 매칭 파일 사용
+                logger.warning(f"Fallback to shared JSON: {file_path}")
+            else:
+                raise ValueError(f"Invalid JSON file: {file_path}. 공유 폴더에도 없음.")
+        logger.info(f"Processing JSON: {file_path}")
+
+        cache_key = str(file_path)
+        if cache_key in retriever_cache and retriever_cache[cache_key] is not None:
+            ensemble_retriever = retriever_cache[cache_key]
+            logger.info("Using cached retriever")
+        else:
+            # jq_schema 없으면 플래튼 모드
+            if jq_schema is None:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                flat_data = flatten_json(data)
+                # 플래튼 결과를 문자열로 (key: value 형식)
+                json_text = "\n".join(f"{k}: {v}" for k, v in flat_data.items())
+                text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=50)
+                split_docs = text_splitter.split_text(json_text)
+                split_docs = [Document(page_content=chunk, metadata={"source": str(file_path)}) for chunk in split_docs]
+            else:
+                # 기존 JSONLoader 사용
+                loader = jsonLoader(file_path=str(file_path), jq_schema=jq_schema, text_content=text_content)
+                split_docs = await loader.load_and_split(text_splitter=RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=50))
+
+            logger.info(f"Split into {len(split_docs)} chunks")
+
+            bm25_retriever = BM25Retriever.from_documents(split_docs)
+            bm25_retriever.k = k
+
+            faiss_vectorstore = create_vectorstore(str(file_path), split_docs)
+            faiss_retriever = faiss_vectorstore.as_retriever(search_kwargs={"k": k})
+
+            ensemble_retriever = EnsembleRetriever(retrievers=[bm25_retriever, faiss_retriever], weights=[0.5, 0.5])
+            retriever_cache[cache_key] = ensemble_retriever
+            logger.info("Created and cached new retriever")
+
+        if prompt is None:
+            prompt = await asyncio.to_thread(hub.pull, "rlm/rag-prompt")
+
+        llm = ChatOpenAI(model_name=model, timeout=30, max_retries=2)
+        rag_chain = (
+            {"context": ensemble_retriever | format_docs_runnable, "question": RunnablePassthrough()}
+            | prompt
+            | llm
+            | StrOutputParser()
+        )
+
+        async with asyncio.timeout(45):
+            response = await rag_chain.ainvoke(QA)
+
+        response_buff = [
+            f"JSON Path: {file_path}",
+            f"[HUMAN]\n{QA}\n",
+            f"[AI]\n{response}"
+        ]
+        result = "\n".join(response_buff)
+        logger.info(f"JSONask 결과: {result}")
+        return result
+
+    except Exception as e:
+        logger.error(f"Error in JSONask: {e}", exc_info=True)
+        raise ValueError(f"JSON 처리 중 에러: {e}")
+
+@mcp.tool()
+async def GetCurrentDate() -> str:
+    """현재 시스템 날짜를 반환하는 도구. 날짜 관련 질문 시 사용. 반환 형식: YYYY-MM-DD (예: 2025-08-15)."""
+    try:
+        current_date = datetime.now().strftime("%Y-%m-%d")
+        logger.info(f"GetCurrentDate 호출: {current_date}")
+        return current_date
+    except Exception as e:
+        logger.error(f"GetCurrentDate 에러: {e}", exc_info=True)
+        raise ValueError(f"날짜 가져오기 중 에러: {e}")
+
+
+
 
 @mcp.tool()
 async def prompt_maker():  # async 유지 (MCP 도구 규칙)
@@ -53,21 +165,21 @@ async def prompt_maker():  # async 유지 (MCP 도구 규칙)
     )
     return custom_prompt  # 수정: await 제거, return으로 직접 반환
 
-@lru_cache(maxsize=10)
-def create_vectorstore(file_path: str):  # 수정: split_docs 인자 제거, 키를 file_path만으로 단순화
-    embeddings = OpenAIEmbeddings(model="text-embedding-3-large")
-    # split_docs는 PDFask 내부에서 생성하므로, 여기서는 임시로 빈 리스트 사용 – 실제 생성은 외부에서
-    # 하지만 캐싱 목적상, 함수 시그니처를 file_path만으로 해서 해시 문제 피함
-    # (실제 벡터스토어는 PDFask에서 생성 후 캐시)
-    logger.debug(f"Creating vectorstore for {file_path} (cached if hit)")
-    # 여기에 split_docs 로직을 넣지 않음 – 외부에서 주입
-    
-    
-
+def create_vectorstore(file_path: str, split_docs: list[Document]):  # 수정: lru_cache 제거, list로 변경, 캐시 dict 사용
+    cache_key = file_path  # file_path만으로 캐싱 (split_docs는 deterministic 가정)
+    if cache_key in vectorstore_cache:
+        logger.debug(f"Vectorstore cache hit for {file_path}")
+        return vectorstore_cache[cache_key]
+    else:
+        embeddings = OpenAIEmbeddings(model="text-embedding-3-large")
+        logger.debug(f"Creating vectorstore for {file_path}")
+        vs = FAISS.from_documents(split_docs, embeddings)
+        vectorstore_cache[cache_key] = vs
+        return vs
 
 @mcp.tool()
-async def SharedFolderSearchAndRAG(QA: str, prompt: str = None, file_types: str = ".pdf,.hwp,.hwpx") -> str:
-    """공유 폴더를 자율 검색해 적합 파일 선택 후 RAG 진행. file_types는 comma-separated (e.g., .pdf,.hwp)."""
+async def SharedFolderSearchAndRAG(QA: str, prompt: str = None, file_types: str = ".pdf,.hwp,.hwpx,.json", history: str = None) -> str:
+    """공유 폴더를 자율 검색해 적합 파일 선택 후 RAG 진행. file_types는 comma-separated (e.g., .pdf,.hwp, .json)."""
     try:
         folder_path = Path(SHARED_FOLDER_PATH).resolve()
         if not folder_path.exists() or not folder_path.is_dir():
@@ -81,35 +193,33 @@ async def SharedFolderSearchAndRAG(QA: str, prompt: str = None, file_types: str 
                     files.append({"path": entry.path, "name": entry.name, "mtime": entry.stat().st_mtime})
         await scan_files()
         if not files:
-            raise ValueError("적합한 파일(.pdf, .hwp, .hwpx)을 찾을 수 없습니다.")
+            raise ValueError("적합한 파일(.pdf, .hwp)을 찾을 수 없습니다.")
         
         logger.info(f"공유 폴더에서 {len(files)}개 파일 발견: {[f['name'] for f in files]}")
         
+        # 수정: history가 있으면 QA에 붙임 (대화 맥락 반영으로 파일 선택 정확도 ↑)
+        if history:
+            QA = f"{history}\n{QA}"
+        
         # 에이전트가 적합 파일 선택 (LLM 판단)
         select_llm = ChatOpenAI(model_name=os.getenv("OPENAI_MODEL_NAME", "gpt-5-mini"))
-        #select_prompt = f"QA: {QA}\n파일 목록: {[f['name'] + ' (modified: ' + str(f['mtime']) + ')' for f in files]}\n가장 적합한 파일 경로 선택 (이유 설명):"
-        #select_prompt = f"QA 키워드: {QA}\n파일 목록: {[f['name'] + ' (modified: ' + str(f['mtime']) + ')' for f in files]}\nQA 키워드와 가장 매칭되는 파일 경로 선택 (e.g., 'TensorRT' in QA → Tensorrt_demos.pdf 선택). 이유 설명하고, 형식: Selected Path: full/path/to/file.ext"  # 수정: 키워드 매칭 지시, 형식 지정
-        select_prompt = f"QA 키워드: {QA}\n파일 목록: {[f['name'] + ' (full path: ' + str(Path(folder_path) / f['name']) + ', modified: ' + str(f['mtime']) + ')' for f in files]}\nQA 키워드와 가장 매칭되는 파일의 FULL ABSOLUTE PATH 선택 (e.g., '고양이' in QA → 'Q:\\full\\path\\to\\고양이에 대한 5가지 놀라운 사실.hwp'). 이유 설명하고, 형식: Selected Full Path: Q:\\full\\path\\to\\file.ext"  # 수정: 목록에 full path 포함, 형식 지시 강조
+        # 파일 선택 프롬프트 수정: history 반영 (이전 히스토리를 명시적으로 포함해 LLM이 맥락 이해)
+        select_prompt = f"이전 히스토리: {history or '없음'}\nQA 키워드: {QA}\n파일 목록: {[f['name'] + ' (full path: ' + str(Path(folder_path) / f['name']) + ', modified: ' + str(f['mtime']) + ')' for f in files]}\nQA 키워드와 가장 매칭되는 파일의 FULL ABSOLUTE PATH 선택 (e.g., '고양이' in QA → 'Q:\\full\\path\\to\\고양이에 대한 5가지 놀라운 사실.hwp'). 이유 설명하고, 형식: Selected Full Path: Q:\\full\\path\\to\\file.ext"
         select_response = await select_llm.ainvoke(select_prompt)
-        #selected_file_path = match.group(1).strip() if match else files[0]['path']  # fallback 유지
-        match = re.search(r"Selected Full Path: (.*)", select_response.content, re.IGNORECASE)  # 수정: "Selected Full Path:" 추출
-        #match = re.search(r"Selected Path: (.*)", select_response.content, re.IGNORECASE)  # 수정: regex로 "Selected Path:" 추출
-        #selected_file_path = match.group(1).strip() if match else files[0]['path']  # fallback 유지
-        selected_file_path = match.group(1).strip() if match else str(Path(folder_path) / files[0]['name'])  # fallback: folder_path / name 조합
-        if not Path(selected_file_path).exists():  # 추가: exists() 체크 & 보완
-            logger.warning(f"Selected path not exists: {selected_file_path}. Falling back to constructed path.")
+        match = re.search(r"Selected Full Path: (.*)", select_response.content, re.IGNORECASE)
+        selected_file_path = match.group(1).strip() if match else str(Path(folder_path) / files[0]['name'])
+        if not Path(selected_file_path).exists():
+            logger.warning(f"Selected path not exists: {selected_file_path}. Falling back.")
             selected_file_name = Path(selected_file_path).name if Path(selected_file_path).name else files[0]['name']
             selected_file_path = str(Path(folder_path) / selected_file_name)
         logger.info(f"선택된 파일: {selected_file_path}")
-        #selected_file_path = select_response.content.split("Path:")[1].strip() if "Path:" in select_response.content else files[0]['path']  # 첫 번째 fallback
-
         
         # 파일 확장자에 따라 로더 선택
         selected_path = Path(selected_file_path)
         if selected_path.suffix.lower() == '.pdf':
             loader = PDF.pdfLoader(file_path=selected_file_path, extract_bool=True)
             split_docs = await loader.load_and_split(text_splitter=RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=50))
-        elif selected_path.suffix.lower() in ('.hwp', '.hwpx'):
+        elif selected_path.suffix.lower() in ('.hwp'):
             loader = HWP.HWP(file_path=selected_file_path)
             context = await loader.load()
             idx = 0
@@ -122,12 +232,22 @@ async def SharedFolderSearchAndRAG(QA: str, prompt: str = None, file_types: str 
             text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=50)
             text_chunks = text_splitter.split_text(original_context)
             split_docs = [Document(page_content=chunk, metadata={"source": str(selected_file_path)}) for chunk in text_chunks]
+            
+        elif selected_path.suffix.lower() == '.json':
+            # JSON 처리: jq_schema None으로 플래튼 모드 사용 (JSONask 로직 재활용)
+            with open(selected_file_path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            flat_data = flatten_json(data)
+            json_text = "\n".join(f"{k}: {v}" for k, v in flat_data.items())
+            text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=50)
+            text_chunks = text_splitter.split_text(json_text)
+            split_docs = [Document(page_content=chunk, metadata={"source": str(selected_file_path)}) for chunk in text_chunks]
         else:
             raise ValueError(f"지원하지 않는 파일 형식: {selected_path.suffix}")
         
         logger.info(f"Split into {len(split_docs)} chunks")
         
-        # 기존 RAG 프로세스 (복제)
+        # 기존 RAG 프로세스
         cache_key = str(selected_file_path)
         if cache_key in retriever_cache and retriever_cache[cache_key] is not None:
             ensemble_retriever = retriever_cache[cache_key]
@@ -135,7 +255,7 @@ async def SharedFolderSearchAndRAG(QA: str, prompt: str = None, file_types: str 
         else:
             bm25_retriever = BM25Retriever.from_documents(split_docs)
             bm25_retriever.k = 3
-            faiss_vectorstore = FAISS.from_documents(split_docs, OpenAIEmbeddings(model="text-embedding-3-large"))
+            faiss_vectorstore = create_vectorstore(selected_file_path, split_docs)  # 수정: list 전달, 캐시 dict 사용
             faiss_retriever = faiss_vectorstore.as_retriever(search_kwargs={"k": 3})
             ensemble_retriever = EnsembleRetriever(retrievers=[bm25_retriever, faiss_retriever], weights=[0.5, 0.5])
             retriever_cache[cache_key] = ensemble_retriever
@@ -143,16 +263,16 @@ async def SharedFolderSearchAndRAG(QA: str, prompt: str = None, file_types: str 
         
         if prompt is None:
             prompt = await asyncio.to_thread(hub.pull, "rlm/rag-prompt")
-        elif isinstance(prompt, str):  # 수정: str인 경우 Template으로 변환
+        elif isinstance(prompt, str):
             prompt = PromptTemplate.from_template(prompt)
-        elif not isinstance(prompt, PromptTemplate):  # 추가: 다른 타입 fallback
+        elif not isinstance(prompt, PromptTemplate):
             logger.error(f"Invalid prompt type: {type(prompt)}. Falling back to default.")
             prompt = await asyncio.to_thread(hub.pull, "rlm/rag-prompt")
         llm = ChatOpenAI(model_name=os.getenv("OPENAI_MODEL_NAME", "gpt-5-mini"), timeout=60, max_retries=2)
-        logger.debug(f"Prompt type after processing: {type(prompt)}")  # 추가: 디버그 로그 (파일에만)
+        logger.debug(f"Prompt type after processing: {type(prompt)}")
         rag_chain = RunnableMap(
             {"context": ensemble_retriever | format_docs_runnable, "question": RunnablePassthrough()}
-        )| prompt | llm | StrOutputParser()
+        ) | prompt | llm | StrOutputParser()
         
         async with asyncio.timeout(60):
             response = await rag_chain.ainvoke(QA)
@@ -168,9 +288,9 @@ async def SharedFolderSearchAndRAG(QA: str, prompt: str = None, file_types: str 
     
     except Exception as e:
         logger.error(f"SharedFolderSearchAndRAG 에러: {e}", exc_info=True)
+        if "unhashable" in str(e).lower():
+            logger.error("Unhashable Document detected - Consider serializing split_docs for caching.")
         raise ValueError(f"공유 폴더 처리 중 에러: {e}. 경로/권한 확인하세요.")
-    
-
 
 @mcp.tool()
 async def PDFask(file_path: str, QA: str, prompt: str = None) -> str:
@@ -181,7 +301,7 @@ async def PDFask(file_path: str, QA: str, prompt: str = None) -> str:
         logger.info(f"Processing PDF: {file_path}")
 
         cache_key = str(file_path)
-        if cache_key in retriever_cache:
+        if cache_key in retriever_cache and retriever_cache[cache_key] is not None:
             ensemble_retriever = retriever_cache[cache_key]
             logger.info("Using cached retriever")
         else:
@@ -194,11 +314,8 @@ async def PDFask(file_path: str, QA: str, prompt: str = None) -> str:
             bm25_retriever = BM25Retriever.from_documents(split_docs)
             bm25_retriever.k = 3
 
-            # 수정: create_vectorstore 호출 시 split_docs 직접 넘김 (캐싱 키는 file_path만)
-            # lru_cache가 file_path로 캐싱되지만, 실제 생성은 split_docs 사용
-            create_vectorstore(file_path)  # 캐싱 체크 (하지만 실제 생성은 아래)
-            faiss_vectorstore = FAISS.from_documents(split_docs, OpenAIEmbeddings(model="text-embedding-3-large"))  # 직접 생성, lru_cache는 상태 확인용으로
-            logger.debug("FAISS vectorstore created successfully")  # 성공 로그 추가
+            faiss_vectorstore = create_vectorstore(file_path, split_docs)  # 수정: list 전달
+            logger.debug("FAISS vectorstore created successfully")
             faiss_retriever = faiss_vectorstore.as_retriever(search_kwargs={"k": 3})
 
             ensemble_retriever = EnsembleRetriever(retrievers=[bm25_retriever, faiss_retriever], weights=[0.5, 0.5])
@@ -210,17 +327,17 @@ async def PDFask(file_path: str, QA: str, prompt: str = None) -> str:
 
         llm = ChatOpenAI(
             model_name="gpt-5-mini",
-            timeout=30,  # API 호출 타임아웃 30초
-            max_retries=2  # 재시도 2회
+            timeout=30,
+            max_retries=2
         )
         rag_chain = (
-            {"context": ensemble_retriever | format_docs, "question": RunnablePassthrough()}
+            {"context": ensemble_retriever | format_docs_runnable, "question": RunnablePassthrough()}
             | prompt
             | llm
             | StrOutputParser()
         )
 
-        async with asyncio.timeout(45):  # RAG 체인 타임아웃 45초 (기존 유지)
+        async with asyncio.timeout(45):
             logger.debug(f"Invoking rag_chain with QA: {QA}")
             response = await rag_chain.ainvoke(QA)
             logger.debug(f"rag_chain response: {response}")
@@ -237,14 +354,14 @@ async def PDFask(file_path: str, QA: str, prompt: str = None) -> str:
     except asyncio.TimeoutError:
         logger.error(f"Timeout in PDFask for {file_path}")
         raise ValueError("PDF processing or LLM call timed out")
-    except TypeError as te:  # 추가: unhashable 에러 fallback
-        logger.error(f"Hash error in vectorstore: {te} – Falling back to non-cached creation")
-        # fallback: 캐싱 없이 직접 생성 (필요 시)
+    except TypeError as te:
+        logger.error(f"Chain operator error in vectorstore: {te} – Falling back to non-cached creation")
+        # fallback: 직접 생성
         faiss_vectorstore = FAISS.from_documents(split_docs, OpenAIEmbeddings(model="text-embedding-3-large"))
     except Exception as e:
         logger.error(f"Error in PDFask: {e}", exc_info=True)
         raise
-    
+
 @mcp.tool()
 async def HWPask(file_path: str, QA: str, prompt: str = None) -> str:
     try:
@@ -255,77 +372,62 @@ async def HWPask(file_path: str, QA: str, prompt: str = None) -> str:
         if file_path.suffix.lower() not in ('.hwp', '.hwpx'):
             raise ValueError(f"Invalid HWP or HWPX file: {file_path}")
         logger.info(f"Processing HWP: {file_path}")
-        logger.debug(f"File confirmed exists: {file_path.exists()}, Suffix: {file_path.suffix.lower()}")  # 강화 디버그
+        logger.debug(f"File confirmed exists: {file_path.exists()}, Suffix: {file_path.suffix.lower()}")
 
         cache_key = str(file_path)
-        if cache_key in retriever_cache and retriever_cache[cache_key] is not None:  # 캐시 유효성 체크
+        if cache_key in retriever_cache and retriever_cache[cache_key] is not None:
             ensemble_retriever = retriever_cache[cache_key]
             logger.info("Using valid cached retriever")
         else:
             loader = HWP.HWP(file_path=file_path)
             context = await loader.load()
-            if not context:  # 빈 context 방지
+            if not context:
                 raise ValueError("Loaded context is empty - Check HWPLoader or file integrity.")
-            # 나머지 코드 (idx pop, split_docs 등) 기존 유지
-            # ...
-            
             idx = 0
-            while idx < len(context):  # 안전하게 pop 위해 while 사용 (pop 시 인덱스 변함)
+            while idx < len(context):
                 if context[idx].page_content is None:
                     context.pop(idx)
                 else:
                     idx += 1
-                    
-                    
-            original_context = "".join(str(c) for c in context)  # 효율적 join
-            
+            original_context = "".join(str(c) for c in context)
             text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=50)
             text_chunks = text_splitter.split_text(original_context)
             split_docs = [Document(page_content=chunk, metadata={"source": str(file_path)}) for chunk in text_chunks]
-            
             logger.info(f"Split into {len(split_docs)} chunks")
             
             bm25_retriever = BM25Retriever.from_documents(split_docs)
             bm25_retriever.k = 3
             
-            create_vectorstore(file_path)  # 기존 유지
-            faiss_vectorstore = FAISS.from_documents(split_docs, OpenAIEmbeddings(model="text-embedding-3-large"))
+            faiss_vectorstore = create_vectorstore(file_path, split_docs)  # 수정: list 전달
             logger.debug("FAISS vectorstore created successfully")
             faiss_retriever = faiss_vectorstore.as_retriever(search_kwargs={"k": 3})
             ensemble_retriever = EnsembleRetriever(retrievers=[bm25_retriever, faiss_retriever], weights=[0.5, 0.5])
-          
-            
-            
             retriever_cache[cache_key] = ensemble_retriever
             logger.info("Created and cached new retriever")
 
-        # rag_chain 실행 부분 기존 유지
-        # ...
         if prompt is None:
             prompt = await asyncio.to_thread(hub.pull, "rlm/rag-prompt")
             
-            
         llm = ChatOpenAI(
             model_name="gpt-5-mini",
-            timeout=30,  # API 호출 타임아웃 30초
-            max_retries=2  # 재시도 2회
+            timeout=30,
+            max_retries=2
         )
         
-        
         rag_chain = (
-            {"context": ensemble_retriever | format_docs, "question": RunnablePassthrough()}
+            {"context": ensemble_retriever | format_docs_runnable, "question": RunnablePassthrough()}
             | prompt
             | llm
             | StrOutputParser()
         )
         
-        async with asyncio.timeout(45):  # RAG 체인 타임아웃 45초 (기존 유지)
+        async with asyncio.timeout(45):
             logger.debug(f"Invoking rag_chain with QA: {QA}")
             response = await rag_chain.ainvoke(QA)
             logger.debug(f"rag_chain response: {response}")
 
         response_buff = [
-            f"PDF Path: {file_path}",
+            f"HWP Path: {file_path}",
             f"[HUMAN]\n{QA}\n",
             f"[AI]\n{response}"
         ]
@@ -335,13 +437,10 @@ async def HWPask(file_path: str, QA: str, prompt: str = None) -> str:
 
     except ValueError as ve:
         logger.error(f"ValueError in HWPask: {ve}", exc_info=True)
-        return f"Error: {ve} - Please check file path and try again."  # 클라이언트에 명확 에러 반환
+        return f"Error: {ve} - Please check file path and try again."
     except Exception as e:
         logger.error(f"Unexpected error in HWPask: {e}", exc_info=True)
         raise  
-
-        
-    
 
 if __name__ == "__main__":
     # HTTP 서버로 변경 (포트 기본 8000, 필요 시 --port 옵션 추가 가능)

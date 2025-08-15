@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>RAG API Chat Client</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        #chatContainer { border: 1px solid #ccc; height: 400px; overflow-y: auto; padding: 10px; margin-bottom: 10px; }
+        .message { margin: 10px 0; padding: 10px; border-radius: 10px; max-width: 80%; }
+        .user { background: #007bff; color: white; text-align: right; margin-left: auto; }
+        .ai { background: #f1f1f1; color: black; text-align: left; margin-right: auto; }
+        #queryInput { width: 70%; padding: 10px; }
+        button { padding: 10px; }
+    </style>
+</head>
+<body>
+    <div id="chatContainer"></div> <!-- 채팅 메시지 누적 영역 -->
+    <input type="text" id="queryInput" placeholder="형제야, 질문해봐 (e.g., 아이오바이오란 회사에 대해서)">
+    <button onclick="sendRequest()">보내기</button>
+    <pre id="fullResponse" style="display: none;"></pre> <!-- 전체 JSON 숨김, 디버깅용 -->
+
+    <script>
+        let chatHistory = [];  // 글로벌 히스토리 배열: {role: 'user' or 'assistant', content: '...'} 형태
+
+        async function sendRequest() {
+            const query = document.getElementById('queryInput').value.trim();
+            if (!query) {
+                alert('형제야, 질문을 입력해라!');
+                return;
+            }
+
+            // 사용자 메시지 추가: UI에 바로 표시
+            addMessageToChat('user', query);
+            document.getElementById('queryInput').value = '';  // 입력 초기화
+
+            // 히스토리에 사용자 쿼리 추가
+            chatHistory.push({ role: 'user', content: query });
+
+            // 로딩 표시 (프로답게 UX 좋게)
+            const loadingMsg = addMessageToChat('ai', '형제가 생각 중... 😺');
+
+            const payload = {
+                query: query,
+                tool: 'SharedFolderSearchAndRAG',
+                file_path: null,
+                history: chatHistory  // 전체 히스토리 전달: 서버 맥락 반영
+            };
+
+            try {
+                const response = await fetch('http://localhost:8000/api/rag/query', {  // AWS 시 URL 변경
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload),
+                    mode: 'cors'
+                });
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+
+                // AI 응답 추출: result에서 [AI] 부분 파싱 (기존 정규식 유지)
+                const aiMatch = data.result.match(/\[AI\]\n(.*)/s);  // /s로 멀티라인 매치
+                const aiText = aiMatch ? aiMatch[1].trim() : data.result;
+
+                // 로딩 메시지 제거하고 AI 응답 표시
+                removeMessage(loadingMsg);
+                addMessageToChat('assistant', aiText);
+
+                // 히스토리에 AI 응답 추가
+                chatHistory.push({ role: 'assistant', content: aiText });
+
+                // 히스토리 길이 제한: 최근 10개만 유지 (메모리 관리)
+                if (chatHistory.length > 10) {
+                    chatHistory = chatHistory.slice(-10);
+                }
+
+                document.getElementById('fullResponse').textContent = JSON.stringify(data, null, 2);  // 디버깅 로그
+                console.log('Success:', data);
+            } catch (error) {
+                console.error('Request failed:', error);
+                removeMessage(loadingMsg);
+                addMessageToChat('ai', `에러 발생: ${error.message} – 형제가 다시 해볼게!`);
+            }
+        }
+
+        // 헬퍼: 채팅에 메시지 추가 (프로답게 DOM 조작)
+        function addMessageToChat(role, content) {
+            const chatContainer = document.getElementById('chatContainer');
+            const msgDiv = document.createElement('div');
+            msgDiv.classList.add('message', role === 'user' ? 'user' : 'ai');
+            msgDiv.innerHTML = content.replace(/\n/g, '<br>');  // 줄바꿈 처리
+            chatContainer.appendChild(msgDiv);
+            chatContainer.scrollTop = chatContainer.scrollHeight;  // 자동 스크롤
+            return msgDiv;  // 제거용 반환
+        }
+
+        // 헬퍼: 메시지 제거 (로딩 시 사용)
+        function removeMessage(msgDiv) {
+            if (msgDiv) msgDiv.remove();
+        }
+    </script>
+</body>
+</html>

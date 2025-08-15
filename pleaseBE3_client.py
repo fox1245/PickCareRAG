@@ -5,14 +5,14 @@ from langchain_mcp_adapters.client import MultiServerMCPClient
 from langgraph.prebuilt import create_react_agent
 from langchain_core.messages import HumanMessage
 from dotenv import load_dotenv
-from langchain_teddynote import logging as teddy_logging
+#from langchain_teddynote import logging as teddy_logging  # 기존 제거 유지
 import os  # 추가: 환경 변수 설정 용
 
-# langsmith 완전 비활성화 (추가: 최상단)
+# langsmith 완전 비활성화 (기존 유지)
 os.environ["LANGCHAIN_TRACING_V2"] = "false"
 os.environ["LANGCHAIN_ENDPOINT"] = ""  # 엔드포인트 비우기 (추가 보안)
 
-# 로깅 설정 수정: 콘솔 핸들러 제거 (파일만), level=INFO 유지
+# 로깅 설정 수정: 콘솔 핸들러 제거 (파일만), level=INFO 유지 (기존 유지)
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
@@ -20,48 +20,42 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# teddy_logging.langsmith("MCP Project Client") 호출 제거 (또는 주석 처리)
-# teddy_logging.langsmith("MCP Project Client")  # 제거: langsmith 로깅 비활성화
-
 load_dotenv()
 
-# 콘솔 출력 인코딩 utf-8로 설정 (추가: 이모지 에러 방지)
-sys.stdout.reconfigure(encoding='utf-8')
+# 콘솔 출력 인코딩 utf-8로 설정 (기존 유지: 이모지 에러 방지)
+#sys.stdout.reconfigure(encoding='utf-8')
 sys.stderr.reconfigure(encoding='utf-8')
 
-async def run_agent(QA, file_path):
+async def run_agent(QA):  # 수정: file_path 인자 제거 (자율 처리)
     try:
         client = MultiServerMCPClient(
             {
                 "pdf_rag": {"url": "http://localhost:8000/mcp/", "transport": "streamable_http"},
             }
         )
-        # logger.info 제거: 콘솔 깨끗하게 (주석 처리)
-        # logger.info("MultiServerMCPClient 초기화 완료")
+        # logger.info 제거: 콘솔 깨끗하게 (기존 주석 처리 유지)
 
         tools = await client.get_tools()
         if not tools:
             raise ValueError("도구 로드 실패: 서버 연결 확인 필요")
-        # logger.info(f"로드된 도구: {[tool.name for tool in tools]}")  # 주석 처리
+        # logger.info(f"로드된 도구: {[tool.name for tool in tools]}")  # 주석 처리 (기존 유지)
 
         agent = create_react_agent(
             model="openai:gpt-5-mini",
             tools=tools,
             config={"configurable": {"retry_policy": {"max_attempts": 3, "wait_exponential_multiplier": 1000}}}
         )
-        # logger.info("에이전트 생성 완료")
+        # logger.info("에이전트 생성 완료")  # 주석 처리 (기존 유지)
 
-        #content = "제공된 도구를 호출하여 '{}' 파일에 대해 다음 질문 처리: '{}'".format(file_path, QA)
         content = "SharedFolderSearchAndRAG 도구를 호출하여 공유 폴더를 자율 검색해 적합 파일로 다음 질문 처리: '{}'".format(QA)
-        # 기존 input_message에 content 사용 – 파일 경로 입력 제거
         input_message = {"messages": [HumanMessage(content=content)]}
-        # logger.info(f"에이전트 요청: {input_message}")  # 주석 처리
+        # logger.info(f"에이전트 요청: {input_message}")  # 주석 처리 (기존 유지)
 
         async with asyncio.timeout(300):
             agent_response = await agent.ainvoke(input_message)
-            # logger.debug(f"중간 응답: {agent_response.get('intermediate_steps', [])}")  # 주석 처리
+            # logger.debug(f"중간 응답: {agent_response.get('intermediate_steps', [])}")  # 주석 처리 (기존 유지)
 
-        # logger.info(f"에이전트 응답: {agent_response}")  # 주석 처리 (이게 UnicodeError 유발자)
+        # logger.info(f"에이전트 응답: {agent_response}")  # 주석 처리 (기존 유지)
 
         final_message = agent_response.get("messages", [])[-1]
         if hasattr(final_message, 'content'):
@@ -80,11 +74,11 @@ if __name__ == "__main__":
             print("질문 내용을 입력해주세요: ")
             QA = sys.stdin.readline().strip()
             print()
-            file_path = input("질문할 파일의 경로 입력:")
+            # 수정: file_path 입력 제거 (에이전트 자율 처리)
             if not QA:
                 print("빈 질문입니다. 다시 입력해주세요.")
                 continue
-            asyncio.run(run_agent(QA, file_path))
+            asyncio.run(run_agent(QA))  # 수정: file_path 전달 제거
         except KeyboardInterrupt:
             print("\n프로그램 종료. 안녕히 가세요!")
             break

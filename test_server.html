@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>RAG API Client Example</title>
+</head>
+<body>
+    <input type="text" id="queryInput" placeholder="쿼리 입력 (e.g., 고양이 사실 알려줘)">
+    <button onclick="sendRequest()">요청 보내기</button>
+    <pre id="response"></pre>
+
+    <script>
+        async function sendRequest() {
+            const query = document.getElementById('queryInput').value;
+            if (!query) {
+                alert('쿼리를 입력하세요!');
+                return;
+            }
+
+            const payload = {
+                query: query,
+                tool: 'SharedFolderSearchAndRAG',  // 옵션: 특정 도구 지정 (e.g., PDFask)
+                file_path: null,  // 필요 시 파일 경로
+                history: [  // 옵션: 이전 대화 히스토리 (array of {role: 'user' or 'assistant', content: '...'})
+                    { role: 'user', content: '이전 질문' },
+                    { role: 'assistant', content: '이전 응답' }
+                ]
+            };
+
+            try {
+                const response = await fetch('http://localhost:8000/api/rag/query', {  // AWS 시 URL 변경
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                document.getElementById('response').textContent = JSON.stringify(data, null, 2);
+                console.log('Success:', data.result);  // 결과 처리
+            } catch (error) {
+                console.error('Request failed:', error);
+                alert('요청 실패: ' + error.message);
+            }
+        }
+    </script>
+</body>
+</html>
